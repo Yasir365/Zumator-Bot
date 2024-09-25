@@ -1,0 +1,181 @@
+@mixin max($max-width) {
+    @media screen and (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
+
+
+.roadmap {
+    margin: 0 auto;
+    max-width: 1514px;
+    width: 100%;
+}
+
+.roadmap h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.roadmap .item {
+    background: linear-gradient(180deg, #ffffff1a, #ffffff0a);
+    border-left: 6px solid transparent;
+    border-radius: 20px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 20px;
+    position: relative;
+}
+
+.roadmap .item.completed {
+    border-color: #19de8b;
+}
+
+.roadmap .title {
+    color: #ffffff80;
+    flex: 1 1;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+
+.roadmap .content {
+    flex: 1 1;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.roadmap .content ul li {
+    padding-left: 24px;
+    position: relative;
+}
+
+.roadmap .content ul li.completed:before {
+    background-color: #19de8b;
+}
+
+.roadmap .content ul li:before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 12px;
+    width: 6px;
+}
+
+.roadmap .overlay {
+    display: none;
+    position: absolute;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.roadmap .overlay.is-1 {
+    bottom: 0;
+    right: -60px;
+}
+
+.roadmap .overlay.is-1 .overlay-bg {
+    border-radius: 53px;
+    overflow: hidden;
+    right: 60px;
+}
+
+.roadmap .overlay.is-1 .overlay-bg img {
+    position: absolute;
+    right: -50px;
+}
+
+.roadmap .overlay.is-2 {
+    bottom: 0;
+    left: 20%;
+}
+
+
+.roadmap .overlay.is-2 .overlay-bg {
+    left: -50px;
+}
+
+.roadmap .overlay-bg {
+    border-radius: 53px;
+    bottom: 0;
+    height: 160px;
+    position: absolute;
+    width: 550px;
+    z-index: -1;
+}
+
+.roadmap .overlay-image {
+    height: 280px;
+    overflow: hidden;
+    width: 420px;
+}
+
+.roadmap .overlay-image img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    .roadmap .roadmap h2 {
+        font-size: 80px;
+        line-height: 84px;
+        margin: 120px 0;
+    }
+
+    .roadmap .item {
+        align-items: center;
+        border-left: 12px solid transparent;
+        border-radius: 53px;
+        display: flex;
+        min-height: 160px;
+        padding: 24px 50px 24px 78px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .roadmap .roadmap {
+        margin-bottom: 60px;
+    }
+
+    .roadmap .title {
+        font-size: 60px;
+        line-height: 64px;
+    }
+
+    .roadmap .overlay {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) {
+    .roadmap .title {
+        font-size: 80px;
+        line-height: 84px;
+        margin-bottom: 0;
+    }
+
+    .roadmap .content {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .roadmap .content ul li:before {
+        top: 15px;
+    }
+
+    .roadmap .overlay.is-2 {
+        left: 25%;
+    }
+}
