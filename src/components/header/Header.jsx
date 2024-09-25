@@ -1,37 +1,38 @@
 import './header.scss'
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <header>
-            <div className="header-left">
-                <div className="social">
-                    <a href="#" title="X" >
-                        <div className="icon">
-                            <img src="/svgs/x.svg" alt="" />
-                        </div>
-                    </a>
-                    <a href="#" title="Telegram" >
-                        <div className="icon">
-                            <img src="/svgs/telegram.svg" alt="" />
-                        </div>
-                    </a>
-                    <p>Join us!</p>
-                </div>
-            </div>
-            <div className="header-center">
-                <div className="logo-wrapper">
-                    <img className="img-responsive" src='/images/logo.png' alt="Hamster Kombat" />
-                </div>
-                <p>Digie Kambat</p>
-            </div>
-            <div className="header-right">
-                <a className="button" href="/files/rules.pdf" target="_blank" title="Whitepaper" >
-                    <p>Whitepaper</p>
-                    <div className="icon">
-                        <img src="/svgs/right-arrow.svg" alt="" />
+        <header className='user-header'>
+            <nav className="navbar navbar-expand-lg">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/"><img src='/images/logo.ico' alt="Nav Logo" /></Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" >
+                        <i className="navbar-toggler-icon"></i>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarToggler">
+                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/"> Base </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ops"> Ops </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/air-drop"> Air Drop </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends"> Friends </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena"> Arena </NavLink>
+                            </li>
+
+                        </ul>
                     </div>
-                </a>
-            </div>
+                </div>
+            </nav>
+
         </header>
     )
 }

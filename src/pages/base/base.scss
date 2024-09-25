@@ -1,0 +1,61 @@
+.base header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.base .username {
+    font-weight: bold;
+}
+
+.base .battery-icon {
+    /* Add your battery icon image here */
+    width: 20px;
+    height: 20px;
+}
+
+.base .time {
+    /* Add your time display implementation here */
+    font-size: 12px;
+}
+
+.base main {
+    padding: 20px;
+}
+
+.base .section-settones,
+.base .section-factions,
+.base .section-tickets,
+.base .section-kain {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.base .player-character {
+    /* Add your player character image or graphic here */
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.base .recruit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.base footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.base .playx-button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

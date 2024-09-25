@@ -1,10 +1,37 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/home/Home';
+import App from './App';
+import Base from './pages/base/Base';
+import Ops from './pages/ops/Ops';
+import AirDrop from './pages/air-drop/AirDrop';
+import Friends from './pages/friends/Friends';
+import Arena from './pages/arena/Arena';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />,
+        element: <App />,
+        children: [
+            {
+                path: '',
+                element: <Base />,
+            },
+            {
+                path: 'ops',
+                element: <Ops />,
+            },
+            {
+                path: 'air-drop',
+                element: <AirDrop />,
+            },
+            {
+                path: 'friends',
+                element: <Friends />,
+            },
+            {
+                path: 'arena',
+                element: <Arena />,
+            },
+        ],
     },
     // {
     //     path: '*',

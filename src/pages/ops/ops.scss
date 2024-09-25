@@ -1,0 +1,43 @@
+.ops header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.ops .time {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ops main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.ops .left-column {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.ops .grid-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.ops .right-column {
+    width: 70%;
+}
+
+.ops h2 {
+    margin-top: 0;
+}
+
+.ops footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}

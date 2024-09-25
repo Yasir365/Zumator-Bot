@@ -1,0 +1,133 @@
+.arena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffa500;
+        margin-bottom: 20px;
+    }
+
+
+    .circle-wrapper {
+        width: 100%;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+
+    .circle-left {
+        display: flex;
+        justify-content: flex-start;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 87%;
+            width: 55vw;
+            height: 2px;
+            background-color: #fff;
+            z-index: 1;
+
+            left: 75px;
+            transform: skew(20deg, 22deg);
+        }
+    }
+
+    .circle-right {
+        display: flex;
+        justify-content: flex-end;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 87%;
+            width:55vw;
+            height: 2px;
+            background-color: #fff;
+            z-index: 1;
+            transform: skew(-20deg, -23deg);
+            right: 75px;
+        }
+
+    }
+
+    .circle-left:last-child::after,
+    .circle-right:last-child::after {
+        display: none;
+
+    }
+
+    .circle {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        z-index: 2;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        span {
+            font-size: 1.2rem;
+            text-align: center;
+            z-index: 1;
+            font-weight: 400;
+            color: #000;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .circle-left::after {
+            transform: skew(-20deg, 36deg);
+            
+        }
+        .circle-right::after {
+            transform: skew(-20deg, -37deg);
+            
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .circle-left::after {
+            transform: skew(-20deg, 36deg);
+            
+        }
+        .circle-right::after {
+            transform: skew(-20deg, -37deg);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        
+    }
+    
+    @media (max-width: 525px) {
+        .circle {
+            width: 250;
+            height: 250px;
+        }
+
+        .circle-left,
+        .circle-right {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .circle-left::after,
+        .circle-right::after {
+            display: none;
+        }
+    }
+}

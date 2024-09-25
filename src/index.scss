@@ -4,13 +4,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-family: Roboto Flex, sans-serif;
 }
 
-#root {
-    padding-bottom: 20px;
+:root {
+    --primary: #F3AC00;
+    --secondary: rgb(179, 48, 0);
+    --background: #14121c;
+    --text: #ffffff;
+    --text2: #ffffff;
+    --accent: #ffc3c3;
+    --shadow: #14121c;
+    --overlay: #fde3d5aa;
 }
 
 body {
@@ -20,10 +25,8 @@ body {
     text-rendering: optimizeLegibility !important;
     width: 100%;
     -webkit-font-smoothing: antialiased !important;
-    padding: 0 20px;
     background-color: #14121c;
     color: #fff;
-    cursor: default;
     font-weight: 400;
     min-width: 320px;
     -webkit-overflow-scrolling: touch !important;
@@ -38,33 +41,10 @@ ul {
     list-style: none;
 }
 
-.img-responsive {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
-.button {
-    border: none;
-    box-shadow: none;
-    cursor: pointer;
-    font-family: inherit;
-    outline: none;
-    transition: all .25s ease;
-    -webkit-transition: all .25s ease;
-    -webkit-tap-highlight-color: transparent;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    width: 100%;
-}
-
-h1 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 27px;
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffa500;
+    margin-bottom: 20px;
+    text-align: center;
 }
