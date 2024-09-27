@@ -17,13 +17,15 @@ export default function Arena() {
   return (
     <div className='arena'>
       <h1 className="title">Leaderboard</h1>
-      {circles.map((circle, index) => (
+      {/* {circles.map((circle, index) => (
         <div className={index % 2 == 0 ? 'circle-wrapper circle-left' : 'circle-wrapper circle-right'}>
           <div key={circle.id} className={`circle`}>
             <span>{circle.info}</span>
           </div>
         </div>
-      ))}
+      ))} */}
+      <img className='img' src="/images/img2.jpg" alt="" />
+
     </div>
   )
 }
