@@ -1,43 +1,179 @@
-.ops header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-}
+.ops {
+    padding-bottom: 20px;
 
-.ops .time {
-    font-size: 24px;
-    font-weight: bold;
-}
+    .date {
+        text-align: end;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
-.ops main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
+    .combo {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 20px;
+    }
 
-.ops .left-column {
-    width: 30%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-}
+    .images-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
 
-.ops .grid-item {
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
+        .image {
+            width: calc(25% - 20px);
+            border-radius: 20px;
+            height: 200px;
 
-.ops .right-column {
-    width: 70%;
-}
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
 
-.ops h2 {
-    margin-top: 0;
-}
+    .nav-tabs {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        border: none;
 
-.ops footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0;
+        .nav-item {
+            width: calc(25% - 10px);
+            text-align: center;
+
+            .nav-link {
+                border: 1px solid var(--text);
+                border-radius: 8px 8px 0 0;
+                color: var(--text);
+                font-size: 1.2rem;
+                font-weight: 400;
+
+                &.active {
+                    background-color: var(--text);
+                    color: var(--background);
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+
+        .left,
+        .right {
+            width: calc(50% - 20px);
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                .card-image {
+                    width: 50%;
+                    height: 150px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .card-info {
+                    margin-left: 8px;
+
+                    p {
+                        font-size: 1rem;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    @media (max-width: 768px) {
+        .date {
+            font-size: 1.2rem;
+        }
+
+        .combo {
+            flex-direction: column;
+            font-size: 1rem;
+        }
+
+        .images-container {
+            gap: 10px;
+
+            .image {
+                width: calc(50% - 10px);
+                height: 150px;
+            }
+        }
+
+        .nav-tabs {
+            flex-wrap: wrap;
+
+            .nav-item {
+                width: calc(50% - 5px);
+            }
+        }
+
+        .tab-content {
+            // flex-direction: column;
+
+            .left,
+            .right {
+                width: calc(50% - 10px);
+
+                .item {
+                    flex-direction: column;
+
+                    .card-image {
+                        width: 100%;
+                        height: 150px;
+                    }
+
+                    .card-info {
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .images-container {
+            .image {
+                width: 100%;
+            }
+        }
+
+        .nav-tabs {
+            .nav-item {
+                width: 100%;
+            }
+        }
+
+        .tab-content {
+            flex-wrap: wrap;
+
+            .left,
+            .right {
+                width: 100%;
+            }
+        }
+    }
 }
