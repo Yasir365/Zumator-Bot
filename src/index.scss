@@ -10,12 +10,11 @@
 :root {
     --primary: #F3AC00;
     --secondary: rgb(179, 48, 0);
-    --background: #14121c;
+    --background: #1c172c;
     --text: #ffffff;
     --text2: #ffffff;
     --accent: #ffc3c3;
-    --shadow: #14121c;
-    --overlay: #fde3d5aa;
+    --shadow: rgb(43, 39, 61);
 }
 
 body {
@@ -25,7 +24,7 @@ body {
     text-rendering: optimizeLegibility !important;
     width: 100%;
     -webkit-font-smoothing: antialiased !important;
-    background-color: #14121c;
+    background-color: var(--background);
     color: #fff;
     font-weight: 400;
     min-width: 320px;
