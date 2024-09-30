@@ -1,18 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './arena.scss';
 
 export default function Arena() {
   const [activeStep, setActiveStep] = useState(0);
   const articleRefs = useRef([]);
 
-  // Handle click outside to collapse articles
   useEffect(() => {
     const handleMouseUp = (e) => {
       const activeArticle = articleRefs.current[activeStep - 1];
       if (activeArticle && !activeArticle.contains(e.target)) {
-        setActiveStep(null);  // Deselect the article if clicked outside
+        setActiveStep(null);
       }
     };
+
 
     document.addEventListener('mouseup', handleMouseUp);
     return () => document.removeEventListener('mouseup', handleMouseUp);
@@ -70,40 +70,54 @@ export default function Arena() {
   return (
     <div className="arena d-flex flex-column align-items-center py-5">
       <section className="text-danger">
-        {/* <div className="circle">
-          <i className="fa-solid fa-sitemap display-1 mb-3" />
-          <h4>STEP 1</h4>Ready for this?
-        </div> */}
-        {renderArticle(1, false, 'danger')}
-        {renderArticle(2, false, 'danger')}
-        {renderArticle(3, false, 'danger')}
-        {renderArticle(4, false, 'danger')}
-        {renderArticle(5, false, 'danger')}
+        <div className="circle-wrapper">
+          <div className="circle">
+            <i className="fa-solid fa-meteor display-1 mb-3" />
+            <h4>STEP 1</h4>Ready for this?
+          </div>
+
+        </div>
+        <div className='content'>
+          {renderArticle(1, false, 'danger')}
+          {renderArticle(2, false, 'danger')}
+          {renderArticle(3, false, 'danger')}
+          {renderArticle(4, false, 'danger')}
+          {renderArticle(5, false, 'danger')}
+        </div>
       </section>
 
       <section className="text-warning">
-        {/* <div className="circle">
-          <i className="fa-solid fa-cookie-bite display-1 mb-3" />
-          <h4>STEP 2</h4>You're doing great!
-        </div> */}
-        {renderArticle(6, false, 'warning')}
-        {renderArticle(7, false, 'warning')}
-        {renderArticle(8, false, 'warning')}
-        {renderArticle(9, false, 'warning')}
-        {renderArticle(10, false, 'warning')}
+        <div className="circle-wrapper">
+
+          <div className="circle">
+            <i className="fa-solid fa-cookie-bite display-1 mb-3" />
+            <h4>STEP 2</h4>You're doing great!
+          </div>
+        </div>
+        <div className='content'>
+          {renderArticle(6, false, 'warning')}
+          {renderArticle(7, false, 'warning')}
+          {renderArticle(8, false, 'warning')}
+          {renderArticle(9, false, 'warning')}
+          {renderArticle(10, false, 'warning')}
+        </div>
       </section>
 
       <section className="text-success">
-        {/* <div className="circle">
-          <i className="fa-solid fa-ghost display-1 mb-3" />
-          <h4>STEP 3</h4>Almost There!
-        </div> */}
-        {renderArticle(11, false, 'success')}
-        {renderArticle(12, false, 'success')}
-        {renderArticle(13, false, 'success')}
-        {renderArticle(14, false, 'success')}
-        {renderArticle(15, false, 'success')}
-        {renderArticle(16, true, 'success')}
+        <div className="circle-wrapper">
+          <div className="circle">
+            <i className="fa-solid fa-ghost display-1 mb-3" />
+            <h4>STEP 3</h4>Almost There!
+          </div>
+        </div>
+        <div className='content'>
+          {renderArticle(11, false, 'success')}
+          {renderArticle(12, false, 'success')}
+          {renderArticle(13, false, 'success')}
+          {renderArticle(14, false, 'success')}
+          {renderArticle(15, false, 'success')}
+          {renderArticle(16, true, 'success')}
+        </div>
       </section>
     </div>
   );
