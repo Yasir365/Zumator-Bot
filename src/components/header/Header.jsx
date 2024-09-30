@@ -18,7 +18,7 @@ export default function Header() {
         <header className='user-header'>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/"><img src='/images/logo.ico' alt="Nav Logo" /></Link>
+                    <Link className="navbar-brand" to="/"><img src='/images/main.png' alt="Nav Logo" /></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" >
                         <i className="navbar-toggler-icon"></i>
                     </button>
@@ -31,7 +31,7 @@ export default function Header() {
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ops"> Ops </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/air-drop"> Air Drop </NavLink>
+                                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard"> Ship Yard </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends"> Friends </NavLink>

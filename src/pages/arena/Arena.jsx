@@ -1,31 +1,110 @@
-import './arena.scss'
-
-
-const circles = [
-  { id: 1, info: 'Top Performer' },
-  { id: 2, info: 'Fastest Growth' },
-  { id: 3, info: 'Most Consistent' },
-  { id: 4, info: 'Best Innovation' },
-  { id: 5, info: 'Strategic Thinker' },
-  { id: 6, info: 'Excellent Leadership' },
-  { id: 7, info: 'Rising Star' },
-  { id: 8, info: 'Outstanding Collaboration' }
-];
-
+import React, { useState, useRef, useEffect } from 'react';
+import './arena.scss';
 
 export default function Arena() {
-  return (
-    <div className='arena'>
-      <h1 className="title">Leaderboard</h1>
-      {/* {circles.map((circle, index) => (
-        <div className={index % 2 == 0 ? 'circle-wrapper circle-left' : 'circle-wrapper circle-right'}>
-          <div key={circle.id} className={`circle`}>
-            <span>{circle.info}</span>
+  const [activeStep, setActiveStep] = useState(0);
+  const articleRefs = useRef([]);
+
+  // Handle click outside to collapse articles
+  useEffect(() => {
+    const handleMouseUp = (e) => {
+      const activeArticle = articleRefs.current[activeStep - 1];
+      if (activeArticle && !activeArticle.contains(e.target)) {
+        setActiveStep(null);  // Deselect the article if clicked outside
+      }
+    };
+
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => document.removeEventListener('mouseup', handleMouseUp);
+  }, [activeStep]);
+
+  const handlePrevNext = (isPrev, step) => {
+    const newStep = isPrev ? step - 1 : step + 1;
+    if (newStep >= 1 && newStep <= 16) {
+      setActiveStep(newStep);
+      articleRefs.current[newStep - 1]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      });
+    }
+  };
+
+  const renderArticle = (step, isLastStep, color) => {
+    return (
+      <article
+        data-step={step}
+        ref={(el) => (articleRefs.current[step - 1] = el)}
+        className={activeStep === step ? 'active' : ''}
+        onClick={() => setActiveStep(step)}
+      >
+        <header className={`d-flex align-items-center text-${color} bg-${color} bg-opacity-10`}>
+          <i className={`fa-solid fa-meteor bg-${color}`} />
+          <h6 className="text-uppercase my-3 ps-4">Lorem Ipsum dolor sit Amet</h6>
+        </header>
+        <div className="body">
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </small>
+          <div className="d-flex justify-content-between mt-3 controls">
+            <button
+              className={`btn btn-outline-${color} ${step === 1 ? 'invisible' : ''}`}
+              onClick={() => handlePrevNext(true, step)}
+            >
+              Prev
+            </button>
+            <button
+              className={`btn btn-outline-${color} ${isLastStep ? 'invisible' : ''}`}
+              onClick={() => handlePrevNext(false, step)}
+            >
+              Next
+            </button>
           </div>
         </div>
-      ))} */}
-      <img className='img' src="/images/img2.jpg" alt="" />
+      </article>
+    );
+  };
 
+  return (
+    <div className="arena d-flex flex-column align-items-center py-5">
+      <section className="text-danger">
+        {/* <div className="circle">
+          <i className="fa-solid fa-sitemap display-1 mb-3" />
+          <h4>STEP 1</h4>Ready for this?
+        </div> */}
+        {renderArticle(1, false, 'danger')}
+        {renderArticle(2, false, 'danger')}
+        {renderArticle(3, false, 'danger')}
+        {renderArticle(4, false, 'danger')}
+        {renderArticle(5, false, 'danger')}
+      </section>
+
+      <section className="text-warning">
+        {/* <div className="circle">
+          <i className="fa-solid fa-cookie-bite display-1 mb-3" />
+          <h4>STEP 2</h4>You're doing great!
+        </div> */}
+        {renderArticle(6, false, 'warning')}
+        {renderArticle(7, false, 'warning')}
+        {renderArticle(8, false, 'warning')}
+        {renderArticle(9, false, 'warning')}
+        {renderArticle(10, false, 'warning')}
+      </section>
+
+      <section className="text-success">
+        {/* <div className="circle">
+          <i className="fa-solid fa-ghost display-1 mb-3" />
+          <h4>STEP 3</h4>Almost There!
+        </div> */}
+        {renderArticle(11, false, 'success')}
+        {renderArticle(12, false, 'success')}
+        {renderArticle(13, false, 'success')}
+        {renderArticle(14, false, 'success')}
+        {renderArticle(15, false, 'success')}
+        {renderArticle(16, true, 'success')}
+      </section>
     </div>
-  )
+  );
 }

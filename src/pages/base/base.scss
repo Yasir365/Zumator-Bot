@@ -1,0 +1,186 @@
+.base {
+    padding-bottom: 30px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            i {
+                font-size: 2rem;
+                font-weight: 900;
+            }
+        }
+
+        .middle {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .right {
+            span {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 0 8px;
+            }
+        }
+
+    }
+
+    .settings {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // flex-direction: column;
+
+            i {
+                font-size: 2rem;
+            }
+
+            p {
+                margin-left: 4px;
+                margin-bottom: 0;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+        }
+
+        .profit {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .images-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--text);
+            width: calc(25% - 20px);
+            border-radius: 20px;
+            height: 200px;
+
+            i {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .phone-number {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .main-image-wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        .image {
+            width: 50%;
+            height: 50vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0;
+
+        .button {
+            background: linear-gradient(90deg, #2253ff 1.46%, #1744e1 99.81%);
+            border: 1px solid var(--text);
+            border-radius: 71px;
+            color: var(--text);
+            display: inline-flex;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 500;
+            height: 80px;
+            margin-top: 36px;
+            max-width: 320px;
+            min-width: 320px;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                position: relative;
+                z-index: 3;
+            }
+
+            &:after,
+            &:before {
+                content: "";
+                display: block;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover:after {
+                filter: blur(30px);
+            }
+
+            &:before {
+                background: linear-gradient(90deg, #2253ff 1.46%, #3a66ff00 50.8%, #2253ff 99.81%);
+                border: 2px solid #2252fd;
+                border-radius: 71px;
+                height: calc(100% + 32px);
+                width: calc(100% + 32px);
+                z-index: 2;
+            }
+
+            &:after {
+                background: linear-gradient(90deg, #2253ff 1.46%, #3a66ff82 50.8%, #2253ff 99.81%);
+                border-radius: 71px;
+                filter: blur(20px);
+                height: calc(100% + 30px);
+                transition: all .25s ease;
+                -webkit-transition: all .25s ease;
+                width: calc(100% + 50px);
+                z-index: 1;
+            }
+
+        }
+    }
+
+    @media (max-width: 480px) {
+        .images-container .item{
+            width: 45%;
+        }
+    }
+
+}
