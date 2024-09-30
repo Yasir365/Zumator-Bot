@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './base.scss';
 
 
 export default function Base() {
     const [value, setValue] = useState(0);
+
+    useEffect(() => {
+        const storedValue = localStorage.getItem('value');
+        if (storedValue) {
+            setValue(+storedValue);
+        }
+    }, []);
+
+    const handleTap = () => {
+        setValue((prevValue) => prevValue + 1);
+        localStorage.setItem('value', String(value + 1));
+    }
 
     return (
         <div className='base'>
@@ -14,7 +26,7 @@ export default function Base() {
                     className='glow-on-click'
                     src="/images/logo.ico"
                     alt="coin"
-                    onClick={() => setValue(value + 1)}
+                    onClick={handleTap}
                 />
             </div>
             <h1 className="mt-5 text-center value">

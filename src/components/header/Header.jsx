@@ -1,7 +1,19 @@
 import './header.scss'
 import { Link, NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Header() {
+
+    useEffect(() => {
+        const navbarToggler = document.getElementById('navbarToggler');
+        const navbarButtons = document.querySelectorAll('.nav-link');
+
+        navbarButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                navbarToggler.classList.remove('show');
+            });
+        });
+    }, []);
     return (
         <header className='user-header'>
             <nav className="navbar navbar-expand-lg">

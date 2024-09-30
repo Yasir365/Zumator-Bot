@@ -6,7 +6,7 @@ export default function App() {
     return (
         <>
             <Header />
-            <div className="container mt-5">
+            <div className="container outlet-container">
                 <Outlet />
             </div>
         </>

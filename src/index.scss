@@ -54,3 +54,13 @@ ul {
     width: 100%;
     height: calc(100vh - 300px);
 }
+
+.outlet-container {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .outlet-container {
+        margin-top: 100px;
+    }
+}
