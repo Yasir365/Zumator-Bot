@@ -33,9 +33,9 @@ export default function Header() {
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard"> Ship Yard </NavLink>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends"> Friends </NavLink>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena"> Arena </NavLink>
                             </li>
