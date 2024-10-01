@@ -13,12 +13,12 @@ export default function Arena() {
       }
     };
 
-
     document.addEventListener('mouseup', handleMouseUp);
     return () => document.removeEventListener('mouseup', handleMouseUp);
   }, [activeStep]);
 
-  const handlePrevNext = (isPrev, step) => {
+  const handlePrevNext = (e, isPrev, step) => {
+    e.stopPropagation(); // Prevent event bubbling to parent article
     const newStep = isPrev ? step - 1 : step + 1;
     if (newStep >= 1 && newStep <= 16) {
       setActiveStep(newStep);
@@ -51,13 +51,13 @@ export default function Arena() {
           <div className="d-flex justify-content-between mt-3 controls">
             <button
               className={`btn btn-outline-${color} ${step === 1 ? 'invisible' : ''}`}
-              onClick={() => handlePrevNext(true, step)}
+              onClick={(e) => handlePrevNext(e, true, step)}  // Updated handler
             >
               Prev
             </button>
             <button
               className={`btn btn-outline-${color} ${isLastStep ? 'invisible' : ''}`}
-              onClick={() => handlePrevNext(false, step)}
+              onClick={(e) => handlePrevNext(e, false, step)}  // Updated handler
             >
               Next
             </button>
@@ -75,9 +75,8 @@ export default function Arena() {
             <i className="fa-solid fa-meteor display-1 mb-3" />
             <h4>STEP 1</h4>Ready for this?
           </div>
-
         </div>
-        <div className='content'>
+        <div className="content">
           {renderArticle(1, false, 'danger')}
           {renderArticle(2, false, 'danger')}
           {renderArticle(3, false, 'danger')}
@@ -88,13 +87,12 @@ export default function Arena() {
 
       <section className="text-warning">
         <div className="circle-wrapper">
-
           <div className="circle">
             <i className="fa-solid fa-cookie-bite display-1 mb-3" />
             <h4>STEP 2</h4>You're doing great!
           </div>
         </div>
-        <div className='content'>
+        <div className="content">
           {renderArticle(6, false, 'warning')}
           {renderArticle(7, false, 'warning')}
           {renderArticle(8, false, 'warning')}
@@ -110,7 +108,7 @@ export default function Arena() {
             <h4>STEP 3</h4>Almost There!
           </div>
         </div>
-        <div className='content'>
+        <div className="content">
           {renderArticle(11, false, 'success')}
           {renderArticle(12, false, 'success')}
           {renderArticle(13, false, 'success')}

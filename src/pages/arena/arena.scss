@@ -116,10 +116,6 @@
             :nth-child(even) article {
                 text-align: right;
                 transform: translateX(0%);
-
-                @include max(525px) {
-                    transform: translateX(0);
-                }
             }
 
             :nth-child(even) article header {
