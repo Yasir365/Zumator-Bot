@@ -22,8 +22,8 @@ export default function Header() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" >
                         <i className="navbar-toggler-icon"></i>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarToggler">
-                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <div className="navbar-collapse" id="navbarToggler">
+                        <ul className="navbar-nav mx-lg-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/"> Base </NavLink>
                             </li>

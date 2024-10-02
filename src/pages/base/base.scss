@@ -117,7 +117,7 @@
         margin: 40px 0;
 
         .button {
-            background: linear-gradient(90deg, #2253ff 1.46%, #1744e1 99.81%);
+            background: linear-gradient(90deg, #29ff22 1.46%, #2d9e0b 99.81%);
             border: 1px solid var(--text);
             border-radius: 71px;
             color: var(--text);
@@ -155,8 +155,8 @@
             }
 
             &:before {
-                background: linear-gradient(90deg, #2253ff 1.46%, #3a66ff00 50.8%, #2253ff 99.81%);
-                border: 2px solid #2252fd;
+                background: linear-gradient(90deg, #169711 1.46%, #3a66ff00 50.8%, #169711 99.81%);
+                border: 2px solid #169711;
                 border-radius: 71px;
                 height: calc(100% + 32px);
                 width: calc(100% + 32px);
@@ -164,7 +164,7 @@
             }
 
             &:after {
-                background: linear-gradient(90deg, #2253ff 1.46%, #3a66ff82 50.8%, #2253ff 99.81%);
+                background: linear-gradient(90deg, #169711 1.46%, #169711 50.8%, #169711 99.81%);
                 border-radius: 71px;
                 filter: blur(20px);
                 height: calc(100% + 30px);
@@ -178,7 +178,7 @@
     }
 
     @media (max-width: 480px) {
-        .images-container .item{
+        .images-container .item {
             width: 45%;
         }
     }

@@ -43,7 +43,7 @@ ul {
 .title {
     font-size: 2rem;
     font-weight: 800;
-    color: #ffa500;
+    color: var(--primary);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -60,6 +60,7 @@ ul {
 
 @media screen and (max-width: 768px) {
     .outlet-container {
-        margin-top: 100px;
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
 }

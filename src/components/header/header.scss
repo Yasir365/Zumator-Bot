@@ -6,8 +6,8 @@
 
 .user-header {
     @include max(768px) {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        bottom: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
@@ -74,4 +74,43 @@
         }
 
     }
+}
+
+@media screen and (max-width: 768px) {
+    .user-header{
+        .navbar{
+            padding-bottom: 0;
+            .navbar-brand{
+                display: none;
+            }
+    
+            .navbar-toggler{
+                display: none;
+            }
+    
+            .navbar-collapse{
+                display: flex;
+            }
+            .navbar-nav{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex: 4;
+                margin-bottom: 0 !important;
+                
+                .nav-item{
+                    border-bottom: none;
+                    text-align: center;
+                    background-color: var(--shadow);
+                    border-radius: 12px 12px 0 0;
+                    flex: 1;
+                    a{
+                        font-weight: 700;
+                    }
+                    
+                }
+            }
+        }
+    } 
+    
 }
