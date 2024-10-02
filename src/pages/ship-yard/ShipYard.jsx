@@ -11,16 +11,16 @@ export default function ShipYard() {
 
             <div className="row main-heading">
                 <div className="col-sm-6">
-                    <h3>Fire : --------</h3>
+                    <div className='content'><span>Fire:</span> <span>90</span> </div>
                 </div>
                 <div className="col-sm-6">
-                    <h3>Shield : --------</h3>
+                    <div className='content'><span>Shield:</span> <span>10</span> </div>
                 </div>
                 <div className="col-sm-6">
-                    <h3>Fuel Capacity : --------</h3>
+                    <div className='content'><span>Fuel Capacity:</span> <span>50</span> </div>
                 </div>
                 <div className="col-sm-6">
-                    <h3>speed : --------</h3>
+                    <div className='content'><span>Speed:</span> <span>75</span> </div>
                 </div>
             </div>
 

@@ -19,6 +19,20 @@
 
     .main-heading {
         margin-top: 20px;
+
+        .content{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+
+            :last-child{
+                font-weight: 500;
+            }
+            
+            :first-child{
+                font-weight: 600;
+            }
+        }
     }
 
     .item-wrapper {
