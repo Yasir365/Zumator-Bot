@@ -13,9 +13,9 @@ export default function Base() {
     return (
         <div className='base'>
             <div className='header'>
-                <div className='left'>
+                {/* <div className='left'>
                     <i class="fa-regular fa-circle-xmark"></i>
-                </div>
+                </div> */}
 
                 <div className='middle'>
                     Name (Car)

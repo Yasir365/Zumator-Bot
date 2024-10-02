@@ -6,12 +6,12 @@
         justify-content: space-between;
         align-items: center;
 
-        .left {
-            i {
-                font-size: 2rem;
-                font-weight: 900;
-            }
-        }
+        // .left {
+        //     i {
+        //         font-size: 2rem;
+        //         font-weight: 900;
+        //     }
+        // }
 
         .middle {
             font-size: 2rem;
@@ -19,6 +19,10 @@
         }
 
         .right {
+            i{
+                color: var(--primary);
+                font-size: 1.3rem;
+            }
             span {
                 font-size: 1.5rem;
                 font-weight: 700;
@@ -197,6 +201,11 @@
     }
 
     @media (max-width: 480px) {
+        .header .middle{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
         .images-container .item {
             width: 45%;
         }
