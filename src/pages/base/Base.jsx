@@ -41,19 +41,19 @@ export default function Base() {
 
             <div className='images-container'>
                 <div className='item'>
-                    <i class="fa-brands fa-earlybirds"></i>
+                    <i class="fa-solid fa-coins"></i>
                     <p>Cambo</p>
                 </div>
                 <div className='item'>
-                    <i class="fa-brands fa-earlybirds"></i>
+                    <i class="fa-brands fa-bitcoin"></i>
                     <p>Cipher</p>
                 </div>
                 <div className='item'>
-                    <i class="fa-brands fa-earlybirds"></i>
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
                     <p>Daily</p>
                 </div>
                 <div className='item'>
-                    <i class="fa-brands fa-earlybirds"></i>
+                    <i class="fa-regular fa-money-bill-1"></i>
                     <p>Task</p>
                 </div>
             </div>
@@ -63,7 +63,7 @@ export default function Base() {
             </div>
 
             <div className="phone-number">
-                Points: {count}
+                Points: <span className='text-warning'>{count}</span>
             </div>
 
             <div className="main-image-wrapper">
