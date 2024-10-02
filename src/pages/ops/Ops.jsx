@@ -21,7 +21,7 @@ export default function Ops() {
       items: [
         { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
         { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
+        // { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
       ],
     },
     {
@@ -29,7 +29,7 @@ export default function Ops() {
       items: [
         { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
         { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
+        // { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
       ],
     },
     {
@@ -37,7 +37,7 @@ export default function Ops() {
       items: [
         { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
         { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
+        // { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
       ],
     },
     {
@@ -45,7 +45,7 @@ export default function Ops() {
       items: [
         { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
         { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
+        // { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
       ],
     },
   ];
