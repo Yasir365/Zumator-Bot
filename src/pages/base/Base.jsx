@@ -1,7 +1,14 @@
 import './base.scss';
+import { useState } from 'react';
 
 
 export default function Base() {
+    const [count, setCount] = useState(+localStorage.getItem('count') || 0);
+
+    const updateCount = () => {
+        setCount(count + 10);
+        localStorage.setItem('count', count + 10);
+    }
 
     return (
         <div className='base'>
@@ -55,9 +62,13 @@ export default function Base() {
                 123-456-789
             </div>
 
+            <div className="phone-number">
+                Points: {count}
+            </div>
+
             <div className="main-image-wrapper">
                 <div className="image">
-                    <img src="/images/main.png" alt="" />
+                    <img src="/images/main.png" alt="" onClick={() => updateCount()} />
                 </div>
             </div>
 
