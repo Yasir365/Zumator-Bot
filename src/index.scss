@@ -11,7 +11,7 @@
     --primary: #3B643B;
     --secondary: #304130;
     --primary-light: #03E104;
-    --background: #1c172c;
+    --background: #2B9946;
     --text: #fff;
     --text2: #000;
     --accent: #FFD700;
@@ -24,10 +24,13 @@ body {
     min-width: 320px;
     max-width: 768px;
     -webkit-font-smoothing: antialiased !important;
-    background-color: var(--background);
+    // background-color: var(--background);
     min-width: 320px;
     overflow-x: hidden;
     margin: auto;
+    color: var(--text);
+    font-size: 12px;
+    background: url('/images/bg.png') no-repeat center center fixed;
 }
 a {
     text-decoration: none;
@@ -37,6 +40,11 @@ ul {
     list-style: none;
 }
 
+p{
+    margin: 0;
+}
+
 .outlet-container {
     margin-top: 2rem;
+    min-height: 100vh;
 }

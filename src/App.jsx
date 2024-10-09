@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 export default function App() {
     return (
         <>
-            <div className="container outlet-container">
+            <div className="outlet-container">
                 <Outlet />
             </div>
             <Navbar />

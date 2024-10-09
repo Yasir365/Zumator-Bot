@@ -1,0 +1,25 @@
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 8px;
+    border-radius: 6px;
+    margin: 0 12px;
+
+    .profile-container{
+        display: flex;
+        align-items: center;
+
+        p{
+            margin-left: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+
+    .setting{
+        padding-left: 6px;
+        border-left: 1px solid var(--text);
+    }
+}

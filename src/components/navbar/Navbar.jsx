@@ -1,5 +1,6 @@
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-collapse">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ">
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
                   <img src="/images/nav-icon/frog.png" alt="" />
