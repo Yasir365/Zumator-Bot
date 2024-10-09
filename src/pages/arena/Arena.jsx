@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './arena.scss';
 
-export default function Arena() {
+export default function Money() {
   const [activeStep, setActiveStep] = useState(0);
   const articleRefs = useRef([]);
 

@@ -1,37 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto Flex, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
-    --primary: #1bfc07;
-    --secondary: rgb(179, 48, 0);
+    --primary: #3B643B;
+    --secondary: #304130;
+    --primary-light: #03E104;
     --background: #1c172c;
-    --text: #ffffff;
-    --text2: #ffffff;
-    --accent: #ffc3c3;
-    --shadow: rgb(43, 39, 61);
+    --text: #fff;
+    --text2: #000;
+    --accent: #FFD700;
+    --gradient1: linear-gradient(90deg, rgba(44, 103, 54, 1), rgba(36, 193, 102, 1));
+    --gradient1: linear-gradient(90deg, rgba(2, 54, 47, 1), rgba(2, 46, 20, 1));
 }
 
 body {
-    height: 100%;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     text-rendering: optimizeLegibility !important;
-    width: 100%;
+    min-width: 320px;
+    max-width: 768px;
     -webkit-font-smoothing: antialiased !important;
     background-color: var(--background);
-    color: #fff;
-    font-weight: 400;
     min-width: 320px;
-    -webkit-overflow-scrolling: touch !important;
     overflow-x: hidden;
+    margin: auto;
 }
-
 a {
     text-decoration: none;
 }
@@ -40,27 +37,6 @@ ul {
     list-style: none;
 }
 
-.title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.img {
-    border-radius: 20px;
-    width: 100%;
-    height: calc(100vh - 300px);
-}
-
 .outlet-container {
-    margin-top: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .outlet-container {
-        margin-top: 20px;
-        margin-bottom: 40px;
-    }
+    margin-top: 2rem;
 }

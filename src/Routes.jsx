@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-import Base from './pages/base/Base';
+import Home from './pages/base/Base';
 import Ops from './pages/ops/Ops';
-import Friends from './pages/friends/Friends';
-import Arena from './pages/arena/Arena';
 import ShipYard from './pages/ship-yard/ShipYard';
+import Friends from './pages/friends/Friends';
+import Money from './pages/arena/Arena';
 
 const router = createBrowserRouter([
     {
@@ -13,10 +13,10 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <Base />,
+                element: <Home />,
             },
             {
-                path: 'ops',
+                path: 'OPS',
                 element: <Ops />,
             },
             {
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
                 element: <Friends />,
             },
             {
-                path: 'arena',
-                element: <Arena />,
+                path: 'money',
+                element: <Money />,
             },
         ],
     },

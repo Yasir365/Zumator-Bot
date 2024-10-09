@@ -2,7 +2,7 @@ import './base.scss';
 import { useState } from 'react';
 
 
-export default function Base() {
+export default function Home() {
     const [count, setCount] = useState(+localStorage.getItem('count') || 0);
 
     const updateCount = () => {
