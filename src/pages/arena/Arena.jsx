@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
 import './arena.scss';
+import { useState, useRef, useEffect } from 'react';
 import Header from '../../components/header/Header';
 
 export default function Money() {
@@ -19,7 +19,7 @@ export default function Money() {
   }, [activeStep]);
 
   const handlePrevNext = (e, isPrev, step) => {
-    e.stopPropagation(); // Prevent event bubbling to parent article
+    e.stopPropagation();
     const newStep = isPrev ? step - 1 : step + 1;
     if (newStep >= 1 && newStep <= 16) {
       setActiveStep(newStep);
@@ -32,12 +32,7 @@ export default function Money() {
 
   const renderArticle = (step, isLastStep) => {
     return (
-      <article
-        data-step={step}
-        ref={(el) => (articleRefs.current[step - 1] = el)}
-        className={activeStep === step ? 'active' : ''}
-        onClick={() => setActiveStep(step)}
-      >
+      <article data-step={step} ref={(el) => (articleRefs.current[step - 1] = el)} className={activeStep === step ? 'active' : ''} onClick={() => setActiveStep(step)} >
         <header>
           <i className="fa-solid fa-meteor" />
           <h6 className="text-uppercase my-3 ps-4">Step {step}</h6>
@@ -45,12 +40,8 @@ export default function Money() {
         <div className="body">
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           <div className="d-flex justify-content-between mt-3 controls">
-            <button className={`btn ${step === 1 ? 'invisible' : ''}`} onClick={(e) => handlePrevNext(e, true, step)} >
-              Prev
-            </button>
-            <button className={`btn ${isLastStep ? 'invisible' : ''}`} onClick={(e) => handlePrevNext(e, false, step)} >
-              Next
-            </button>
+            <button className={`btn ${step === 1 ? 'invisible' : ''}`} onClick={(e) => handlePrevNext(e, true, step)} > Prev </button>
+            <button className={`btn ${isLastStep ? 'invisible' : ''}`} onClick={(e) => handlePrevNext(e, false, step)} > Next </button>
           </div>
         </div>
       </article>
@@ -73,7 +64,7 @@ export default function Money() {
           {renderArticle(9, false)}
           {renderArticle(10, false)}
           {renderArticle(11, false)}
-          {renderArticle(12, false)}
+          {renderArticle(12, true)}
         </div>
       </section>
     </div>
