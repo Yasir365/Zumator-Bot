@@ -2,10 +2,11 @@ import './friends.scss'
 
 export default function Friends() {
   return (
-    <div className='firends'>
-      <h1 className="title">Friends</h1>
-      <img className='img' src="/images/img4.jpg" alt="" />
-
+    <div className='firends-page'>
+      <div className='h-100 d-flex justify-content-center align-items-center flex-column'>
+        <h1 className="text-center">Friends</h1>
+        <h1 className="text-center">Comming Soon</h1>
+      </div>
     </div>
   )
 }
