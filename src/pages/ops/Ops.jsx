@@ -18,7 +18,7 @@ export default function Ops() {
       <Header />
 
       <div className="daily-combo">
-        <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="" /></p>
+        <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="info" /></p>
 
         <div className="header d-flex justify-content-between">
           <div className='d-flex align-items-center'>
@@ -26,7 +26,7 @@ export default function Ops() {
             <img src="/images/icons/star.png" alt="" />
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
-            <img src="/images/icons/usdt.png" alt="" />
+            <img src="/images/icons/usdt.png" alt="usdt" />
             <p className="value">416,815,3</p>
           </div>
         </div>
