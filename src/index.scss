@@ -15,8 +15,6 @@
     --text: #fff;
     --text2: #000;
     --accent: #FFD700;
-    --gradient1: linear-gradient(90deg, rgba(44, 103, 54, 1), rgba(36, 193, 102, 1));
-    --gradient1: linear-gradient(90deg, rgba(2, 54, 47, 1), rgba(2, 46, 20, 1));
 }
 
 body {
@@ -30,6 +28,7 @@ body {
     color: var(--text);
     font-size: 12px;
     background: url('/images/bg.png') no-repeat center center fixed;
+    background-size: cover;
 }
 a {
     text-decoration: none;

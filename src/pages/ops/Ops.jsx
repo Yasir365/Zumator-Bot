@@ -1,118 +1,201 @@
 import './ops.scss';
 import { useState } from 'react';
 import moment from 'moment';
+import Header from '../../components/header/Header';
+import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/ops.service';
 
 export default function Ops() {
   const [date] = useState(new Date());
-  const [activeTab, setActiveTab] = useState(1);
-
-  const formattedDate = moment(date).format('YYYY-MM-DD');
-
-  const tabs = [
-    { id: 1, name: 'Web 3', image: '/images/img1.jpg' },
-    { id: 2, name: 'Market', image: '/images/img2.jpg' },
-    { id: 3, name: 'Galatic', image: '/images/img3.jpg' },
-    { id: 4, name: 'Artifacts', image: '/images/img4.jpg' },
-  ];
-
-  const tabContent = [
-    {
-      id: 1,
-      items: [
-        { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        // { image: '/images/img1.jpg', text: 'Lorem ipsum dolor sit amet.' },
-      ],
-    },
-    {
-      id: 2,
-      items: [
-        { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        // { image: '/images/img2.jpg', text: 'Lorem ipsum dolor sit amet.' },
-      ],
-    },
-    {
-      id: 3,
-      items: [
-        { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        // { image: '/images/img3.jpg', text: 'Lorem ipsum dolor sit amet.' },
-      ],
-    },
-    {
-      id: 4,
-      items: [
-        { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
-        // { image: '/images/img4.jpg', text: 'Lorem ipsum dolor sit amet.' },
-      ],
-    },
-  ];
-
-  const TabItems = ({ items }) => (
-    <>
-      {items.map((item, index) => (
-        <div key={index} className="item">
-          <div className="card-image">
-            <img src={item.image} alt="" />
-          </div>
-          <div className="card-info">
-            <p>{item.text}</p>
-            <p>{item.text}</p>
-            <p>{item.text}</p>
-            <p>{item.text}</p>
-          </div>
-        </div>
-      ))}
-    </>
-  );
+  const [activeTab, setActiveTab] = useState('web3');
+  const tab1data = tab1Data
+  const tab2data = tab2Data
+  const tab3data = tab3Data
+  const tab4data = tab4Data
+  const formattedDate = moment(date).format('mm:ss:SS');
 
   return (
-    <div className="ops">
-      <div className="date">{formattedDate}</div>
+    <div className="ops-page">
+      <Header />
 
-      <div className="combo">
-        <div>Daily Combo</div>
-        <div>0.0000</div>
-      </div>
+      <div className="daily-combo">
+        <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="" /></p>
 
-      <div className="images-container">
-        {tabs.map((tab) => (
-          <div key={tab.id} className="image">
-            <img src={tab.image} alt={tab.name} />
+        <div className="header d-flex justify-content-between">
+          <div className='d-flex align-items-center'>
+            <p className="title">Daily Combo</p>
+            <img src="/images/icons/star.png" alt="" />
           </div>
-        ))}
+          <div className='earning d-flex align-items-between align-items-center'>
+            <img src="/images/icons/usdt.png" alt="" />
+            <p className="value">416,815,3</p>
+          </div>
+        </div>
+        <div className="item-container">
+          <div className="item">
+            <div className="img">
+              <img className='question' src="/images/icons/question.png" alt="" />
+              <img src="/images/icons/coins.png" alt="" />
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="img">
+              <img className='question' src="/images/icons/question.png" alt="" />
+              <img src="/images/icons/coins.png" alt="" />
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="img">
+              <img className='question' src="/images/icons/question.png" alt="" />
+              <img src="/images/icons/coins.png" alt="" />
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="img">
+              <img className='question' src="/images/icons/question.png" alt="" />
+              <img src="/images/icons/coins.png" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <ul className="nav nav-tabs">
-        {tabs.map((tab) => (
-          <li key={tab.id} className="nav-item">
-            <a
-              className={activeTab === tab.id ? 'nav-link active' : 'nav-link'}
-              href="#"
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.name}
-            </a>
-          </li>
-        ))}
+        <li className="nav-item">
+          <a className={activeTab === 'web3' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('web3')} >
+            Web 3
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className={activeTab === 'market' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('market')} >
+            Market
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className={activeTab === 'galactic' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('galactic')} >
+            Galactic
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className={activeTab === 'artifacts' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('artifacts')} >
+            Artifacts
+          </a>
+        </li>
       </ul>
 
-      {tabs.map(
-        (tab) =>
-          activeTab === tab.id && (
-            <div key={tab.id} className="tab-content d-flex">
-              {/* Left and right can now use the same component */}
-              <div className="left">
-                <TabItems items={tabContent.find((content) => content.id === tab.id).items} />
+      {
+        activeTab === 'web3' && (
+          <div className="tab-content d-flex">
+            {tab1data.map((item, index) => (
+              <div className="item" key={index}>
+                <div className="card-image">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="card-info">
+                  <div className='d-flex justify-content-between'>
+                    <div className="title">Zumator</div>
+                    <div className="value">{item.num}</div>
+                  </div>
+                  <div className='d-flex justify-content-between'>
+                    <div className="profit">Profit per hour</div>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                  </div>
+                  <div className="card-footer">
+                    <p>Lvl 2</p>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                  </div>
+                </div>
               </div>
-              <div className="right">
-                <TabItems items={tabContent.find((content) => content.id === tab.id).items} />
+            ))}
+          </div>
+        )
+      }
+
+      {
+        activeTab === 'market' && (
+          <div className="tab-content d-flex">
+            {tab2data.map((item, index) => (
+              <div className="item" key={index}>
+                <div className="card-image">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="card-info">
+                  <div className='d-flex justify-content-between'>
+                    <div className="title">Zumator</div>
+                    <div className="value">{item.num}</div>
+                  </div>
+                  <div className='d-flex justify-content-between'>
+                    <div className="profit">Profit per hour</div>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                  </div>
+                  <div className="card-footer">
+                    <p>Lvl 2</p>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                  </div>
+                </div>
               </div>
-            </div>
-          )
-      )}
+            ))}
+          </div>
+        )
+      }
+
+      {
+        activeTab === 'galactic' && (
+          <div className="tab-content d-flex">
+            {tab3data.map((item, index) => (
+              <div className="item" key={index}>
+                <div className="card-image">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="card-info">
+                  <div className='d-flex justify-content-between'>
+                    <div className="title">Zumator</div>
+                    <div className="value">{item.num}</div>
+                  </div>
+                  <div className='d-flex justify-content-between'>
+                    <div className="profit">Profit per hour</div>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                  </div>
+                  <div className="card-footer">
+                    <p>Lvl 2</p>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+      }
+
+      {
+        activeTab === 'artifacts' && (
+          <div className="tab-content d-flex">
+            {tab4data.map((item, index) => (
+              <div className="item" key={index}>
+                <div className="card-image">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="card-info">
+                  <div className='d-flex justify-content-between'>
+                    <div className="title">Zumator</div>
+                    <div className="value">{item.num}</div>
+                  </div>
+                  <div className='mt-2 d-flex justify-content-between'>
+                    <div className="profit">Profit per hour</div>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                  </div>
+                  <div className="card-footer mt-2">
+                    <p>Lvl 2</p>
+                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+      }
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .home-page {
-    padding-bottom: 0;
+    padding-bottom: 6rem;
     .rewards {
         display: flex;
         justify-content: space-between;
@@ -255,12 +255,6 @@
         }
     }
 
-}
-
-@media screen and (max-height: 720px) {
-    .home-page {
-        padding-bottom: 6rem;
-    }
 }
 
 @keyframes shadow-pulse {
