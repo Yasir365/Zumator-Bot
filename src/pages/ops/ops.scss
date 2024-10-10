@@ -131,7 +131,7 @@
             padding: 8px;
             background-color: var(--primary);
             border-radius: 8px;
-            width: 48.5%;
+            width: calc(50% - 6px);
 
             .card-image {
                 img {
