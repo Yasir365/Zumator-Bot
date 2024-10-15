@@ -58,3 +58,14 @@ p {
         background-color: var(--primary-light);
     }
 }
+
+@keyframes  floatUp{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
