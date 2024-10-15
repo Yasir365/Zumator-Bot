@@ -30,6 +30,7 @@ body {
     background: url('/images/bg.png') no-repeat center center fixed;
     background-size: cover;
 }
+
 a {
     text-decoration: none;
 }
@@ -38,7 +39,7 @@ ul {
     list-style: none;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -48,4 +49,12 @@ p{
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.progress {
+    background-color: var(--text);
+
+    .progress-bar {
+        background-color: var(--primary-light);
+    }
 }

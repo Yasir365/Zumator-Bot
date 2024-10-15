@@ -150,3 +150,46 @@ export const tab4Data = [
         total: 200
     },
 ]
+
+export const shipyardData = [
+    {
+        image: '/images/ship-yard/1.png',
+        title: 'Phoenix (Legendary)',
+        num: '#12345',
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
+    },
+    {
+        image: '/images/ship-yard/3.png',
+        title: 'Phoenix (Legendary)',
+        num: '#12345',
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
+    },
+    {
+        image: '/images/ship-yard/3.png',
+        title: 'Phoenix (Legendary)',
+        num: '#12345',
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
+    },
+    {
+        image: '/images/ship-yard/1.png',
+        title: 'Phoenix (Legendary)',
+        num: '#12345',
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
+    },
+]

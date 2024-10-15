@@ -2,7 +2,7 @@ import './ops.scss';
 import { useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
-import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/ops.service';
+import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
 
 export default function Ops() {
   const [date] = useState(new Date());
