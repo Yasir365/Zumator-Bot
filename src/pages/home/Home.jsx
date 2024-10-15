@@ -2,8 +2,22 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
+import { Tilt } from 'react-tilt';
+// import 'react-tilt/dist/tilt.css';
 
 const MaxEnergy = 120;
+
+const defaultOptions = {
+    reverse: true,  
+    max: 90,     
+    perspective: 5000,   
+    scale: 1.1,    // 2 = 200%, 1.5 = 150%, etc..
+    speed: 500,  
+    transition: true,   
+    axis: null,   
+    reset: true,    
+    easing: "cubic-bezier(.03,.98,.52,.99)",  
+}
 export default function Home() {
     const [date] = useState(new Date());
     const [count, setCount] = useState(+localStorage.getItem('count') || 0.00);
@@ -108,7 +122,11 @@ export default function Home() {
 
             <div className="main-image-wrapper">
                 <div className="image" onClick={reduceEnergy}>
-                    <img src="/images/hero.png" alt="" />
+                    <Tilt
+                        options={defaultOptions}
+                    >
+                        <img src="/images/hero.png" alt="" />
+                    </Tilt>
                 </div>
             </div>
 
