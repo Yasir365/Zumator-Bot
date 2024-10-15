@@ -208,9 +208,9 @@
         }
 
         .progress {
-            width: 100%;
+            width: calc(100% - 138px);
             height: 25px;
-            border-radius: 26px;
+            border-radius: 26px 0 0 26px;
             font-weight: 600;
 
             .progress-bar {
