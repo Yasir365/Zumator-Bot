@@ -1,63 +1,61 @@
 .arena-page {
     padding-bottom: 6rem;
 
-    section {
+    .heading {
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .card-container {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
         margin: 0 12px;
-        margin-top: 20px;
+        margin-top: 40px;
+        height: 80vh;
+        background: url('/images/arena/connector.png') no-repeat center center;
 
-        .content {
-            color: var(--text);
-            width: 100%;
+        .item{
+            position: absolute;
 
-            article {
-                margin-bottom: 12px;
-
-                header {
-                    display: flex;
-                    align-items: center;
-                    border-radius: 0 12px 0;
-                    background-color: var(--secondary);
-
-                    i {
-                        display: flex;
-                        font-size: 1.5em;
-                        background-clip: padding-box;
-                        padding: 14px;
-                        transition: transform 0.4s;
-                        color: var(--accent);
-                        margin: 0;
-                    }
-
-                    h6{
-                        color: var(--primary-light);
-                    }
-                }
-
-                .body {
-                    background: var(--primary);
-                    padding: 0 20px;
-                    border-radius: 0 0 12px;
-                    max-height: 0;
-                    transition: max-height 0.5s, padding 0.5s;
-                    overflow: hidden;
-
-                    .btn {
-                        padding: 3px 10px;
-                        border: 2px solid var(--accent);
-                        color: var(--text);
-                    }
-                }
+            &:nth-child(1) {
+                top: 0;
+                right: 32px;
+            }
+    
+            &:nth-child(2) {
+                left: 32px;
+                top: 11.7%;
+            }
+    
+            &:nth-child(3) {
+                right: 36px;
+                top: 31%;
+            }
+    
+            &:nth-child(4) {
+                left: 32px;
+                top: 42%;
+            }
+            
+            &:nth-child(5) {
+                right: 36px;
+                top: 61%;
+            }
+    
+            &:nth-child(6) {
+                left: 32px;
+                top: 72%;
             }
 
-            article.active .body {
-                padding: 20px;
-                max-height: 300px;
+            .rating{
+                margin-top: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
             }
         }
+        
+
+        
     }
 }
