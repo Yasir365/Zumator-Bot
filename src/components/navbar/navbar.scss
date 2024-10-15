@@ -6,11 +6,12 @@
     width: 100%;
     max-width: 525px;
     z-index: 1000;
-
+    background-color: #00141A;
+    
     .navbar {
         margin: 12px;
-        background-color: var(--secondary);
         border-radius: 8px;
+        background-color: var(--primary);
 
         .navbar-nav {
             display: flex;
