@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import Header from '../../components/header/Header';
 import './home.scss';
 
 
+const MaxEnergy = 300;
 export default function Home() {
+    const [energy, setEnergy] = useState(MaxEnergy);
+
     return (
         <div className='home-page'>
             <Header />
@@ -34,22 +38,22 @@ export default function Home() {
                 <h4>Daily Mission Board</h4>
                 <div className="item-container">
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/1.png" alt="" /> </div>
+                        <div className="img"> <img src="/images/daily-board/1.png" alt="img" /> </div>
                         <p>Combo</p>
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/2.png" alt="" /> </div>
+                        <div className="img"> <img src="/images/daily-board/2.png" alt="img" /> </div>
                         <p>Cypher</p>
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/3.png" alt="" /> </div>
+                        <div className="img"> <img src="/images/daily-board/3.png" alt="img" /> </div>
                         <p>Reward</p>
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/4.png" alt="" /> </div>
+                        <div className="img"> <img src="/images/daily-board/4.png" alt="img" /> </div>
                         <p>Task</p>
                     </div>
                 </div>
@@ -89,8 +93,8 @@ export default function Home() {
 
             <div className="progress-container">
                 <button className='claim'>Claim</button>
-                <div class="progress">
-                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 3</div>
+                <div className="progress">
+                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 3</div>
                 </div>
                 <div className="img"> <img src="/images/icons/layer.png" alt="" /> </div>
             </div>

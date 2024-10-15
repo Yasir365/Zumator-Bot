@@ -27,7 +27,7 @@ export default function Language() {
                             <div>
                                 <div className='title'>{item}</div>
                             </div>
-                            {item === selectedLanguage ? <i class="fa-solid fa-check"></i> : null}
+                            {item === selectedLanguage ? <i className="fa-solid fa-check"></i> : null}
                         </li>
                     ))
                 }

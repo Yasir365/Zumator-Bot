@@ -38,21 +38,21 @@ export default function Settings() {
                             <div className='title'>Select Language</div>
                             <small>{selectedLanguage}</small>
                         </div>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i className="fa-solid fa-chevron-right"></i>
                     </Link>
                 </li>
                 <li>
                     <Link to='/privacy-policy' className='item'>
                         <div className='title'>Privacy Policy</div>
 
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i className="fa-solid fa-chevron-right"></i>
                     </Link>
                 </li>
                 <li className='item' onClick={() => deleteAccount()}>
                     <div>
                         <div className='title'>Delete Account</div>
                     </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i className="fa-solid fa-chevron-right"></i>
                 </li>
             </ul>
         </div>
