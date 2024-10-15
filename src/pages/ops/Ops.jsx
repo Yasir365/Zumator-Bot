@@ -1,5 +1,5 @@
 import './ops.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
 import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
@@ -11,7 +11,15 @@ export default function Ops() {
   const tab2data = tab2Data
   const tab3data = tab3Data
   const tab4data = tab4Data
-  const formattedDate = moment(date).format('mm:ss:SS');
+  const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFormattedDate(moment().format('mm:ss'));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="ops-page">

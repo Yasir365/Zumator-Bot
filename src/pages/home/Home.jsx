@@ -1,13 +1,15 @@
+import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
-import './home.scss';
-
+import moment from 'moment';
 
 const MaxEnergy = 120;
 export default function Home() {
-    const [count , setCount] = useState(+localStorage.getItem('count') || 0.00);
+    const [date] = useState(new Date());
+    const [count, setCount] = useState(+localStorage.getItem('count') || 0.00);
     const [energy, setEnergy] = useState(MaxEnergy);
     const [energyPer, setEnergyPer] = useState(100);
+    const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,6 +28,14 @@ export default function Home() {
     useEffect(() => {
         setEnergyPer((energy / MaxEnergy) * 100);
     }, [energy]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFormattedDate(moment().format('mm:ss'));
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     const reduceEnergy = () => {
         if (energy > 0) {
@@ -114,7 +124,7 @@ export default function Home() {
 
             <div className="time">
                 <img src="/images/icons/clock.png" alt="" />
-                <span>08:05:22</span>
+                <span>{formattedDate}</span>
                 <img src="/images/icons/podium.png" alt="" />
                 <img src="/images/icons/chart.png" alt="" />
             </div>
