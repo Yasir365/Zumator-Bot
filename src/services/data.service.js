@@ -193,3 +193,36 @@ export const shipyardData = [
         profit: 50000
     },
 ]
+
+export const friendsData = [
+    {
+        image: '/images/friends/1.png',
+        title: 'Courtney Henry',
+        lvl: 251,
+        profit: '+25k'
+    },
+    {
+        image: '/images/friends/2.png',
+        title: 'Jenny Wilson',
+        lvl: 251,
+        profit: '+25k'
+    },
+    {
+        image: '/images/friends/3.png',
+        title: 'Dianne Russell',
+        lvl: 251,
+        profit: '+25k'
+    },
+    {
+        image: '/images/friends/4.png',
+        title: 'Jacob Jones',
+        lvl: 251,
+        profit: '+25k'
+    },
+    {
+        image: '/images/friends/5.png',
+        title: 'Esther Howard',
+        lvl: 251,
+        profit: '+25k'
+    },
+]

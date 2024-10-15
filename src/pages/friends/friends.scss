@@ -1,4 +1,92 @@
 .firends-page {
-    // padding-bottom: 6rem;
-    height: 90vh;
+    padding-bottom: 6rem;
+
+    .banner {
+        background: url('/images/friends/banner.png') no-repeat center center;
+        height: 230px;
+    }
+
+    .heading,
+    .sub-heading {
+        text-align: center;
+    }
+
+    .heading {
+        margin-bottom: 6px;
+        font-weight: 700;
+    }
+
+    .sub-heading {
+        font-weight: 500;
+    }
+
+    .send-invite {
+        background-color: var(--accent);
+        color: var(--text2);
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        border-radius: 26px;
+        padding: 12px 20px;
+        margin-top: 16px;
+        width: 240px;
+    }
+
+    .tab-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 12px;
+        margin-top: 40px;
+
+        .item {
+            padding: 8px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card-info {
+                display: flex;
+
+                .card-image {
+                    margin-right: 8px;
+
+                    img {
+                        object-fit: cover;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .user {
+                    margin: auto;
+
+                    .title {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+
+                    .value {
+                        font-size: 10px;
+                        font-weight: 400;
+                    }
+                }
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 4px;
+                }
+
+            }
+
+
+        }
+    }
 }
