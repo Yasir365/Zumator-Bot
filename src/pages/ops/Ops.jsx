@@ -4,6 +4,10 @@ import moment from 'moment';
 import Header from '../../components/header/Header';
 import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
 
+
+const count = +localStorage.getItem('count') || 0;
+
+
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
@@ -35,7 +39,7 @@ export default function Ops() {
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
             <img src="/images/icons/usdt.png" alt="usdt" />
-            <p className="value">416,815,3</p>
+            <p className="value">{count / 10000}</p>
           </div>
         </div>
         <div className="item-container">
