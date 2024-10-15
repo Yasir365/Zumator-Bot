@@ -226,3 +226,17 @@ export const friendsData = [
         profit: '+25k'
     },
 ]
+
+export const languages = [
+    "English",
+    "Spanish",
+    "French",
+    "German",
+    "Italian",
+    "Japanese",
+    "Russian",
+    "Mandarin",
+    "Arabic",
+    "Portuguese",
+    "Korean",
+]

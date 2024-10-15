@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './header.scss'
 
 export default function Header() {
@@ -9,7 +10,9 @@ export default function Header() {
                 <p className="title">Jane Cooper (CEO)</p>
             </div>
             <div className='setting'>
-                <img src="/images/icons/setting.png" alt="setting" />
+                <Link to="/settings">
+                    <img src="/images/icons/setting.png" alt="setting" />
+                </Link>
             </div>
         </header>
     )
