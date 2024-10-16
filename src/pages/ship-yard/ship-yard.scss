@@ -1,19 +1,99 @@
 .ship-yard-page {
     padding-bottom: 6rem;
 
-    .banner {
-        background: url('/images/ship-yard/banner.png') no-repeat center center;
-        height: 230px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .slick-slider {
+        background-color: var(--text);
+        width: 80%;
+        margin: auto;
+        border-radius: 12px;
+
+        .slick-slide {
+            height: 200px;
+
+            .item-container {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+
+                h6 {
+                    margin-top: 10px;
+                    text-align: center;
+                    color: var(--text2);
+                    font-weight: 700;
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 150px;
+                }
+            }
+
+
+        }
+
+        .slick-dots {
+            bottom: -20px !important;
+
+            li {
+                width: 8px;
+                height: 8px;
+            }
+
+            li button {
+                width: 8px;
+                height: 8px;
+                border-radius: 12px;
+                background-color: var(--text) !important;
+
+                &::before {
+                    content: '' !important;
+                }
+            }
+
+            li.slick-active {
+                width: 25px;
+
+            }
+
+            li.slick-active button {
+                width: 25px;
+                background-color: var(--accent) !important;
+                margin-right: 6px;
+            }
+        }
+
+        .slick-arrow {
+            z-index: 1000;
+            &::before {
+                content: '';
+            }
+
+            &.slick-next {
+                right: -6px;
+            }
+
+            &.slick-prev {
+                left: -15px;
+            }
+
+            i {
+                border-radius: 100%;
+                border: 1px solid var(--accent);
+                background-color: var(--secondary);
+                color: var(--text);
+                font-size: 20px;
+                padding: 3px 7px;
+            }
+        }
 
     }
 
+
     .progess-container {
         margin: 0 12px;
-        margin-top: 20px;
+        margin-top: 35px;
         padding: 12px;
         border: 1px solid var(--accent);
         border-radius: 12px;

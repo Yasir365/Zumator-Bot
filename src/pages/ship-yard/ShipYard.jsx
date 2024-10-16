@@ -1,14 +1,66 @@
 import './ship-yard.scss'
 import { shipyardData } from '../../services/data.service';
 
+import Slider from 'react-slick';
+
+function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={`${className} custom-arrow next-arrow`}
+            onClick={onClick}
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    );
+}
+
+function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={`${className} custom-arrow prev-arrow`}
+            onClick={onClick}
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+    );
+}
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+};
+
 export default function ShipYard() {
     const cardData = shipyardData
     return (
         <div className='ship-yard-page'>
-            <div className='banner'>
-                <h2>Noah</h2>
-                <img src="/images/ship-yard/2.png" alt="" />
-            </div>
+            <Slider {...settings}>
+                <div className="item-container">
+                    <h6>Noah</h6>
+                    <img src="/images/ship-yard/4.png" alt="" />
+                </div>
+                <div className="item-container">
+                    <h6>Noah</h6>
+                    <img src="/images/ship-yard/3.png" alt="" />
+                </div>
+                <div className="item-container">
+                    <h6>Noah</h6>
+                    <img src="/images/ship-yard/2.png" alt="" />
+                </div>
+                <div className="item-container">
+                    <h6>Noah</h6>
+                    <img src="/images/ship-yard/1.png" alt="" />
+                </div>
+            </Slider>
 
             <div className="progess-container">
                 <div className='d-flex justify-content-between mb-1'>
