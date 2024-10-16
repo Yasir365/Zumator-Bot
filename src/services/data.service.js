@@ -154,35 +154,43 @@ export const tab4Data = [
 export const shipyardData = [
     {
         image: '/images/ship-yard/1.png',
-        title: 'Fire Power',
+        title: 'Phoenix (Legendary)',
         num: '#12345',
-        points: 350,
-        progressName: 'Attack',
-        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
-    },
-    {
-        image: '/images/ship-yard/2.png',
-        title: 'Shield',
-        num: '#12345',
-        points: 350,
-        progressName: 'Defence',
-        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
     },
     {
         image: '/images/ship-yard/3.png',
-        title: 'Fire Power',
+        title: 'Phoenix (Legendary)',
         num: '#12345',
-        points: 350,
-        progressName: 'Attack',
-        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
     },
     {
-        image: '/images/ship-yard/4.png',
-        title: 'Shield',
+        image: '/images/ship-yard/3.png',
+        title: 'Phoenix (Legendary)',
         num: '#12345',
-        points: 350,
-        progressName: 'Defence',
-        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
+    },
+    {
+        image: '/images/ship-yard/1.png',
+        title: 'Phoenix (Legendary)',
+        num: '#12345',
+        attack: 350,
+        defence: 200,
+        speed: 450,
+        lvl: 'Lvl 2',
+        profit: 50000
     },
 ]
 
@@ -231,31 +239,4 @@ export const languages = [
     "Arabic",
     "Portuguese",
     "Korean",
-]
-
-export const leaderboardData = [
-    {
-        name: 'Jenny Wilson',
-        score: 12350,
-    },
-    {
-        name: 'Alexa Smith',
-        score: 10350,
-    },
-    {
-        name: 'William Smith',
-        score: 12350,
-    },
-    {
-        name: 'Esther Howard',
-        score: 11350,
-    },
-    {
-        name: 'Oliver Smith',
-        score: 15350,
-    },
-    {
-        name: 'Quincy Smith',
-        score: 10150,
-    },
 ]

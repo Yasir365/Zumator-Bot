@@ -62,8 +62,12 @@ export default function Home() {
 
                 <div className='right'>
                     <div className="item">
-                        <img src="/images/icons/grid.png" alt="" />
-                        <p>Profit per hour <span>0.05</span> <small> /hr</small></p>
+                        <img src="/images/icons/money.png" alt="" />
+                        <p>Profit per hour <span>0.05</span></p>
+                    </div>
+
+                    <div className="item item2">
+                        <img src="/images/icons/usdt.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -94,8 +98,12 @@ export default function Home() {
             </div>
 
             <div className="balance">
-                <img src="/images/icons/usdt.png" alt="" />
-                <span>{count / 10000}</span>
+                <div>
+                    <img src="/images/icons/usdt.png" alt="" />
+                    <span>({count / 10000})</span>
+                </div>
+                <p>User Balance</p>
+
             </div>
 
             <div className="main-image-wrapper">
@@ -110,14 +118,13 @@ export default function Home() {
                     <span>05/10</span>
                 </div>
                 <div>
-                    <img src="/images/icons/pass.png" alt="" />
+                    <img src="/images/icons/mini-frog.png" alt="" />
                 </div>
             </div>
 
             <div className="time">
                 <img src="/images/icons/clock.png" alt="" />
                 <span>{formattedDate}</span>
-                <span className='m-0 ms-4'>Recruite</span>
                 <img src="/images/icons/podium.png" alt="" />
                 <img src="/images/icons/chart.png" alt="" />
             </div>
@@ -125,7 +132,7 @@ export default function Home() {
             <div className="progress-container">
                 <button className='claim'>Claim</button>
                 <div className="progress">
-                    <div className="progress-bar" style={{ width: `${energyPer}%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
+                    <div className="progress-bar" style={{ width: `${energyPer}%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 3</div>
                 </div>
                 <div className="img"> <img src="/images/icons/layer.png" alt="" /> </div>
             </div>

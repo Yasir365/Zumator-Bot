@@ -3,24 +3,26 @@
     overflow-x: hidden;
 
     .daily-combo {
-        padding: 12px;
-        background-color: var(--primary);
+        padding: 12px 20px;
+        border-top: 2px solid var(--accent);
+        border-bottom: 2px solid var(--accent);
+        background-color: var(--secondary);
         margin-top: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 5px 0px var(--warning);
-        border: 1px solid var(--warning);
+        border-radius: 40px;
+        width: calc(100% + 20px);
+        transform: translateX(-10px);
 
         .time {
             text-align: right;
 
-            img {
+            img{
                 width: 12px;
                 height: 12px;
             }
         }
 
         .header {
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border-radius: 8px;
             padding: 4px 8px;
             margin-top: 4px;
@@ -33,7 +35,7 @@
 
             .earning {
                 border-radius: 26px;
-                background-color: var(--warning);
+                background-color: var(--accent);
 
                 img {
                     border: 5px solid var(--text);
@@ -60,7 +62,7 @@
             .item {
                 width: 90px;
                 background-color: var(--text);
-                border: 6px solid var(--secondary);
+                border: 6px solid var(--primary);
                 border-radius: 8px;
 
                 .img {
@@ -98,8 +100,9 @@
         justify-content: space-evenly;
         gap: 10px;
         border: none;
+        margin: 0 12px;
         margin-top: 20px;
-        background-color: var(--primary);
+        background-color: var(--secondary);
         border-radius: 30px;
         padding: 8px;
 
@@ -117,7 +120,7 @@
                 padding: 10px 8px;
 
                 &.active {
-                    background-color: var(--secondary);
+                    background-color: var(--primary);
                 }
             }
         }
@@ -129,11 +132,12 @@
         align-items: center;
         gap: 12px;
         flex-wrap: wrap;
+        margin: 0 12px;
         margin-top: 20px;
 
         .item {
             padding: 8px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border-radius: 8px;
             width: calc(50% - 6px);
 
@@ -162,7 +166,7 @@
                 .card-footer {
                     display: flex;
                     justify-content: space-between;
-                    background-color: var(--primary);
+                    background-color: var(--secondary);
                     padding: 6px 8px;
                     border-radius: 6px;
                 }

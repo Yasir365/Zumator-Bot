@@ -1,104 +1,23 @@
 .ship-yard-page {
     padding-bottom: 6rem;
 
-    .slick-slider {
-        background-color: var(--text);
-        width: 92%;
-        margin: auto;
-        border-radius: 12px;
-        border: 1px solid silver;
-
-        .slick-slide {
-            height: 200px;
-
-            .item-container {
-                display: flex !important;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                height: 100%;
-
-                h6 {
-                    margin-top: 10px;
-                    text-align: center;
-                    color: var(--text2);
-                    font-weight: 700;
-                }
-
-                img {
-                    object-fit: cover;
-                    height: 150px;
-                }
-            }
-
-
-        }
-
-        .slick-dots {
-            bottom: -20px !important;
-
-            li {
-                width: 8px;
-                height: 8px;
-            }
-
-            li button {
-                width: 8px;
-                height: 8px;
-                border-radius: 12px;
-                background-color: var(--text) !important;
-                border: 1px solid silver;
-
-                &::before {
-                    content: '' !important;
-                }
-            }
-
-            li.slick-active {
-                width: 30px;
-            }
-
-            li.slick-active button {
-                width: 30px;
-                background-color: var(--warning) !important;
-                margin-right: 6px;
-            }
-        }
-
-        .slick-arrow {
-            z-index: 1000;
-
-            &::before {
-                content: '';
-            }
-
-            &.slick-next {
-                right: -6px;
-            }
-
-            &.slick-prev {
-                left: -15px;
-            }
-
-            i {
-                border-radius: 100%;
-                border: 1px solid var(--warning);
-                background-color: var(--primary);
-                color: var(--text);
-                font-size: 20px;
-                padding: 3px 7px;
-            }
-        }
+    .banner {
+        background: url('/images/ship-yard/banner.png') no-repeat center center;
+        height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
     }
 
-
     .progess-container {
-        margin-top: 35px;
+        margin: 0 12px;
+        margin-top: 20px;
         padding: 12px;
-        border: 1px solid var(--warning);
+        border: 1px solid var(--accent);
         border-radius: 12px;
-        background-color: var(--primary);
+        background-color: var(--secondary);
 
         label {
             font-weight: 600;
@@ -115,11 +34,12 @@
         align-items: center;
         gap: 12px;
         flex-wrap: wrap;
+        margin: 0 12px;
         margin-top: 20px;
 
         .item {
             padding: 8px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border-radius: 8px;
             width: calc(50% - 6px);
 
@@ -149,15 +69,17 @@
                 }
 
                 .progress-container {
-                    padding: 4px 0;
+                    padding: 12px 0;
 
                     .progress {
                         height: 6px;
                     }
                 }
 
-                .description {
-                    font-size: 10px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 4px;
                 }
 
                 .upgrade {
@@ -167,7 +89,7 @@
                     width: 100%;
                     margin-top: 8px;
                     font-weight: 600;
-                    background-color: var(--warning);
+                    background-color: var(--accent);
                 }
             }
 

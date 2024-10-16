@@ -8,13 +8,13 @@
 }
 
 :root {
-    --primary: #304130;
-    --secondary: #3B643B;
-    --background: #EEFFEE;
+    --primary: #3B643B;
+    --secondary: #304130;
+    --primary-light: #03E104;
+    --background: #2B9946;
     --text: #fff;
     --text2: #000;
-    --success: #03E104;
-    --warning: #FFD700;
+    --accent: #FFD700;
 }
 
 body {
@@ -24,10 +24,11 @@ body {
     -webkit-font-smoothing: antialiased !important;
     min-width: 320px;
     overflow-x: hidden;
+    margin: auto;
     color: var(--text);
     font-size: 12px;
-    background-color: var(--background);
-    margin: auto 12px;
+    background: url('/images/bg.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 a {
@@ -54,17 +55,16 @@ p {
     background-color: var(--text);
 
     .progress-bar {
-        background-color: var(--success);
+        background-color: var(--primary-light);
     }
 }
 
-@keyframes floatUp {
-    0% {
+@keyframes  floatUp{
+    0%{
         opacity: 1;
         transform: translateY(0);
     }
-
-    100% {
+    100%{
         opacity: 0;
         transform: translateY(-50%);
     }
