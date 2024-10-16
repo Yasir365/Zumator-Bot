@@ -90,16 +90,32 @@
 
     }
 
+    .heading {
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: var(--text2);
+        margin-top: 60px;
+    }
 
     .card-container {
-        margin-top: 50px;
         background: url('/images/leaderboard/card.png') no-repeat;
+        position: relative;
         height: 390px;
-        overflow: scroll;
+
+        .card-content {
+            top: 50%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            overflow: auto;
+            height: 320px;
+            width: 100%;
+            padding: 0 44px;
+        }
 
         .item {
             padding: 8px;
-            margin-top: 20px;
+            margin-top: 10px;
             background-color: var(--secondary);
             border-radius: 8px;
             width: 100%;

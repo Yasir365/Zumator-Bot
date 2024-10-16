@@ -45,44 +45,48 @@ export default function Leaderboard() {
         <div className='leaderboard-page'>
             <Slider {...settings}>
                 <div className="item-container">
-                    <h6>Noah</h6>
                     <img src="/images/hero.png" alt="" />
+                    <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
                     <img src="/images/hero.png" alt="" />
+                    <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
                     <img src="/images/hero.png" alt="" />
+                    <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
                     <img src="/images/hero.png" alt="" />
+                    <h6>Recruite</h6>
                 </div>
             </Slider>
 
+            <h4 className="heading"> Leaderboard </h4>
 
             <div className="card-container">
-                {cardData.map((item, index) => (
-                    <div className="item" key={index}>
-                        <div className="index">{index + 1}</div>
-                        <div className="profile-image">
-                            <img src='/images/leaderboard/profile.png' alt="" />
+                <div className="card-content">
+                    {cardData.map((item, index) => (
+                        <div className="item" key={index}>
+                            <div className="index">{index + 1}</div>
+                            <div className="profile-image">
+                                <img src='/images/leaderboard/profile.png' alt="" />
+                            </div>
+                            <div className="player">
+                                <small className="title">Player’s Name</small>
+                                <div className="value">{item.name}</div>
+                            </div>
+                            <div className="play-image">
+                                <img src='/images/leaderboard/play.png' alt="" />
+                            </div>
+                            <div className="score">
+                                <small>Score</small>
+                                <p>{item.score}</p>
+                            </div>
                         </div>
-                        <div className="player">
-                            <small className="title">Player’s Name</small>
-                            <div className="value">{item.name}</div>
-                        </div>
-                        <div className="play-image">
-                            <img src='/images/leaderboard/play.png' alt="" />
-                        </div>
-                        <div className="score">
-                            <small>Score</small>
-                            <p>{item.score}</p>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+
+                </div>
             </div>
         </div>
     )
