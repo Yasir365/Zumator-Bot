@@ -4,7 +4,7 @@ import { shipyardData } from '../../services/data.service';
 import Slider from 'react-slick';
 
 function NextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
         <div
             className={`${className} custom-arrow next-arrow`}
@@ -16,7 +16,7 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
         <div
             className={`${className} custom-arrow prev-arrow`}
