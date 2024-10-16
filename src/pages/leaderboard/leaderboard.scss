@@ -120,6 +120,17 @@
             border-radius: 8px;
             width: 100%;
             display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .index {
+                padding: 4px 10px;
+                background-color: var(--warning);
+                color: var(--text2);
+                border-radius: 100%;
+                font-weight: 600;
+                font-size: 12px;
+            }
 
             .card-image {
                 width: 100%;
@@ -134,38 +145,18 @@
                 }
             }
 
-            .card-info {
-                margin-top: 12px;
+            small{
+                color: var(--warning);
+                font-size: 8px;
+            }
 
-                .title {
-                    font-weight: 600;
-                }
+            .play-image{
+                margin: auto;
+            }
 
-                .value {
-                    font-size: 10px;
-                }
-
-                .progress-container {
-                    padding: 4px 0;
-
-                    .progress {
-                        height: 6px;
-                    }
-                }
-
-                .description {
-                    font-size: 10px;
-                }
-
-                .upgrade {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    margin-top: 8px;
-                    font-weight: 600;
-                    background-color: var(--warning);
-                }
+            .score {
+                margin-left: auto;
+                text-align: right;
             }
 
 
