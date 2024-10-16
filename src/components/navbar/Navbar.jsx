@@ -12,26 +12,31 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
                   <img src="/images/nav-icon/frog.png" alt="" />
+                  Base
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS">
                   <img src="/images/nav-icon/gaming.png" alt="" />
+                  Ops
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard">
                   <img src="/images/nav-icon/shipyard.png" alt="" />
+                  Ship Yard
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends">
                   <img src="/images/nav-icon/friends.png" alt="" />
+                  Friends
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
                   <img src="/images/nav-icon/podium.png" alt="" />
+                  Arena
                 </NavLink>
               </li>
 
