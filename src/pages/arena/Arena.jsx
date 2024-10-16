@@ -1,6 +1,6 @@
 import './arena.scss';
 
-export default function Money() {
+export default function Arena() {
 
   return (
     <div className="arena-page">

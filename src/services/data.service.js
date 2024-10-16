@@ -232,3 +232,30 @@ export const languages = [
     "Portuguese",
     "Korean",
 ]
+
+export const leaderboardData = [
+    {
+        name: 'Jenny Wilson',
+        score: 12350,
+    },
+    {
+        name: 'Alexa Smith',
+        score: 10350,
+    },
+    {
+        name: 'William Smith',
+        score: 12350,
+    },
+    {
+        name: 'Esther Howard',
+        score: 11350,
+    },
+    {
+        name: 'Oliver Smith',
+        score: 15350,
+    },
+    {
+        name: 'Quincy Smith',
+        score: 10150,
+    },
+]

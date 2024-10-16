@@ -4,10 +4,11 @@ import Home from './pages/home/Home';
 import Ops from './pages/ops/Ops';
 import ShipYard from './pages/ship-yard/ShipYard';
 import Friends from './pages/friends/Friends';
-import Money from './pages/arena/Arena';
 import Settings from './pages/settings/Settings';
 import PrivacyPolicy from './pages/settings/Privacy-Policy';
 import Language from './pages/settings/Language';
+import Arena from './pages/arena/Arena';
+import Leaderboard from './pages/leaderboard/Leaderboard';
 
 const router = createBrowserRouter([
     {
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
                 element: <Friends />,
             },
             {
-                path: 'money',
-                element: <Money />,
+                path: 'arena',
+                element: <Arena />,
+            },
+            {
+                path: 'leaderboard',
+                element: <Leaderboard />,
             },
             {
                 path: 'settings',

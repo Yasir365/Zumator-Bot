@@ -7,9 +7,6 @@ export default function Friends() {
     <div className='firends-page'>
       <h3 className='heading'>Invite Friends</h3>
       <h6 className="sub-heading">You and your friends will get bonuses</h6>
-      <div className='d-flex justify-content-center'>
-        <button className='send-invite'>Send Invite</button>
-      </div>
 
       <div className="item mt-4">
         <div className="card-info">
