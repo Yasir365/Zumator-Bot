@@ -118,7 +118,7 @@ export default function Home() {
                     <span>05/10</span>
                 </div>
                 <div>
-                    <img src="/images/icons/mini-frog.png" alt="" />
+                    <img src="/images/icons/pass.png" alt="" />
                 </div>
             </div>
 
