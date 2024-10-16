@@ -1,53 +1,18 @@
 import './arena.scss';
 
+const total = [1, 2, 3, 4, 5, 6, 7, 8];
+
 export default function Arena() {
 
   return (
     <div className="arena-page">
-      <h4 className="heading"> Leader Board </h4>
+      <h4 className="heading"> Arena </h4>
       <div className="card-container">
-        <div className="item">
-          <img src="/images/arena/6.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
+        {total.map((item, index) => (
+          <div className="item" key={index}>
+            <img src="/images/arena/step.png" alt="" />
           </div>
-        </div>
-        <div className="item">
-          <img src="/images/arena/5.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
-          </div>
-        </div>
-        <div className="item">
-          <img src="/images/arena/4.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
-          </div>
-        </div>
-        <div className="item">
-          <img src="/images/arena/3.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
-          </div>
-        </div>
-        <div className="item">
-          <img src="/images/arena/2.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
-          </div>
-        </div>
-        <div className="item">
-          <img src="/images/arena/1.png" alt="" />
-          <div className='rating'>
-            <img src="/images/arena/stars.png" alt="" />
-            <img src="/images/arena/lock.png" alt="" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
