@@ -31,7 +31,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/money">
-                  <img src="/images/nav-icon/money.png" alt="" />
+                  <img src="/images/nav-icon/podium.png" alt="" />
                 </NavLink>
               </li>
 

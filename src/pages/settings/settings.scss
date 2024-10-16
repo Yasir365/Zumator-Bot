@@ -6,11 +6,11 @@
         font-size: 20px;
         text-align: center;
         font-weight: 700;
+        color: var(--text2);
     }
 
     ul {
         padding: 0;
-        margin: 0 12px;
         margin-top: 40px;
 
         .item {
@@ -22,14 +22,14 @@
             border-radius: 6px;
             margin-bottom: 8px;
             min-height: 48px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
 
             .title {
                 font-weight: 500;
             }
 
             small {
-                color: var(--primary-light);
+                color: #9ca39c;
             }
         }
 

@@ -10,7 +10,7 @@ function NextArrow(props) {
             className={`${className} custom-arrow next-arrow`}
             onClick={onClick}
         >
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
         </div>
     );
 }
@@ -22,7 +22,7 @@ function PrevArrow(props) {
             className={`${className} custom-arrow prev-arrow`}
             onClick={onClick}
         >
-            <i class="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-left"></i>
         </div>
     );
 }
@@ -112,35 +112,18 @@ export default function ShipYard() {
                                 <div className='progress-container'>
 
                                     <div className='d-flex justify-content-between mb-1'>
-                                        <label>Attack</label>
-                                        <p>{item.attack}</p>
-                                    </div>
-                                    <div className="progress mb-1">
-                                        <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div className='d-flex justify-content-between mb-1'>
-                                        <label>Defence</label>
-                                        <p>{item.defence}</p>
-                                    </div>
-                                    <div className="progress mb-1">
-                                        <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div className='d-flex justify-content-between mb-1'>
-                                        <label>Speed</label>
-                                        <p>{item.speed}</p>
+                                        <label>{item.progressName}</label>
+                                        <p>{item.points}</p>
                                     </div>
                                     <div className="progress mb-1">
                                         <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
-                                <div className='d-flex justify-content-between'>
-                                    <p>{item.lvl}</p>
-                                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                                <div>
+                                    <h6>Description</h6>
+                                    <p className='description'>{item.description}</p>
                                 </div>
-
                                 <button className='btn upgrade'>Upgrade</button>
                             </div>
                         </div>

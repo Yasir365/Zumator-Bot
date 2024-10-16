@@ -154,43 +154,35 @@ export const tab4Data = [
 export const shipyardData = [
     {
         image: '/images/ship-yard/1.png',
-        title: 'Phoenix (Legendary)',
+        title: 'Fire Power',
         num: '#12345',
-        attack: 350,
-        defence: 200,
-        speed: 450,
-        lvl: 'Lvl 2',
-        profit: 50000
+        points: 350,
+        progressName: 'Attack',
+        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
+    },
+    {
+        image: '/images/ship-yard/2.png',
+        title: 'Shield',
+        num: '#12345',
+        points: 350,
+        progressName: 'Defence',
+        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
     {
         image: '/images/ship-yard/3.png',
-        title: 'Phoenix (Legendary)',
+        title: 'Fire Power',
         num: '#12345',
-        attack: 350,
-        defence: 200,
-        speed: 450,
-        lvl: 'Lvl 2',
-        profit: 50000
+        points: 350,
+        progressName: 'Attack',
+        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
     {
-        image: '/images/ship-yard/3.png',
-        title: 'Phoenix (Legendary)',
+        image: '/images/ship-yard/4.png',
+        title: 'Shield',
         num: '#12345',
-        attack: 350,
-        defence: 200,
-        speed: 450,
-        lvl: 'Lvl 2',
-        profit: 50000
-    },
-    {
-        image: '/images/ship-yard/1.png',
-        title: 'Phoenix (Legendary)',
-        num: '#12345',
-        attack: 350,
-        defence: 200,
-        speed: 450,
-        lvl: 'Lvl 2',
-        profit: 50000
+        points: 350,
+        progressName: 'Defence',
+        description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
 ]
 

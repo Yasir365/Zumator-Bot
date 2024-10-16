@@ -1,14 +1,10 @@
 .firends-page {
     padding-bottom: 6rem;
 
-    .banner {
-        background: url('/images/friends/banner.png') no-repeat center center;
-        height: 230px;
-    }
-
     .heading,
     .sub-heading {
         text-align: center;
+        color: var(--text2);
     }
 
     .heading {
@@ -21,7 +17,7 @@
     }
 
     .send-invite {
-        background-color: var(--accent);
+        background-color: var(--warning);
         color: var(--text2);
         font-weight: 700;
         font-size: 16px;
@@ -36,57 +32,106 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 12px;
         flex-wrap: wrap;
-        margin: 0 12px;
         margin-top: 40px;
 
-        .item {
-            padding: 8px;
-            background-color: var(--primary);
-            border-radius: 8px;
-            width: 100%;
+        h6 {
+            color: var(--text2);
+            font-weight: 700;
+        }
+    }
+
+    .item {
+        padding: 8px;
+        background-color: var(--secondary);
+        border-radius: 8px;
+        width: 100%;
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .card-info {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
 
-            .card-info {
-                display: flex;
-
-                .card-image {
-                    margin-right: 8px;
-
-                    img {
-                        object-fit: cover;
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 50%;
-                    }
-                }
-
-                .user {
-                    margin: auto;
-
-                    .title {
-                        font-size: 14px;
-                        font-weight: 500;
-                    }
-
-                    .value {
-                        font-size: 10px;
-                        font-weight: 400;
-                    }
-                }
+            .card-image {
+                margin-right: 8px;
 
                 img {
-                    width: 16px;
-                    height: 16px;
-                    margin-right: 4px;
+                    object-fit: cover;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
                 }
-
             }
 
+            .user {
+                margin: auto;
 
+                .title {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .value {
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+            }
+
+            .reward{
+                .value{
+                    display: flex;
+                    p{
+                        color: var(--warning);
+                        margin-right: 2px;
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+
+        .invite{
+            width: 80%;
+            padding: 12px;
+            border-radius: 26px;
+            background-color: var(--warning);
+            border: none;
+            color: var(--text2);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .copy{
+            width: 50px;
+            padding: 12px;
+            border-radius: 100%;
+            background-color: var(--warning);
+            border: none;
+            color: var(--text2);
+            font-weight: 700;
+            font-size: 16px;
+
+            i{
+                font-size: 18px;
+            }
         }
     }
 }

@@ -3,9 +3,10 @@
 
     .slick-slider {
         background-color: var(--text);
-        width: 80%;
+        width: 92%;
         margin: auto;
         border-radius: 12px;
+        border: 1px solid silver;
 
         .slick-slide {
             height: 200px;
@@ -46,6 +47,7 @@
                 height: 8px;
                 border-radius: 12px;
                 background-color: var(--text) !important;
+                border: 1px solid silver;
 
                 &::before {
                     content: '' !important;
@@ -53,19 +55,19 @@
             }
 
             li.slick-active {
-                width: 25px;
-
+                width: 30px;
             }
 
             li.slick-active button {
-                width: 25px;
-                background-color: var(--accent) !important;
+                width: 30px;
+                background-color: var(--warning) !important;
                 margin-right: 6px;
             }
         }
 
         .slick-arrow {
             z-index: 1000;
+
             &::before {
                 content: '';
             }
@@ -80,8 +82,8 @@
 
             i {
                 border-radius: 100%;
-                border: 1px solid var(--accent);
-                background-color: var(--secondary);
+                border: 1px solid var(--warning);
+                background-color: var(--primary);
                 color: var(--text);
                 font-size: 20px;
                 padding: 3px 7px;
@@ -92,12 +94,11 @@
 
 
     .progess-container {
-        margin: 0 12px;
         margin-top: 35px;
         padding: 12px;
-        border: 1px solid var(--accent);
+        border: 1px solid var(--warning);
         border-radius: 12px;
-        background-color: var(--secondary);
+        background-color: var(--primary);
 
         label {
             font-weight: 600;
@@ -114,12 +115,11 @@
         align-items: center;
         gap: 12px;
         flex-wrap: wrap;
-        margin: 0 12px;
         margin-top: 20px;
 
         .item {
             padding: 8px;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             border-radius: 8px;
             width: calc(50% - 6px);
 
@@ -149,17 +149,15 @@
                 }
 
                 .progress-container {
-                    padding: 12px 0;
+                    padding: 4px 0;
 
                     .progress {
                         height: 6px;
                     }
                 }
 
-                img {
-                    width: 16px;
-                    height: 16px;
-                    margin-right: 4px;
+                .description {
+                    font-size: 10px;
                 }
 
                 .upgrade {
@@ -169,7 +167,7 @@
                     width: 100%;
                     margin-top: 8px;
                     font-weight: 600;
-                    background-color: var(--accent);
+                    background-color: var(--warning);
                 }
             }
 

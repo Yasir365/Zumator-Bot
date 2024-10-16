@@ -5,17 +5,46 @@ export default function Friends() {
   const friends = friendsData
   return (
     <div className='firends-page'>
-      <div className='banner'> </div>
-
       <h3 className='heading'>Invite Friends</h3>
       <h6 className="sub-heading">You and your friends will get bonuses</h6>
       <div className='d-flex justify-content-center'>
         <button className='send-invite'>Send Invite</button>
       </div>
 
+      <div className="item mt-4">
+        <div className="card-info">
+          <div className="card-image">
+            <img src='/images/profile.png' alt="" />
+          </div>
+          <div className='reward'>
+            <div className="title">Invite a friend</div>
+            <div className="value"><img src="/images/icons/usdt.png" alt="" /> <p>+0.1 </p> for you and your friend </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="item mt-4">
+        <div className="card-info">
+          <div className="card-image">
+            <img src='/images/profile.png' alt="" />
+          </div>
+          <div className='reward'>
+            <div className="title">Invite a friend with Telegram Premium</div>
+            <div className="value"><img src="/images/icons/usdt.png" alt="" /> <p>+0.3 </p> for you and your friend </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="card-container">
         <div className="tab-content d-flex">
-          {friends.map((item, index) => (
+          <h6>List of your Friends</h6>
+          {friends.length == 0 &&
+            <div className="item mt-4 d-flex justify-content-center">
+              <p>You haven’t invited anyone yet</p>
+            </div>
+          }
+          {friends.length > 0 && friends.map((item, index) => (
             <div className="item" key={index}>
               <div className="card-info">
                 <div className="card-image">
@@ -34,6 +63,10 @@ export default function Friends() {
         </div>
       </div>
 
+      <div className="button-container">
+          <button className='invite'>Send Invite</button>
+          <button className='copy'><i class="fa-regular fa-copy"></i></button>
+      </div>
     </div>
   )
 }

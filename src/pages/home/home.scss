@@ -6,13 +6,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 12px;
         margin-top: 20px;
 
         .left {
             padding: 6px 20px;
             border-radius: 26px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -24,13 +23,18 @@
                 span {
                     margin-left: 6px;
                 }
+
+                &:first-child {
+                    padding-right: 6px;
+                    border-right: 1px solid var(--text);
+                }
             }
         }
 
         .right {
             padding: 6px 20px;
             border-radius: 26px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -44,25 +48,22 @@
                 span {
                     margin-left: 6px;
                 }
-            }
 
-            .item2 {
-                padding-left: 8px;
-                border-left: 1px solid var(--text);
+                small {
+                    font-size: 8px;
+                }
             }
         }
 
     }
 
     .daily-board {
-        padding: 12px 20px;
-        border-top: 2px solid var(--accent);
-        border-bottom: 2px solid var(--accent);
-        background-color: var(--secondary);
+        padding: 12px;
+        background-color: var(--primary);
         margin-top: 20px;
-        border-radius: 40px;
-        width: calc(100% + 20px);
-        transform: translateX(-10px);
+        border-radius: 12px;
+        box-shadow: 0 0 5px 0px var(--warning);
+        border: 1px solid var(--warning);
 
         h4 {
             font-weight: 500;
@@ -78,7 +79,7 @@
 
             .item {
                 width: 90px;
-                background-color: var(--primary);
+                background-color: var(--secondary);
                 border-radius: 8px;
 
                 .img {
@@ -104,28 +105,16 @@
     .balance {
         margin: auto;
         margin-top: 20px;
-        width: 220px;
         border-radius: 6px;
-        background-color: var(--secondary);
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 6px 12px;
-
-        img {
-            padding-right: 12px;
-            border-right: 1px solid var(--primary);
-        }
+        justify-content: center;
 
         span {
             margin-left: 8px;
-            font-weight: 600;
-        }
-
-        p {
-            font-size: 8px;
-            font-weight: 400;
-            color: var(--accent);
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--text2);
         }
     }
 
@@ -136,7 +125,7 @@
 
         .image {
             width: 160px;
-            height: 160px;
+            height: 220px;
 
             img {
                 width: 100%;
@@ -149,7 +138,7 @@
 
                 &:active,
                 &:focus {
-                    filter: drop-shadow(0 0 10px var(--primary));
+                    filter: drop-shadow(0 0 10px var(--secondary));
                     animation: shadow-pulse 0.5s;
                 }
             }
@@ -161,6 +150,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 20px 12px 0 50px;
+        color: var(--text2);
 
         p {
             font-size: 16px;
@@ -169,15 +159,15 @@
 
         span {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
         }
     }
 
     .time {
         display: flex;
         align-items: center;
-        margin: 0 12px;
         margin-top: 10px;
+        color: var(--text2);
 
         img {
             margin-right: 8px;
@@ -186,7 +176,7 @@
         span {
             margin-right: 12px;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             min-width: 45px;
         }
 
@@ -195,7 +185,6 @@
     .progress-container {
         display: flex;
         align-items: center;
-        margin: 0 12px;
         margin-top: 10px;
         gap: 20px;
         position: relative;
@@ -203,7 +192,7 @@
         .claim {
             border-radius: 26px;
             padding: 2px 20px;
-            background-color: var(--primary-light);
+            background-color: var(--success);
             border: none;
             color: var(--text);
             font-size: 14px;
@@ -215,10 +204,11 @@
             height: 25px;
             border-radius: 26px 0 0 26px;
             font-weight: 600;
+            border: 0.5px solid var(--success);
 
             .progress-bar {
                 height: 100%;
-                background-color: var(--primary-light);
+                background-color: var(--success);
             }
 
         }
@@ -229,7 +219,7 @@
             padding: 6px 8px;
             border-radius: 50%;
             background-color: var(--text);
-            border: 1px solid var(--accent);
+            border: 1px solid var(--warning);
 
             img {
                 object-fit: contain;
@@ -247,7 +237,7 @@
         .play-button {
             height: 50px;
             width: 214px;
-            background: var(--accent);
+            background: var(--warning);
             border-radius: 26px;
             border: none;
             display: flex;
@@ -267,7 +257,7 @@
 
 @keyframes shadow-pulse {
     0% {
-        filter: drop-shadow(0 0 10px var(--accent));
+        filter: drop-shadow(0 0 10px var(--warning));
     }
 
     100% {

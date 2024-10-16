@@ -1,24 +1,23 @@
-.user-header{
+.user-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     padding: 8px;
     border-radius: 6px;
-    margin: 0 12px;
 
-    .profile-container{
+    .profile-container {
         display: flex;
         align-items: center;
 
-        p{
+        p {
             margin-left: 6px;
             font-size: 12px;
             font-weight: 500;
         }
     }
 
-    .setting{
+    .setting {
         padding-left: 6px;
         border-left: 1px solid var(--text);
     }
