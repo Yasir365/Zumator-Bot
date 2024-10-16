@@ -3,6 +3,17 @@ import { friendsData } from '../../services/data.service';
 
 export default function Friends() {
   const friends = friendsData
+  const generateInviteLink = () => {
+    const inviteLink = `${window.location.origin}/invite?ref=Yasirsaleem`;
+    return inviteLink;
+  };
+
+  const handleInviteClick = () => {
+    const link = generateInviteLink();
+    const telegramInviteMessage = `Hey! Join this awesome platform using my invite link: ${link}`;
+
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(telegramInviteMessage)}`);
+  };
   return (
     <div className='firends-page'>
       <h3 className='heading'>Invite Friends</h3>
@@ -11,7 +22,7 @@ export default function Friends() {
       <div className="item mt-4">
         <div className="card-info">
           <div className="card-image">
-            <img src='/images/friends/reward.png' alt="" style={{borderRadius:0}} />
+            <img src='/images/friends/reward.png' alt="" style={{ borderRadius: 0 }} />
           </div>
           <div className='reward'>
             <div className="title">Invite a friend</div>
@@ -23,7 +34,7 @@ export default function Friends() {
       <div className="item mt-4">
         <div className="card-info">
           <div className="card-image">
-            <img src='/images/friends/reward.png' alt="" style={{borderRadius:0}} />
+            <img src='/images/friends/reward.png' alt="" style={{ borderRadius: 0 }} />
           </div>
           <div className='reward'>
             <div className="title">Invite a friend with Telegram Premium</div>
@@ -61,8 +72,8 @@ export default function Friends() {
       </div>
 
       <div className="button-container">
-          <button className='invite'>Send Invite</button>
-          <button className='copy'><i class="fa-regular fa-copy"></i></button>
+        <button className='invite' onClick={handleInviteClick}>Send Invite</button>
+        <button className='copy'><i class="fa-regular fa-copy"></i></button>
       </div>
     </div>
   )
