@@ -4,7 +4,7 @@ import { friendsData } from '../../services/data.service';
 export default function Friends() {
   const friends = friendsData
   const generateInviteLink = () => {
-    const inviteLink = `${window.location.origin}/invite?ref=Yasirsaleem`;
+    const inviteLink = `${window.location.origin}?ref=Yasirsaleem`;
     return inviteLink;
   };
 
