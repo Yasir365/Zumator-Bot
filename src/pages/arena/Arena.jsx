@@ -10,7 +10,7 @@ export default function Arena() {
       <div className="card-container">
         {total.map((item, index) => (
           <div className="item" key={index}>
-            <img src="/images/arena/step.png" alt="" />
+            <img src="/images/arena/step.png" alt="" className={index === total.length - 1 ? "active" : ""}  />
           </div>
         ))}
       </div>

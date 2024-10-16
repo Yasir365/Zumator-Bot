@@ -46,6 +46,14 @@
                 display: none;
             }
 
+            img {
+                filter: blur(4px);
+
+                &.active {
+                    filter: none;
+                }
+            }
+
 
         }
 
