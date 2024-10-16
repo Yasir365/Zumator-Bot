@@ -18,7 +18,7 @@ export default function Friends() {
           </div>
           <div className='reward'>
             <div className="title">Invite a friend</div>
-            <div className="value"><img src="/images/icons/usdt.png" alt="" /> <p>+0.1 </p> for you and your friend </div>
+            <div className="value"><img src="/images/friends/reward2.png" alt="" /> <p>+0.1 </p> for you and your friend </div>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Friends() {
           </div>
           <div className='reward'>
             <div className="title">Invite a friend with Telegram Premium</div>
-            <div className="value"><img src="/images/icons/usdt.png" alt="" /> <p>+0.3 </p> for you and your friend </div>
+            <div className="value"><img src="/images/friends/reward2.png" alt="" /> <p>+0.3 </p> for you and your friend </div>
           </div>
         </div>
       </div>
