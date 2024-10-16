@@ -14,7 +14,7 @@ export default function Friends() {
       <div className="item mt-4">
         <div className="card-info">
           <div className="card-image">
-            <img src='/images/profile.png' alt="" />
+            <img src='/images/friends/reward.png' alt="" style={{borderRadius:0}} />
           </div>
           <div className='reward'>
             <div className="title">Invite a friend</div>
@@ -26,7 +26,7 @@ export default function Friends() {
       <div className="item mt-4">
         <div className="card-info">
           <div className="card-image">
-            <img src='/images/profile.png' alt="" />
+            <img src='/images/friends/reward.png' alt="" style={{borderRadius:0}} />
           </div>
           <div className='reward'>
             <div className="title">Invite a friend with Telegram Premium</div>
