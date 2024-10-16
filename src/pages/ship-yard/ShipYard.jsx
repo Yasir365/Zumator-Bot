@@ -68,7 +68,7 @@ export default function ShipYard() {
                     <p>290.1</p>
                 </div>
                 <div className="progress mb-1">
-                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar w-25" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
 
                 <div className='d-flex justify-content-between mb-1'>
@@ -76,7 +76,7 @@ export default function ShipYard() {
                     <p>471.8</p>
                 </div>
                 <div className="progress mb-1">
-                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
 
                 <div className='d-flex justify-content-between mb-1'>
@@ -84,7 +84,7 @@ export default function ShipYard() {
                     <p>390</p>
                 </div>
                 <div className="progress mb-1">
-                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar w-75" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
 
                 <div className='d-flex justify-content-between mb-1'>
@@ -92,7 +92,7 @@ export default function ShipYard() {
                     <p>230/hr</p>
                 </div>
                 <div className="progress mb-1">
-                    <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
 
