@@ -34,7 +34,7 @@ async function saveInfo(data){
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(userInfo),
+            body: JSON.stringify(data),
         });
         if (!response.ok) {
             throw new Error('Failed to save user info');
