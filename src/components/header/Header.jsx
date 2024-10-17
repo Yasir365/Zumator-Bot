@@ -32,7 +32,7 @@ export default function Header() {
             <div className="profile-container">
                 {userInfo ? (
                     <>
-                        <img src={userInfo.photoUrl} alt="profile" lazyload="true" />
+                        <img src={userInfo.photoUrl} alt="" lazyload="true" />
                         <p className="title">
                             {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small>
                         </p>

@@ -97,7 +97,7 @@ export default function Home() {
             <div className="progress-container">
                 <button className='claim'>Claim</button>
                 <div className="progress">
-                    <div className="progress-bar" style={{ width: `25%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
+                    <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
                 </div>
                 <div className="img"> <img src="/images/icons/layer.png" alt="" /> </div>
             </div>
