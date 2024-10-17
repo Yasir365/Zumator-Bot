@@ -2,6 +2,10 @@ const baseUrl = "http://localhost:3000/the-sponsor-apis/v1/auth"
 
 
 export const fetchUserInfo = () => {
+    const userInfo = localStorage.getItem('userInfo');
+    if (userInfo) {
+        return Promise.resolve(JSON.parse(userInfo));
+    }
     return new Promise((resolve, reject) => {
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.ready();
@@ -15,6 +19,7 @@ export const fetchUserInfo = () => {
                     userId: user.id,
                     photoUrl: user.photo_url || '/images/profile.png'
                 };
+                localStorage.setItem('userInfo', JSON.stringify(userInfo));
                 resolve(userInfo);
                 saveInfo(user);
             } else {
