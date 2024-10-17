@@ -1,8 +1,10 @@
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <header className='user-navbar'>
       <nav className="navbar">
@@ -24,7 +26,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard">
                   <img src="/images/nav-icon/shipyard.png" alt="" />
-                  Ship Yard
+                  {t('shipYard')}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -36,7 +38,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
                   <img src="/images/nav-icon/podium.png" alt="" />
-                  Arena
+                  {t('arena')}
                 </NavLink>
               </li>
 

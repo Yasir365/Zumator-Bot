@@ -5,6 +5,7 @@ import moment from 'moment';
 
 const MaxEnergy = 120;
 export default function Home() {
+
     const [date] = useState(new Date());
     const [count, setCount] = useState(+localStorage.getItem('count') || 0.00);
     const [energy, setEnergy] = useState(MaxEnergy);

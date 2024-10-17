@@ -220,18 +220,18 @@ export const friendsData = [
 ]
 
 export const languages = [
-    "English",
-    "Spanish",
-    "French",
-    "German",
-    "Italian",
-    "Japanese",
-    "Russian",
-    "Mandarin",
-    "Arabic",
-    "Portuguese",
-    "Korean",
-]
+    { "name": "English", "value": "en" },
+    { "name": "Spanish", "value": "es" },
+    { "name": "French", "value": "fr" },
+    { "name": "German", "value": "de" },
+    { "name": "Italian", "value": "it" },
+    { "name": "Japanese", "value": "ja" },
+    { "name": "Russian", "value": "ru" },
+    { "name": "Mandarin", "value": "zh" },
+    { "name": "Arabic", "value": "ar" },
+    { "name": "Portuguese", "value": "pt" },
+    { "name": "Korean", "value": "ko" }
+];
 
 export const leaderboardData = [
     {

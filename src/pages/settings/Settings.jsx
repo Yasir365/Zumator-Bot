@@ -6,8 +6,14 @@ import Swal from 'sweetalert2'
 export default function Settings() {
     const [selectedLanguage, setSelectedLanguage] = useState('English')
     useEffect(() => {
-        const temp = localStorage.getItem('language')
-        setSelectedLanguage(temp ? temp : 'English')
+        let temp = localStorage.getItem('language')
+        try {
+            temp = temp ? JSON.parse(temp) : null;
+        } catch (e) {
+            console.error("Error parsing language from localStorage:", e);
+            temp = null;
+        }
+        setSelectedLanguage(temp ? temp.name : 'English')
     }, [])
 
     const deleteAccount = () => {
