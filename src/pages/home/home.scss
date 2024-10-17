@@ -135,12 +135,8 @@
                 -webkit-user-select: none;
                 -ms-user-select: none;
                 -moz-user-select: none;
-
-                &:active,
-                &:focus {
-                    filter: drop-shadow(0 0 10px var(--secondary));
-                    animation: shadow-pulse 0.5s;
-                }
+                border: none;
+                outline: none;
             }
         }
     }
@@ -253,14 +249,4 @@
         }
     }
 
-}
-
-@keyframes shadow-pulse {
-    0% {
-        filter: drop-shadow(0 0 10px var(--warning));
-    }
-
-    100% {
-        filter: none;
-    }
 }

@@ -7,28 +7,7 @@ const MaxEnergy = 120;
 export default function Home() {
 
     const [date] = useState(new Date());
-    const [count, setCount] = useState(+localStorage.getItem('count') || 0.00);
-    const [energy, setEnergy] = useState(MaxEnergy);
-    const [energyPer, setEnergyPer] = useState(100);
     const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setEnergy(prevEnergy => {
-                if (prevEnergy < MaxEnergy) {
-                    return prevEnergy + 1;
-                } else {
-                    return prevEnergy;
-                }
-            });
-        }, 2000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        setEnergyPer((energy / MaxEnergy) * 100);
-    }, [energy]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -37,14 +16,6 @@ export default function Home() {
 
         return () => clearInterval(interval);
     }, []);
-
-    const reduceEnergy = () => {
-        if (energy > 0) {
-            setEnergy(prevEnergy => prevEnergy - 1);
-            setCount(+count + 1);
-            localStorage.setItem('count', +count + 1);
-        }
-    };
 
     return (
         <div className='home-page'>
@@ -96,11 +67,11 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.png" alt="" />
-                <span>{count / 10000}</span>
+                <span>0.000156</span>
             </div>
 
             <div className="main-image-wrapper">
-                <div className="image" onClick={reduceEnergy}>
+                <div className="image">
                     <img src="/images/hero.png" alt="" />
                 </div>
             </div>
@@ -126,7 +97,7 @@ export default function Home() {
             <div className="progress-container">
                 <button className='claim'>Claim</button>
                 <div className="progress">
-                    <div className="progress-bar" style={{ width: `${energyPer}%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
+                    <div className="progress-bar" style={{ width: `25%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
                 </div>
                 <div className="img"> <img src="/images/icons/layer.png" alt="" /> </div>
             </div>
