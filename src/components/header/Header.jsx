@@ -1,30 +1,17 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { fetchUserInfo } from '../../services/telegram.service';
 
 export default function Header() {
     const [userInfo, setUserInfo] = useState(null);
 
     useEffect(() => {
-        if (window.Telegram && window.Telegram.WebApp) {
-            window.Telegram.WebApp.ready();
-
-            const user = window.Telegram.WebApp.initDataUnsafe?.user;
-
-            if (user) {
-                setUserInfo({
-                    firstName: user.first_name,
-                    lastName: user.last_name,
-                    userId: user.id,
-                    photoUrl: user.photo_url
-                });
-                console.log('User info:', user);
-            } else {
-                console.log('User info not available');
-            }
-        } else {
-            console.error('Telegram WebApp SDK is not available');
-        }
+        fetchUserInfo()
+            .then(info => {
+                setUserInfo(info);
+            })
+            .catch(err => setError(err));
     }, []);
 
     return (
