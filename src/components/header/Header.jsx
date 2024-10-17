@@ -6,24 +6,21 @@ export default function Header() {
     const [userInfo, setUserInfo] = useState(null);
 
     useEffect(() => {
-        // Ensure that the code runs only when the app is opened in Telegram
         if (window.Telegram && window.Telegram.WebApp) {
-            window.Telegram.WebApp.ready(); // Initialize the Web App
+            window.Telegram.WebApp.ready();
 
-            // Get the user's info
             const user = window.Telegram.WebApp.initDataUnsafe?.user;
 
-            // Check if user info exists
             if (user) {
                 setUserInfo({
                     firstName: user.first_name,
                     lastName: user.last_name,
-                    username: user.username,
                     userId: user.id,
+                    photoUrl: user.photo_url
                 });
-                console.log('User info:', user); // Debugging: Log user info
+                console.log('User info:', user);
             } else {
-                console.error('User info not available');
+                console.log('User info not available');
             }
         } else {
             console.error('Telegram WebApp SDK is not available');
@@ -35,9 +32,9 @@ export default function Header() {
             <div className="profile-container">
                 {userInfo ? (
                     <>
-                        <img src="/images/profile.png" alt="profile" />
+                        <img src={userInfo.photoUrl} alt="profile" lazyload="true" />
                         <p className="title">
-                            {userInfo.firstName} {userInfo.lastName} ({userInfo.username})
+                            {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small>
                         </p>
                     </>
                 ) : (
