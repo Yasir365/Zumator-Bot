@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000/the-sponsor-apis/v1"
+const baseUrl = "http://localhost:3000/the-sponsor-apis/v1/auth"
 
 
 export const fetchUserInfo = () => {
