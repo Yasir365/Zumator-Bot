@@ -1,6 +1,6 @@
 import './rewards.scss';
 import { useState } from 'react';
-
+import { rewardData } from '../../services/data.service';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
@@ -49,32 +49,23 @@ export default function Rewards() {
       {
         activeTab === 'new' && (
           <div className="tab-content">
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/youtube.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>How to Trade?</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +250</p>
+            {rewardData.new.map((item, index) => (
+              <div className='w-100' key={index}>
+                <div className="d-flex justify-content-between align-items-center pb-1">
+                  <div className='d-flex align-items-center'>
+                    <img src={item.image} alt="" />
+                    <div className='ms-2'>
+                      <p className='bold'>{item.title}</p>
+                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
 
+                    </div>
+                  </div>
+
+                  <button className="start">Start</button>
                 </div>
+                {index !== rewardData.new.length - 1 && (<hr />)}
               </div>
-
-              <button className="start">Start</button>
-            </div>
-            <hr />
-
-            <div className="item d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/youtube.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Crypto Terms</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +250</p>
-
-                </div>
-              </div>
-
-              <button className="start">Start</button>
-            </div>
+            ))}
           </div>
         )
       }
@@ -99,75 +90,23 @@ export default function Rewards() {
       {
         activeTab === 'social' && (
           <div className="tab-content">
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/youtube.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Subscribe to YouTube</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +150</p>
+            {rewardData.social.map((item, index) => (
+              <div className='w-100' key={index}>
+                <div className="d-flex justify-content-between align-items-center pb-1">
+                  <div className='d-flex align-items-center'>
+                    <img src={item.image} alt="" />
+                    <div className='ms-2'>
+                      <p className='bold'>{item.title}</p>
+                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
 
+                    </div>
+                  </div>
+
+                  <button className="start">Start</button>
                 </div>
+                {index !== rewardData.social.length - 1 && (<hr />)}
               </div>
-
-              <button className="start">Start</button>
-            </div>
-            <hr />
-
-            <div className="item d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/twitter.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Connect Twitter</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +180</p>
-
-                </div>
-              </div>
-
-              <button className="start">Start</button>
-            </div>
-            <hr />
-
-            <div className="item d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/instagram.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Follow Instagram</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +200</p>
-
-                </div>
-              </div>
-
-              <button className="start">Start</button>
-            </div>
-            <hr />
-
-            <div className="item d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/facebook.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Join Facebook</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +130</p>
-
-                </div>
-              </div>
-
-              <button className="start">Start</button>
-            </div>
-            <hr />
-
-            <div className="item d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/tiktok.png" alt="" />
-                <div className='ms-2'>
-                  <p className='bold'>Connect Tiktok</p>
-                  <p className='small'><img src="/images/icons/bonas.png" alt="" /> +80</p>
-
-                </div>
-              </div>
-
-              <button className="start">Start</button>
-            </div>
-
+            ))}
           </div>
         )
       }
@@ -176,88 +115,26 @@ export default function Rewards() {
       {
         activeTab === 'friends' && (
           <div className="tab-content">
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 10 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +50</p>
+            {rewardData.friends.map((item, index) => (
+              <div className='w-100' key={index}>
+                <div className="d-flex justify-content-between align-items-center pb-1">
+                  <div className='d-flex align-items-center'>
+                    <img src={item.image} alt="" />
+                    <div className='ms-2'>
+                      <p className='bold'>{item.title}</p>
+                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
+
+                    </div>
+                  </div>
+
+                  <button className="start">Start</button>
+                </div>
+                {index !== rewardData.friends.length - 1 && (<hr />)}
               </div>
-            </div>
-
-            <button className="start">Start</button>
+            ))}
           </div>
-          <hr />
-          
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 20 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +100</p>
-              </div>
-            </div>
-
-            <button className="start">Start</button>
-          </div>
-          <hr />
-
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 30 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +150</p>
-              </div>
-            </div>
-
-            <button className="start">Start</button>
-          </div>
-          <hr />
-
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 40 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +200</p>
-              </div>
-            </div>
-
-            <button className="start">Start</button>
-          </div>
-          <hr />
-
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 50 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +250</p>
-              </div>
-            </div>
-
-            <button className="start">Start</button>
-          </div>
-          <hr />
-
-          <div className="item d-flex justify-content-between align-items-center w-100">
-            <div className='d-flex align-items-center'>
-              <img src="/images/icons/friends.png" alt="" />
-              <div className='ms-2'>
-                <p className='bold'>Invite 60 friends</p>
-                <p className='small'><img src="/images/icons/bonas.png" alt="" /> +300</p>
-              </div>
-            </div>
-
-            <button className="start">Start</button>
-          </div>
-          
-        </div>
         )
       }
-
-
 
     </div>
   );

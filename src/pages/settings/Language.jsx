@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 export default function Language() {
     const { t, i18n } = useTranslation();
-    const language = languages;
 
     const [selectedLanguage, setSelectedLanguage] = React.useState('English');
 
@@ -35,7 +34,7 @@ export default function Language() {
 
             <ul>
                 {
-                    language.map((item, index) => (
+                    languages.map((item, index) => (
                         <li
                             className='item'
                             key={index}

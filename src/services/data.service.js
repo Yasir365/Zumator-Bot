@@ -1,107 +1,109 @@
-export const tab1Data = [
-    {
-        image: '/images/card-img.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-export const tab2Data = [
-    {
-        image: '/images/daily-board/2.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-export const tab3Data = [
-    {
-        image: '/images/daily-board/3.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-export const tab4Data = [
-    {
-        image: '/images/daily-board/4.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.png',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
+export const opsData = {
+    tab1Data : [
+        {
+            image: '/images/card-img.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/card-img.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/card-img.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/card-img.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+    ],
+    tab2Data : [
+        {
+            image: '/images/daily-board/2.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/2.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/2.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/2.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+    ],
+    tab3Data : [
+        {
+            image: '/images/daily-board/3.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/3.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/3.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/3.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+    ],
+    tab4Data : [
+        {
+            image: '/images/daily-board/4.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.png',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+    ]
+}
 
 export const shipyardData = [
     {
@@ -193,3 +195,93 @@ export const leaderboardData = [
         score: 10150,
     },
 ]
+
+
+export const rewardData = {
+    new:[
+        {
+            image: 'images/icons/youtube.png',
+            title: 'How to Trade?',
+            score: 250
+        },
+        {
+            image: 'images/icons/youtube.png',
+            title: 'Crypto Terms',
+            score: 200
+        },
+    ],
+    social: [
+        {
+            image: 'images/icons/twitter.png',
+            title: 'Connect Twitter',
+            score: 250
+        },
+        {
+            image: 'images/icons/youtube.png',
+            title: 'Subscribe to YouTube',
+            score: 180
+        },
+        {
+            image: 'images/icons/youtube.png',
+            title: 'Subscribe to YouTube',
+            score: 200
+        },
+        {
+            image: 'images/icons/tiktok.png',
+            title: 'Connect Tiktok',
+            score: 130
+        },
+        {
+            image: 'images/icons/facebook.png',
+            title: 'Join Facebook',
+            score: 300
+        },
+        {
+            image: 'images/icons/instagram.png',
+            title: 'Follow Instagram',
+            score: 280
+        },
+    ],
+    friends: [
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 10 friends',
+            score: 50
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 20 friends',
+            score: 100
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 30 friends',
+            score: 150
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 40 friends',
+            score: 200
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 50 friends',
+            score: 250
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 60 friends',
+            score: 300
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 70 friends',
+            score: 350
+        },
+        {
+            image: 'images/icons/friends.png',
+            title: 'Invite 80 friends',
+            score: 400
+        },
+    ],
+}

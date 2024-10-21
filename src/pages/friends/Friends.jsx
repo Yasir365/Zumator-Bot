@@ -2,7 +2,6 @@ import './friends.scss'
 import { friendsData } from '../../services/data.service';
 
 export default function Friends() {
-  const friends = friendsData
   const generateInviteLink = () => {
     const inviteLink = `${window.location.origin}?ref=Yasirsaleem`;
     return inviteLink;
@@ -50,12 +49,12 @@ export default function Friends() {
       <div className="card-container">
         <div className="tab-content d-flex">
           <h6>List of your Friends</h6>
-          {friends.length == 0 &&
+          {friendsData.length == 0 &&
             <div className="item mt-4 d-flex justify-content-center">
               <p>You haven’t invited anyone yet</p>
             </div>
           }
-          {friends.length > 0 && friends.map((item, index) => (
+          {friendsData.length > 0 && friendsData.map((item, index) => (
             <div className="item" key={index}>
               <div className="card-info">
                 <div className="card-image">

@@ -40,7 +40,6 @@ const settings = {
 };
 
 export default function ShipYard() {
-    const cardData = shipyardData
     return (
         <div className='ship-yard-page'>
             <Slider {...settings}>
@@ -98,7 +97,7 @@ export default function ShipYard() {
 
             <div className="card-container">
                 <div className="tab-content d-flex">
-                    {cardData.map((item, index) => (
+                    {shipyardData.map((item, index) => (
                         <div className="item" key={index}>
                             <div className="card-image">
                                 <img src={item.image} alt="" />

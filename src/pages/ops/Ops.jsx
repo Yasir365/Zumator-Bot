@@ -2,17 +2,14 @@ import './ops.scss';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
-import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
+import { opsData } from '../../services/data.service';
 import { Rating } from 'react-simple-star-rating'
 
 
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
-  const tab1data = tab1Data
-  const tab2data = tab2Data
-  const tab3data = tab3Data
-  const tab4data = tab4Data
+  const { tab1Data, tab2Data, tab3Data, tab4Data } = opsData
   const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
 
   useEffect(() => {
@@ -119,7 +116,7 @@ export default function Ops() {
       {
         activeTab === 'web3' && (
           <div className="tab-content d-flex">
-            {tab1data.map((item, index) => (
+            {tab1Data.map((item, index) => (
               <div className="item" key={index}>
                 <div className="card-image">
                   <img src={item.image} alt="" />
@@ -147,7 +144,7 @@ export default function Ops() {
       {
         activeTab === 'market' && (
           <div className="tab-content d-flex">
-            {tab2data.map((item, index) => (
+            {tab2Data.map((item, index) => (
               <div className="item" key={index}>
                 <div className="card-image">
                   <img src={item.image} alt="" />
@@ -175,7 +172,7 @@ export default function Ops() {
       {
         activeTab === 'galactic' && (
           <div className="tab-content d-flex">
-            {tab3data.map((item, index) => (
+            {tab3Data.map((item, index) => (
               <div className="item" key={index}>
                 <div className="card-image">
                   <img src={item.image} alt="" />
@@ -203,7 +200,7 @@ export default function Ops() {
       {
         activeTab === 'artifacts' && (
           <div className="tab-content d-flex">
-            {tab4data.map((item, index) => (
+            {tab4Data.map((item, index) => (
               <div className="item" key={index}>
                 <div className="card-image">
                   <img src={item.image} alt="" />
