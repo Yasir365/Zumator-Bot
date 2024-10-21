@@ -11,7 +11,7 @@ export default function Header() {
             .then(info => {
                 setUserInfo(info);
             })
-            .catch(err => setError(err));
+            .catch(err => console.error(err));
     }, []);
 
     return (
