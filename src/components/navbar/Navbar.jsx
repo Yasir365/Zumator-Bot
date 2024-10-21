@@ -13,31 +13,31 @@ export default function Navbar() {
             <ul className="navbar-nav ">
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
-                  <img src="/images/nav-icon/frog.webp" alt="" />
+                  <img src="/images/icons/frog.webp" alt="" />
                   Base
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS">
-                  <img src="/images/nav-icon/gaming.webp" alt="" />
+                  <img src="/images/icons/gaming.webp" alt="" />
                   Ops
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard">
-                  <img src="/images/nav-icon/shipyard.webp" alt="" />
+                  <img src="/images/icons/shipyard.webp" alt="" />
                   {t('shipYard')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends">
-                  <img src="/images/nav-icon/friends.webp" alt="" />
+                  <img src="/images/icons/friends.webp" alt="" />
                   Friends
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
-                  <img src="/images/nav-icon/podium.webp" alt="" />
+                  <img src="/images/icons/podium.webp" alt="" />
                   {t('arena')}
                 </NavLink>
               </li>

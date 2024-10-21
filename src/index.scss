@@ -10,7 +10,7 @@
 :root {
     --primary: #fff;
     --secondary: #359235;
-    --background: #EEFFEE;
+    --background: #4F92B7;
     --text: #000;
     --text2: #fff;
     --success: #03E104;
@@ -23,12 +23,14 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     min-width: 320px;
+    display: flex;
+    justify-content: center;
     overflow-x: hidden;
     color: var(--text);
     font-size: 12px;
-    background-color: var(--background);
     margin: auto 12px;
-    background: url('/images/background.webp') no-repeat center center fixed;
+    background: url('/images/background.webp') no-repeat center center ;
+    background-size: cover;
 }
 
 a {
