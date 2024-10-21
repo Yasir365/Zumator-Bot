@@ -26,14 +26,14 @@ export default function Header() {
                     </>
                 ) : (
                     <div className='profile-container'>
-                        <img src="/images/profile.png" alt="profile" />
+                        <img src="/images/profile.webp" alt="profile" />
                         <p className="title">Jane Cooper (CEO)</p>
                     </div>
                 )}
             </div>
             <div className="setting">
                 <Link to="/settings">
-                    <img src="/images/icons/setting.png" alt="setting" />
+                    <img src="/images/icons/setting.webp" alt="setting" />
                 </Link>
             </div>
         </header>

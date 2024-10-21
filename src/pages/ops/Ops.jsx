@@ -48,45 +48,45 @@ export default function Ops() {
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
             <div className="icon me-2">
-              <img className='usdt' src="/images/icons/usdt.png" alt="usdt" />
+              <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
               <p className='amount'>548,000</p>
-              <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="info" /></p>
+              <p className="time">{formattedDate} <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>
         </div>
         <div className="item-container">
           <div className="item">
             <div className="img">
-              <img className='question' src="/images/icons/question.png" alt="" />
-              <img src="/images/icons/coins.png" alt="" />
+              <img className='question' src="/images/icons/question.webp" alt="" />
+              <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
             <div className="img">
-              <img className='question' src="/images/icons/question.png" alt="" />
-              <img src="/images/icons/coins.png" alt="" />
+              <img className='question' src="/images/icons/question.webp" alt="" />
+              <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
             <div className="img">
-              <img className='question' src="/images/icons/question.png" alt="" />
-              <img src="/images/icons/coins.png" alt="" />
+              <img className='question' src="/images/icons/question.webp" alt="" />
+              <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
             <div className="img">
-              <img className='question' src="/images/icons/question.png" alt="" />
-              <img src="/images/icons/coins.png" alt="" />
+              <img className='question' src="/images/icons/question.webp" alt="" />
+              <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
         </div>
         <div className="d-flex justify-content-center mt-2">
-          <img src="/images/ops/coin-box.png" alt="" />
+          <img src="/images/ops/coin-box.webp" alt="" />
         </div>
       </div>
 
@@ -128,11 +128,11 @@ export default function Ops() {
                   </div>
                   <div className='d-flex justify-content-between'>
                     <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
                   </div>
                   <div className="card-footer">
                     <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
                   </div>
                 </div>
               </div>
@@ -156,11 +156,11 @@ export default function Ops() {
                   </div>
                   <div className='d-flex justify-content-between'>
                     <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
                   </div>
                   <div className="card-footer">
                     <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
                   </div>
                 </div>
               </div>
@@ -184,11 +184,11 @@ export default function Ops() {
                   </div>
                   <div className='d-flex justify-content-between'>
                     <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
                   </div>
                   <div className="card-footer">
                     <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
                   </div>
                 </div>
               </div>
@@ -212,11 +212,11 @@ export default function Ops() {
                   </div>
                   <div className='mt-2 d-flex justify-content-between'>
                     <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
                   </div>
                   <div className="card-footer mt-2">
                     <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.total}</div>
+                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
                   </div>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function Ops() {
           <div className="modal-content">
             <div className="modal-body">
               <h5>Mystery Ops</h5>
-              <img src="/images/ops/mystery-box.png" alt="" />
+              <img src="/images/ops/mystery-box.webp" alt="" />
               <button type="button" className="btn" onClick={collectCoins} data-bs-dismiss="modal">Collect Coins</button>
             </div>
           </div>

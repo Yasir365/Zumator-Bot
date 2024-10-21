@@ -17,7 +17,7 @@ export const fetchUserInfo = () => {
                     firstName: user.first_name,
                     lastName: user.last_name,
                     userId: user.id,
-                    photoUrl: user.photo_url || '/images/profile.png'
+                    photoUrl: user.photo_url || '/images/profile.webp'
                 };
                 localStorage.setItem('userInfo', JSON.stringify(userInfo));
                 resolve(userInfo);
@@ -32,7 +32,7 @@ export const fetchUserInfo = () => {
 };
 
 
-async function saveInfo(data){
+async function saveInfo(data) {
     try {
         const response = await fetch(`${baseUrl}/test`, {
             method: 'POST',

@@ -24,18 +24,18 @@ export default function Home() {
             <div className='rewards'>
                 <div className='left'>
                     <div className="item">
-                        <img src="/images/icons/key.png" alt="" />
+                        <img src="/images/icons/key.webp" alt="" />
                         <span>50</span>
                     </div>
                     <div className="item">
-                        <img src="/images/icons/bonas.png" alt="" />
+                        <img src="/images/icons/bonas.webp" alt="" />
                         <span>30</span>
                     </div>
                 </div>
 
                 <div className='right'>
                     <div className="item">
-                        <img src="/images/icons/grid.png" alt="" />
+                        <img src="/images/icons/grid.webp" alt="" />
                         <p>Profit per hour <span>0.05</span> <small> /hr</small></p>
                     </div>
                 </div>
@@ -45,37 +45,37 @@ export default function Home() {
                 <h4>Daily Mission Board</h4>
                 <div className="item-container">
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/1.png" alt="img" /> </div>
+                        <div className="img"> <img src="/images/daily-board/1.webp" alt="img" /> </div>
                         <p>Combo</p>
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/2.png" alt="img" /> </div>
+                        <div className="img"> <img src="/images/daily-board/2.webp" alt="img" /> </div>
                         <p>Cypher</p>
                     </div>
 
                     <div className="item">
                         <Link to="/rewards">
-                            <div className="img"> <img src="/images/daily-board/3.png" alt="img" /> </div>
+                            <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
                             <p>Reward</p>
                         </Link>
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/4.png" alt="img" /> </div>
+                        <div className="img"> <img src="/images/daily-board/4.webp" alt="img" /> </div>
                         <p>Task</p>
                     </div>
                 </div>
             </div>
 
             <div className="balance">
-                <img src="/images/icons/usdt.png" alt="" />
+                <img src="/images/icons/usdt.webp" alt="" />
                 <span>0.000156</span>
             </div>
 
             <div className="main-image-wrapper">
                 <div className="image">
-                    <img src="/images/hero.png" alt="" />
+                    <img src="/images/hero.webp" alt="" />
                 </div>
             </div>
 
@@ -85,16 +85,16 @@ export default function Home() {
                     <span>05/10</span>
                 </div>
                 <div>
-                    <img src="/images/icons/pass.png" alt="" />
+                    <img src="/images/icons/pass.webp" alt="" />
                 </div>
             </div>
 
             <div className="time">
-                <img src="/images/icons/clock.png" alt="" />
+                <img src="/images/icons/clock.webp" alt="" />
                 <span>{formattedDate}</span>
                 <span className='m-0 ms-4'>Recruite</span>
-                <img src="/images/icons/podium.png" alt="" />
-                <img src="/images/icons/chart.png" alt="" />
+                <img src="/images/icons/podium.webp" alt="" />
+                <img src="/images/icons/chart.webp" alt="" />
             </div>
 
             <div className="progress-container">
@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="progress">
                     <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
                 </div>
-                <div className="img"> <img src="/images/icons/layer.png" alt="" /> </div>
+                <div className="img"> <img src="/images/icons/layer.webp" alt="" /> </div>
             </div>
 
             <div className="play-container">

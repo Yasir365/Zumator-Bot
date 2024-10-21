@@ -1,103 +1,103 @@
 export const opsData = {
-    tab1Data : [
+    tab1Data: [
         {
-            image: '/images/card-img.png',
+            image: '/images/card-img.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/card-img.png',
+            image: '/images/card-img.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/card-img.png',
+            image: '/images/card-img.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/card-img.png',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-    ],
-    tab2Data : [
-        {
-            image: '/images/daily-board/2.png',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.png',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.png',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.png',
+            image: '/images/card-img.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
     ],
-    tab3Data : [
+    tab2Data: [
         {
-            image: '/images/daily-board/3.png',
+            image: '/images/daily-board/2.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/3.png',
+            image: '/images/daily-board/2.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/3.png',
+            image: '/images/daily-board/2.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/3.png',
+            image: '/images/daily-board/2.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
     ],
-    tab4Data : [
+    tab3Data: [
         {
-            image: '/images/daily-board/4.png',
+            image: '/images/daily-board/3.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/4.png',
+            image: '/images/daily-board/3.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/4.png',
+            image: '/images/daily-board/3.webp',
             num: '#021',
             profit: 0.05,
             total: 200
         },
         {
-            image: '/images/daily-board/4.png',
+            image: '/images/daily-board/3.webp',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+    ],
+    tab4Data: [
+        {
+            image: '/images/daily-board/4.webp',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.webp',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.webp',
+            num: '#021',
+            profit: 0.05,
+            total: 200
+        },
+        {
+            image: '/images/daily-board/4.webp',
             num: '#021',
             profit: 0.05,
             total: 200
@@ -107,7 +107,7 @@ export const opsData = {
 
 export const shipyardData = [
     {
-        image: '/images/ship-yard/1.png',
+        image: '/images/ship-yard/1.webp',
         title: 'Fire Power',
         num: '#12345',
         points: 350,
@@ -115,7 +115,7 @@ export const shipyardData = [
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
     {
-        image: '/images/ship-yard/2.png',
+        image: '/images/ship-yard/2.webp',
         title: 'Shield',
         num: '#12345',
         points: 350,
@@ -123,7 +123,7 @@ export const shipyardData = [
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
     {
-        image: '/images/ship-yard/3.png',
+        image: '/images/ship-yard/3.webp',
         title: 'Fire Power',
         num: '#12345',
         points: 350,
@@ -131,7 +131,7 @@ export const shipyardData = [
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
     {
-        image: '/images/ship-yard/4.png',
+        image: '/images/ship-yard/4.webp',
         title: 'Shield',
         num: '#12345',
         points: 350,
@@ -142,13 +142,13 @@ export const shipyardData = [
 
 export const friendsData = [
     {
-        image: '/images/friends/1.png',
+        image: '/images/friends/1.webp',
         title: 'Courtney Henry',
         lvl: 251,
         profit: '+25k'
     },
     {
-        image: '/images/friends/2.png',
+        image: '/images/friends/2.webp',
         title: 'Jenny Wilson',
         lvl: 251,
         profit: '+25k'
@@ -198,88 +198,88 @@ export const leaderboardData = [
 
 
 export const rewardData = {
-    new:[
+    new: [
         {
-            image: 'images/icons/youtube.png',
+            image: 'images/icons/youtube.webp',
             title: 'How to Trade?',
             score: 250
         },
         {
-            image: 'images/icons/youtube.png',
+            image: 'images/icons/youtube.webp',
             title: 'Crypto Terms',
             score: 200
         },
     ],
     social: [
         {
-            image: 'images/icons/twitter.png',
+            image: 'images/icons/twitter.webp',
             title: 'Connect Twitter',
             score: 250
         },
         {
-            image: 'images/icons/youtube.png',
+            image: 'images/icons/youtube.webp',
             title: 'Subscribe to YouTube',
             score: 180
         },
         {
-            image: 'images/icons/youtube.png',
+            image: 'images/icons/youtube.webp',
             title: 'Subscribe to YouTube',
             score: 200
         },
         {
-            image: 'images/icons/tiktok.png',
+            image: 'images/icons/tiktok.webp',
             title: 'Connect Tiktok',
             score: 130
         },
         {
-            image: 'images/icons/facebook.png',
+            image: 'images/icons/facebook.webp',
             title: 'Join Facebook',
             score: 300
         },
         {
-            image: 'images/icons/instagram.png',
+            image: 'images/icons/instagram.webp',
             title: 'Follow Instagram',
             score: 280
         },
     ],
     friends: [
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 10 friends',
             score: 50
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 20 friends',
             score: 100
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 30 friends',
             score: 150
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 40 friends',
             score: 200
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 50 friends',
             score: 250
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 60 friends',
             score: 300
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 70 friends',
             score: 350
         },
         {
-            image: 'images/icons/friends.png',
+            image: 'images/icons/friends.webp',
             title: 'Invite 80 friends',
             score: 400
         },

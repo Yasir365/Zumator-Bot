@@ -12,7 +12,7 @@ export default function Rewards() {
 
       <div className="daily-reward d-flex justify-content-between align-items-center">
         <div className='d-flex'>
-          <img src='/images/friends/reward.png' alt="" style={{ borderRadius: 0 }} />
+          <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
           <div className='ms-2'>
             <p className="head"> Daily Reward</p>
             <p>Can be claim in</p>
@@ -56,7 +56,7 @@ export default function Rewards() {
                     <img src={item.image} alt="" />
                     <div className='ms-2'>
                       <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
+                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
 
                     </div>
                   </div>
@@ -76,7 +76,7 @@ export default function Rewards() {
           <div className="tab-content">
             <div className="d-flex justify-content-between align-items-center w-100">
               <div className='d-flex align-items-center'>
-                <img src="/images/icons/wallet.png" alt="" />
+                <img src="/images/icons/wallet.webp" alt="" />
                 <span className='bold ms-2'>Connect to Wallet</span>
               </div>
 
@@ -97,7 +97,7 @@ export default function Rewards() {
                     <img src={item.image} alt="" />
                     <div className='ms-2'>
                       <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
+                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
 
                     </div>
                   </div>
@@ -122,7 +122,7 @@ export default function Rewards() {
                     <img src={item.image} alt="" />
                     <div className='ms-2'>
                       <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.png" alt="" /> +{item.score}</p>
+                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
 
                     </div>
                   </div>

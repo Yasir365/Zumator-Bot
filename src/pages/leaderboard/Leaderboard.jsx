@@ -45,19 +45,19 @@ export default function Leaderboard() {
         <div className='leaderboard-page'>
             <Slider {...settings}>
                 <div className="item-container">
-                    <img src="/images/hero.png" alt="" />
+                    <img src="/images/hero.webp" alt="" />
                     <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <img src="/images/hero.png" alt="" />
+                    <img src="/images/hero.webp" alt="" />
                     <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <img src="/images/hero.png" alt="" />
+                    <img src="/images/hero.webp" alt="" />
                     <h6>Recruite</h6>
                 </div>
                 <div className="item-container">
-                    <img src="/images/hero.png" alt="" />
+                    <img src="/images/hero.webp" alt="" />
                     <h6>Recruite</h6>
                 </div>
             </Slider>
@@ -71,14 +71,14 @@ export default function Leaderboard() {
                             <div className="item" key={index}>
                                 <div className="index">{index + 1}</div>
                                 <div className="profile-image">
-                                    <img src='/images/leaderboard/profile.png' alt="" />
+                                    <img src='/images/leaderboard/profile.webp' alt="" />
                                 </div>
                                 <div className="player">
                                     <small className="title">Player’s Name</small>
                                     <p className="value">{item.name}</p>
                                 </div>
                                 <div className="play-image">
-                                    <img src='/images/leaderboard/play.png' alt="" />
+                                    <img src='/images/leaderboard/play.webp' alt="" />
                                 </div>
                                 <div className="score">
                                     <small>Score</small>
