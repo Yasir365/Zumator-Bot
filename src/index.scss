@@ -27,7 +27,6 @@ body {
     overflow-x: hidden;
     color: var(--black);
     font-size: 12px;
-    margin: auto 12px;
     background: url('/images/background.webp') no-repeat center center;
     background-size: cover;
 }
@@ -44,12 +43,31 @@ p {
     margin: 0;
 }
 
-.outlet-container {
+#root {
     min-height: 100vh;
     max-width: 525px;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    padding: 2rem 12px 0px 12px;
+    background: url('/images/background.webp') no-repeat center center;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }
 
 .progress {
