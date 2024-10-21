@@ -8,15 +8,14 @@
 }
 
 :root {
-    --primary: #fff;
-    --secondary: #359235;
+    --primary: #359235;
     --background: #4F92B7;
-    --text: #000;
-    --text2: #fff;
     --success: #03E104;
     --warning: #FFD700;
     --danger: #FF0000;
     --gray: silver;
+    --white: #fff;
+    --black: #000;
 }
 
 body {
@@ -26,10 +25,10 @@ body {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    color: var(--text);
+    color: var(--black);
     font-size: 12px;
     margin: auto 12px;
-    background: url('/images/background.webp') no-repeat center center ;
+    background: url('/images/background.webp') no-repeat center center;
     background-size: cover;
 }
 
@@ -54,7 +53,7 @@ p {
 }
 
 .progress {
-    background-color: var(--text2);
+    background-color: var(--white);
     border: 1px solid var(--gray);
     font-weight: 600;
 

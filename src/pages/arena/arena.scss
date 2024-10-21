@@ -4,7 +4,7 @@
     .heading {
         text-align: center;
         font-weight: 600;
-        color: var(--text2);
+        color: var(--white);
     }
 
     .card-container {
@@ -53,11 +53,11 @@
                 }
             }
 
-            &:nth-child(4){
+            &:nth-child(4) {
                 margin-top: 40px;
             }
 
-            &:last-child{
+            &:last-child {
                 margin-top: 40px;
             }
         }

@@ -4,7 +4,7 @@
     .heading,
     .sub-heading {
         text-align: center;
-        color: var(--text2);
+        color: var(--white);
     }
 
     .heading {
@@ -24,14 +24,14 @@
         margin-top: 40px;
 
         h6 {
-            color: var(--text2);
+            color: var(--white);
             font-weight: 700;
         }
     }
 
     .item {
         padding: 8px;
-        background-color: var(--text2);
+        background-color: var(--white);
         border-radius: 8px;
         width: 100%;
         min-height: 60px;
@@ -80,8 +80,9 @@
                 }
             }
 
-            
+
         }
+
         .warn {
             color: var(--warning);
             margin-right: 2px;
@@ -105,7 +106,7 @@
             border-radius: 26px;
             background-color: var(--warning);
             border: none;
-            color: var(--text);
+            color: var(--black);
             font-weight: 700;
             font-size: 16px;
         }
@@ -116,7 +117,7 @@
             border-radius: 100%;
             background-color: var(--warning);
             border: none;
-            color: var(--text);
+            color: var(--black);
             font-weight: 700;
             font-size: 16px;
 

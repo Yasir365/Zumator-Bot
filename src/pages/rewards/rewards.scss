@@ -6,12 +6,12 @@
         font-size: 20px;
         text-align: center;
         font-weight: 700;
-        color: var(--text2);
+        color: var(--white);
     }
 
     .daily-reward {
         padding: 8px 25px 8px 10px;
-        background-color: var(--text2);
+        background-color: var(--white);
         border-radius: 8px;
         width: 100%;
         min-height: 90px;
@@ -41,7 +41,7 @@
         gap: 10px;
         border: none;
         margin-top: 20px;
-        background-color: var(--primary);
+        background-color: var(--white);
         border-radius: 30px;
         padding: 8px;
 
@@ -52,15 +52,15 @@
 
             .nav-link {
                 border-radius: 8px 8px 0 0;
-                color: var(--text);
+                color: var(--black);
                 font-weight: 600;
                 border: none;
                 border-radius: 30px;
                 padding: 10px 8px;
 
                 &.active {
-                    background-color: var(--secondary);
-                    color: var(--text2);
+                    background-color: var(--primary);
+                    color: var(--white);
                 }
             }
         }
@@ -73,19 +73,19 @@
         gap: 12px;
         flex-wrap: wrap;
         margin-top: 20px;
-        background-color: var(--text2);
+        background-color: var(--white);
         border-radius: 8px;
         padding: 30px 15px;
         min-height: 90px;
 
-        .small img{
+        .small img {
             width: 16px;
             height: 16px;
         }
 
         hr {
             opacity: 1;
-            border: 1px solid var(--text);
+            border: 1px solid var(--black);
             width: 100%;
             margin: 3px 0;
         }
@@ -98,10 +98,10 @@
         .start {
             padding: 4px;
             border-radius: 16px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border: none;
             min-width: 65px;
-            color: var(--text2);
+            color: var(--white);
         }
     }
 

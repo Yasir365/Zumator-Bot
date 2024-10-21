@@ -4,12 +4,12 @@
 
     .daily-combo {
         padding: 12px;
-        background-color: var(--primary);
+        background-color: var(--white);
         margin-top: 20px;
         border-radius: 12px;
         box-shadow: 0 0 5px 0px var(--warning);
         border: 1px solid var(--warning);
-        color: var(--text2);
+        color: var(--white);
 
         .time {
             text-align: right;
@@ -21,7 +21,7 @@
         }
 
         .header {
-            background-color: var(--secondary);
+            background-color: var(--primary);
             border-radius: 8px;
             padding: 4px 8px;
             margin-top: 4px;
@@ -32,7 +32,7 @@
                 margin-right: 4px;
             }
 
-            svg{
+            svg {
                 margin-right: -1.5px;
             }
 
@@ -40,10 +40,10 @@
                 border-radius: 26px;
                 background-color: var(--warning);
                 width: 150px;
-                color: var(--text);
+                color: var(--black);
 
                 .icon img {
-                    border: 5px solid var(--text2);
+                    border: 5px solid var(--white);
                     border-radius: 26px;
                     width: 35px;
                     height: 35px;
@@ -70,8 +70,8 @@
 
             .item {
                 width: 90px;
-                background-color: var(--text2);
-                border: 2px solid var(--secondary);
+                background-color: var(--white);
+                border: 2px solid var(--primary);
                 border-radius: 8px;
 
                 .img {
@@ -111,7 +111,7 @@
         gap: 10px;
         border: none;
         margin-top: 20px;
-        background-color: var(--primary);
+        background-color: var(--white);
         border-radius: 30px;
         padding: 8px;
 
@@ -122,15 +122,15 @@
 
             .nav-link {
                 border-radius: 8px 8px 0 0;
-                color: var(--text);
+                color: var(--black);
                 font-weight: 600;
                 border: none;
                 border-radius: 30px;
                 padding: 10px 8px;
-                
+
                 &.active {
-                    background-color: var(--secondary);
-                    color: var(--text2);
+                    background-color: var(--primary);
+                    color: var(--white);
                 }
             }
         }
@@ -148,7 +148,8 @@
             padding: 8px;
             border-radius: 8px;
             width: calc(50% - 6px);
-            color: var(--text2);
+            color: var(--white);
+
             .card-image {
                 img {
                     object-fit: cover;
@@ -174,7 +175,7 @@
                 .card-footer {
                     display: flex;
                     justify-content: space-between;
-                    background-color: var(--secondary);
+                    background-color: var(--primary);
                     padding: 6px 8px;
                     border-radius: 6px;
                     margin-top: 12px;
@@ -194,7 +195,7 @@
             }
 
             &:nth-child(4) {
-            background: linear-gradient(180deg, #FFE575 0%, #725D00 100%);
+                background: linear-gradient(180deg, #FFE575 0%, #725D00 100%);
             }
 
         }
@@ -219,7 +220,7 @@
                 width: 100%;
                 border-radius: 100px;
                 background-color: var(--warning);
-                color: var(--text);
+                color: var(--black);
                 padding: 10px 0;
                 font-size: 16px;
                 font-weight: 700;

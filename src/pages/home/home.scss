@@ -11,7 +11,7 @@
         .left {
             padding: 6px 20px;
             border-radius: 26px;
-            background-color: var(--primary);
+            background-color: var(--white);
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -26,7 +26,7 @@
 
                 &:first-child {
                     padding-right: 6px;
-                    border-right: 1px solid var(--text);
+                    border-right: 1px solid var(--black);
                 }
             }
         }
@@ -34,7 +34,7 @@
         .right {
             padding: 6px 20px;
             border-radius: 26px;
-            background-color: var(--primary);
+            background-color: var(--white);
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -59,7 +59,7 @@
 
     .daily-board {
         padding: 12px;
-        background-color: var(--primary);
+        background-color: var(--white);
         margin-top: 20px;
         border-radius: 12px;
         box-shadow: 0 0 5px 0px var(--warning);
@@ -79,7 +79,7 @@
 
             .item {
                 width: calc(25% - 8px);
-                background-color: var(--secondary);
+                background-color: var(--primary);
                 border-radius: 8px;
 
                 .img {
@@ -94,7 +94,7 @@
                 }
 
                 p {
-                    color: var(--text2);
+                    color: var(--white);
                     text-align: center;
                     font-size: 600;
                     margin-bottom: 8px;
@@ -115,7 +115,7 @@
             margin-left: 8px;
             font-weight: 700;
             font-size: 24px;
-            color: var(--text2);
+            color: var(--white);
         }
     }
 
@@ -188,7 +188,7 @@
             padding: 2px 30px;
             background-color: var(--success);
             border: none;
-            color: var(--text2);
+            color: var(--white);
             font-size: 14px;
             font-weight: 600;
         }
@@ -204,7 +204,7 @@
             right: -5px;
             padding: 6px 8px;
             border-radius: 50%;
-            background-color: var(--text);
+            background-color: var(--black);
             border: 1px solid var(--warning);
 
             img {
@@ -233,7 +233,7 @@
             span {
                 font-size: 16px;
                 font-weight: 600;
-                color: var(--text);
+                color: var(--black);
             }
 
         }

@@ -1,12 +1,12 @@
 .settings-pages {
-    color: var(--text2);
+    color: var(--white);
     padding-bottom: 90px;
 
     .heading {
         font-size: 20px;
         text-align: center;
         font-weight: 700;
-        color: var(--text2);
+        color: var(--white);
     }
 
     ul {
@@ -17,12 +17,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: var(--text);
+            color: var(--black);
             padding: 6px 16px;
             border-radius: 6px;
             margin-bottom: 8px;
             min-height: 48px;
-            background-color: var(--primary);
+            background-color: var(--white);
 
             .title {
                 font-weight: 500;
@@ -45,7 +45,7 @@
             }
 
             p {
-                color: var(--text);
+                color: var(--black);
                 margin-bottom: 12px;
                 font-weight: 500;
             }
@@ -54,8 +54,8 @@
             button {
                 width: 120px;
                 border-radius: 100px;
-                background-color: var(--secondary);
-                color: var(--text2);
+                background-color: var(--primary);
+                color: var(--white);
             }
         }
     }
