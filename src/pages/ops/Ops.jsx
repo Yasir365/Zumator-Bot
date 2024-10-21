@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
 import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
+import { Rating } from 'react-simple-star-rating'
 
 
 export default function Ops() {
@@ -23,25 +24,39 @@ export default function Ops() {
   }, []);
 
   useEffect(() => {
-    let a=document.querySelector('#mistery-box-btn')
-    a?.click()
-  },[]);
+    let previous = localStorage.getItem('collect-coins');
+    const currentTime = new Date().getTime();
+
+    if (!previous || (currentTime - previous) > (24 * 60 * 60 * 1000)) {
+      let a = document.querySelector('#mistery-box-btn');
+      a?.click();
+    }
+  }, []);
+
+
+  const collectCoins = () => {
+    localStorage.setItem('collect-coins', new Date().getTime())
+    swalToastr('success', 'Coins collected successfully')
+  }
 
   return (
     <div className="ops-page">
       <Header />
 
       <div className="daily-combo">
-        <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="info" /></p>
-
         <div className="header d-flex justify-content-between">
           <div className='d-flex align-items-center'>
-            <p className="title">Daily Combo</p>
-            <img src="/images/icons/star.png" alt="" />
+            <p className="title">Mystery Ops</p>
+            <Rating initialValue={2} readonly={true} size={13} emptyColor="#fff" maxValue={4} />
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
-            <img src="/images/icons/usdt.png" alt="usdt" />
-            <p className="value">548,000</p>
+            <div className="icon me-2">
+              <img className='usdt' src="/images/icons/usdt.png" alt="usdt" />
+            </div>
+            <div className="d-flex flex-column">
+              <p className='amount'>548,000</p>
+              <p className="time">{formattedDate} <img src="/images/icons/info.png" alt="info" /></p>
+            </div>
           </div>
         </div>
         <div className="item-container">
@@ -72,6 +87,9 @@ export default function Ops() {
               <img src="/images/icons/coins.png" alt="" />
             </div>
           </div>
+        </div>
+        <div className="d-flex justify-content-center mt-2">
+          <img src="/images/ops/coin-box.png" alt="" />
         </div>
       </div>
 
@@ -214,13 +232,13 @@ export default function Ops() {
 
       {/* Mystery Box Modal */}
       <button data-bs-toggle="modal" data-bs-target="#misteryBoxModal" id='mistery-box-btn' className='d-none'></button>
-      <div class="modal fade" id="misteryBoxModal" tabindex="-1" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
+      <div className="modal fade" id="misteryBoxModal" tabindex="-1" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
               <h5>Mystery Ops</h5>
-              <img src="/images/mystery-box.png" alt="" />
-              <button type="button" class="btn">Collect Coins</button>
+              <img src="/images/ops/mystery-box.png" alt="" />
+              <button type="button" className="btn" onClick={collectCoins} data-bs-dismiss="modal">Collect Coins</button>
             </div>
           </div>
         </div>

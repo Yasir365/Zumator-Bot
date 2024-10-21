@@ -22,7 +22,7 @@ export default function Settings() {
         swalToastr('success', 'Account deleted successfully')
     }
 
-    
+
     return (
         <div className='settings-pages'>
             <h3 className='heading'>Settings</h3>
@@ -61,13 +61,13 @@ export default function Settings() {
 
 
             {/* Delete Account Modal */}
-            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">  
-                    <div class="modal-content">
-                        <div class="modal-body">
+            <div className="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                        <div className="modal-body">
                             <h5>Delete Account</h5>
                             <p>Are you sure you want to delete your account?</p>
-                            <button type="button" class="btn"  onClick={() => deleteAccount()}>Sure</button>
+                            <button type="button" className="btn" onClick={() => deleteAccount()}>Sure</button>
                         </div>
                     </div>
                 </div>

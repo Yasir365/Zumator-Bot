@@ -25,7 +25,10 @@ export default function Header() {
                         </p>
                     </>
                 ) : (
-                    <p>Loading user info...</p>
+                    <div className='profile-container'>
+                        <img src="/images/profile.png" alt="profile" />
+                        <p className="title">Jane Cooper (CEO)</p>
+                    </div>
                 )}
             </div>
             <div className="setting">
