@@ -17,16 +17,15 @@ export default function Header() {
     return (
         <header className="user-header">
             <div className="profile-container">
+                <img src='/images/profile.webp' alt="img" lazyload="true" />
                 {userInfo ? (
                     <>
-                        <img src={userInfo.photoUrl} alt="img" lazyload="true" />
                         <p className="title">
                             {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small>
                         </p>
                     </>
                 ) : (
                     <div className='profile-container'>
-                        <img src="/images/profile.webp" alt="profile" />
                         <p className="title">Jane Cooper (CEO)</p>
                     </div>
                 )}
