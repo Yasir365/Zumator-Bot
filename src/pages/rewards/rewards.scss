@@ -1,0 +1,108 @@
+.rewards-page {
+    padding-bottom: 90px;
+
+
+    .heading {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: var(--text2);
+    }
+
+    .daily-reward {
+        padding: 8px 25px 8px 10px;
+        background-color: var(--text2);
+        border-radius: 8px;
+        width: 100%;
+        min-height: 90px;
+        margin-top: 16px;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .head {
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        i {
+            font-weight: 700;
+        }
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        border: none;
+        margin-top: 20px;
+        background-color: var(--primary);
+        border-radius: 30px;
+        padding: 8px;
+
+        .nav-item {
+            width: calc(25% - 10px);
+            text-align: center;
+            padding: 0;
+
+            .nav-link {
+                border-radius: 8px 8px 0 0;
+                color: var(--text);
+                font-weight: 600;
+                border: none;
+                border-radius: 30px;
+                padding: 10px 8px;
+
+                &.active {
+                    background-color: var(--secondary);
+                    color: var(--text2);
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        background-color: var(--text2);
+        border-radius: 8px;
+        padding: 30px 15px;
+        min-height: 90px;
+
+        .small img{
+            width: 16px;
+            height: 16px;
+        }
+
+        hr {
+            opacity: 1;
+            border: 1px solid var(--text);
+            width: 100%;
+            margin: 2px 0;
+        }
+
+
+        .bold {
+            font-weight: 600;
+        }
+
+        .start {
+            padding: 4px;
+            border-radius: 16px;
+            background-color: var(--secondary);
+            border: none;
+            min-width: 65px;
+            color: var(--text2);
+        }
+    }
+
+}

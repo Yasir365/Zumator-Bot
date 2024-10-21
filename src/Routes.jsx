@@ -9,6 +9,7 @@ import PrivacyPolicy from './pages/settings/Privacy-Policy';
 import Language from './pages/settings/Language';
 import Arena from './pages/arena/Arena';
 import Leaderboard from './pages/leaderboard/Leaderboard';
+import Rewards from './pages/rewards/Rewards';
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: 'change-language',
                 element: <Language />,
+            },
+            {
+                path: 'rewards',
+                element: <Rewards />,
             },
         ],
     },

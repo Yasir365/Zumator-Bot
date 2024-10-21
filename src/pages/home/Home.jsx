@@ -2,6 +2,7 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 const MaxEnergy = 120;
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
                         <span>50</span>
                     </div>
                     <div className="item">
-                        <img src="/images/icons/usdt.png" alt="" />
+                        <img src="/images/icons/bonas.png" alt="" />
                         <span>30</span>
                     </div>
                 </div>
@@ -55,7 +56,7 @@ export default function Home() {
 
                     <div className="item">
                         <div className="img"> <img src="/images/daily-board/3.png" alt="img" /> </div>
-                        <p>Reward</p>
+                        <Link to="/rewards"> <p>Reward</p> </Link>
                     </div>
 
                     <div className="item">
