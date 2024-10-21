@@ -22,6 +22,7 @@
         align-items: center;
         flex-wrap: wrap;
         margin-top: 40px;
+        padding-bottom: 60px;
 
         h6 {
             color: var(--white);
@@ -94,11 +95,14 @@
     .button-container {
         position: fixed;
         width: calc(100% - 24px);
-        bottom: 90px;
+        bottom: 100px;
         display: flex;
         justify-content: center;
         gap: 12px;
-        margin-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 525px;
 
         .invite {
             width: 80%;
