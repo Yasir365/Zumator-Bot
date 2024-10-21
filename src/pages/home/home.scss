@@ -186,10 +186,10 @@
 
         .claim {
             border-radius: 26px;
-            padding: 2px 20px;
+            padding: 2px 30px;
             background-color: var(--success);
             border: none;
-            color: var(--text);
+            color: var(--text2);
             font-size: 14px;
             font-weight: 600;
         }
@@ -198,15 +198,6 @@
             width: calc(100% - 138px);
             height: 25px;
             border-radius: 26px 0 0 26px;
-            font-weight: 600;
-            background-color: var(--primary);
-            border: 0.5px solid var(--gray);
-
-            .progress-bar {
-                height: 100%;
-                background-color: var(--success);
-            }
-
         }
 
         .img {

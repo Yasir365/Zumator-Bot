@@ -45,20 +45,20 @@ export default function ShipYard() {
         <div className='ship-yard-page'>
             <Slider {...settings}>
                 <div className="item-container">
-                    <h6>Noah</h6>
+                    <h6>Noah 1</h6>
                     <img src="/images/ship-yard/4.png" alt="" />
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
+                    <h6>Noah 2</h6>
                     <img src="/images/ship-yard/3.png" alt="" />
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
-                    <img src="/images/ship-yard/2.png" alt="" />
+                    <h6>Noah 3</h6>
+                    <img src="/images/ship-yard/4.png" alt="" />
                 </div>
                 <div className="item-container">
-                    <h6>Noah</h6>
-                    <img src="/images/ship-yard/1.png" alt="" />
+                    <h6>Noah 4</h6>
+                    <img src="/images/ship-yard/3.png" alt="" />
                 </div>
             </Slider>
 
@@ -124,7 +124,13 @@ export default function ShipYard() {
                                     <h6>Description</h6>
                                     <p className='description'>{item.description}</p>
                                 </div>
-                                <button className='btn upgrade'>Upgrade</button>
+                                <div className="upgrade d-flex justify-content-between">
+                                    <p>Lvl 2</p>
+                                    <div>
+                                        <img src="/images/icons/usdt.png" alt="" />
+                                        <span className='ms-2'>200</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}

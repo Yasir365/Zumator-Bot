@@ -52,10 +52,13 @@ p {
 }
 
 .progress {
-    background-color: var(--text);
+    background-color: var(--text2);
+    border: 1px solid var(--gray);
+    font-weight: 600;
 
     .progress-bar {
         background-color: var(--success);
+        height: 100%;
     }
 }
 

@@ -5,9 +5,6 @@ import Header from '../../components/header/Header';
 import { tab1Data, tab2Data, tab3Data, tab4Data } from '../../services/data.service';
 
 
-const count = +localStorage.getItem('count') || 0;
-
-
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
@@ -25,6 +22,11 @@ export default function Ops() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    let a=document.querySelector('#mistery-box-btn')
+    a?.click()
+  },[]);
+
   return (
     <div className="ops-page">
       <Header />
@@ -39,7 +41,7 @@ export default function Ops() {
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
             <img src="/images/icons/usdt.png" alt="usdt" />
-            <p className="value">{count / 10000}</p>
+            <p className="value">548,000</p>
           </div>
         </div>
         <div className="item-container">
@@ -207,6 +209,22 @@ export default function Ops() {
           </div>
         )
       }
+
+
+
+      {/* Mystery Box Modal */}
+      <button data-bs-toggle="modal" data-bs-target="#misteryBoxModal" id='mistery-box-btn' className='d-none'></button>
+      <div class="modal fade" id="misteryBoxModal" tabindex="-1" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h5>Mystery Ops</h5>
+              <img src="/images/mystery-box.png" alt="" />
+              <button type="button" class="btn">Collect Coins</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   );

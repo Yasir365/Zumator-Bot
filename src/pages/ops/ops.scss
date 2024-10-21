@@ -172,4 +172,29 @@
         }
     }
 
+    #misteryBoxModal {
+        .modal-body {
+            text-align: center;
+            padding: 16px 40px;
+            h5 {
+                font-weight: 600;
+            }
+
+            img{
+                margin-bottom: 12px;
+                object-fit: cover;
+                background-position: center;
+            }
+
+            button {
+                width: 100%;
+                border-radius: 100px;
+                background-color: var(--warning);
+                color: var(--text);
+                padding: 10px 0;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
 }
