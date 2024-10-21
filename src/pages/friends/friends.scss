@@ -1,5 +1,5 @@
 .firends-page {
-    padding-bottom: 6rem;
+    padding-bottom: 90px;
 
     .heading,
     .sub-heading {
@@ -31,7 +31,7 @@
 
     .item {
         padding: 8px;
-        background-color: var(--secondary);
+        background-color: var(--text2);
         border-radius: 8px;
         width: 100%;
         min-height: 60px;
@@ -74,50 +74,53 @@
                 margin-right: 4px;
             }
 
-            .reward{
-                .value{
+            .reward {
+                .value {
                     display: flex;
-                    p{
-                        color: var(--warning);
-                        margin-right: 2px;
-                    }
-
                 }
             }
 
+            
+        }
+        .warn {
+            color: var(--warning);
+            margin-right: 2px;
         }
 
 
     }
 
-    .button-container{
+    .button-container {
+        position: fixed;
+        width: calc(100% - 24px);
+        bottom: 90px;
         display: flex;
         justify-content: center;
         gap: 12px;
         margin-top: 20px;
 
-        .invite{
+        .invite {
             width: 80%;
             padding: 12px;
             border-radius: 26px;
             background-color: var(--warning);
             border: none;
-            color: var(--text2);
+            color: var(--text);
             font-weight: 700;
             font-size: 16px;
         }
-        
-        .copy{
+
+        .copy {
             width: 50px;
             padding: 12px;
             border-radius: 100%;
             background-color: var(--warning);
             border: none;
-            color: var(--text2);
+            color: var(--text);
             font-weight: 700;
             font-size: 16px;
 
-            i{
+            i {
                 font-size: 18px;
             }
         }

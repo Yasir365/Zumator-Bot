@@ -67,22 +67,25 @@ export default function Leaderboard() {
             <div className="card-container">
                 <div className="card-content">
                     {cardData.map((item, index) => (
-                        <div className="item" key={index}>
-                            <div className="index">{index + 1}</div>
-                            <div className="profile-image">
-                                <img src='/images/leaderboard/profile.png' alt="" />
+                        <div>
+                            <div className="item" key={index}>
+                                <div className="index">{index + 1}</div>
+                                <div className="profile-image">
+                                    <img src='/images/leaderboard/profile.png' alt="" />
+                                </div>
+                                <div className="player">
+                                    <small className="title">Player’s Name</small>
+                                    <p className="value">{item.name}</p>
+                                </div>
+                                <div className="play-image">
+                                    <img src='/images/leaderboard/play.png' alt="" />
+                                </div>
+                                <div className="score">
+                                    <small>Score</small>
+                                    <p className="value">{item.score}</p>
+                                </div>
                             </div>
-                            <div className="player">
-                                <small className="title">Player’s Name</small>
-                                <div className="value">{item.name}</div>
-                            </div>
-                            <div className="play-image">
-                                <img src='/images/leaderboard/play.png' alt="" />
-                            </div>
-                            <div className="score">
-                                <small>Score</small>
-                                <p>{item.score}</p>
-                            </div>
+                            <hr />
                         </div>
                     ))}
 

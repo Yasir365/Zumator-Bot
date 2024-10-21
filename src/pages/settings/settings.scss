@@ -1,6 +1,6 @@
 .settings-pages {
     color: var(--text2);
-    padding-bottom: 6rem;
+    padding-bottom: 90px;
 
     .heading {
         font-size: 20px;
@@ -33,5 +33,31 @@
             }
         }
 
+    }
+
+    #deleteModal {
+        .modal-body {
+            text-align: center;
+
+            h5 {
+                color: var(--danger);
+                font-weight: 700;
+            }
+
+            p {
+                color: var(--text);
+                margin-bottom: 12px;
+                font-weight: 500;
+            }
+
+
+            button {
+                width: 120px;
+                border-radius: 100px;
+                background-color: var(--secondary);
+                color: var(--text2);
+                color: var(--text2);
+            }
+        }
     }
 }

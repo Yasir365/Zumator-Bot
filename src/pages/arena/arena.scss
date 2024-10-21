@@ -1,5 +1,5 @@
 .arena-page {
-    padding-bottom: 6rem;
+    padding-bottom: 90px;
 
     .heading {
         text-align: center;
@@ -14,7 +14,6 @@
 
         .item {
             position: relative;
-            top: -15px;
 
             &:nth-child(odd) {
                 display: flex;
@@ -47,17 +46,21 @@
             }
 
             img {
-                filter: blur(4px);
+                filter: blur(2px);
 
                 &.active {
                     filter: none;
                 }
             }
 
+            &:nth-child(4){
+                margin-top: 40px;
+            }
 
+            &:last-child{
+                margin-top: 40px;
+            }
         }
-
-
 
     }
 }

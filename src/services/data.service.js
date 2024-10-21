@@ -198,25 +198,7 @@ export const friendsData = [
         title: 'Jenny Wilson',
         lvl: 251,
         profit: '+25k'
-    },
-    {
-        image: '/images/friends/3.png',
-        title: 'Dianne Russell',
-        lvl: 251,
-        profit: '+25k'
-    },
-    {
-        image: '/images/friends/4.png',
-        title: 'Jacob Jones',
-        lvl: 251,
-        profit: '+25k'
-    },
-    {
-        image: '/images/friends/5.png',
-        title: 'Esther Howard',
-        lvl: 251,
-        profit: '+25k'
-    },
+    }
 ]
 
 export const languages = [

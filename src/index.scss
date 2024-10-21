@@ -8,13 +8,15 @@
 }
 
 :root {
-    --primary: #304130;
-    --secondary: #3B643B;
+    --primary: #fff;
+    --secondary: #359235;
     --background: #EEFFEE;
-    --text: #fff;
-    --text2: #000;
+    --text: #000;
+    --text2: #fff;
     --success: #03E104;
     --warning: #FFD700;
+    --danger: #FF0000;
+    --gray: silver;
 }
 
 body {
@@ -26,6 +28,7 @@ body {
     font-size: 12px;
     background-color: var(--background);
     margin: auto 12px;
+    background: url('/images/background.png') no-repeat center center fixed;
 }
 
 a {
