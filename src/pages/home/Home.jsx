@@ -22,7 +22,7 @@ export default function Home() {
 
     useEffect(() => {
         if (ref) {
-            let data = localStorage.getItem('userInfo');
+            let data = JSON.parse(localStorage.getItem('userInfo'))
             if (data) {
                 data['ref']= ref;
                 saveRefUser(data)

@@ -5,7 +5,6 @@ import { handleInviteClick } from '../../services/api.service';
 export default function Friends() {
   const ref = localStorage.getItem('ref');
 
-  
   return (
     <div className='firends-page'>
       <h3 className='heading'>Invite Friends</h3>
