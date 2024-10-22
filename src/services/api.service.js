@@ -23,8 +23,7 @@ export const fetchUserInfo = () => {
                     telegram_id: user.id,
                 };
 
-                localStorage.setItem('userInfo', JSON.stringify(userInfo));
-                saveUser(userInfo);  // Save user info asynchronously
+                saveUser(userInfo);
                 resolve(userInfo);
             } else {
                 reject(new Error('User info not available'));
@@ -34,6 +33,7 @@ export const fetchUserInfo = () => {
         }
     });
 };
+
 async function saveUser(data) {
     try {
         const response = await axios.post(`${baseUrl}/register`, data, {
@@ -44,6 +44,10 @@ async function saveUser(data) {
 
         if (response.status !== 200) {
             throw new Error('Failed to save user info');
+        }
+
+        if(response.data.data){
+            localStorage.setItem('userInfo', JSON.stringify(response.data.data));
         }
 
     } catch (error) {
