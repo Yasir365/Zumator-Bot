@@ -2,13 +2,14 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const MaxEnergy = 120;
 export default function Home() {
-
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
+    const location = useLocation();
+    const urlParams = new URLSearchParams(location.search);
+    const ref = urlParams.get('ref');
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,6 +18,12 @@ export default function Home() {
 
         return () => clearInterval(interval);
     }, []);
+
+    useEffect(() => {
+        if (ref) {
+            localStorage.setItem('ref', ref);
+        }
+    }, [ref]);
 
     return (
         <div className='home-page'>

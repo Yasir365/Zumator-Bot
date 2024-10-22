@@ -2,6 +2,8 @@ import './friends.scss'
 import { friendsData } from '../../services/data.service';
 
 export default function Friends() {
+  const ref = localStorage.getItem('ref');
+
   const generateInviteLink = () => {
     const inviteLink = `${window.location.origin}?ref=Yasirsaleem`;
     return inviteLink;
@@ -42,9 +44,11 @@ export default function Friends() {
         </div>
       </div>
 
-      <div className="item mt-4 d-flex justify-content-center">
-        <p>Your are already a referral, invited by <span className="warn">Jenny Wilson</span></p>
-      </div>
+      {ref && (
+        <div className="item mt-4 d-flex justify-content-center">
+          <p>Your are already a referral, invited by <span className="warn">{ref}</span></p>
+        </div>
+      )}
 
       <div className="card-container">
         <div className="tab-content d-flex">
