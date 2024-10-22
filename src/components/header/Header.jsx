@@ -1,7 +1,7 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchUserInfo } from '../../services/telegram.service';
+import { fetchUserInfo } from '../../services/api.service';
 
 export default function Header() {
     const [userInfo, setUserInfo] = useState(null);
@@ -20,7 +20,7 @@ export default function Header() {
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
                 {userInfo ? (
                     <>
-                        <p className="title"> {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small> </p>
+                        <p className="title"> {userInfo.first_name} {userInfo.last_name} <small>(Conqueror)</small> </p>
                     </>
                 ) : (
                     <p className="title">Jane Cooper <small>(CEO)</small></p>

@@ -1,4 +1,5 @@
-const baseUrl = "http://localhost:3000/the-sponsor-apis/v1/auth"
+// const baseUrl = "https://zumbator-bot-backend-ulzr.vercel.app/"
+const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 
 
 export const fetchUserInfo = () => {
@@ -14,14 +15,13 @@ export const fetchUserInfo = () => {
 
             if (user) {
                 const userInfo = {
-                    firstName: user.first_name,
-                    lastName: user.last_name,
-                    userId: user.id,
-                    photoUrl: user.photo_url || '/images/profile.webp'
+                    first_name: user.first_name,
+                    last_name: user.last_name,
+                    telegram_id: user.id,
                 };
                 localStorage.setItem('userInfo', JSON.stringify(userInfo));
                 resolve(userInfo);
-                saveInfo(user);
+                saveInfo(userInfo);
             } else {
                 reject('User info not available');
             }
@@ -34,7 +34,7 @@ export const fetchUserInfo = () => {
 
 async function saveInfo(data) {
     try {
-        const response = await fetch(`${baseUrl}/test`, {
+        const response = await fetch(`${baseUrl}/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
