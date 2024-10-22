@@ -83,7 +83,8 @@ export const saveRefUser = async (data) => {
         if (response.status !== 200) {
             throw new Error('Failed to save referral user info');
         }
-
+        console.log("++++++++++++++++",response);
+        
         localStorage.setItem('ref', JSON.stringify(response.data.first_name + ' ' + response.data.last_name));
 
     } catch (error) {
