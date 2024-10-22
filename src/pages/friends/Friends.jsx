@@ -2,6 +2,7 @@ import './friends.scss'
 import { friendsData } from '../../services/data.service';
 import { handleInviteClick, getInvitedFriends, generateInviteLink } from '../../services/api.service';
 import { useEffect, useState } from 'react';
+import swalToastr from '../../services/toastr.service';
 
 export default function Friends() {
   const ref = localStorage.getItem('ref');
@@ -11,6 +12,10 @@ export default function Friends() {
     setInvitedFriends(getInvitedFriends())
   }, [])
 
+  const copyLink = () =>{
+    swalToastr.success('Link copied to clipboard')
+    navigator.clipboard.writeText(generateInviteLink())
+  } 
 
   return (
     <div className='firends-page'>
@@ -76,7 +81,7 @@ export default function Friends() {
 
       <div className="button-container">
         <button className='invite' onClick={handleInviteClick}>Send Invite</button>
-        <button className='copy' onClick={() => navigator.clipboard.writeText(generateInviteLink())}><i className="fa-regular fa-copy"></i></button>
+        <button className='copy' onClick={copyLink}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>
   )
