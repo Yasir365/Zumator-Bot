@@ -1,6 +1,6 @@
 import './friends.scss'
 import { friendsData } from '../../services/data.service';
-import { handleInviteClick, getInvitedFriends } from '../../services/api.service';
+import { handleInviteClick, getInvitedFriends, generateInviteLink } from '../../services/api.service';
 import { useEffect, useState } from 'react';
 
 export default function Friends() {
@@ -76,7 +76,7 @@ export default function Friends() {
 
       <div className="button-container">
         <button className='invite' onClick={handleInviteClick}>Send Invite</button>
-        <button className='copy'><i className="fa-regular fa-copy"></i></button>
+        <button className='copy' onClick={() => navigator.clipboard.writeText(generateInviteLink())}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>
   )
