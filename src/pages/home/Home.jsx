@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
+import { saveRefUser } from '../../services/api.service';
 
 export default function Home() {
     const [date] = useState(new Date());
@@ -21,7 +22,11 @@ export default function Home() {
 
     useEffect(() => {
         if (ref) {
-            localStorage.setItem('ref', ref);
+            let data = localStorage.getItem('userInfo');
+            if (data) {
+                data['ref']= ref;
+                saveRefUser(data)
+            }
         }
     }, [ref]);
 

@@ -1,20 +1,11 @@
 import './friends.scss'
 import { friendsData } from '../../services/data.service';
+import { handleInviteClick } from '../../services/api.service';
 
 export default function Friends() {
   const ref = localStorage.getItem('ref');
 
-  const generateInviteLink = () => {
-    const inviteLink = `${window.location.origin}?ref=Yasirsaleem`;
-    return inviteLink;
-  };
-
-  const handleInviteClick = () => {
-    const link = generateInviteLink();
-    const telegramInviteMessage = `Hey! Join this awesome platform using my invite link: ${link}`;
-
-    window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(telegramInviteMessage)}`);
-  };
+  
   return (
     <div className='firends-page'>
       <h3 className='heading'>Invite Friends</h3>

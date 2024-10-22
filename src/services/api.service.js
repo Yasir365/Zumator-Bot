@@ -21,7 +21,7 @@ export const fetchUserInfo = () => {
                 };
                 localStorage.setItem('userInfo', JSON.stringify(userInfo));
                 resolve(userInfo);
-                saveInfo(userInfo);
+                saveUser(userInfo);
             } else {
                 reject('User info not available');
             }
@@ -32,9 +32,43 @@ export const fetchUserInfo = () => {
 };
 
 
-async function saveInfo(data) {
+async function saveUser(data) {
     try {
         const response = await fetch(`${baseUrl}/register`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+            throw new Error('Failed to save user info');
+        }
+        console.log('User info saved successfully');
+    } catch (error) {
+        console.error('Error saving user info:', error);
+    }
+}
+
+
+const generateInviteLink = () => {
+    const user = localStorage.getItem('userInfo');
+    debugger
+    const inviteLink = `${window.location.origin}?ref=${user?.telegram_id}`;
+    return inviteLink;
+};
+
+export const handleInviteClick = () => {
+    const link = generateInviteLink();
+    const message = `Hey! Join Zumator using my invite link: ${link}`;
+
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
+};
+
+
+export const saveRefUser = async(data) => {
+    try {
+        const response = await fetch(`${baseUrl}/saveRefUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
