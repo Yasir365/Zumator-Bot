@@ -92,3 +92,18 @@ export const saveRefUser = async (data) => {
         console.error('Error saving referral user info:', error);
     }
 };
+
+export const getInvitedFriends = async () => {
+    const data = JSON.parse(localStorage.getItem('userInfo'));
+    try {
+        const response = await axios.get(`${baseUrl}/getInvitedFriends`, data, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        return response.data.data;
+    } catch (error) {
+        console.error('Error getting invited friends:', error);
+        return [];
+    }
+}

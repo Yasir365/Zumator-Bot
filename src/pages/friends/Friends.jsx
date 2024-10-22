@@ -1,10 +1,17 @@
 import './friends.scss'
 import { friendsData } from '../../services/data.service';
-import { handleInviteClick } from '../../services/api.service';
+import { handleInviteClick, getInvitedFriends } from '../../services/api.service';
+import { useEffect } from 'react';
 
 export default function Friends() {
   const ref = localStorage.getItem('ref');
+  const [invitedFriends, setInvitedFriends] = useState([]);
 
+  useEffect(() => {
+    setInvitedFriends(getInvitedFriends())
+  }, [])
+
+  
   return (
     <div className='firends-page'>
       <h3 className='heading'>Invite Friends</h3>
