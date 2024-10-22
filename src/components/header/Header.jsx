@@ -10,6 +10,7 @@ export default function Header() {
         fetchUserInfo()
             .then(info => {
                 setUserInfo(info);
+                console.log("-------------------", info);
             })
             .catch(err => console.error(err));
     }, []);
