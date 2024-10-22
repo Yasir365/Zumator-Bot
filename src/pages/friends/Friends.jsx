@@ -12,10 +12,10 @@ export default function Friends() {
     setInvitedFriends(getInvitedFriends())
   }, [])
 
-  const copyLink = () =>{
-    swalToastr.success('Link copied to clipboard')
+  const copyLink = () => {
+    swalToastr('success', 'Link copied to clipboard')
     navigator.clipboard.writeText(generateInviteLink())
-  } 
+  }
 
   return (
     <div className='firends-page'>
