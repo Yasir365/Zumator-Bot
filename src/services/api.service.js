@@ -99,7 +99,7 @@ export const saveRefUser = async (data) => {
 export const getInvitedFriends = async () => {
     const data = JSON.parse(localStorage.getItem('userInfo'));
     try {
-        const response = await axios.get(`${baseUrl}/getInvitedFriends`, data, {
+        const response = await axios.post(`${baseUrl}/getInvitedFriends`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
