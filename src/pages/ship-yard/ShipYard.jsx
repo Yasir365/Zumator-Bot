@@ -1,7 +1,7 @@
 import './ship-yard.scss'
-import { shipyardData } from '../../services/data.service';
-
+import { shipyardData, gradients } from '../../services/data.service';
 import Slider from 'react-slick';
+
 
 function NextArrow(props) {
     const { className, onClick } = props;
@@ -98,7 +98,7 @@ export default function ShipYard() {
             <div className="card-container">
                 <div className="tab-content d-flex">
                     {shipyardData.map((item, index) => (
-                        <div className="item" key={index}>
+                        <div className="item" key={index} style={{ background: gradients[index % gradients.length], }}>
                             <div className="card-image">
                                 <img src={item.image} alt="" />
                             </div>

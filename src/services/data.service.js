@@ -196,7 +196,6 @@ export const leaderboardData = [
     },
 ]
 
-
 export const rewardData = {
     new: [
         {
@@ -285,3 +284,10 @@ export const rewardData = {
         },
     ],
 }
+
+export const gradients = [
+    'linear-gradient(180deg, #4EA9B8 0%, #009FB9 100%)',
+    'linear-gradient(180deg, #F1AEFF 0%, #9000AA 100%)',
+    'linear-gradient(180deg, #FFE575 0%, #725D00 100%)',
+    'linear-gradient(180deg, #A58AFF 0%, #009FB9 100%)',
+]

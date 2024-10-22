@@ -2,7 +2,7 @@ import './ops.scss';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
-import { opsData } from '../../services/data.service';
+import { opsData, gradients } from '../../services/data.service';
 import { Rating } from 'react-simple-star-rating'
 
 
@@ -117,7 +117,7 @@ export default function Ops() {
         activeTab === 'web3' && (
           <div className="tab-content d-flex">
             {tab1Data.map((item, index) => (
-              <div className="item" key={index}>
+              <div className="item" key={index} style={{ background: gradients[index % gradients.length], }}>
                 <div className="card-image">
                   <img src={item.image} alt="" />
                 </div>
@@ -234,7 +234,7 @@ export default function Ops() {
           <div className="modal-content">
             <div className="modal-body">
               <h5>Mystery Ops</h5>
-              <img src="/images/ops/mystery-box.webp" alt="" lazyload="true"/>
+              <img src="/images/ops/mystery-box.webp" alt="" lazyload="true" />
               <button type="button" className="btn" onClick={collectCoins} data-bs-dismiss="modal">Collect Coins</button>
             </div>
           </div>
