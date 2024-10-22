@@ -53,7 +53,6 @@ async function saveUser(data) {
 
 const generateInviteLink = () => {
     const user = JSON.parse(localStorage.getItem('userInfo'));
-    debugger
     const inviteLink = `${window.location.origin}?ref=${user?.telegram_id}`;
     return inviteLink;
 };
