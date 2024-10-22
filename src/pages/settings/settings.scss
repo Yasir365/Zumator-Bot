@@ -10,7 +10,6 @@
     }
 
     ul {
-        padding: 0;
         margin-top: 40px;
 
         .item {
@@ -23,16 +22,7 @@
             margin-bottom: 8px;
             min-height: 48px;
             background-color: var(--white);
-
-            .title {
-                font-weight: 500;
-            }
-
-            small {
-                color: #9ca39c;
-            }
         }
-
     }
 
     #deleteModal {
@@ -49,7 +39,6 @@
                 margin-bottom: 12px;
                 font-weight: 500;
             }
-
 
             button {
                 width: 120px;

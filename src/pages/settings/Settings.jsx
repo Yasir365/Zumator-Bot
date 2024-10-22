@@ -32,7 +32,7 @@ export default function Settings() {
                     <Link to='/change-language' className='item'>
                         <div>
                             <div className='title'>Select Language</div>
-                            <small>{selectedLanguage}</small>
+                            <small className='text-muted'>{selectedLanguage}</small>
                         </div>
                         <i className="fa-solid fa-chevron-right"></i>
                     </Link>
@@ -40,21 +40,17 @@ export default function Settings() {
                 <li>
                     <Link to='/privacy-policy' className='item'>
                         <div className='title'>Privacy Policy</div>
-
                         <i className="fa-solid fa-chevron-right"></i>
                     </Link>
                 </li>
                 <li>
                     <Link to='/leaderboard' className='item'>
                         <div className='title'>Leaderboard</div>
-
                         <i className="fa-solid fa-chevron-right"></i>
                     </Link>
                 </li>
                 <li className='item' data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    <div>
-                        <div className='title'>Delete Account</div>
-                    </div>
+                    <div className='title'>Delete Account</div>
                     <i className="fa-solid fa-chevron-right"></i>
                 </li>
             </ul>

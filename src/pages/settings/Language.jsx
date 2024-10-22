@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 export default function Language() {
     const { t, i18n } = useTranslation();
-
     const [selectedLanguage, setSelectedLanguage] = React.useState('English');
 
     useEffect(() => {
@@ -35,17 +34,9 @@ export default function Language() {
             <ul>
                 {
                     languages.map((item, index) => (
-                        <li
-                            className='item'
-                            key={index}
-                            onClick={() => changeLanguage(item)}
-                        >
-                            <div>
-                                <div className='title'>{item.name}</div>
-                            </div>
-                            {item.name === selectedLanguage ? (
-                                <i className="fa-solid fa-check"></i>
-                            ) : null}
+                        <li className='item' key={index} onClick={() => changeLanguage(item)} >
+                            <div className='title'>{item.name}</div>
+                            {item.name === selectedLanguage ? (<i className="fa-solid fa-check"></i>) : null}
                         </li>
                     ))
                 }

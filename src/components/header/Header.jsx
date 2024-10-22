@@ -16,23 +16,19 @@ export default function Header() {
 
     return (
         <header className="user-header">
-            <div className="profile-container">
+            <div className="d-flex align-items-center">
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
                 {userInfo ? (
                     <>
-                        <p className="title">
-                            {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small>
-                        </p>
+                        <p className="title"> {userInfo.firstName} {userInfo.lastName} <small>(Conqueror)</small> </p>
                     </>
                 ) : (
-                    <div className='profile-container'>
-                        <p className="title">Jane Cooper (CEO)</p>
-                    </div>
+                    <p className="title">Jane Cooper <small>(CEO)</small></p>
                 )}
             </div>
             <div className="setting">
                 <Link to="/settings">
-                    <img src="/images/icons/setting.webp" alt="setting" />
+                    <img src="/images/icons/setting.webp" alt="setting" lazyload="true" />
                 </Link>
             </div>
         </header>
