@@ -3,6 +3,22 @@ import axios from 'axios';
 const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 
 
+export const setFullHeight = () => {
+    if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram.WebApp;
+
+        // Check if the mini app is expanded
+        if (!tg.isExpanded) {
+            // If not expanded, expand it
+            tg.expand();
+            console.log('Mini app expanded to full height');
+        } else {
+            console.log('Mini app is already expanded');
+        }
+    }
+
+}
+
 export const fetchUserInfo = () => {
     const userInfo = localStorage.getItem('userInfo');
     if (userInfo) {
@@ -19,7 +35,7 @@ export const fetchUserInfo = () => {
 
             console.log("Test InitData :: ", test);
             // console.log("Test InitDataUnsafe :: ", test2);
-            
+
 
             if (user) {
                 const userInfo = {
@@ -51,7 +67,7 @@ async function saveUser(data) {
             throw new Error('Failed to save user info');
         }
 
-        if(response.data.data){
+        if (response.data.data) {
             localStorage.setItem('userInfo', JSON.stringify(response.data.data));
         }
 
@@ -92,8 +108,8 @@ export const saveRefUser = async (data) => {
         if (response.status !== 200) {
             throw new Error('Failed to save referral user info');
         }
-        
-        if(response.data.data){
+
+        if (response.data.data) {
             localStorage.setItem('ref', JSON.stringify(response.data.data.first_name + ' ' + response.data.data.last_name));
         }
 
