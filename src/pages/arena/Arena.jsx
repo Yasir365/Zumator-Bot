@@ -1,8 +1,14 @@
+import React, { useEffect, useRef } from 'react';
 import './arena.scss';
 
 const total = [6, 5, 4, 3, 2, 1];
 
 export default function Arena() {
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="arena-page">
@@ -13,6 +19,7 @@ export default function Arena() {
             <img src={`/images/arena/${item}.webp`} alt="" className={index === total.length - 1 ? "active" : ""} />
           </div>
         ))}
+        <div ref={bottomRef}></div>
       </div>
     </div>
   );

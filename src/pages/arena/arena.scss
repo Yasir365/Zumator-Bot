@@ -10,7 +10,7 @@
     .card-container {
         margin-top: 40px;
         padding: 10px 30px;
-
+        overflow-x: hidden;
         .item {
             position: relative;
 
@@ -40,8 +40,8 @@
                 top: 89px;
             }
 
-            &:last-child::before {
-                display: none;
+            &:nth-child(6)::before {
+                display: none !important;
             }
 
             img {
@@ -56,7 +56,7 @@
                 margin-top: 40px;
             }
 
-            &:last-child {
+            &:nth-child(6) {
                 margin-top: 40px;
             }
         }
