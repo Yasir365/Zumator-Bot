@@ -14,6 +14,12 @@ export const fetchUserInfo = () => {
             window.Telegram.WebApp.ready();
 
             const user = window.Telegram.WebApp.initDataUnsafe?.user;
+            const test = window.Telegram.WebApp.initData;
+            const test2 = window.Telegram.WebApp.initDataUnsafe;
+
+            console.log("Test InitData :: ", test);
+            console.log("Test InitDataUnsafe :: ", test2);
+            
 
             if (user) {
                 const userInfo = {
