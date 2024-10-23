@@ -11,8 +11,12 @@
         margin-top: 40px;
         padding: 10px 30px;
         overflow-x: hidden;
+
         .item {
+            min-height: 148px;
             position: relative;
+            display: flex;
+            align-items: flex-end;
 
             &:nth-child(odd) {
                 display: flex;
@@ -50,14 +54,6 @@
                 &.active {
                     filter: none;
                 }
-            }
-
-            &:nth-child(4) {
-                margin-top: 40px;
-            }
-
-            &:nth-child(6) {
-                margin-top: 40px;
             }
         }
 
