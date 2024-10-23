@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
+// const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
+const baseUrl = "https://zumbator-bot-backend.vercel.app/"
 
 
 export const fetchUserInfo = () => {
