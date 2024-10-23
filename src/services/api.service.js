@@ -3,22 +3,6 @@ import axios from 'axios';
 const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 
 
-export const setFullHeight = () => {
-    if (window.Telegram && window.Telegram.WebApp) {
-        const tg = window.Telegram.WebApp;
-
-        // Check if the mini app is expanded
-        if (!tg.isExpanded) {
-            // If not expanded, expand it
-            tg.expand();
-            console.log('Mini app expanded to full height');
-        } else {
-            console.log('Mini app is already expanded');
-        }
-    }
-
-}
-
 export const fetchUserInfo = () => {
     const userInfo = localStorage.getItem('userInfo');
     if (userInfo) {
