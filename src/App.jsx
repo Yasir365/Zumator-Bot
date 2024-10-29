@@ -11,7 +11,7 @@ export default function App() {
 
     function updateButton() {
         if (window.Telegram && window.Telegram.WebApp) {
-            if (window.location.pathname === "/") {
+            if (window.location.pathname === "") {
                 tg.BackButton.hide();
                 tg.MainButton.show().setText("Close").onClick(() => {
                     tg.close();
