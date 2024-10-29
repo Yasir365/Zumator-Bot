@@ -14,17 +14,17 @@ export default function Home() {
 
     const [startParam, setStartParam] = useState('')
 
+    const initWebApp = async () => {
+        if (typeof window !== 'undefined') {
+            const WebApp = (await import('@twa-dev/sdk')).default;
+            WebApp.ready();
+            setStartParam(WebApp.initDataUnsafe.start_param || '');
+            console.log("----------Start Params Data :: +++++++++++-", WebApp.initDataUnsafe);
+
+        }
+    };
 
     useEffect(() => {
-        const initWebApp = async () => {
-            if (typeof window !== 'undefined') {
-                const WebApp = (await import('@twa-dev/sdk')).default;
-                WebApp.ready();
-                setStartParam(WebApp.initDataUnsafe.start_param || '');
-                console.log("----------Start Params Data :: ---------", startParam );
-                
-            }
-        };
 
         initWebApp();
     }, [])
