@@ -21,11 +21,12 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        const hash = location.hash; // Get the hash part of the URL
-        const id = hash ? hash.substring(hash.indexOf('frndId') + 6) : null;
-    
-        console.log("Telegram ID ----------- :: ", id);
-        
+        const hash = location.hash;
+        const idMatch = hash.match(/#(\d+)/); // Use regex to extract the number after the '#'
+        const id = idMatch ? idMatch[1] : null;
+
+        console.log("Telegram ID ++++++ :: ", id);
+
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
             if (data) {
