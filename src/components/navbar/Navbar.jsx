@@ -13,22 +13,20 @@ export default function Navbar() {
 
   function updateButton() {
     if (window.Telegram && window.Telegram.WebApp) {
-      const tg = window.Telegram.WebApp;
 
-      if (activeRoute === '/') {
-        // Show BackButton with "Close" on the home route
-        tg.BackButton.show().setText("Close").onClick(() => {
-          tg.close();
-        });
+      if (activeRoute == '/') {
+        tg.BackButton.hide();
+        // tg.BackButton.show().setText("Close").onClick(() => {
+        //   tg.close();
+        // });
       } else {
-        // Show BackButton with "Back" on other routes
+        tg.MainButton.hide();
         tg.BackButton.show().setText("Back").onClick(() => {
           window.history.back();
         });
       }
     }
   }
-
 
   // useEffect(() => {
   //   if (window.Telegram && window.Telegram.WebApp) {
