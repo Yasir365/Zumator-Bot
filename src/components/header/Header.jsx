@@ -1,6 +1,19 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
-import { updateCloseButton } from '../../services/api.service';
+
+const updateCloseButton = (route) => {
+    let tg;
+    if (window.Telegram && window.Telegram.WebApp) {
+        tg = window.Telegram.WebApp;
+        if (route == 'main') {
+            tg.BackButton.hide()
+        } else {
+            tg.BackButton.show().onClick(() => {
+                window.history.back();
+            });
+        }
+    }
+}
 
 export default function Header() {
     const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;

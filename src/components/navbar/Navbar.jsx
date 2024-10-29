@@ -1,7 +1,20 @@
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { updateCloseButton } from '../../services/api.service';
+
+const updateCloseButton = (route) => {
+  let tg;
+  if (window.Telegram && window.Telegram.WebApp) {
+      tg = window.Telegram.WebApp;
+      if (route == 'main') {
+          tg.BackButton.hide()
+      } else {
+          tg.BackButton.show().onClick(() => {
+              window.history.back();
+          });
+      }
+  }
+}
 
 export default function Navbar() {
   const { t } = useTranslation();

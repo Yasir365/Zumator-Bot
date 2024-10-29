@@ -3,7 +3,21 @@ import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
-import { saveRefUser, updateCloseButton } from '../../services/api.service';
+import { saveRefUser } from '../../services/api.service';
+
+const updateCloseButton = (route) => {
+    let tg;
+    if (window.Telegram && window.Telegram.WebApp) {
+        tg = window.Telegram.WebApp;
+        if (route == 'main') {
+            tg.BackButton.hide()
+        } else {
+            tg.BackButton.show().onClick(() => {
+                window.history.back();
+            });
+        }
+    }
+}
 
 export default function Home() {
     const [date] = useState(new Date());
