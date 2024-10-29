@@ -22,7 +22,7 @@ export default function Navbar() {
         //   tg.close();
         // });
       } else {
-        tg.BackButton.show().onClick(() => {
+        tg.BackButton.show().setText("Back").onClick(() => {
           window.history.back();
         });
       }
