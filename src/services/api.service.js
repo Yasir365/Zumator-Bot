@@ -119,12 +119,13 @@ export const getInvitedFriends = async () => {
 }
 
 export const updateCloseButton = (route) => {
-    let tg;
     if (window.Telegram && window.Telegram.WebApp) {
-        tg = window.Telegram.WebApp;
+        const tg = window.Telegram.WebApp;
         if (route == 'main') {
+            this.MainButton.hide()
             tg.BackButton.hide()
         } else {
+            this.MainButton.hide()
             tg.BackButton.show().onClick(() => {
                 window.history.back();
             });
