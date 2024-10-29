@@ -12,29 +12,6 @@ export default function Home() {
     const urlParams = new URLSearchParams(location.search);
     const ref = urlParams.get('startapp');
 
-    const [startParam, setStartParam] = useState('')
-
-    const initWebApp = async () => {
-        if (typeof window !== 'undefined') {
-            const WebApp = (await import('@twa-dev/sdk')).default;
-
-            // Make WebApp ready
-            WebApp.ready();
-
-            // Access `start_param` via `initDataUnsafe`
-            const startParamData = WebApp.initDataUnsafe.start_param;
-            setStartParam(startParamData || ''); // Set to state or empty string
-
-            // Log the whole initData to inspect all parameters
-            console.log("Complete initData:", WebApp.initData);
-            console.log("start_param:", startParamData);
-        }
-    };
-
-    useEffect(() => {
-        initWebApp();
-    }, [])
-
     useEffect(() => {
         const interval = setInterval(() => {
             setFormattedDate(moment().format('hh:mm:ss'));
