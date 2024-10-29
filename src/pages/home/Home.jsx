@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
-import { saveRefUser } from '../../services/api.service';
+import { saveRefUser, updateCloseButton } from '../../services/api.service';
 
 export default function Home() {
     const [date] = useState(new Date());
@@ -24,7 +24,7 @@ export default function Home() {
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
             if (data) {
-                data['ref']= ref;
+                data['ref'] = ref;
                 saveRefUser(data)
             }
         }
@@ -67,7 +67,7 @@ export default function Home() {
                     </div>
 
                     <div className="item">
-                        <Link to="/rewards">
+                        <Link to="/rewards" onClick={updateCloseButton('other')}>
                             <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
                             <p>Reward</p>
                         </Link>

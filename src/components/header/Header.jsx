@@ -1,6 +1,6 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
     const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
@@ -20,7 +20,7 @@ export default function Header() {
                 )}
             </div>
             <div className="setting">
-                <Link to="/settings">
+                <Link to="/settings" onClick={updateCloseButton('other')}>
                     <img src="/images/icons/setting.webp" alt="setting" lazyload="true" />
                 </Link>
             </div>
