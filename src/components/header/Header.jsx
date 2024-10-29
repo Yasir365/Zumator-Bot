@@ -20,7 +20,7 @@ export default function Header() {
                 )}
             </div>
             <div className="setting">
-                <Link to="/settings">
+                <Link to="/settings" onClick={updateCloseButton('other')}>
                     <img src="/images/icons/setting.webp" alt="setting" lazyload="true" />
                 </Link>
             </div>
