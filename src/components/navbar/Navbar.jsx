@@ -16,11 +16,11 @@ export default function Navbar() {
 
       if (activeRoute == '/') {
         tg.BackButton.hide();
-        tg.CloseButton.show().setText("Close").onClick(() => {
+        tg.MainButton.show().setText("Close").onClick(() => {
           tg.close();
         });
       } else {
-        tg.CloseButton.hide();
+        tg.MainButton.hide();
         tg.BackButton.show().onClick(() => {
           window.history.back();
         });
@@ -30,8 +30,9 @@ export default function Navbar() {
 
   useEffect(() => {
     if (window.Telegram && window.Telegram.WebApp) {
+      tg.MainButton.hide();
       tg.BackButton.hide();
-      tg.CloseButton.show().setText("Close").onClick(() => {
+      tg.MainButton.show().setText("Close").onClick(() => {
         tg.close();
       });
     }
