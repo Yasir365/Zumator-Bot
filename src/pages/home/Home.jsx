@@ -17,15 +17,21 @@ export default function Home() {
     const initWebApp = async () => {
         if (typeof window !== 'undefined') {
             const WebApp = (await import('@twa-dev/sdk')).default;
-            WebApp.ready();
-            setStartParam(WebApp.initDataUnsafe.start_param || '');
-            console.log("----------Start Params Data222222222 :: +++++++++++-", WebApp.tgWebAppStartParam);
 
+            // Make WebApp ready
+            WebApp.ready();
+
+            // Access `start_param` via `initDataUnsafe`
+            const startParamData = WebApp.initDataUnsafe.start_param;
+            setStartParam(startParamData || ''); // Set to state or empty string
+
+            // Log the whole initData to inspect all parameters
+            console.log("Complete initData:", WebApp.initData);
+            console.log("start_param:", startParamData);
         }
     };
 
     useEffect(() => {
-
         initWebApp();
     }, [])
 
