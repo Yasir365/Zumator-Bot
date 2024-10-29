@@ -7,31 +7,32 @@ export default function Navbar() {
   const { t } = useTranslation();
   let tg;
   if (window.Telegram && window.Telegram.WebApp) {
-      tg = window.Telegram.WebApp;
+    tg = window.Telegram.WebApp;
   }
 
   function updateButton() {
-      if (window.Telegram && window.Telegram.WebApp) {
-          console.log("window.location.pathname", window.location.pathname);
-          
-          if (window.location.pathname != "OPS" || window.location.pathname != "ship-yard" || window.location.pathname != "friends" ||
-              window.location.pathname != "arena" || window.location.pathname != "leaderboard" || window.location.pathname != "settings" ||
-              window.location.pathname != "privacy-policy" || window.location.pathname != "change-language" || window.location.pathname != "rewards"
-          ) {
-              tg.BackButton.hide();
-              tg.MainButton.show().setText("Close").onClick(() => {
-                  tg.close();
-              });
-          } else {
-              tg.MainButton.hide();
-              tg.BackButton.show().onClick(() => {
-                  window.history.back();
-              });
-          }
+    if (window.Telegram && window.Telegram.WebApp) {
+      console.log("window.location.pathname", window.location.pathname);
+
+      // if (window.location.pathname != "OPS" || window.location.pathname != "ship-yard" || window.location.pathname != "friends" ||
+      //     window.location.pathname != "arena" || window.location.pathname != "leaderboard" || window.location.pathname != "settings" ||
+      //     window.location.pathname != "privacy-policy" || window.location.pathname != "change-language" || window.location.pathname != "rewards"
+      // ) {
+      if (window.location.pathname == "/") {
+        tg.BackButton.hide();
+        tg.MainButton.show().setText("Close").onClick(() => {
+          tg.close();
+        });
+      } else {
+        tg.MainButton.hide();
+        tg.BackButton.show().onClick(() => {
+          window.history.back();
+        });
       }
+    }
   }
   useEffect(() => {
-      updateButton();
+    updateButton();
   }, [window.location.pathname]);
 
   updateButton();
@@ -44,7 +45,7 @@ export default function Navbar() {
           <div className="navbar-collapse">
             <ul className="navbar-nav d-flex flex-row justify-content-evenly">
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/" onClick={updateButton}>
                   <img src="/images/icons/frog.webp" alt="" lazyload="true" />
                   Base
                 </NavLink>
@@ -56,19 +57,19 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard">
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard" onClick={updateButton}>
                   <img src="/images/icons/shipyard.webp" alt="" lazyload="true" />
                   {t('shipYard')}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends">
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends" onClick={updateButton}>
                   <img src="/images/icons/friends.webp" alt="" lazyload="true" />
                   Friends
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena" onClick={updateButton}>
                   <img src="/images/icons/podium.webp" alt="" lazyload="true" />
                   {t('arena')}
                 </NavLink>
