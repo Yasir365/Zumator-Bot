@@ -20,7 +20,8 @@ export default function App() {
 
             // Log the whole initData to inspect all parameters
             console.log("Complete initData:", WebApp.initDataUnsafe.tgWebAppStartParam);
-            console.log("start_param:", startParamData);
+            console.log("start_param:", WebApp.tgWebAppStartParam);
+            console.log("start_param:", WebApp.initDataUnsafe);
         }
     };
 
