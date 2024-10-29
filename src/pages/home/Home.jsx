@@ -31,7 +31,9 @@ export default function Home() {
     }, [ref]);
 
     useEffect(() => {
-        updateCloseButton('main');
+        setTimeout(() => {
+            updateCloseButton('main');
+        }, 1000);
     }, []);
 
     return (
