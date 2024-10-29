@@ -43,7 +43,7 @@ export default function Home() {
                 <div className='left'>
                     <div className="item">
                         <img src="/images/icons/key.webp" alt="" />
-                        <span>50</span>
+                        <span>50 {ref}</span>
                     </div>
                     <div className="item">
                         <img src="/images/icons/bonas.webp" alt="" />
