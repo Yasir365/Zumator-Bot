@@ -21,10 +21,8 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        const hash = window.location.hash;
-        const id = hash ? hash.substring(1) : null;  // Removes the '#' character
-
-        console.log("Telegram ID ---------+++ :: ", hash);
+        const hash = window.location.href;
+        console.log("Telegram ID ----------- :: ", hash);
 
         // if (hash) {
         //     const id = hash.substring(1); 
