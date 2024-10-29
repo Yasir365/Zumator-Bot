@@ -13,30 +13,32 @@ export default function Navbar() {
 
   function updateButton() {
     if (window.Telegram && window.Telegram.WebApp) {
+      const tg = window.Telegram.WebApp;
 
-      if (activeRoute == '/') {
-        tg.BackButton.hide();
-        tg.MainButton.show().setText("Close").onClick(() => {
+      if (activeRoute === '/') {
+        // Show BackButton with "Close" on the home route
+        tg.BackButton.show().setText("Close").onClick(() => {
           tg.close();
         });
       } else {
-        tg.MainButton.hide();
-        tg.BackButton.show().onClick(() => {
+        // Show BackButton with "Back" on other routes
+        tg.BackButton.show().setText("Back").onClick(() => {
           window.history.back();
         });
       }
     }
   }
 
-  useEffect(() => {
-    if (window.Telegram && window.Telegram.WebApp) {
-      tg.MainButton.hide();
-      tg.BackButton.hide();
-      tg.MainButton.show().setText("Close").onClick(() => {
-        tg.close();
-      });
-    }
-  }, [])
+
+  // useEffect(() => {
+  //   if (window.Telegram && window.Telegram.WebApp) {
+  //     tg.MainButton.hide();
+  //     tg.BackButton.hide();
+  //     tg.MainButton.show().setText("Close").onClick(() => {
+  //       tg.close();
+  //     });
+  //   }
+  // }, [])
 
   useEffect(() => {
     updateButton();
