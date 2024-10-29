@@ -21,20 +21,20 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        const hash = location.hash;
+        const hash = location.hash; 
         const idMatch = hash.match(/#(\d+)/); // Use regex to extract the number after the '#'
         const id = idMatch ? idMatch[1] : null;
+    
+        console.log("Telegram ID ----------- :: ", id);
 
-        console.log("Telegram ID ++++++ :: ", id);
-
-        if (ref) {
-            let data = JSON.parse(localStorage.getItem('userInfo'))
-            if (data) {
-                data['ref'] = ref;
-                saveRefUser(data)
-            }
-        }
-    }, [ref]);
+        // if (ref) {
+        //     let data = JSON.parse(localStorage.getItem('userInfo'))
+        //     if (data) {
+        //         data['ref'] = ref;
+        //         saveRefUser(data)
+        //     }
+        // }
+    }, [location]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -49,7 +49,7 @@ export default function Home() {
                 <div className='left'>
                     <div className="item">
                         <img src="/images/icons/key.webp" alt="" />
-                        <span>50 {ref}</span>
+                        <span>50</span>
                     </div>
                     <div className="item">
                         <img src="/images/icons/bonas.webp" alt="" />
