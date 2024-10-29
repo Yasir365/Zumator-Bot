@@ -68,7 +68,7 @@ export const generateInviteLink = () => {
     }
     const botUsername = "ZumatorTestBot";
     const appId = "7518320908";
-    const inviteLink = `https://t.me/${botUsername}?startapp=TeleId_${user.telegram_id}`;
+    const inviteLink = `https://t.me/${botUsername}?startapp=${appId}&ref=${user.telegram_id}`;
 
     return inviteLink;
 };
