@@ -11,65 +11,83 @@ export default function Navbar() {
     tg = window.Telegram.WebApp;
   }
 
-  useEffect(() => {
-    if (tg) {
-      tg.BackButton.hide(); // Hide Telegram's back button initially
-    }
-  }, []);
+  function updateButton() {
+    if (window.Telegram && window.Telegram.WebApp) {
 
-  function handleButtonClick() {
-    if (activeRoute === '/') {
-      tg.close(); // Custom close button on the home page
-    } else {
-      window.history.back(); // Navigate back on other pages
+      if (activeRoute == '/') {
+        tg.BackButton.show().setText("Close").onClick(() => {
+          tg.close();
+        });
+        // tg.MainButton.show().setText("Close").onClick(() => {
+        //   tg.close();
+        // });
+      } else {
+        tg.BackButton.show().onClick(() => {
+          window.history.back();
+        });
+      }
     }
   }
+
+  useEffect(() => {
+    if (window.Telegram && window.Telegram.WebApp) {
+      tg.MainButton.hide();
+      tg.BackButton.show().setText("Close").onClick(() => {
+        tg.close();
+      });
+      // tg.BackButton.hide();
+      // tg.MainButton.show().setText("Close").onClick(() => {
+      //   tg.close();
+      // });
+    }
+  }, [])
+
+  useEffect(() => {
+    updateButton();
+  }, [activeRoute]);
 
   return (
     <header className='user-navbar'>
       <nav className="navbar">
         <div className="container">
-          {/* Top Close/Back button */}
-          <button className="custom-close-button" onClick={handleButtonClick}>
-            {activeRoute === '/' ? 'Close' : 'Back'}
-          </button>
-
           <div className="navbar-collapse">
             <ul className="navbar-nav d-flex flex-row justify-content-evenly">
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/" onClick={() => setActiveRoute('/')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/" onClick={() => setActiveRoute('/')}>
                   <img src="/images/icons/frog.webp" alt="" lazyload="true" />
                   Base
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/OPS" onClick={() => setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/gaming.webp" alt="" lazyload="true" />
                   Ops
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/ship-yard" onClick={() => setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/shipyard.webp" alt="" lazyload="true" />
                   {t('shipYard')}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/friends" onClick={() => setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/friends.webp" alt="" lazyload="true" />
                   Friends
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/arena" onClick={() => setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/podium.webp" alt="" lazyload="true" />
                   {t('arena')}
                 </NavLink>
               </li>
+
             </ul>
           </div>
         </div>
       </nav>
+
     </header>
-  );
+  )
 }
