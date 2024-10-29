@@ -16,22 +16,22 @@ export default function Navbar() {
 
       if (activeRoute == '/') {
         tg.BackButton.hide();
-        tg.MainButton.show().setText("Close").onClick(() => {
+        tg.CloseButton.show().setText("Close").onClick(() => {
           tg.close();
         });
       } else {
-        tg.MainButton.hide();
+        tg.CloseButton.hide();
         tg.BackButton.show().onClick(() => {
           window.history.back();
         });
       }
     }
   }
-  
+
   useEffect(() => {
     if (window.Telegram && window.Telegram.WebApp) {
       tg.BackButton.hide();
-      tg.MainButton.show().setText("Close").onClick(() => {
+      tg.CloseButton.show().setText("Close").onClick(() => {
         tg.close();
       });
     }
@@ -40,9 +40,6 @@ export default function Navbar() {
   useEffect(() => {
     updateButton();
   }, [activeRoute]);
-
-  // updateButton();
-  // window.addEventListener("popstate", updateButton);
 
   return (
     <header className='user-navbar'>
