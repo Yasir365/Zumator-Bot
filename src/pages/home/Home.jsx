@@ -22,7 +22,6 @@ export default function Home() {
 
     useEffect(() => {
         console.log("Ref---------- :: ", ref);
-        alert(ref);
 
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
