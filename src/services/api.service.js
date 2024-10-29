@@ -76,7 +76,7 @@ export const handleInviteClick = () => {
         const link = generateInviteLink();
         const message = `Hey! Join Zumator using my invite link: ${link}`;
 
-        window.open(`${encodeURIComponent(message)} ${encodeURIComponent(link)}`);
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
