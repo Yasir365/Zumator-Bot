@@ -13,7 +13,6 @@ export default function Navbar() {
 
   function updateButton() {
     if (window.Telegram && window.Telegram.WebApp) {
-      console.log("window.location.pathname", window.location.pathname);
 
       if (activeRoute == '/') {
         tg.BackButton.hide();
@@ -28,6 +27,16 @@ export default function Navbar() {
       }
     }
   }
+  
+  useEffect(() => {
+    if (window.Telegram && window.Telegram.WebApp) {
+      tg.BackButton.hide();
+      tg.MainButton.show().setText("Close").onClick(() => {
+        tg.close();
+      });
+    }
+  }, [])
+
   useEffect(() => {
     updateButton();
   }, [activeRoute]);
@@ -42,31 +51,31 @@ export default function Navbar() {
           <div className="navbar-collapse">
             <ul className="navbar-nav d-flex flex-row justify-content-evenly">
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/" onClick={()=> setActiveRoute('/')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/" onClick={() => setActiveRoute('/')}>
                   <img src="/images/icons/frog.webp" alt="" lazyload="true" />
                   Base
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS" onClick={()=> setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/gaming.webp" alt="" lazyload="true" />
                   Ops
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard" onClick={()=> setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/shipyard.webp" alt="" lazyload="true" />
                   {t('shipYard')}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends" onClick={()=> setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/friends.webp" alt="" lazyload="true" />
                   Friends
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena" onClick={()=> setActiveRoute('other')}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena" onClick={() => setActiveRoute('other')}>
                   <img src="/images/icons/podium.webp" alt="" lazyload="true" />
                   {t('arena')}
                 </NavLink>
