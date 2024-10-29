@@ -21,10 +21,9 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        const url = new URL(window.location.href);
-        const params = url.searchParams;
-        const id = params.get('id');  // Replace 'id' with your actual parameter name
-    
+        const hash = window.location.hash;
+        const id = hash ? hash.substring(1) : null;  // Removes the '#' character
+
         console.log("Telegram ID ----------- :: ", id);
 
         // if (hash) {
