@@ -7,14 +7,14 @@ import { saveRefUser } from '../../services/api.service';
 
 export default function Home() {
     const [date] = useState(new Date());
-    const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
+    const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
     const location = useLocation();
     const urlParams = new URLSearchParams(location.search);
     const ref = urlParams.get('ref');
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setFormattedDate(moment().format('mm:ss'));
+            setFormattedDate(moment().format('hh:mm:ss'));
         }, 1000);
 
         return () => clearInterval(interval);

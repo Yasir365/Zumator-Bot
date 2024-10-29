@@ -10,11 +10,11 @@ export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
   const { tab1Data, tab2Data, tab3Data, tab4Data } = opsData
-  const [formattedDate, setFormattedDate] = useState(moment(date).format('mm:ss'));
+  const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFormattedDate(moment().format('mm:ss'));
+      setFormattedDate(moment().format('hh:mm:ss'));
     }, 1000);
 
     return () => clearInterval(interval);
