@@ -67,7 +67,7 @@ export const generateInviteLink = () => {
         throw new Error('User info is not available to generate invite link');
     }
 
-    const inviteLink = `https://t.me/ZumatorTestBot/start?startapp=${user.telegram_id}`;
+    const inviteLink = `https://t.me/ZumatorTestBot/start?startapp=7518320908&invite=${user.telegram_id}`;
     return inviteLink;
 };
 
