@@ -15,14 +15,13 @@ export default function Navbar() {
     if (window.Telegram && window.Telegram.WebApp) {
 
       if (activeRoute == '/') {
-        tg.BackButton.show().setText("Close").onClick(() => {
+        tg.BackButton.hide();
+        tg.MainButton.show().setText("Close").onClick(() => {
           tg.close();
         });
-        // tg.MainButton.show().setText("Close").onClick(() => {
-        //   tg.close();
-        // });
       } else {
-        tg.BackButton.show().setText("Back").onClick(() => {
+        tg.MainButton.hide();
+        tg.BackButton.show().onClick(() => {
           window.history.back();
         });
       }
@@ -32,13 +31,10 @@ export default function Navbar() {
   useEffect(() => {
     if (window.Telegram && window.Telegram.WebApp) {
       tg.MainButton.hide();
-      tg.BackButton.show().setText("Close").onClick(() => {
+      tg.BackButton.hide();
+      tg.MainButton.show().setText("Close").onClick(() => {
         tg.close();
       });
-      // tg.BackButton.hide();
-      // tg.MainButton.show().setText("Close").onClick(() => {
-      //   tg.close();
-      // });
     }
   }, [])
 
