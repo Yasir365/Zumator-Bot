@@ -67,7 +67,7 @@ export const generateInviteLink = () => {
         throw new Error('User info is not available to generate invite link');
     }
 
-    const inviteLink = `${window.location.origin}?ref=${user.telegram_id}`;
+    const inviteLink = `https://web.telegram.org/a/#7518320908?ref=${user.telegram_id}`;
     return inviteLink;
 };
 
@@ -76,7 +76,7 @@ export const handleInviteClick = () => {
         const link = generateInviteLink();
         const message = `Hey! Join Zumator using my invite link: ${link}`;
 
-        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
+        window.open(`${encodeURIComponent(message)} ${encodeURIComponent(link)}`);
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
