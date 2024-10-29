@@ -2,7 +2,7 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams  } from 'react-router-dom';
 import { saveRefUser, updateCloseButton } from '../../services/api.service';
 
 export default function Home() {
@@ -22,7 +22,8 @@ export default function Home() {
 
     useEffect(() => {
         const hash = window.location.href;
-        console.log("Telegram ID ----------- :: ", hash);
+        const { id } = useParams();
+        console.log("Telegram ID ----------- :: ", id);
 
         // if (hash) {
         //     const id = hash.substring(1); 
