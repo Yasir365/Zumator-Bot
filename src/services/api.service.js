@@ -117,3 +117,17 @@ export const getInvitedFriends = async () => {
         return [];
     }
 }
+
+export const updateCloseButton = (route) => {
+    let tg;
+    if (window.Telegram && window.Telegram.WebApp) {
+        tg = window.Telegram.WebApp;
+        if (route == 'main') {
+            tg.BackButton.hide()
+        } else {
+            tg.BackButton.show().onClick(() => {
+                window.history.back();
+            });
+        }
+    }
+}
