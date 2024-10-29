@@ -9,6 +9,7 @@ export default function App() {
     const initWebApp = async () => {
         if (typeof window !== 'undefined') {
             const WebApp = (await import('@twa-dev/sdk')).default;
+            
 
             // Make WebApp ready
             WebApp.ready();
@@ -18,7 +19,7 @@ export default function App() {
             setStartParam(startParamData || ''); // Set to state or empty string
 
             // Log the whole initData to inspect all parameters
-            console.log("Complete initData:", WebApp.initData);
+            console.log("Complete initData:", WebApp.initDataUnsafe.tgWebAppStartParam);
             console.log("start_param:", startParamData);
         }
     };
