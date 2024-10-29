@@ -11,7 +11,10 @@ export default function App() {
 
     function updateButton() {
         if (window.Telegram && window.Telegram.WebApp) {
-            if (window.location.pathname === "") {
+            if (window.location.pathname != "OPS" || window.location.pathname != "ship-yard" || window.location.pathname != "friends" ||
+                window.location.pathname != "arena" || window.location.pathname != "leaderboard" || window.location.pathname != "settings" ||
+                window.location.pathname != "privacy-policy" || window.location.pathname != "change-language" || window.location.pathname != "rewards"
+            ) {
                 tg.BackButton.hide();
                 tg.MainButton.show().setText("Close").onClick(() => {
                     tg.close();
