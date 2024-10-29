@@ -12,6 +12,23 @@ export default function Home() {
     const urlParams = new URLSearchParams(location.search);
     const ref = urlParams.get('startapp');
 
+    const [startParam, setStartParam] = useState('')
+
+
+    useEffect(() => {
+        const initWebApp = async () => {
+            if (typeof window !== 'undefined') {
+                const WebApp = (await import('@twa-dev/sdk')).default;
+                WebApp.ready();
+                setStartParam(WebApp.initDataUnsafe.start_param || '');
+                console.log("----------Start Params Data :: ---------", startParam );
+                
+            }
+        };
+
+        initWebApp();
+    }, [])
+
     useEffect(() => {
         const interval = setInterval(() => {
             setFormattedDate(moment().format('hh:mm:ss'));
@@ -21,10 +38,10 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        const hash = location.hash; 
+        const hash = location.hash;
         const idMatch = hash.match(/#(\d+)/); // Use regex to extract the number after the '#'
         const id = idMatch ? idMatch[1] : null;
-    
+
         console.log("Telegram ID ----------- :: ", id);
 
         // if (ref) {
