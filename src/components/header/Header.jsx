@@ -1,18 +1,11 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { fetchUserInfo } from '../../services/api.service';
+import { useState } from 'react';
 
 export default function Header() {
-    const [userInfo, setUserInfo] = useState(null);
+    const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
 
-    useEffect(() => {
-        fetchUserInfo()
-            .then(info => {
-                setUserInfo(info);
-            })
-            .catch(err => console.error(err));
-    }, []);
+    
 
     return (
         <header className="user-header">
