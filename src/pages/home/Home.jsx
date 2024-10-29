@@ -19,8 +19,7 @@ export default function Home() {
             const WebApp = (await import('@twa-dev/sdk')).default;
             WebApp.ready();
             setStartParam(WebApp.initDataUnsafe.start_param || '');
-            console.log("----------Start Params Data :: +++++++++++-", WebApp.initDataUnsafe);
-            console.log("----------Start Params Data222222222 :: +++++++++++-", WebApp.initDataUnsafe.start_param);
+            console.log("----------Start Params Data222222222 :: +++++++++++-", WebApp.tgWebAppStartParam);
 
         }
     };
