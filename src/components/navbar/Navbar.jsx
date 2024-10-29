@@ -15,28 +15,13 @@ export default function Navbar() {
     if (window.Telegram && window.Telegram.WebApp) {
 
       if (activeRoute == '/') {
-        tg.BackButton.hide();
-        // tg.BackButton.show().setText("Close").onClick(() => {
-        //   tg.close();
-        // });
       } else {
-        tg.MainButton.hide();
-        tg.BackButton.show().setText("Back").onClick(() => {
+        tg.BackButton.show().onClick(() => {
           window.history.back();
         });
       }
     }
   }
-
-  // useEffect(() => {
-  //   if (window.Telegram && window.Telegram.WebApp) {
-  //     tg.MainButton.hide();
-  //     tg.BackButton.hide();
-  //     tg.MainButton.show().setText("Close").onClick(() => {
-  //       tg.close();
-  //     });
-  //   }
-  // }, [])
 
   useEffect(() => {
     updateButton();
