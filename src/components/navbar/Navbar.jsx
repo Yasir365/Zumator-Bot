@@ -31,12 +31,12 @@ export default function Navbar() {
       }
     }
   }
-  useEffect(() => {
-    updateButton();
-  }, [window.location.pathname]);
+  // useEffect(() => {
+  //   // updateButton();
+  // }, [window.location.pathname]);
 
-  updateButton();
-  window.addEventListener("popstate", updateButton);
+  // updateButton();
+  // window.addEventListener("popstate", updateButton);
 
   return (
     <header className='user-navbar'>
