@@ -21,7 +21,14 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        console.log("Ref---------- :: ", ref);
+        const hash = window.location.hash;
+
+        // Check if hash is not empty
+        if (hash) {
+            // Remove the '#' and set the ID
+            const id = hash.substring(1); // Remove the '#' character
+            console.log("Telegram ID :: ", id); // Log the ID for debugging
+        }
 
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
