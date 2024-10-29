@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { initUtils } from '@telegram-apps/sdk'
 
 // const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
@@ -63,27 +62,23 @@ async function saveUser(data) {
 }
 
 export const generateInviteLink = () => {
-    const url = ''
     const user = JSON.parse(localStorage.getItem('userInfo'));
     if (!user || !user.telegram_id) {
         throw new Error('User info is not available to generate invite link');
     }
     const botUsername = "ZumatorTestBot";
     const appId = "7518320908";
-    const inviteLink = `https://t.me/${botUsername}/start?startapp=${user.telegram_id}`;
+    const inviteLink = `https://t.me/${botUsername}?startapp=frndId${user.telegram_id}`;
 
     return inviteLink;
 };
 
 export const handleInviteClick = () => {
     try {
-        const utils = initUtils();
         const link = generateInviteLink();
         const message = `Hey! Join Zumator using my invite link.`;
-        const completeLink = `https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`;
-        // window.open(completeLink);
 
-        utils.openTelegramLink(completeLink);
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
