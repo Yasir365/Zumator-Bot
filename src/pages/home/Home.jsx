@@ -10,7 +10,7 @@ export default function Home() {
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
     const location = useLocation();
     const urlParams = new URLSearchParams(location.search);
-    const ref = urlParams.get('ref');
+    const ref = urlParams.get('startapp');
 
     useEffect(() => {
         const interval = setInterval(() => {
