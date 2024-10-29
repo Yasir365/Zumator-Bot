@@ -20,6 +20,7 @@ export default function Home() {
             WebApp.ready();
             setStartParam(WebApp.initDataUnsafe.start_param || '');
             console.log("----------Start Params Data :: +++++++++++-", WebApp.initDataUnsafe);
+            console.log("----------Start Params Data222222222 :: +++++++++++-", WebApp.initDataUnsafe.start_param);
 
         }
     };
