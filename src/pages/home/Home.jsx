@@ -22,7 +22,22 @@ export default function Home() {
 
     useEffect(() => {
         console.log("Ref---------- :: ", ref);
-        
+
+        if (window.Telegram && window.Telegram.WebApp) {
+            const initData = window.Telegram.WebApp.initData;
+
+            // Parse the initData
+            const params = new URLSearchParams(initData);
+
+            // Retrieve the invite parameter
+            const invite = params.get('ref');
+            if (invite) {
+                console.log('Invite ID:', invite);
+            } else {
+                console.log('No invite parameter found');
+            }
+        }
+
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
             if (data) {
