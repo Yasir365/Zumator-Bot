@@ -24,7 +24,7 @@ export default function Home() {
         const hash = window.location.hash;
         const id = hash ? hash.substring(1) : null;  // Removes the '#' character
 
-        console.log("Telegram ID ----------- :: ", id);
+        console.log("Telegram ID ---------+++ :: ", hash);
 
         // if (hash) {
         //     const id = hash.substring(1); 
