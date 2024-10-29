@@ -30,6 +30,10 @@ export default function Home() {
         }
     }, [ref]);
 
+    useEffect(() => {
+        updateCloseButton('main');
+    }, []);
+
     return (
         <div className='home-page'>
             <Header />
