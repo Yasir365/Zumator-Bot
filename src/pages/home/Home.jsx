@@ -20,9 +20,9 @@ export default function Home() {
 
 
 
-    useEffect(() => {
-        updateCloseButton('main');
-    }, []);
+    // useEffect(() => {
+    //     updateCloseButton('main');
+    // }, []);
 
     return (
         <div className='home-page'>
@@ -61,7 +61,7 @@ export default function Home() {
                     </div>
 
                     <div className="item">
-                        <Link to="/rewards" aria-current="page" onClick={updateCloseButton('other')}>
+                        <Link to="/rewards">
                             <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
                             <p>Reward</p>
                         </Link>
@@ -99,10 +99,10 @@ export default function Home() {
                 <img src="/images/icons/clock.webp" alt="" />
                 <span>{formattedDate}</span>
                 <span className='m-0 ms-4'>Recruite</span>
-                <Link to="/arena" aria-current="page" onClick={updateCloseButton('other')}>
+                <Link to="/arena">
                     <img src="/images/icons/podium.webp" alt="" />
                 </Link>
-                <Link to="/leaderboard" aria-current="page" onClick={updateCloseButton('other')}>
+                <Link to="/leaderboard">
                     <img src="/images/icons/chart.webp" alt="" />
                 </Link>
             </div>
