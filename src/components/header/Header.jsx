@@ -4,7 +4,7 @@ import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
     let userInfo = localStorage.getItem('userInfo') || undefined;
-    if(userInfo != undefined){
+    if (userInfo != undefined) {
         userInfo = JSON.parse(userInfo);
     }
 
@@ -12,7 +12,7 @@ export default function Header() {
         <header className="user-header">
             <div className="d-flex align-items-center">
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
-                {userInfo != undefined ? (
+                {userInfo != undefined && userInfo.user ? (
                     <>
                         <p className="title"> {userInfo.user.first_name} {userInfo.user.last_name} <small>(Conqueror)</small> </p>
                     </>
