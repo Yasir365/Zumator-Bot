@@ -22,13 +22,17 @@ export async function registerUser(data) {
 }
 
 export const generateInviteLink = () => {
-    const user = JSON.parse(localStorage.getItem('userInfo'));
-    if (!user) {
-        throw new Error('User info is not available to generate invite link');
+    try {
+        const user = JSON.parse(localStorage.getItem('userInfo'));
+        if (!user) {
+            throw new Error('User info is not available to generate invite link');
+        }
+        const botUsername = "ZumatorTestBot";
+        const appId = "7518320908";
+        return `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
+    } catch (error) {
+        console.error('Error generating invite link:', error);
     }
-    const botUsername = "ZumatorTestBot";
-    const appId = "7518320908";
-    return `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
 };
 
 export const handleInviteClick = () => {
@@ -84,8 +88,8 @@ export const getReferal = async () => {
 };
 
 export const getInvitedFriends = async () => {
-    const data = JSON.parse(localStorage.getItem('userInfo'));
     try {
+        const data = JSON.parse(localStorage.getItem('userInfo'));
         const response = await axios.post(`${baseUrl}/getInvitedFriends`, data, {
             headers: {
                 'Content-Type': 'application/json',
