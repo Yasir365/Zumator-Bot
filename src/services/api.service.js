@@ -4,14 +4,14 @@ import axios from 'axios';
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 
 export async function registerUser(data) {
-    if (data) {
+    if(data){
         try {
             const response = await axios.post(`${baseUrl}/register`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
-
+    
             if (response.status == 200) {
                 return response.data.data;
             }
@@ -101,21 +101,19 @@ export const getInvitedFriends = async () => {
     }
 }
 
-export const setupBackButton = async () => {
-    try {
-        if (typeof window !== 'undefined') {
-            const WebApp = (await import('@twa-dev/sdk')).default;
-            WebApp.ready();
+export const updateCloseButton = async (route) => {
+    if (typeof window !== 'undefined') {
+        const WebApp = (await import('@twa-dev/sdk')).default;
+        WebApp.ready();
+        // console.log("WebApp ::::::: ", WebApp);
 
-            if (location.pathname === '/') {
-                WebApp.BackButton.hide();
-            } else {
-                WebApp.BackButton.show().onClick(() => {
-                    window.history.back();
-                });
-            }
+        if (route == 'main') {
+            WebApp.BackButton.hide()
+        } else {
+            WebApp.BackButton.show().onClick(() => {
+                window.history.back();
+            });
         }
-    } catch (error) {
-        console.error('Error initializing WebApp:', error);
+
     }
-};
+}
