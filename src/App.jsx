@@ -11,7 +11,9 @@ export default function App() {
 
             const user = WebApp.initDataUnsafe;
             const data = await registerUser(user);
-            localStorage.setItem('userInfo', JSON.stringify(data));
+            if (data) {
+                localStorage.setItem('userInfo', JSON.stringify(data));
+            }
         }
     };
 
