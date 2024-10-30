@@ -11,7 +11,7 @@ export default function Header() {
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
                 {userInfo ? (
                     <>
-                        <p className="title"> {userInfo.first_name} {userInfo.last_name} <small>(Conqueror)</small> </p>
+                        <p className="title"> {userInfo.user.first_name} {userInfo.user.last_name} <small>(Conqueror)</small> </p>
                     </>
                 ) : (
                     <p className="title">Jane Cooper <small>(CEO)</small></p>
