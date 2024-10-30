@@ -61,7 +61,7 @@ export default function Home() {
                     </div>
 
                     <div className="item">
-                        <Link to="/rewards" onClick={updateCloseButton('other')}>
+                        <Link to="/rewards" aria-current="page" onClick={updateCloseButton('other')}>
                             <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
                             <p>Reward</p>
                         </Link>
@@ -99,8 +99,12 @@ export default function Home() {
                 <img src="/images/icons/clock.webp" alt="" />
                 <span>{formattedDate}</span>
                 <span className='m-0 ms-4'>Recruite</span>
-                <img src="/images/icons/podium.webp" alt="" />
-                <img src="/images/icons/chart.webp" alt="" />
+                <Link to="/arena" aria-current="page" onClick={updateCloseButton('other')}>
+                    <img src="/images/icons/podium.webp" alt="" />
+                </Link>
+                <Link to="/leaderboard" aria-current="page" onClick={updateCloseButton('other')}>
+                    <img src="/images/icons/chart.webp" alt="" />
+                </Link>
             </div>
 
             <div className="progress-container">

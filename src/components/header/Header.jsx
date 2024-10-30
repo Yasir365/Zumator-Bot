@@ -4,7 +4,7 @@ import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
     let userInfo = localStorage.getItem('userInfo') || undefined;
-    if (userInfo != undefined) {
+    if (userInfo && userInfo != undefined) {
         userInfo = JSON.parse(userInfo);
     }
 
