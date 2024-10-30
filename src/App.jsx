@@ -58,7 +58,7 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        saveRef();
+        // saveRef();
     }, [])
 
 
@@ -68,7 +68,7 @@ export default function App() {
 
 
     useEffect(() => {
-        const initWebApp = async () => {
+        const getParams = async () => {
             if (typeof window !== 'undefined') {
                 const WebApp = (await import('@twa-dev/sdk')).default;
                 WebApp.ready();
@@ -78,7 +78,7 @@ export default function App() {
             }
         };
 
-        initWebApp();
+        getParams();
     }, [])
 
 
