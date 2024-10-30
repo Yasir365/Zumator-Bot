@@ -9,7 +9,7 @@ export default function Friends() {
   const [invitedFriends, setInvitedFriends] = useState([]);
 
   useEffect(() => {
-    // setRef(getReferal)
+    setRef(getReferal)
     // setInvitedFriends(getInvitedFriends())
   }, [])
 
