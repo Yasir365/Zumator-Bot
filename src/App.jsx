@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { registerUser, saveReferal } from "./services/api.service";
 import { Link, useLocation, } from 'react-router-dom';
 export default function App() {
+    const location = useLocation();
 
     const initWebApp = async () => {
         if (typeof window !== 'undefined') {
@@ -19,7 +20,6 @@ export default function App() {
     };
 
     const saveRef = () => {
-        const location = useLocation();
         const urlParams = new URLSearchParams(location.search);
         const ref = urlParams.get('startapp');
         console.log("Ref :: ", ref);
