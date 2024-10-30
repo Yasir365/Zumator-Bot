@@ -26,17 +26,15 @@ export const generateInviteLink = () => {
     }
     const botUsername = "ZumatorTestBot";
     const appId = "7518320908";
-    const inviteLink = `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
-
-    return inviteLink;
+    const link = `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
+    const message = `Hey! Join Zumator using my invite link.`;
+    return `https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`
 };
 
 export const handleInviteClick = () => {
     try {
         const link = generateInviteLink();
-        const message = `Hey! Join Zumator using my invite link.`;
-
-        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
+        window.open(link);
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
