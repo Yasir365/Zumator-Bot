@@ -40,7 +40,7 @@ export const fetchUserInfo = () => {
     });
 };
 
-async function saveUser(data) {
+export async function saveUser(data) {
     try {
         const response = await axios.post(`${baseUrl}/register`, data, {
             headers: {
@@ -48,14 +48,7 @@ async function saveUser(data) {
             },
         });
 
-        if (response.status !== 200) {
-            throw new Error('Failed to save user info');
-        }
-
-        if (response.data.data) {
-            localStorage.setItem('userInfo', JSON.stringify(response.data.data));
-        }
-
+        return response.data.data;
     } catch (error) {
         console.error('Error saving user info:', error);
     }
