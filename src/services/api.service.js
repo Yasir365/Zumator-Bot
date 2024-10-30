@@ -99,6 +99,7 @@ export const updateCloseButton = async (route) => {
     if (typeof window !== 'undefined') {
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
+        console.log("WebApp ::::::: ", WebApp);
         
         if (route == 'main') {
             WebApp.BackButton.hide()
