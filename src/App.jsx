@@ -21,9 +21,12 @@ export default function App() {
     };
 
     const saveRef = () => {
-        const urlParams = new URLSearchParams(location.hash.substring(1));
+        console.log("Current window location:", window.location.href); // Add this line
+        const hash = window.location.hash.substring(1);  // Access directly from window.location
+        console.log("Parsed hash:", hash); // Add this line
+        const urlParams = new URLSearchParams(hash);
         const ref = urlParams.get('startapp');
-        console.log("Ref ::::::: ", urlParams);
+        console.log("Ref :: ", ref);
 
         // if (ref) {
         //     let data = JSON.parse(localStorage.getItem('userInfo'))
