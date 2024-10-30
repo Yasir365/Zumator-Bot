@@ -11,10 +11,7 @@ export default function Friends() {
   useEffect(() => {
     const fetchReferralData = async () => {
       try {
-        const data = await getReferal();
-        console.log("Referal data :: ", data);
-        
-        setRef(data); 
+        setRef(await getReferal()); 
         setInvitedFriends(await getInvitedFriends());
       } catch (error) {
         console.error("Error fetching referral data:", error);
