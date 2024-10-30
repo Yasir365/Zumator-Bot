@@ -35,7 +35,7 @@ export default function App() {
         //     }
         // }
     }
-    
+
     const setupBackButton = async () => {
         try {
             if (typeof window !== 'undefined') {
@@ -54,7 +54,7 @@ export default function App() {
             console.error('Error initializing WebApp:', error);
         }
     };
-    
+
 
     useEffect(() => {
         initWebApp();
@@ -65,6 +65,21 @@ export default function App() {
     useEffect(() => {
         setupBackButton();
     }, [location]);
+
+
+    useEffect(() => {
+        const initWebApp = async () => {
+            if (typeof window !== 'undefined') {
+                const WebApp = (await import('@twa-dev/sdk')).default;
+                WebApp.ready();
+                // console.log("::::::::::::::::::", WebApp.initData);
+                // console.log("::::::::::::::::::", WebApp.initDataUnsafe.user?.id.toString() || '');
+                console.log("::::::::::::::::::", WebApp.initDataUnsafe.start_param || '');
+            }
+        };
+
+        initWebApp();
+    }, [])
 
 
     return (
