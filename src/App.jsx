@@ -22,7 +22,7 @@ export default function App() {
     const saveRef = () => {
         const urlParams = new URLSearchParams(location.hash.substring(1));
         const ref = urlParams.get('startapp');
-        console.log("Ref :: ", ref);
+        console.log("Ref ::::::: ", urlParams);
 
         // if (ref) {
         //     let data = JSON.parse(localStorage.getItem('userInfo'))
