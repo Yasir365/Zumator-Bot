@@ -1,7 +1,6 @@
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { updateCloseButton } from '../../services/api.service';
 
 export default function Navbar() {
   const { t } = useTranslation();

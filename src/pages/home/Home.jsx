@@ -2,7 +2,6 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
-import { updateCloseButton } from '../../services/api.service';
 import { Link } from 'react-router-dom';
 
 export default function Home() {

@@ -1,6 +1,5 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
-import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
     let userInfo = localStorage.getItem('userInfo') || undefined;
