@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
-    const userInfo = localStorage.getItem('userInfo');
+    let userInfo = localStorage.getItem('userInfo') || undefined;
     if(userInfo != undefined){
         userInfo = JSON.parse(userInfo);
     }
