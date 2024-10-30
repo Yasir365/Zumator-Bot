@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect, useState } from "react";
-import { fetchUserInfo, saveUser } from "./services/api.service";
+import { fetchUserInfo, registerUser } from "./services/api.service";
 
 export default function App() {
     // const [user, setUser] = useState({})
@@ -15,7 +15,7 @@ export default function App() {
             const user = WebApp.initDataUnsafe;
             console.log("User :: ", user);
             
-            // const data = await saveUser(WebApp.initDataUnsafe)
+            // const data = await registerUser(WebApp.initDataUnsafe)
             // console.log("User Info :: ", data);
             
             // setUser(data)

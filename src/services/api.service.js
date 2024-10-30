@@ -40,7 +40,7 @@ export const fetchUserInfo = () => {
     });
 };
 
-export async function saveUser(data) {
+export async function registerUser(data) {
     try {
         const response = await axios.post(`${baseUrl}/register`, data, {
             headers: {
