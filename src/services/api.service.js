@@ -28,12 +28,12 @@ export const generateInviteLink = () => {
     const appId = "7518320908";
     const link = `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
     const message = `Hey! Join Zumator using my invite link.`;
-    return `https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`
+    return `url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`
 };
 
 export const handleInviteClick = () => {
     try {
-        const link = generateInviteLink();
+        const link = 'https://t.me/share/url?' + generateInviteLink();
         window.open(link);
     } catch (error) {
         console.error('Error generating invite link:', error);
@@ -68,7 +68,7 @@ export const getReferal = async () => {
 
         if (response.data.data) {
             return response.data.data.user.first_name + " " + response.data.data.user.last_name;
-        }else{
+        } else {
             return '';
         }
 
@@ -101,7 +101,7 @@ export const updateCloseButton = async (route) => {
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
         // console.log("WebApp ::::::: ", WebApp);
-        
+
         if (route == 'main') {
             WebApp.BackButton.hide()
         } else {
