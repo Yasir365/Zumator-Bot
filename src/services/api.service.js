@@ -69,11 +69,14 @@ export const getReferal = async () => {
         });
 
         if (response.data.data) {
-            return response.data.data;
+            return response.data.data.user.first_name + " " + response.data.data.user.last_name;
+        }else{
+            return '';
         }
 
     } catch (error) {
         console.error('Error Fetching referral user info:', error);
+        return '';
     }
 };
 

@@ -1,14 +1,15 @@
 import './friends.scss'
 import { friendsData } from '../../services/data.service';
-import { handleInviteClick, getInvitedFriends, generateInviteLink } from '../../services/api.service';
+import { handleInviteClick, getInvitedFriends, generateInviteLink, getReferal } from '../../services/api.service';
 import { useEffect, useState } from 'react';
 import swalToastr from '../../services/toastr.service';
 
 export default function Friends() {
-  const ref = localStorage.getItem('ref');
+  const [ref, setRef] = useState('');
   const [invitedFriends, setInvitedFriends] = useState([]);
 
   useEffect(() => {
+    // setRef(getReferal)
     setInvitedFriends(getInvitedFriends())
   }, [])
 
