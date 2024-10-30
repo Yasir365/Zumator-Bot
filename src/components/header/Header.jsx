@@ -2,12 +2,9 @@ import './header.scss';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
-    let userInfo =  undefined;
+    let userInfo;
     try {
-        // if (userInfo && userInfo != undefined) {
-        //     userInfo = JSON.parse(userInfo);
-        // }
-        
+        userInfo = JSON.parse(localStorage.getItem('userInfo')) || undefined;
     } catch (error) {
         console.error('Error fetching user info:', error);
     }
