@@ -24,13 +24,13 @@ export default function App() {
         const ref = urlParams.get('startapp');
         console.log("Ref :: ", ref);
 
-        if (ref) {
-            let data = JSON.parse(localStorage.getItem('userInfo'))
-            if (data) {
-                data['referral_id'] = ref;
-                saveReferal(data)
-            }
-        }
+        // if (ref) {
+        //     let data = JSON.parse(localStorage.getItem('userInfo'))
+        //     if (data) {
+        //         data['referral_id'] = ref;
+        //         saveReferal(data)
+        //     }
+        // }
     }
 
     useEffect(() => {
