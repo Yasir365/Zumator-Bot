@@ -20,10 +20,10 @@ export default function App() {
     };
 
     const saveRef = () => {
-        const urlParams = new URLSearchParams(location.search);
+        const urlParams = new URLSearchParams(location.hash.substring(1));
         const ref = urlParams.get('startapp');
         console.log("Ref :: ", ref);
-        
+
         if (ref) {
             let data = JSON.parse(localStorage.getItem('userInfo'))
             if (data) {
