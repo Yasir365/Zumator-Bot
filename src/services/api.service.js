@@ -3,43 +3,6 @@ import axios from 'axios';
 const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 // const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 
-
-export const fetchUserInfo = () => {
-    const userInfo = localStorage.getItem('userInfo');
-    if (userInfo) {
-        return Promise.resolve(JSON.parse(userInfo));
-    }
-
-    return new Promise((resolve, reject) => {
-        if (window.Telegram && window.Telegram.WebApp) {
-            window.Telegram.WebApp.ready();
-
-            const user = window.Telegram.WebApp.initDataUnsafe?.user;
-            const test = window.Telegram.WebApp.themeParams;
-            // const test2 = window.Telegram.WebApp.initDataUnsafe;
-
-            console.log("Test InitData :: ", test);
-            // console.log("Test InitDataUnsafe :: ", test2);
-
-
-            if (user) {
-                const userInfo = {
-                    first_name: user.first_name,
-                    last_name: user.last_name,
-                    telegram_id: user.id,
-                };
-
-                saveUser(userInfo);
-                resolve(userInfo);
-            } else {
-                reject(new Error('User info not available'));
-            }
-        } else {
-            reject(new Error('Telegram WebApp SDK is not available'));
-        }
-    });
-};
-
 export async function registerUser(data) {
     try {
         const response = await axios.post(`${baseUrl}/register`, data, {
