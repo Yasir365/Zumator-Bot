@@ -21,7 +21,7 @@ export async function registerUser(data) {
 
 export const generateInviteLink = () => {
     const user = JSON.parse(localStorage.getItem('userInfo'));
-    if (!user || !user.telegram_id) {
+    if (!user) {
         throw new Error('User info is not available to generate invite link');
     }
     const botUsername = "ZumatorTestBot";
