@@ -95,11 +95,18 @@ export const getInvitedFriends = async () => {
     }
 }
 
-export const updateCloseButton = (route) => {
+export const updateCloseButton = async (route) => {
+    if (typeof window !== 'undefined') {
+        const WebApp = (await import('@twa-dev/sdk')).default;
+        WebApp.ready();
+        console.log("WebApp ::::::: ", WebApp);
+        
+
+    }
     if (window.Telegram && window.Telegram.WebApp) {
         const tg = window.Telegram.WebApp;
-        console.log("tg ::::::: ", tg);
-        
+        // console.log("tg ::::::: ", tg);
+
         if (route == 'main') {
             tg.BackButton.hide()
         } else {

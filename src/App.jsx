@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect } from "react";
 import { registerUser, saveReferal } from "./services/api.service";
-import { Link, useLocation, } from 'react-router-dom';
+import { useLocation, } from 'react-router-dom';
 export default function App() {
     const location = useLocation();
 
