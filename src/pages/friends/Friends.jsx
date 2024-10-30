@@ -9,10 +9,21 @@ export default function Friends() {
   const [invitedFriends, setInvitedFriends] = useState([]);
 
   useEffect(() => {
-    setRef(getReferal)
-    // setInvitedFriends(getInvitedFriends())
-  }, [])
+    const fetchReferralData = async () => {
+      try {
+        const data = await getReferal();
+        console.log("Referal data :: ", data);
+        
+        setRef(data); 
+        setInvitedFriends(await getInvitedFriends());
+      } catch (error) {
+        console.error("Error fetching referral data:", error);
+      }
+    };
 
+    // Call the async function
+    fetchReferralData();
+  }, [])
   const copyLink = () => {
     swalToastr('success', 'Link copied to clipboard')
     navigator.clipboard.writeText(generateInviteLink())
@@ -82,7 +93,7 @@ export default function Friends() {
 
       <div className="button-container">
         <button className='invite' onClick={handleInviteClick}>Send Invite</button>
-        <button className='copy' onClick={copyLink}><i className="fa-regular fa-copy"></i></button>
+        <button className='copy' onClick={generateInviteLink}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>
   )

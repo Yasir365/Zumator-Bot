@@ -12,8 +12,8 @@ export default function App() {
             WebApp.ready();
 
             const user = WebApp.initDataUnsafe;
-            const data = await registerUser(user);
-            if (data) {
+            if (user && user.user) {
+                const data = await registerUser(user);
                 localStorage.removeItem('userInfo');
                 localStorage.setItem('userInfo', JSON.stringify(data));
             }
@@ -38,7 +38,7 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        saveRef();
+        // saveRef();
     }, [])
 
 

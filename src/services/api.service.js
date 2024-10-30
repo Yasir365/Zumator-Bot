@@ -4,18 +4,20 @@ import axios from 'axios';
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 
 export async function registerUser(data) {
-    try {
-        const response = await axios.post(`${baseUrl}/register`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.status == 200) {
-            return response.data.data;
+    if(data){
+        try {
+            const response = await axios.post(`${baseUrl}/register`, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+    
+            if (response.status == 200) {
+                return response.data.data;
+            }
+        } catch (error) {
+            console.error('Error saving user info:', error);
         }
-    } catch (error) {
-        console.error('Error saving user info:', error);
     }
 }
 
@@ -60,6 +62,9 @@ export const saveReferal = async (data) => {
 export const getReferal = async () => {
     try {
         const data = JSON.parse(localStorage.getItem('userInfo'));
+        if (!data) {
+            return '';
+        }
         const response = await axios.post(`${baseUrl}/getReferal`, data, {
             headers: {
                 'Content-Type': 'application/json',
