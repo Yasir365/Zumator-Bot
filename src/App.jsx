@@ -21,10 +21,9 @@ export default function App() {
     };
 
     const saveRef = () => {
-        console.log("Current window location:", window.location.href); // Add this line
-        const hash = window.location.hash.substring(1);  // Access directly from window.location
-        console.log("Parsed hash:", hash); // Add this line
-        const urlParams = new URLSearchParams(hash);
+        const hash = window.location.hash.substring(1); // Remove initial '#'
+        const decodedHash = decodeURIComponent(hash); // Decode the hash
+        const urlParams = new URLSearchParams(decodedHash);
         const ref = urlParams.get('startapp');
         console.log("Ref :: ", ref);
 
