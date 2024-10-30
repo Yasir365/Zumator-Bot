@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchUserInfo, saveUser } from "./services/api.service";
 
 export default function App() {
-    const [user, setUser] = useState({})
+    // const [user, setUser] = useState({})
     const [startParam, setStartParam] = useState('')
 
     const initWebApp = async () => {
@@ -12,6 +12,9 @@ export default function App() {
             const WebApp = (await import('@twa-dev/sdk')).default;
             WebApp.ready();
 
+            const user = WebApp.initDataUnsafe;
+            console.log("User :: ", user);
+            
             const data = await saveUser(WebApp.initDataUnsafe)
             console.log("User Info :: ", data);
             
