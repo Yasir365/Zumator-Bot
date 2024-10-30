@@ -35,13 +35,7 @@ export default function App() {
         //     }
         // }
     }
-
-    useEffect(() => {
-        initWebApp();
-        // saveRef();
-    }, [])
-
-
+    
     const setupBackButton = async () => {
         try {
             if (typeof window !== 'undefined') {
@@ -61,6 +55,13 @@ export default function App() {
         }
     };
     
+
+    useEffect(() => {
+        initWebApp();
+        saveRef();
+    }, [])
+
+
     useEffect(() => {
         setupBackButton();
     }, [location]);
