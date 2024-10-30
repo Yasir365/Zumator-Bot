@@ -101,7 +101,7 @@ export const getInvitedFriends = async () => {
     }
 }
 
-export const setupBackButton = async () => {
+export const setupBackButton = async (location) => {
     try {
         if (typeof window !== 'undefined') {
             const WebApp = (await import('@twa-dev/sdk')).default;
