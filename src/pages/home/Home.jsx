@@ -2,15 +2,12 @@ import './home.scss';
 import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
-import { Link, useLocation, } from 'react-router-dom';
-import { saveRefUser, updateCloseButton } from '../../services/api.service';
+import { updateCloseButton } from '../../services/api.service';
 
 export default function Home() {
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
-    const location = useLocation();
-    const urlParams = new URLSearchParams(location.search);
-    const ref = urlParams.get('startapp');
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -20,20 +17,10 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
-    useEffect(() => {
-        if (ref) {
-            let data = JSON.parse(localStorage.getItem('userInfo'))
-            if (data) {
-                data['ref'] = ref;
-                saveRefUser(data)
-            }
-        }
-    }, [location]);
+
 
     useEffect(() => {
-        setTimeout(() => {
-            updateCloseButton('main');
-        }, 1000);
+        updateCloseButton('main');
     }, []);
 
     return (

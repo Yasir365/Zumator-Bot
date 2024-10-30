@@ -11,7 +11,9 @@ export async function registerUser(data) {
             },
         });
 
-        return response.data.data;
+        if (response.status == 200) {
+            return response.data.data;
+        }
     } catch (error) {
         console.error('Error saving user info:', error);
     }
@@ -24,7 +26,7 @@ export const generateInviteLink = () => {
     }
     const botUsername = "ZumatorTestBot";
     const appId = "7518320908";
-    const inviteLink = `https://t.me/${botUsername}?startapp=${appId}&ref=${user.telegram_id}`;
+    const inviteLink = `https://t.me/${botUsername}?startapp=ref${user.user.id}`;
 
     return inviteLink;
 };
@@ -40,24 +42,38 @@ export const handleInviteClick = () => {
     }
 };
 
-export const saveRefUser = async (data) => {
+export const saveReferal = async (data) => {
     try {
-        const response = await axios.post(`${baseUrl}/saveRefUser`, data, {
+        const response = await axios.post(`${baseUrl}/saveReferal`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
         });
 
-        if (response.status !== 200) {
-            throw new Error('Failed to save referral user info');
-        }
-
         if (response.data.data) {
-            localStorage.setItem('ref', JSON.stringify(response.data.data.first_name + ' ' + response.data.data.last_name));
+            return response.data.data;
         }
 
     } catch (error) {
         console.error('Error saving referral user info:', error);
+    }
+};
+
+export const getReferal = async () => {
+    try {
+        const data = JSON.parse(localStorage.getItem('userInfo'));
+        const response = await axios.post(`${baseUrl}/getReferal`, data, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.data.data) {
+            return response.data.data;
+        }
+
+    } catch (error) {
+        console.error('Error Fetching referral user info:', error);
     }
 };
 
@@ -69,7 +85,10 @@ export const getInvitedFriends = async () => {
                 'Content-Type': 'application/json',
             },
         });
-        return response.data.data;
+
+        if (response.status == 200) {
+            return response.data.data;
+        }
     } catch (error) {
         console.error('Error getting invited friends:', error);
         return [];
@@ -80,10 +99,8 @@ export const updateCloseButton = (route) => {
     if (window.Telegram && window.Telegram.WebApp) {
         const tg = window.Telegram.WebApp;
         if (route == 'main') {
-            tg.MainButton.hide()
             tg.BackButton.hide()
         } else {
-            tg.MainButton.hide()
             tg.BackButton.show().onClick(() => {
                 window.history.back();
             });
