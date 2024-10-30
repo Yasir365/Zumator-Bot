@@ -15,8 +15,8 @@ export default function App() {
             const data = await saveUser(WebApp.initDataUnsafe)
             console.log("User Info :: ", data);
             
-            setUser(data)
-            localStorage.setItem('userInfo', JSON.stringify(data));
+            // setUser(data)
+            // localStorage.setItem('userInfo', JSON.stringify(data));
 
 
             // Access `start_param` via `initDataUnsafe`
