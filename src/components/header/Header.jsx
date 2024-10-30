@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import { updateCloseButton } from '../../services/api.service';
 
 export default function Header() {
-    const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
+    const userInfo = localStorage.getItem('userInfo');
+    if(userInfo != undefined){
+        userInfo = JSON.parse(userInfo);
+    }
 
     return (
         <header className="user-header">
             <div className="d-flex align-items-center">
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
-                {userInfo ? (
+                {userInfo != undefined ? (
                     <>
                         <p className="title"> {userInfo.user.first_name} {userInfo.user.last_name} <small>(Conqueror)</small> </p>
                     </>
