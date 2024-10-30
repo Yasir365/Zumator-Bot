@@ -42,7 +42,7 @@ export default function App() {
     }, [])
 
     useEffect(() => {
-        setupBackButton(location);
+        setupBackButton();
     }, [location]);
 
 
