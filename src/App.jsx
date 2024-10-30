@@ -42,6 +42,30 @@ export default function App() {
     }, [])
 
 
+    const setupBackButton = async () => {
+        try {
+            if (typeof window !== 'undefined') {
+                const WebApp = (await import('@twa-dev/sdk')).default;
+                WebApp.ready();
+
+                if (location.pathname === '/') {
+                    WebApp.BackButton.hide();
+                } else {
+                    WebApp.BackButton.show().onClick(() => {
+                        window.history.back();
+                    });
+                }
+            }
+        } catch (error) {
+            console.error('Error initializing WebApp:', error);
+        }
+    };
+    
+    useEffect(() => {
+        setupBackButton();
+    }, [location]);
+
+
     return (
         <>
             <Outlet />

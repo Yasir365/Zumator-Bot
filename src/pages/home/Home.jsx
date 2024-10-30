@@ -19,11 +19,6 @@ export default function Home() {
     }, []);
 
 
-
-    // useEffect(() => {
-    //     updateCloseButton('main');
-    // }, []);
-
     return (
         <div className='home-page'>
             <Header />
