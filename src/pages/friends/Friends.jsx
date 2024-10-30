@@ -10,7 +10,7 @@ export default function Friends() {
 
   useEffect(() => {
     // setRef(getReferal)
-    setInvitedFriends(getInvitedFriends())
+    // setInvitedFriends(getInvitedFriends())
   }, [])
 
   const copyLink = () => {
