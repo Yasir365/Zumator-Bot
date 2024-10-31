@@ -89,7 +89,7 @@ export default function Friends() {
 
       <div className="button-container">
         <button className='invite' onClick={handleInviteClick}>Send Invite</button>
-        <button className='copy' onClick={generateInviteLink}><i className="fa-regular fa-copy"></i></button>
+        <button className='copy' onClick={copyLink}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>
   )
