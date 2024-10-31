@@ -1,5 +1,4 @@
 import './friends.scss'
-import { friendsData } from '../../services/data.service';
 import { handleInviteClick, getInvitedFriends, generateInviteLink, getReferal } from '../../services/api.service';
 import { useEffect, useState } from 'react';
 import swalToastr from '../../services/toastr.service';

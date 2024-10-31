@@ -140,21 +140,6 @@ export const shipyardData = [
     },
 ]
 
-export const friendsData = [
-    {
-        image: '/images/friends/1.webp',
-        title: 'Courtney Henry',
-        lvl: 251,
-        profit: '+25k'
-    },
-    {
-        image: '/images/friends/2.webp',
-        title: 'Jenny Wilson',
-        lvl: 251,
-        profit: '+25k'
-    }
-]
-
 export const languages = [
     { "name": "English", "value": "en" },
     { "name": "Spanish", "value": "es" },

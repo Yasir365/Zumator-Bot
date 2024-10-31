@@ -4,6 +4,24 @@ import { rewardData } from '../../services/data.service';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
+  const [isWalletConnect, setIsWalletConnect] = useState(false);
+
+
+  const handleConnectWallet = async (method) => {
+    try {
+      if (method == 'connect') {
+        console.log("Connect Wallet");
+        setIsWalletConnect(true);
+
+      } else {
+        console.log("Disconnect Wallet");
+        setIsWalletConnect(false);
+
+      }
+    } catch (error) {
+      console.error("Error While wallet Action:", error);
+    }
+  };
 
   return (
     <div className="rewards-page">
@@ -77,10 +95,17 @@ export default function Rewards() {
             <div className="d-flex justify-content-between align-items-center w-100">
               <div className='d-flex align-items-center'>
                 <img src="/images/icons/wallet.webp" alt="" />
-                <span className='bold ms-2'>Connect to Wallet</span>
+                {!isWalletConnect && <span className='bold ms-2'>Connect to Wallet</span>}
+                {isWalletConnect &&
+                  <div>
+                    <span className='bold ms-2'>Wallet Connected</span>
+                    <p className='ms-2'>abcdef...ghijkl</p>
+                  </div>
+                }
               </div>
 
-              <button className="start">Start</button>
+              {!isWalletConnect && <button className="start" onClick={() => handleConnectWallet('connect')}>Connect</button>}
+              {isWalletConnect && <button className="start" onClick={() => handleConnectWallet('disconnect')}>Disconnect</button>}
             </div>
           </div>
         )
