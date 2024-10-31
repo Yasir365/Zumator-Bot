@@ -75,7 +75,7 @@ export default function Friends() {
                   <img src='/images/leaderboard/profile.webp' alt="" />
                 </div>
                 <div className='user'>
-                  <div className="title">{item.first_name + ' ' + item.last_name}</div>
+                  <div className="title">{item.user.first_name + ' ' + item.user.last_name}</div>
                   <div className="value">Level {item.user_level}</div>
                 </div>
               </div>
