@@ -62,8 +62,10 @@ export default function Home() {
                     </div>
 
                     <div className="item">
-                        <div className="img"> <img src="/images/daily-board/4.webp" alt="img" /> </div>
-                        <p>Task</p>
+                        <Link to="/rewards">
+                            <div className="img"> <img src="/images/daily-board/4.webp" alt="img" /> </div>
+                            <p>Task</p>
+                        </Link>
                     </div>
                 </div>
             </div>
