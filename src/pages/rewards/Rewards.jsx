@@ -120,12 +120,9 @@ export default function Rewards() {
                 )}
               </div>
 
-              {/* {!isWalletConnect ? (
-                <button className="start" onClick={() => handleConnectWallet('connect')}>Connect</button>
-              ) : (
-                <button className="start" onClick={() => handleConnectWallet('disconnect')}>Disconnect</button>
-              )} */}
-              <TonConnectButton />
+              <span className='connect-wallet'>
+                <TonConnectButton />
+              </span>
             </div>
           </div>
         )

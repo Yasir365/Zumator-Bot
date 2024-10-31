@@ -103,6 +103,31 @@
             min-width: 65px;
             color: var(--white);
         }
+
+        .connect-wallet {
+            svg {
+                display: none;
+            }
+
+            .go3974562317  {
+                padding: 0 10px;
+                border-radius: 16px;
+                background-color: var(--primary);
+                border: none;
+                min-width: 65px;
+                color: var(--white);
+                font-size: 12px;
+                height: 28px;
+            }
+
+            .go157313249 {
+                background-color: var(--black);
+            }
+
+            .go3349661836{
+                display: block !important;
+            }
+        }
     }
 
 }
