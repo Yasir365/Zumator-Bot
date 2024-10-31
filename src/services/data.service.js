@@ -142,17 +142,18 @@ export const shipyardData = [
 
 export const languages = [
     { "name": "English", "value": "en" },
-    { "name": "Spanish", "value": "es" },
     { "name": "French", "value": "fr" },
-    { "name": "German", "value": "de" },
-    { "name": "Italian", "value": "it" },
-    { "name": "Japanese", "value": "ja" },
+    { "name": "Spanish", "value": "es" },
     { "name": "Russian", "value": "ru" },
-    { "name": "Mandarin", "value": "zh" },
-    { "name": "Arabic", "value": "ar" },
     { "name": "Portuguese", "value": "pt" },
-    { "name": "Korean", "value": "ko" }
+    { "name": "Hindi", "value": "hi" },
+    { "name": "Arabic", "value": "ar" },
+    { "name": "Persian", "value": "fa" },
+    { "name": "Chinese", "value": "zh" },
+    { "name": "Japanese", "value": "ja" },
+    { "name": "Filipino", "value": "fil" }
 ];
+
 
 export const leaderboardData = [
     {

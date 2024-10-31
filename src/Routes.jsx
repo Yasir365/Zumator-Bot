@@ -10,6 +10,7 @@ import Language from './pages/settings/Language';
 import Arena from './pages/arena/Arena';
 import Leaderboard from './pages/leaderboard/Leaderboard';
 import Rewards from './pages/rewards/Rewards';
+import SpacePort from './pages/space-port/SpacePort';
 
 const router = createBrowserRouter([
     {
@@ -25,8 +26,8 @@ const router = createBrowserRouter([
                 element: <Ops />,
             },
             {
-                path: 'ship-yard',
-                element: <ShipYard />,
+                path: 'space-port',
+                element: <SpacePort />,
             },
             {
                 path: 'friends',

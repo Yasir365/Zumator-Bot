@@ -1,4 +1,4 @@
-import './ship-yard.scss'
+import './space-port.scss'
 import { shipyardData, gradients } from '../../services/data.service';
 import Slider from 'react-slick';
 
@@ -39,9 +39,9 @@ const settings = {
     prevArrow: <PrevArrow />,
 };
 
-export default function ShipYard() {
+export default function SpacePort() {
     return (
-        <div className='ship-yard-page'>
+        <div className='space-port-page'>
             <Slider {...settings}>
                 <div className="item-container">
                     <h6>Noah 1</h6>

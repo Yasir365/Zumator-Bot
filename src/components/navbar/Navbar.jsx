@@ -25,7 +25,7 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/ship-yard">
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/space-port">
                   <img src="/images/icons/shipyard.webp" alt="" lazyload="true" />
                   {t('shipYard')}
                 </NavLink>
