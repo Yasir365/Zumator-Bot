@@ -21,7 +21,7 @@ export default function App() {
             const data = await registerUser(user);
             localStorage.setItem('userInfo', JSON.stringify(data));
             console.log("Register User Data :::::::::::: ", data);
-            console.log("start param ::::::::: ", response);
+            console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
 
             if (WebApp.initDataUnsafe.start_param) {
                 await saveReferral(data);
