@@ -27,9 +27,9 @@ export const generateInviteLink = () => {
         if (!user) {
             throw new Error('User info is not available to generate invite link');
         }
-        const botUsername = "@Zumator_dev_bot";
+        const botUsername = "Zumator_dev_bot";
         const appId = "7518320908";
-        return `https://t.me/${botUsername}/start?startapp=ref${user.user.id}`;
+        return `https://t.me/${botUsername}/Game/?startapp=${user.user.id}`;
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
