@@ -13,7 +13,8 @@ export default function App() {
 
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
-        
+        console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
+
         const { initDataUnsafe: user } = WebApp;
         if (user?.user) {
             if (user.start_param) delete user.start_param;
@@ -21,23 +22,20 @@ export default function App() {
             const data = await registerUser(user);
             localStorage.setItem('userInfo', JSON.stringify(data));
             console.log("Register User Data :::::::::::: ", data);
-            console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
 
-            if (WebApp.initDataUnsafe.start_param) {
-                await saveReferral(data);
-            }
         }
     };
 
     // Save referral information if available
-    const saveReferral = async (userData) => {
+    const saveReferral = async () => {
         if (typeof window === "undefined") return;
 
         const WebApp = (await import("@twa-dev/sdk")).default;
         WebApp.ready();
 
         const ref = WebApp.initDataUnsafe.start_param || '';
-        if (ref && userData) {
+        if (ref) {
+            let userData = JSON.parse(localStorage.getItem("userInfo")) || {};
             userData['referral_id'] = ref;
             const response = await saveReferal(userData);
             console.log("Saved Referral Data ::::::::::: ", response);
@@ -59,8 +57,13 @@ export default function App() {
         }
     };
 
-    useEffect(() => { initWebApp(); }, []);
-    useEffect(() => { setupBackButton(); }, [location]);
+    useEffect(() => {
+        initWebApp();
+        saveReferral();
+    }, []);
+    useEffect(() => {
+        setupBackButton();
+    }, [location]);
 
     return (
         <>
