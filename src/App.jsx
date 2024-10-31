@@ -32,7 +32,8 @@ export default function App() {
                 let data = JSON.parse(localStorage.getItem('userInfo'))
                 if (data) {
                     data['referral_id'] = ref;
-                    saveReferal(data)
+                    const response = await saveReferal(data)
+                    localStorage.setItem('userInfo', JSON.stringify(response));
                 }
             }
 
