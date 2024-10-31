@@ -80,7 +80,7 @@ export default function Friends() {
                 </div>
               </div>
               <div className='profit'>
-                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
+                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.points}</div>
               </div>
             </div>
           ))}
