@@ -8,7 +8,7 @@ export default function Header() {
     const { t } = useTranslation();
     const userInfo = useSelector((state) => {
         state.userInfo
-        console.log("User Info ::::::: ", state);
+        // console.log("User Info ::::::: ", state);
     });
 
 
