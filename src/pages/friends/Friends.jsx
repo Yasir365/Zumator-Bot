@@ -11,7 +11,7 @@ export default function Friends() {
   useEffect(() => {
     const fetchReferralData = async () => {
       try {
-        setRef(await getReferal()); 
+        setRef(await getReferal());
         setInvitedFriends(await getInvitedFriends());
       } catch (error) {
         console.error("Error fetching referral data:", error);
@@ -63,20 +63,20 @@ export default function Friends() {
       <div className="card-container">
         <div className="tab-content d-flex">
           <h6>List of your Friends</h6>
-          {friendsData.length == 0 &&
+          {invitedFriends.length == 0 &&
             <div className="item mt-4 d-flex justify-content-center">
               <p>You haven’t invited anyone yet</p>
             </div>
           }
-          {friendsData.length > 0 && friendsData.map((item, index) => (
+          {invitedFriends.length > 0 && invitedFriends.map((item, index) => (
             <div className="item" key={index}>
               <div className="card-info">
                 <div className="card-image">
-                  <img src={item.image} alt="" />
+                  <img src='/images/leaderboard/profile.webp' alt="" />
                 </div>
                 <div className='user'>
-                  <div className="title">{item.title}</div>
-                  <div className="value">Level {item.lvl}</div>
+                  <div className="title">{item.first_name + ' ' + item.last_name}</div>
+                  <div className="value">Level {item.user_level}</div>
                 </div>
               </div>
               <div className='profit'>
