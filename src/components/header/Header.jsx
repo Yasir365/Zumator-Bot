@@ -1,16 +1,19 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+
 
 export default function Header() {
     const { t } = useTranslation();
+    const userInfo = useSelector((state) => state.user);
 
-    let userInfo;
-    try {
-        userInfo = JSON.parse(localStorage.getItem('userInfo')) || undefined;
-    } catch (error) {
-        console.error('Error fetching user info:', error);
-    }
+    // let userInfo;
+    // try {
+    //     userInfo = JSON.parse(localStorage.getItem('userInfo')) || undefined;
+    // } catch (error) {
+    //     console.error('Error fetching user info:', error);
+    // }
 
     return (
         <header className="user-header">

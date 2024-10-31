@@ -4,9 +4,13 @@ import { useEffect } from "react";
 import { registerUser, saveReferal } from "./services/api.service";
 import { useLocation } from 'react-router-dom';
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
+import { useDispatch } from "react-redux";
+import { saveUser } from "./store/cartSlice";
 
 export default function App() {
     const location = useLocation();
+    const dispatch = useDispatch();
+
 
     // Initialize the WebApp SDK and register the user
     const initWebApp = async () => {
@@ -21,6 +25,7 @@ export default function App() {
             if (user.start_param) delete user.start_param;
 
             const data = await registerUser(user);
+            dispatch(saveUser(userData));
             localStorage.setItem('userInfo', JSON.stringify(data));
         }
     };
@@ -37,6 +42,8 @@ export default function App() {
             let userData = JSON.parse(localStorage.getItem("userInfo")) || {};
             userData['referral_id'] = +ref;
             const response = await saveReferal(userData);
+            dispatch(saveUser(userData));
+
             // console.log("Saved Referral Data ::::::::::: ", response);
             localStorage.setItem('userInfo', JSON.stringify(userData));
         }

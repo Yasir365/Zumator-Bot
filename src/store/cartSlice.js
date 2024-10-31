@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-    name: 'cart',
+    name: 'user',
     initialState,
     reducers: {
         saveUser(state, action) {

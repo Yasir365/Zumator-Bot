@@ -6,9 +6,14 @@ import Routes from './Routes'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './i18n';
+import { Provider } from 'react-redux';
+import store from './store/store';
+
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Routes />
-  </StrictMode>,
+  <Provider store={store}>
+    <StrictMode>
+      <Routes />
+    </StrictMode>,
+  </Provider>
 )
