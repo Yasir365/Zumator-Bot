@@ -21,6 +21,7 @@ export default function App() {
                 localStorage.setItem('userInfo', JSON.stringify(data));
                 console.log("Register User Data ::::::::: ", data);
 
+                user = WebApp.initDataUnsafe;
                 if (user.start_param) {
                     saveRef();
                 }
@@ -39,8 +40,7 @@ export default function App() {
                     data['referral_id'] = ref;
                     const response = await saveReferal(data)
                     console.log("Saved referal Data ::::::::: ", response);
-                    
-                    localStorage.setItem('userInfo', JSON.stringify(response));
+                    localStorage.setItem('userInfo', JSON.stringify(data));
                 }
             }
 
