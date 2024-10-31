@@ -18,7 +18,6 @@ export default function Friends() {
       }
     };
 
-    // Call the async function
     fetchReferralData();
   }, [])
   const copyLink = () => {

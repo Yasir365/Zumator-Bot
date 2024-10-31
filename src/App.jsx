@@ -13,6 +13,9 @@ export default function App() {
 
             const user = WebApp.initDataUnsafe;
             if (user && user.user) {
+                if (user.start_param) {
+                    delete user.start_param
+                }
                 const data = await registerUser(user);
                 localStorage.removeItem('userInfo');
                 localStorage.setItem('userInfo', JSON.stringify(data));
@@ -24,29 +27,17 @@ export default function App() {
         if (typeof window !== "undefined") {
             const WebApp = (await import("@twa-dev/sdk")).default;
             WebApp.ready();
-            // setInitData(WebApp.initData);
-            // setUserId(WebApp.initDataUnsafe.user?.id.toString() || "");
-            // setStartParam(WebApp.initDataUnsafe.start_param || "");
-            console.log(
-                "--------------------------------",
-                WebApp.initDataUnsafe.start_param
-            );
-            console.log(
-                "::::::::::::::::::::::::::::: ",
-                startParam
-            );
-
-            // if (ref) {
-            //     let data = JSON.parse(localStorage.getItem('userInfo'))
-            //     if (data) {
-            //         data['referral_id'] = ref;
-            //         saveReferal(data)
-            //     }
-            // }
+            const ref = WebApp.initDataUnsafe.start_param || ''
+            if (ref) {
+                let data = JSON.parse(localStorage.getItem('userInfo'))
+                if (data) {
+                    data['referral_id'] = ref;
+                    saveReferal(data)
+                }
+            }
 
         }
     }
-
 
     const setupBackButton = async () => {
         try {
