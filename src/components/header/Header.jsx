@@ -8,6 +8,9 @@ export default function Header() {
     const { t } = useTranslation();
     const userInfo = useSelector((state) => state.user);
 
+    console.log("User Info ::::::: ", userInfo);
+    
+
     // let userInfo;
     // try {
     //     userInfo = JSON.parse(localStorage.getItem('userInfo')) || undefined;

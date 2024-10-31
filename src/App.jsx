@@ -25,7 +25,7 @@ export default function App() {
             if (user.start_param) delete user.start_param;
 
             const data = await registerUser(user);
-            dispatch(saveUser(userData));
+            dispatch(saveUser(data));
             localStorage.setItem('userInfo', JSON.stringify(data));
         }
     };
