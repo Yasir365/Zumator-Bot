@@ -5,7 +5,7 @@ import { registerUser, saveReferal } from "./services/api.service";
 import { useLocation } from 'react-router-dom';
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { useDispatch } from "react-redux";
-import { saveUser } from "./store/cartSlice";
+import { saveUser } from "./store/userInfoSlice";
 
 export default function App() {
     const location = useLocation();
