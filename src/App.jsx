@@ -14,7 +14,7 @@ export default function App() {
 
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
-        console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
+        // console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
 
         const { initDataUnsafe: user } = WebApp;
         if (user?.user) {
@@ -37,7 +37,7 @@ export default function App() {
             let userData = JSON.parse(localStorage.getItem("userInfo")) || {};
             userData['referral_id'] = +ref;
             const response = await saveReferal(userData);
-            console.log("Saved Referral Data ::::::::::: ", response);
+            // console.log("Saved Referral Data ::::::::::: ", response);
             localStorage.setItem('userInfo', JSON.stringify(userData));
         }
     };
@@ -66,10 +66,10 @@ export default function App() {
 
     return (
         <>
-            <TonConnectUIProvider manifestUrl="https://zumator-bot.vercel.app/tonconnect-manifest.json">
+            <TonConnectUIProvider manifestUrl="http://127.0.0.1:5173/tonconnect-manifest.json">
                 <Outlet />
                 <Navbar />
-                </TonConnectUIProvider>
+            </TonConnectUIProvider>
         </>
     );
 }

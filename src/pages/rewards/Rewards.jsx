@@ -1,29 +1,42 @@
 import './rewards.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { rewardData } from '../../services/data.service';
-import { TonConnectButton, useTonConnectUI } from '@tonconnect/ui-react';
+import { TonConnectButton, useTonAddress } from '@tonconnect/ui-react';
+import swalToastr from '../../services/toastr.service';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
   const [isWalletConnect, setIsWalletConnect] = useState(false);
-  const [tonConnectUI, setOptions] = useTonConnectUI();
 
+  const walletAddress = useTonAddress();
+
+  useEffect(() => {
+    if (walletAddress) {
+      setIsWalletConnect(true);
+
+    } else {
+      setIsWalletConnect(false);
+    }
+  }, [walletAddress]);
+
+  // console.log("User Address: ", walletAddress);
 
   const handleConnectWallet = async (method) => {
     try {
       if (method == 'connect') {
-        console.log("Connect Wallet");
-        setIsWalletConnect(true);
 
       } else {
-        console.log("Disconnect Wallet");
-        setIsWalletConnect(false);
 
       }
     } catch (error) {
       console.error("Error While wallet Action:", error);
     }
   };
+
+  const copyAddress = () => {
+    navigator.clipboard.writeText(walletAddress)
+    swalToastr('success', 'Address copied to clipboard')
+  }
 
   return (
     <div className="rewards-page">
@@ -102,7 +115,7 @@ export default function Rewards() {
                 ) : (
                   <div>
                     <span className='bold ms-2'>Wallet Connected:</span>
-                    <p className='ms-2'>{walletAddress}</p>
+                    <p className='ms-2'>{walletAddress.slice(0, 5)}...{walletAddress.slice(-5)} <i className="fa-solid fa-copy ms-2" onClick={copyAddress}></i></p>
                   </div>
                 )}
               </div>
