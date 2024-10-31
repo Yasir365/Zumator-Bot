@@ -142,11 +142,11 @@ export const shipyardData = [
 
 export const languages = [
     { "name": "English", "value": "en" },
+    { "name": "Hindi", "value": "hi" },
     { "name": "French", "value": "fr" },
     { "name": "Spanish", "value": "es" },
     { "name": "Russian", "value": "ru" },
     { "name": "Portuguese", "value": "pt" },
-    { "name": "Hindi", "value": "hi" },
     { "name": "Arabic", "value": "ar" },
     { "name": "Persian", "value": "fa" },
     { "name": "Chinese", "value": "zh" },
