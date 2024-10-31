@@ -1,10 +1,12 @@
 import './rewards.scss';
 import { useState } from 'react';
 import { rewardData } from '../../services/data.service';
+import { TonConnectButton, useTonConnectUI } from '@tonconnect/ui-react';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
   const [isWalletConnect, setIsWalletConnect] = useState(false);
+  const [tonConnectUI, setOptions] = useTonConnectUI();
 
 
   const handleConnectWallet = async (method) => {
@@ -95,17 +97,22 @@ export default function Rewards() {
             <div className="d-flex justify-content-between align-items-center w-100">
               <div className='d-flex align-items-center'>
                 <img src="/images/icons/wallet.webp" alt="" />
-                {!isWalletConnect && <span className='bold ms-2'>Connect to Wallet</span>}
-                {isWalletConnect &&
+                {!isWalletConnect ? (
+                  <span className='bold ms-2'>Connect to Wallet</span>
+                ) : (
                   <div>
-                    <span className='bold ms-2'>Wallet Connected</span>
-                    <p className='ms-2'>abcdef...ghijkl</p>
+                    <span className='bold ms-2'>Wallet Connected:</span>
+                    <p className='ms-2'>{walletAddress}</p>
                   </div>
-                }
+                )}
               </div>
 
-              {!isWalletConnect && <button className="start" onClick={() => handleConnectWallet('connect')}>Connect</button>}
-              {isWalletConnect && <button className="start" onClick={() => handleConnectWallet('disconnect')}>Disconnect</button>}
+              {/* {!isWalletConnect ? (
+                <button className="start" onClick={() => handleConnectWallet('connect')}>Connect</button>
+              ) : (
+                <button className="start" onClick={() => handleConnectWallet('disconnect')}>Disconnect</button>
+              )} */}
+              <TonConnectButton />
             </div>
           </div>
         )

@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import { useEffect } from "react";
 import { registerUser, saveReferal } from "./services/api.service";
 import { useLocation } from 'react-router-dom';
+import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
 export default function App() {
     const location = useLocation();
@@ -65,8 +66,10 @@ export default function App() {
 
     return (
         <>
-            <Outlet />
-            <Navbar />
+            <TonConnectUIProvider manifestUrl="http://127.0.0.1:5173/tonconnect-manifest.json">
+                <Outlet />
+                <Navbar />
+                </TonConnectUIProvider>
         </>
     );
 }
