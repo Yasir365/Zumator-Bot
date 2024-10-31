@@ -20,21 +20,33 @@ export default function App() {
         }
     };
 
-    const saveRef = () => {
-        const hash = window.location.hash.substring(1); // Remove initial '#'
-        const decodedHash = decodeURIComponent(hash); // Decode the hash
-        const urlParams = new URLSearchParams(decodedHash);
-        const ref = urlParams.get('startapp');
-        console.log("Ref :: ", ref);
+    const saveRef = async () => {
+        if (typeof window !== "undefined") {
+            const WebApp = (await import("@twa-dev/sdk")).default;
+            WebApp.ready();
+            // setInitData(WebApp.initData);
+            // setUserId(WebApp.initDataUnsafe.user?.id.toString() || "");
+            // setStartParam(WebApp.initDataUnsafe.start_param || "");
+            console.log(
+                "--------------------------------",
+                WebApp.initDataUnsafe.start_param
+            );
+            console.log(
+                "::::::::::::::::::::::::::::: ",
+                startParam
+            );
 
-        // if (ref) {
-        //     let data = JSON.parse(localStorage.getItem('userInfo'))
-        //     if (data) {
-        //         data['referral_id'] = ref;
-        //         saveReferal(data)
-        //     }
-        // }
+            // if (ref) {
+            //     let data = JSON.parse(localStorage.getItem('userInfo'))
+            //     if (data) {
+            //         data['referral_id'] = ref;
+            //         saveReferal(data)
+            //     }
+            // }
+
+        }
     }
+
 
     const setupBackButton = async () => {
         try {
@@ -58,7 +70,7 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        // saveRef();
+        saveRef();
     }, [])
 
 
