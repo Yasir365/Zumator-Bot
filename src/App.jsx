@@ -20,7 +20,8 @@ export default function App() {
 
             const data = await registerUser(user);
             localStorage.setItem('userInfo', JSON.stringify(data));
-            console.log("Register User Data:", data);
+            console.log("Register User Data :::::::::::: ", data);
+            console.log("start param ::::::::: ", response);
 
             if (WebApp.initDataUnsafe.start_param) {
                 await saveReferral(data);
@@ -39,7 +40,7 @@ export default function App() {
         if (ref && userData) {
             userData['referral_id'] = ref;
             const response = await saveReferal(userData);
-            console.log("Saved Referral Data:", response);
+            console.log("Saved Referral Data ::::::::::: ", response);
             localStorage.setItem('userInfo', JSON.stringify(userData));
         }
     };
