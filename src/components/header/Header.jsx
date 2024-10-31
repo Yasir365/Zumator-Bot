@@ -6,9 +6,11 @@ import { useSelector } from 'react-redux';
 
 export default function Header() {
     const { t } = useTranslation();
-    const userInfo = useSelector((state) => state.user);
+    const userInfo = useSelector((state) =>{
+        state.user
+        console.log("User Info ::::::: ", state);
+    } );
 
-    console.log("User Info ::::::: ", userInfo);
     
 
     // let userInfo;
