@@ -1,7 +1,10 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+    const { t } = useTranslation();
+
     let userInfo;
     try {
         userInfo = JSON.parse(localStorage.getItem('userInfo')) || undefined;
@@ -15,7 +18,7 @@ export default function Header() {
                 <img src='/images/profile.webp' alt="img" lazyload="true" />
                 {userInfo != undefined && userInfo.user ? (
                     <>
-                        <p className="title"> {userInfo.user.first_name} {userInfo.user.last_name} <small>(Conqueror)</small> </p>
+                        <p className="title"> {userInfo.user.first_name} {userInfo.user.last_name} <small>({t('conqueror')})</small> </p>
                     </>
                 ) : (
                     <p className="title">Jane Cooper <small>(CEO)</small></p>

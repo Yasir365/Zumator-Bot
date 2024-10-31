@@ -35,7 +35,7 @@ export default function Language() {
                 {
                     languages.map((item, index) => (
                         <li className='item' key={index} onClick={() => changeLanguage(item)} >
-                            <div className='title'>{item.name}</div>
+                            <div className='title'>{t(item.name)}</div>
                             {item.name === selectedLanguage ? (<i className="fa-solid fa-check"></i>) : null}
                         </li>
                     ))

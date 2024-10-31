@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const { t } = useTranslation();
-  
+
 
   return (
     <header className='user-navbar'>
@@ -15,31 +15,31 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
                   <img src="/images/icons/frog.webp" alt="" lazyload="true" />
-                  Base
+                  {t('Base')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/OPS">
                   <img src="/images/icons/gaming.webp" alt="" lazyload="true" />
-                  Ops
+                  {t('Ops')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/space-port">
                   <img src="/images/icons/shipyard.webp" alt="" lazyload="true" />
-                  {t('shipYard')}
+                  {t('Space-Port')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/friends">
                   <img src="/images/icons/friends.webp" alt="" lazyload="true" />
-                  Friends
+                  {t('Friends')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
                   <img src="/images/icons/podium.webp" alt="" lazyload="true" />
-                  {t('arena')}
+                  {t('Arena')}
                 </NavLink>
               </li>
 

@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+    const { t } = useTranslation();
+
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
@@ -36,35 +39,35 @@ export default function Home() {
                 <div className='right'>
                     <div className="item">
                         <img src="/images/icons/grid.webp" alt="" />
-                        <p>Profit per hour <span>0.05</span> <small> /hr</small></p>
+                        <p>{t('Profit-per-hour')} <span>0.05</span> <small> /hr</small></p>
                     </div>
                 </div>
             </div>
 
             <div className="daily-board">
-                <h4>Daily Mission Board</h4>
+                <h4>{t('Daily-Mission-Board')}</h4>
                 <div className="item-container">
                     <div className="item">
                         <div className="img"> <img src="/images/daily-board/1.webp" alt="img" /> </div>
-                        <p>Combo</p>
+                        <p>{t('Combo')}</p>
                     </div>
 
                     <div className="item">
                         <div className="img"> <img src="/images/daily-board/2.webp" alt="img" /> </div>
-                        <p>Cypher</p>
+                        <p>{t('Cypher')}</p>
                     </div>
 
                     <div className="item">
                         <Link to="/rewards">
                             <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
-                            <p>Reward</p>
+                            <p>{t('Reward')}</p>
                         </Link>
                     </div>
 
                     <div className="item">
                         <Link to="/rewards">
                             <div className="img"> <img src="/images/daily-board/4.webp" alt="img" /> </div>
-                            <p>Task</p>
+                            <p>{t('Task')}</p>
                         </Link>
                     </div>
                 </div>
@@ -83,7 +86,7 @@ export default function Home() {
 
             <div className="tickets">
                 <div>
-                    <p>Tickets</p>
+                    <p>{t('Tickets')}</p>
                     <span>05/10</span>
                 </div>
                 <div>
@@ -94,7 +97,7 @@ export default function Home() {
             <div className="time">
                 <img src="/images/icons/clock.webp" alt="" />
                 <span>{formattedDate}</span>
-                <span className='m-0 ms-4'>Recruite</span>
+                <span className='m-0 ms-4'>{t('Recruite')}</span>
                 <Link to="/arena">
                     <img src="/images/icons/podium.webp" alt="" />
                 </Link>
@@ -104,15 +107,15 @@ export default function Home() {
             </div>
 
             <div className="progress-container">
-                <button className='claim'>Claim</button>
+                <button className='claim'>{t('Claim')}</button>
                 <div className="progress">
-                    <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Level 1</div>
+                    <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{t('Level-1')}</div>
                 </div>
                 <div className="img"> <img src="/images/icons/layer.webp" alt="" /> </div>
             </div>
 
             <div className="play-container">
-                <a className="play-button" href="#"> <span>Play now</span> </a>
+                <a className="play-button" href="#"> <span>{t('Play-now')}</span> </a>
             </div>
 
         </div>

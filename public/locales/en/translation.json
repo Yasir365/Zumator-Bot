@@ -1,7 +1,50 @@
 {
-    "base": "Base",
+    "Base": "Base",
     "Ops": "Ops",
-    "shipYard": "Ship Yard",
-    "friends": "Friends",
-    "arena": "Arena"
+    "Space-Port": "Space Port",
+    "Friends": "Friends",
+    "Arena": "Arena",
+
+
+    "conqueror": "Conqueror",
+
+
+    "Profit-per-hour": "Profit per hour",
+    "Daily-Mission-Board": "Daily Mission Board",
+    "Combo": "Combo",
+    "Cypher": "Cypher",
+    "Reward": "Reward",
+    "Task": "Task",
+    "Tickets": "Tickets",
+    "Recruite": "Recruite",
+    "Claim": "Claim",
+    "Level-1": "Level 1",
+    "Level-2": "Level 2",
+    "Level-3": "Level 3",
+    "Level-4": "Level 4",
+    "Level-5": "Level 5",
+    "Level-6": "Level 6",
+    "Play-now": "Play now",
+
+
+    "Settings": "Settings",
+    "Select-Language": "Select Language",
+    "Privacy-Policy": "Privacy Policy",
+    "Leaderboard": "Leaderboard",
+    "Delete-Account": "Delete Account",
+    "Are-you-sure-you-want-to-delete-your-account?": "Are you sure you want to delete your account?",
+    "Sure": "Sure",
+
+
+    "English": "English",
+    "French": "French",
+    "Spanish": "Spanish",
+    "Russian": "Russian",
+    "Portuguese": "Portuguese",
+    "Hindi": "Hindi",
+    "Arabic": "Arabic",
+    "Persian": "Persian",
+    "Chinese": "Chinese",
+    "Japanese": "Japanese",
+    "Filipino": "Filipino"
 }
