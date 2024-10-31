@@ -11,7 +11,7 @@ export default function App() {
             const WebApp = (await import('@twa-dev/sdk')).default;
             WebApp.ready();
 
-            const user = WebApp.initDataUnsafe;
+            let user = WebApp.initDataUnsafe;
             if (user && user.user) {
                 if (user.start_param) {
                     delete user.start_param
@@ -19,6 +19,11 @@ export default function App() {
                 const data = await registerUser(user);
                 localStorage.removeItem('userInfo');
                 localStorage.setItem('userInfo', JSON.stringify(data));
+                console.log("Register User Data ::::::::: ", data);
+
+                if (user.start_param) {
+                    saveRef();
+                }
             }
         }
     };
@@ -33,6 +38,8 @@ export default function App() {
                 if (data) {
                     data['referral_id'] = ref;
                     const response = await saveReferal(data)
+                    console.log("Saved referal Data ::::::::: ", response);
+                    
                     localStorage.setItem('userInfo', JSON.stringify(response));
                 }
             }
@@ -62,29 +69,12 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        saveRef();
     }, [])
 
 
     useEffect(() => {
         setupBackButton();
     }, [location]);
-
-
-    useEffect(() => {
-        const getParams = async () => {
-            if (typeof window !== 'undefined') {
-                const WebApp = (await import('@twa-dev/sdk')).default;
-                WebApp.ready();
-                // console.log("::::::::::::::::::", WebApp.initData);
-                // console.log("::::::::::::::::::", WebApp.initDataUnsafe.user?.id.toString() || '');
-                console.log("::::::::::::::::::", WebApp.initDataUnsafe.start_param || '');
-            }
-        };
-
-        getParams();
-    }, [])
-
 
     return (
         <>
