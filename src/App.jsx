@@ -29,6 +29,7 @@ export default function App() {
 
     const saveReferral = async (ref, userData) => {
         console.log("ref ::::::::: ", ref);	
+        console.log("data ::::::::: ", userData);	
         if (ref && userData) {
             userData['referral_id'] = +ref;
             console.log("saveReferral userData ::::::::: ", userData);	
