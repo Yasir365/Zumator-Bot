@@ -23,7 +23,7 @@ export default function App() {
             const data = await registerUser(user);
             dispatch(saveUser(data));
             if (!data.referral_id && start_param) {
-                await saveReferral(start_param, user);
+                await saveReferral(start_param, data);
             }
         }
     };
