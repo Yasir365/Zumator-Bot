@@ -25,7 +25,8 @@ export default function App() {
             if (user.start_param) delete user.start_param;
 
             const data = await registerUser(user);
-            
+            saveReferral();
+
             dispatch(saveUser(data));
             console.log("Info send to store :::::::::::::::: ", data);
             localStorage.setItem('userInfo', JSON.stringify(data));
@@ -67,7 +68,7 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        saveReferral();
+        // saveReferral();
     }, []);
     useEffect(() => {
         setupBackButton();
