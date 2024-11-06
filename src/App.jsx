@@ -29,11 +29,8 @@ export default function App() {
     };
 
     const saveReferral = async (ref, userData) => {
-        console.log("ref ::::::::: ", ref);
-        console.log("data ::::::::: ", userData);
         delete userData['start_param'];
         userData['referral_id'] = +ref;
-        console.log("saveReferral userData ::::::::: ", userData);
         const response = await saveReferal(userData);
         dispatch(saveUser(userData));
         // console.log("Saved Referral Data ::::::::::: ", response);
