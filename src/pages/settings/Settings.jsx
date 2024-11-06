@@ -26,9 +26,9 @@ export default function Settings() {
     }, [])
 
     const deleteAccount = async () => {
-        const data = await deleteUserAccount({ userId: userInfo._id });
+        const res = await deleteUserAccount({ userId: userInfo._id });
 
-        if (data) {
+        if (res.success) {
             swalToastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
             const a = document.getElementById('closeDeleteModal')
