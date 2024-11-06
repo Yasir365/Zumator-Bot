@@ -307,3 +307,15 @@ export const dailyRewards = [
     { Day_29: 2900000 },
     { Day_30: 3000000 },
 ]
+
+
+export const skins = [
+    { image: '/images/profile.webp', Locked: false, price: 50 },
+    { image: '/images/icons/layer.webp', Locked: true, price: 50 },
+    { image: '/images/icons/frog.webp', Locked: true, price: 50 },
+    { image: '/images/icons/gaming.webp', Locked: true, price: 50 },
+    { image: '/images/icons/shipyard.webp', Locked: true, price: 50 },
+    { image: '/images/icons/question.webp', Locked: true, price: 50 },
+    { image: '/images/icons/chart.webp', Locked: true, price: 50 },
+    { image: '/images/icons/podium.webp', Locked: true, price: 50 },
+]
