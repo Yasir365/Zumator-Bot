@@ -31,9 +31,13 @@ export default function Settings() {
         if (res.success) {
             swalToastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
-            const a = document.getElementById('closeDeleteModal')
-            a?.click()
-            window.location.href = 'https://web.telegram.org';
+            // const a = document.getElementById('closeDeleteModal')
+            // a?.click()
+            if (typeof window === 'undefined') return;
+
+            const WebApp = (await import('@twa-dev/sdk')).default;
+            WebApp.ready();
+            WebApp.close();
         } else {
             swalToastr('error', 'Error deleting account')
         }
