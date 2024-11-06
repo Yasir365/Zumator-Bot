@@ -18,9 +18,10 @@ export default function App() {
 
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
-        console.log("start param ::::::::: ", WebApp.initDataUnsafe.start_param);
-
+        
         const { initDataUnsafe: user } = WebApp;
+        const start_param = WebApp.initDataUnsafe.start_param;
+        console.log("start param ::::::::: ", start_param);
         if (user?.user) {
             if (user.start_param) delete user.start_param;
 
