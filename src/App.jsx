@@ -5,6 +5,7 @@ import { registerUser, saveReferal } from "./services/api.service";
 import { useLocation } from 'react-router-dom';
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { useDispatch } from "react-redux";
+import { useSelector } from 'react-redux';
 import { saveUser } from "./store/userInfoSlice";
 
 export default function App() {
@@ -32,6 +33,8 @@ export default function App() {
     };
 
     const saveReferral = async () => {
+        console.log("saveReferral ::::::::: ");	
+        
         if (typeof window === "undefined") return;
 
         const WebApp = (await import("@twa-dev/sdk")).default;
@@ -39,7 +42,8 @@ export default function App() {
 
         const ref = WebApp.initDataUnsafe.start_param || '';
         if (ref) {
-            let userData = JSON.parse(localStorage.getItem("userInfo")) || {};
+            let userData = useSelector((state) => state.user.userInfo);
+
             userData['referral_id'] = +ref;
             const response = await saveReferal(userData);
             dispatch(saveUser(userData));
