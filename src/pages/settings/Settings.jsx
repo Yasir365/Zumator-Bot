@@ -30,6 +30,9 @@ export default function Settings() {
         if (data) {
             swalToastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
+            const a = document.getElementById('closeDeleteModal')
+            a?.click()
+            window.location.href = 'https://web.telegram.org/k/';
         } else {
             swalToastr('error', 'Error deleting account')
         }
@@ -72,6 +75,7 @@ export default function Settings() {
             {/* Delete Account Modal */}
             <div className="modal fade" id="deleteModal" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
+                    <span className='close' data-bs-dismiss="modal" id='closeDeleteModal'></span>
                     <div className="modal-content">
                         <div className="modal-body">
                             <h5>{t('Delete-Account')}</h5>
