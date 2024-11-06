@@ -20,7 +20,7 @@ export default function Settings() {
     }, [])
 
     const deleteAccount = () => {
-        localStorage.clear()
+        // localStorage.clear()
         swalToastr('success', 'Account deleted successfully')
     }
 
