@@ -12,7 +12,6 @@ export default function App() {
     const dispatch = useDispatch();
 
 
-    // Initialize the WebApp SDK and register the user
     const initWebApp = async () => {
         if (typeof window === 'undefined') return;
 
@@ -25,15 +24,13 @@ export default function App() {
             if (user.start_param) delete user.start_param;
 
             const data = await registerUser(user);
-            saveReferral();
-
-            dispatch(saveUser(data));
-            console.log("Info send to store :::::::::::::::: ", data);
             localStorage.setItem('userInfo', JSON.stringify(data));
+            dispatch(saveUser(data));
+            // console.log("Info send to store :::::::::::::::: ", data);
+            saveReferral();
         }
     };
 
-    // Save referral information if available
     const saveReferral = async () => {
         if (typeof window === "undefined") return;
 
@@ -46,13 +43,11 @@ export default function App() {
             userData['referral_id'] = +ref;
             const response = await saveReferal(userData);
             dispatch(saveUser(userData));
-
-            // console.log("Saved Referral Data ::::::::::: ", response);
             localStorage.setItem('userInfo', JSON.stringify(userData));
+            // console.log("Saved Referral Data ::::::::::: ", response);
         }
     };
 
-    // Set up back button behavior based on route
     const setupBackButton = async () => {
         if (typeof window === 'undefined') return;
 
