@@ -204,11 +204,6 @@ export const rewardData = {
         {
             image: 'images/icons/youtube.webp',
             title: 'Subscribe to YouTube',
-            score: 180
-        },
-        {
-            image: 'images/icons/youtube.webp',
-            title: 'Subscribe to YouTube',
             score: 200
         },
         {
@@ -277,3 +272,5 @@ export const gradients = [
     'linear-gradient(180deg, #FFE575 0%, #725D00 100%)',
     'linear-gradient(180deg, #A58AFF 0%, #009FB9 100%)',
 ]
+
+export const youtubeUrl = 'https://youtube.com/@masairgamingyt6876?si=_YRD9v8RscgoMkHu'
