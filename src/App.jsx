@@ -27,7 +27,7 @@ export default function App() {
             localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
             // console.log("Info send to store :::::::::::::::: ", data);
-            saveReferral();
+            await saveReferral();
         }
     };
 
