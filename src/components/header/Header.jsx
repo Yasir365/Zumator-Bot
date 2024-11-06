@@ -6,8 +6,9 @@ import { useSelector } from 'react-redux';
 export default function Header() {
     const { t } = useTranslation();
 
-    // Correctly retrieve `userInfo` from the store
     const userInfo = useSelector((state) => state.user.userInfo);
+    console.log("User Info From Store ::::::: ", userInfo);
+
 
     return (
         <header className="user-header">
