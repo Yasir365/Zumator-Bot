@@ -3,25 +3,34 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import swalToastr from '../../services/toastr.service'
 import { useTranslation } from 'react-i18next';
+import { deleteAccount } from '../../services/api.service';
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Settings() {
     const [selectedLanguage, setSelectedLanguage] = useState('English')
     const { t, i18n } = useTranslation();
+    const userInfo = useSelector((state) => state.user.userInfo);
 
     useEffect(() => {
         let temp = localStorage.getItem('language')
-        // try {
-        //     temp = temp ? JSON.parse(temp) : null;
-        // } catch (e) {
-        //     console.error("Error parsing language from localStorage:", e);
-        //     temp = null;
-        // }
+        try {
+            temp = temp ? JSON.parse(temp) : null;
+        } catch (e) {
+            console.error("Error parsing language from localStorage:", e);
+            temp = null;
+        }
         setSelectedLanguage(temp ? temp.name : 'English')
     }, [])
 
-    const deleteAccount = () => {
-        // localStorage.clear()
-        swalToastr('success', 'Account deleted successfully')
+    const deleteAccount = async() => {
+        const data = await deleteAccount(userInfo._id);
+
+        if(data) {
+            swalToastr('success', 'Account deleted successfully')
+            dispatch(saveUser({}))
+        }else {
+            swalToastr('error', 'Error deleting account')
+        }
     }
 
 

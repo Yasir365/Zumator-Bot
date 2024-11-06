@@ -97,3 +97,21 @@ export const getInvitedFriends = async (data) => {
         return [];
     }
 }
+
+export async function deleteAccount(data) {
+    if (data) {
+        try {
+            const response = await axios.post(`${baseUrl}/deleteAccount`, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.status == 200) {
+                return response.data;
+            }
+        } catch (error) {
+            console.error('Error saving user info:', error);
+        }
+    }
+}
