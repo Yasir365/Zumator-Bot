@@ -1,9 +1,9 @@
 import './rewards.scss';
 import { useState } from 'react';
-import FriendsReward from '../../components/friends-reward/Friends-reward.jsx';
-import NewReward from '../../components/new-reward/New-Reward';
-import SocialReward from '../../components/social-Reward/Social-Reward';
-import WalletReward from '../../components/wallet-reward/Wallet-Reward';
+import FriendsReward from '../../components/friends-reward/FriendsReward';
+import NewReward from '../../components/new-reward/NewReward';
+import SocialReward from '../../components/social-reward/SocialReward';
+import WalletReward from '../../components/wallet-reward/WalletReward';
 
 
 
