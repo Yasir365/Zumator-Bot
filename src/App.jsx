@@ -11,12 +11,12 @@ export default function App() {
     const location = useLocation();
     const dispatch = useDispatch();
 
-    clearLocalStorage = () => {
-        setInterval(() => {
-            localStorage.clear();
-            localStorage.removeItem("userInfo");
-        }, 100);
-    };
+    // clearLocalStorage = () => {
+    //     setInterval(() => {
+    //         localStorage.clear();
+    //         localStorage.removeItem("userInfo");
+    //     }, 100);
+    // };
 
     const initWebApp = async () => {
         if (typeof window === 'undefined') return;
