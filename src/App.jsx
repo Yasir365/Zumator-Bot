@@ -21,31 +21,20 @@ export default function App() {
         
         const { initDataUnsafe: user } = WebApp;
         const start_param = WebApp.initDataUnsafe.start_param;
-        console.log("start param ::::::::: ", start_param);
         if (user?.user) {
-            if (user.start_param) delete user.start_param;
-
             const data = await registerUser(user);
             localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
-            await saveReferral();
+            await saveReferral(start_param);
         }
     };
 
-    const saveReferral = async () => {
-        
-        if (typeof window === "undefined") return;
-        
-        const WebApp = (await import("@twa-dev/sdk")).default;
-        WebApp.ready();
-        
-        const ref = WebApp.initDataUnsafe.start_param || '';
-        console.log("saveReferral ::::::::: ", ref);	
+    const saveReferral = async (ref) => {
+        // console.log("saveReferral ::::::::: ", ref);	
         if (ref) {
             let userData = useSelector((state) => state.user.userInfo);
-            console.log("saveReferral userData ::::::::: ", userData);	
-
             userData['referral_id'] = +ref;
+            console.log("saveReferral userData ::::::::: ", userData);	
             const response = await saveReferal(userData);
             dispatch(saveUser(userData));
             localStorage.setItem('userInfo', JSON.stringify(userData));
