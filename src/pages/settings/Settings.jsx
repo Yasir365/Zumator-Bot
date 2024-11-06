@@ -31,13 +31,14 @@ export default function Settings() {
         if (res.success) {
             swalToastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
-            // const a = document.getElementById('closeDeleteModal')
-            // a?.click()
-            if (typeof window === 'undefined') return;
-
-            const WebApp = (await import('@twa-dev/sdk')).default;
-            WebApp.ready();
-            WebApp.close();
+            const a = document.getElementById('closeDeleteModal')
+            a?.click()
+            setTimeout(async () => {
+                if (typeof window === 'undefined') return;
+                const WebApp = (await import('@twa-dev/sdk')).default;
+                WebApp.ready();
+                WebApp.close();
+            }, 1500);
         } else {
             swalToastr('error', 'Error deleting account')
         }
