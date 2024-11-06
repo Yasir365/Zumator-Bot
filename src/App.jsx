@@ -59,7 +59,7 @@ export default function App() {
 
     return (
         <>
-            <TonConnectUIProvider manifestUrl="http://127.0.0.1:5173/tonconnect-manifest.json">
+            <TonConnectUIProvider manifestUrl="https://zumator-bot.vercel.app/tonconnect-manifest.json">
                 <Outlet />
                 <Navbar />
             </TonConnectUIProvider>
