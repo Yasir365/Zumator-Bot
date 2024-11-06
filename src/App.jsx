@@ -5,13 +5,11 @@ import { registerUser, saveReferal } from "./services/api.service";
 import { useLocation } from 'react-router-dom';
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { useDispatch } from "react-redux";
-import { useSelector } from 'react-redux';
 import { saveUser } from "./store/userInfoSlice";
 
 export default function App() {
     const location = useLocation();
     const dispatch = useDispatch();
-
 
     const initWebApp = async () => {
         if (typeof window === 'undefined') return;
@@ -23,21 +21,20 @@ export default function App() {
         const start_param = WebApp.initDataUnsafe.start_param;
         if (user?.user) {
             const data = await registerUser(user);
-            localStorage.setItem('userInfo', JSON.stringify(data));
+            // localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
-            await saveReferral(start_param);
+            await saveReferral(start_param, data); 
         }
     };
 
-    const saveReferral = async (ref) => {
+    const saveReferral = async (ref, userData) => {
         console.log("ref ::::::::: ", ref);	
-        if (ref) {
-            let userData = useSelector((state) => state.user.userInfo);
+        if (ref && userData) {
             userData['referral_id'] = +ref;
             console.log("saveReferral userData ::::::::: ", userData);	
             const response = await saveReferal(userData);
-            dispatch(saveUser(userData));
-            localStorage.setItem('userInfo', JSON.stringify(userData));
+            dispatch(saveUser(userData)); 
+            // localStorage.setItem('userInfo', JSON.stringify(userData));
             // console.log("Saved Referral Data ::::::::::: ", response);
         }
     };
@@ -57,8 +54,8 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
-        // saveReferral();
     }, []);
+
     useEffect(() => {
         setupBackButton();
     }, [location]);
