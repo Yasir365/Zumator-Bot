@@ -10,11 +10,11 @@ const userInfoSlice = createSlice({
     reducers: {
         saveUser(state, action) {
             state.userInfo = action.payload;
-            localStorage.setItem('userInfo', JSON.stringify(state.userInfo));
+            // localStorage.setItem('userInfo', JSON.stringify(state.userInfo));
         },
         deleteUser(state) {
             state.userInfo = {};
-            localStorage.removeItem('userInfo');
+            // localStorage.removeItem('userInfo');
         },
     },
 });
