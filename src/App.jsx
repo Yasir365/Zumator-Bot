@@ -18,6 +18,8 @@ export default function App() {
         WebApp.ready();
 
         const { initDataUnsafe: user } = WebApp;
+        console.log(WebApp);
+
         const start_param = WebApp.initDataUnsafe.start_param;
         if (user?.user) {
             const data = await registerUser(user);
