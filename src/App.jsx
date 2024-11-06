@@ -51,6 +51,7 @@ export default function App() {
 
     useEffect(() => {
         initWebApp();
+        localStorage.clear();
     }, []);
 
     useEffect(() => {
