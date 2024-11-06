@@ -25,27 +25,4 @@
         }
     }
 
-    #deleteModal {
-        .modal-body {
-            text-align: center;
-
-            h5 {
-                color: var(--danger);
-                font-weight: 700;
-            }
-
-            p {
-                color: var(--black);
-                margin-bottom: 12px;
-                font-weight: 500;
-            }
-
-            button {
-                width: 120px;
-                border-radius: 100px;
-                background-color: var(--primary);
-                color: var(--white);
-            }
-        }
-    }
 }

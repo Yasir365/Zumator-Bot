@@ -4,6 +4,7 @@ import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import GamePass from '../../game-pass/GamePass';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -89,9 +90,7 @@ export default function Home() {
                     <p>{t('Tickets')}</p>
                     <span>05/10</span>
                 </div>
-                <div>
-                    <img src="/images/icons/pass.webp" alt="" />
-                </div>
+                <GamePass />
             </div>
 
             <div className="time">
@@ -117,6 +116,8 @@ export default function Home() {
             <div className="play-container">
                 <a className="play-button" href="#"> <span>{t('Play-now')}</span> </a>
             </div>
+
+
 
         </div>
     )
