@@ -30,7 +30,7 @@ export default function App() {
     };
 
     const saveReferral = async (ref) => {
-        // console.log("saveReferral ::::::::: ", ref);	
+        console.log("ref ::::::::: ", ref);	
         if (ref) {
             let userData = useSelector((state) => state.user.userInfo);
             userData['referral_id'] = +ref;

@@ -7,7 +7,7 @@ export default function Header() {
     const { t } = useTranslation();
 
     const userInfo = useSelector((state) => state.user.userInfo);
-    console.log("User Info From Store ::::::: ", userInfo);
+    // console.log("User Info From Store ::::::: ", userInfo);
 
 
     return (
