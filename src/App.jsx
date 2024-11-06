@@ -29,11 +29,13 @@ export default function App() {
     };
 
     const saveReferral = async (ref, userData) => {
-        delete userData['start_param'];
-        userData['referral_id'] = +ref;
-        const response = await saveReferal(userData);
-        dispatch(saveUser(userData));
-        // console.log("Saved Referral Data ::::::::::: ", response);
+        const data = {
+            referral_id: +ref,
+            user_id: userData._id
+        }
+        const response = await saveReferal(data);
+        dispatch(saveUser(response));
+        console.log("Saved Referral Data ::::::::::: ", response);
     };
 
     const setupBackButton = async () => {
