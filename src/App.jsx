@@ -16,28 +16,29 @@ export default function App() {
 
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
-        
+
         const { initDataUnsafe: user } = WebApp;
         const start_param = WebApp.initDataUnsafe.start_param;
         if (user?.user) {
             const data = await registerUser(user);
             // localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
-            await saveReferral(start_param, data); 
+            if (!data.referral_id && start_param) {
+                await saveReferral(start_param, user);
+            }
         }
     };
 
     const saveReferral = async (ref, userData) => {
-        console.log("ref ::::::::: ", ref);	
-        console.log("data ::::::::: ", userData);	
-        if (ref && userData) {
-            userData['referral_id'] = +ref;
-            console.log("saveReferral userData ::::::::: ", userData);	
-            const response = await saveReferal(userData);
-            dispatch(saveUser(userData)); 
-            // localStorage.setItem('userInfo', JSON.stringify(userData));
-            // console.log("Saved Referral Data ::::::::::: ", response);
-        }
+        console.log("ref ::::::::: ", ref);
+        console.log("data ::::::::: ", userData);
+        delete userData['start_param'];
+        userData['referral_id'] = +ref;
+        console.log("saveReferral userData ::::::::: ", userData);
+        const response = await saveReferal(userData);
+        dispatch(saveUser(userData));
+        // localStorage.setItem('userInfo', JSON.stringify(userData));
+        // console.log("Saved Referral Data ::::::::::: ", response);
     };
 
     const setupBackButton = async () => {
