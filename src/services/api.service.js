@@ -98,7 +98,7 @@ export const getInvitedFriends = async (data) => {
     }
 }
 
-export async function deleteAccount(data) {
+export async function deleteUserAccount(data) {
     if (data) {
         try {
             const response = await axios.post(`${baseUrl}/deleteAccount`, data, {

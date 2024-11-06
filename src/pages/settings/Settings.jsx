@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import swalToastr from '../../services/toastr.service'
 import { useTranslation } from 'react-i18next';
-import { deleteAccount } from '../../services/api.service';
+import { deleteUserAccount } from '../../services/api.service';
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function Settings() {
     const [selectedLanguage, setSelectedLanguage] = useState('English')
     const { t, i18n } = useTranslation();
     const userInfo = useSelector((state) => state.user.userInfo);
+    const dispatch = useDispatch();
+
 
     useEffect(() => {
         let temp = localStorage.getItem('language')
@@ -22,13 +24,13 @@ export default function Settings() {
         setSelectedLanguage(temp ? temp.name : 'English')
     }, [])
 
-    const deleteAccount = async() => {
-        const data = await deleteAccount(userInfo._id);
+    const deleteAccount = async () => {
+        const data = await deleteUserAccount(userInfo._id);
 
-        if(data) {
+        if (data) {
             swalToastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
-        }else {
+        } else {
             swalToastr('error', 'Error deleting account')
         }
     }
