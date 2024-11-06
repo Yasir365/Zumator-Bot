@@ -23,7 +23,7 @@ export default function Friends() {
   }, [])
   const copyLink = () => {
     swalToastr('success', 'Link copied to clipboard')
-    navigator.clipboard.writeText(generateInviteLink())
+    navigator.clipboard.writeText(generateInviteLink(userInfo))
   }
 
   return (
@@ -89,7 +89,7 @@ export default function Friends() {
       </div>
 
       <div className="button-container">
-        <button className='invite' onClick={handleInviteClick}>Send Invite</button>
+        <button className='invite' onClick={() => handleInviteClick(userInfo)}>Send Invite</button>
         <button className='copy' onClick={copyLink}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>

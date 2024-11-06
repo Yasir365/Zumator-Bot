@@ -21,23 +21,21 @@ export async function registerUser(data) {
     }
 }
 
-export const generateInviteLink = () => {
+export const generateInviteLink = (user) => {
     try {
-        const user = JSON.parse(localStorage.getItem('userInfo'));
         if (!user) {
             throw new Error('User info is not available to generate invite link');
         }
         const botUsername = "Zumator_dev_bot";
-        const appId = "7518320908";
         return `https://t.me/${botUsername}/Game/?startapp=${user.user.id}`;
     } catch (error) {
         console.error('Error generating invite link:', error);
     }
 };
 
-export const handleInviteClick = () => {
+export const handleInviteClick = (user) => {
     try {
-        const link = generateInviteLink();
+        const link = generateInviteLink(user);
         const message = `Hey! Join Zumator using my invite link.`;
 
         window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
