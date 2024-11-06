@@ -1,42 +1,14 @@
 import './rewards.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { rewardData } from '../../services/data.service';
-import { TonConnectButton, useTonAddress } from '@tonconnect/ui-react';
-import swalToastr from '../../services/toastr.service';
+import WalletReward from '../../components/wallet/Wallet-Reward';
+import SocialReward from '../../components/social/Social-Reward';
+import FriendsReward from '../../components/friends-reward/Friends-reward';
+import NewReward from '../../components/new-reward/New-Reward';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
-  const [isWalletConnect, setIsWalletConnect] = useState(false);
 
-  const walletAddress = useTonAddress();
-
-  useEffect(() => {
-    if (walletAddress) {
-      setIsWalletConnect(true);
-
-    } else {
-      setIsWalletConnect(false);
-    }
-  }, [walletAddress]);
-
-  // console.log("User Address: ", walletAddress);
-
-  const handleConnectWallet = async (method) => {
-    try {
-      if (method == 'connect') {
-
-      } else {
-
-      }
-    } catch (error) {
-      console.error("Error While wallet Action:", error);
-    }
-  };
-
-  const copyAddress = () => {
-    navigator.clipboard.writeText(walletAddress)
-    swalToastr('success', 'Address copied to clipboard')
-  }
 
   return (
     <div className="rewards-page">
@@ -79,104 +51,10 @@ export default function Rewards() {
         </li>
       </ul>
 
-      {
-        activeTab === 'new' && (
-          <div className="tab-content">
-            {rewardData.new.map((item, index) => (
-              <div className='w-100' key={index}>
-                <div className="d-flex justify-content-between align-items-center pb-1">
-                  <div className='d-flex align-items-center'>
-                    <img src={item.image} alt="" />
-                    <div className='ms-2'>
-                      <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
-
-                    </div>
-                  </div>
-
-                  <button className="start">Start</button>
-                </div>
-                {index !== rewardData.new.length - 1 && (<hr />)}
-              </div>
-            ))}
-          </div>
-        )
-      }
-
-
-      {
-        activeTab === 'onChain' && (
-          <div className="tab-content">
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <div className='d-flex align-items-center'>
-                <img src="/images/icons/wallet.webp" alt="" />
-                {!isWalletConnect ? (
-                  <span className='bold ms-2'>Connect to Wallet</span>
-                ) : (
-                  <div>
-                    <span className='bold ms-2'>Wallet Connected:</span>
-                    <p className='ms-2'>{walletAddress.slice(0, 5)}...{walletAddress.slice(-5)} <i className="fa-solid fa-copy ms-2" onClick={copyAddress}></i></p>
-                  </div>
-                )}
-              </div>
-
-              <span className='connect-wallet'>
-                <TonConnectButton />
-              </span>
-            </div>
-          </div>
-        )
-      }
-
-
-      {
-        activeTab === 'social' && (
-          <div className="tab-content">
-            {rewardData.social.map((item, index) => (
-              <div className='w-100' key={index}>
-                <div className="d-flex justify-content-between align-items-center pb-1">
-                  <div className='d-flex align-items-center'>
-                    <img src={item.image} alt="" />
-                    <div className='ms-2'>
-                      <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
-
-                    </div>
-                  </div>
-
-                  <button className="start">Start</button>
-                </div>
-                {index !== rewardData.social.length - 1 && (<hr />)}
-              </div>
-            ))}
-          </div>
-        )
-      }
-
-
-      {
-        activeTab === 'friends' && (
-          <div className="tab-content">
-            {rewardData.friends.map((item, index) => (
-              <div className='w-100' key={index}>
-                <div className="d-flex justify-content-between align-items-center pb-1">
-                  <div className='d-flex align-items-center'>
-                    <img src={item.image} alt="" />
-                    <div className='ms-2'>
-                      <p className='bold'>{item.title}</p>
-                      <p className='small'><img src="/images/icons/bonas.webp" alt="" /> +{item.score}</p>
-
-                    </div>
-                  </div>
-
-                  <button className="start">Start</button>
-                </div>
-                {index !== rewardData.friends.length - 1 && (<hr />)}
-              </div>
-            ))}
-          </div>
-        )
-      }
+      {activeTab === 'new' && (<NewReward />)}
+      {activeTab === 'onChain' && (<WalletReward />)}
+      {activeTab === 'social' && (<SocialReward />)}
+      {activeTab === 'friends' && (<FriendsReward />)}
 
     </div>
   );
