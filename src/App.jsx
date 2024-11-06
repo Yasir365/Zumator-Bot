@@ -27,22 +27,22 @@ export default function App() {
             const data = await registerUser(user);
             localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
-            // console.log("Info send to store :::::::::::::::: ", data);
             await saveReferral();
         }
     };
 
     const saveReferral = async () => {
-        console.log("saveReferral ::::::::: ");	
         
         if (typeof window === "undefined") return;
-
+        
         const WebApp = (await import("@twa-dev/sdk")).default;
         WebApp.ready();
-
+        
         const ref = WebApp.initDataUnsafe.start_param || '';
+        console.log("saveReferral ::::::::: ", ref);	
         if (ref) {
             let userData = useSelector((state) => state.user.userInfo);
+            console.log("saveReferral userData ::::::::: ", userData);	
 
             userData['referral_id'] = +ref;
             const response = await saveReferal(userData);
