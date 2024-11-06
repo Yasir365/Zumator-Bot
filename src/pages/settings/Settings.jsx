@@ -5,6 +5,7 @@ import swalToastr from '../../services/toastr.service'
 import { useTranslation } from 'react-i18next';
 import { deleteUserAccount } from '../../services/api.service';
 import { useSelector, useDispatch } from 'react-redux';
+import { saveUser } from '../../store/userInfoSlice';
 
 export default function Settings() {
     const [selectedLanguage, setSelectedLanguage] = useState('English')
