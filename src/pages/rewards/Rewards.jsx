@@ -1,10 +1,9 @@
 import './rewards.scss';
 import { useState } from 'react';
-import { rewardData } from '../../services/data.service';
-import WalletReward from '../../components/wallet/Wallet-Reward';
-import SocialReward from '../../components/social/Social-Reward';
 import FriendsReward from '../../components/friends-reward/Friends-reward';
 import NewReward from '../../components/new-reward/New-Reward';
+import SocialReward from '../../components/social-reward/Social-Reward';
+import WalletReward from '../../components/wallet-reward/Wallet-Reward';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
