@@ -2,16 +2,18 @@ import './friends.scss'
 import { handleInviteClick, getInvitedFriends, generateInviteLink, getReferal } from '../../services/api.service';
 import { useEffect, useState } from 'react';
 import swalToastr from '../../services/toastr.service';
+import { useSelector } from 'react-redux';
 
 export default function Friends() {
   const [ref, setRef] = useState('');
   const [invitedFriends, setInvitedFriends] = useState([]);
+  const userInfo = useSelector((state) => state.user.userInfo);
 
   useEffect(() => {
     const fetchReferralData = async () => {
       try {
-        setRef(await getReferal());
-        setInvitedFriends(await getInvitedFriends());
+        setRef(await getReferal(userInfo));
+        setInvitedFriends(await getInvitedFriends(userInfo));
       } catch (error) {
         console.error("Error fetching referral data:", error);
       }

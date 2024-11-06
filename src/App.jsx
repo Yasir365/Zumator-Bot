@@ -21,7 +21,6 @@ export default function App() {
         const start_param = WebApp.initDataUnsafe.start_param;
         if (user?.user) {
             const data = await registerUser(user);
-            // localStorage.setItem('userInfo', JSON.stringify(data));
             dispatch(saveUser(data));
             if (!data.referral_id && start_param) {
                 await saveReferral(start_param, user);
@@ -37,7 +36,6 @@ export default function App() {
         console.log("saveReferral userData ::::::::: ", userData);
         const response = await saveReferal(userData);
         dispatch(saveUser(userData));
-        // localStorage.setItem('userInfo', JSON.stringify(userData));
         // console.log("Saved Referral Data ::::::::::: ", response);
     };
 

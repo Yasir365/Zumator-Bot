@@ -63,12 +63,8 @@ export const saveReferal = async (data) => {
     }
 };
 
-export const getReferal = async () => {
+export const getReferal = async (data) => {
     try {
-        const data = JSON.parse(localStorage.getItem('userInfo'));
-        if (!data) {
-            return '';
-        }
         const response = await axios.post(`${baseUrl}/getReferal`, data, {
             headers: {
                 'Content-Type': 'application/json',
@@ -87,9 +83,8 @@ export const getReferal = async () => {
     }
 };
 
-export const getInvitedFriends = async () => {
+export const getInvitedFriends = async (data) => {
     try {
-        const data = JSON.parse(localStorage.getItem('userInfo'));
         const response = await axios.post(`${baseUrl}/getInvitedFriends`, data, {
             headers: {
                 'Content-Type': 'application/json',
