@@ -33,7 +33,7 @@ export default function Settings() {
             dispatch(saveUser({}))
             const a = document.getElementById('closeDeleteModal')
             a?.click()
-            window.location.href = 'https://web.telegram.org/k/';
+            window.location.href = 'https://web.telegram.org';
         } else {
             swalToastr('error', 'Error deleting account')
         }
