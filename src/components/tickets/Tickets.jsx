@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 export default function Tickets() {
     const { t } = useTranslation();
+    const userInfo = useSelector((state) => state.user.userInfo);
     return (
         <div>
             <p>{t('Tickets')}</p>
-            <span>05/10</span>
+            <span>{userInfo ? userInfo.tickets : 0}/10</span>
         </div>
     )
 }
