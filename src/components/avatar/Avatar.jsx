@@ -11,8 +11,7 @@ function Model() {
 export default function Avatar() {
     return (
         <div className="main-image-wrapper">
-            <div className="image">
-                {/* <img src="/images/hero.webp" alt="" /> */}
+            <div className="model">
                 <div style={{ width: '100%', height: '300px', }}>
                     <Canvas>
                         <ambientLight intensity={0.5} />

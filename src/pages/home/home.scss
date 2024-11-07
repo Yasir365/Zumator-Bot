@@ -124,22 +124,10 @@
         display: flex;
         justify-content: center;
 
-        .image {
+        .model {
             width: 100%;
             // width: 160px;
             // height: 220px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: filter 0.5s;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                -moz-user-select: none;
-                border: none;
-                outline: none;
-            }
         }
     }
 
