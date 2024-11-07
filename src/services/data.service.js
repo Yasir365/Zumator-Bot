@@ -24,6 +24,7 @@ export const web3Data = [
         total: 200
     },
 ]
+
 export const marketData = [
     {
         image: '/images/daily-board/2.webp',
@@ -50,6 +51,7 @@ export const marketData = [
         total: 200
     },
 ]
+
 export const galacticData = [
     {
         image: '/images/daily-board/3.webp',
@@ -76,6 +78,7 @@ export const galacticData = [
         total: 200
     },
 ]
+
 export const artifactsData = [
     {
         image: '/images/daily-board/4.webp',
@@ -151,7 +154,6 @@ export const languages = [
     { "name": "Japanese", "value": "ja" },
     { "name": "Filipino", "value": "fil" }
 ];
-
 
 export const leaderboardData = [
     {
@@ -306,7 +308,6 @@ export const dailyRewards = [
     { Day_30: 3000000 },
 ]
 
-
 export const skins = [
     { image: '/images/profile.webp', Locked: false, price: 50 },
     { image: '/images/icons/layer.webp', Locked: true, price: 50 },
@@ -316,4 +317,14 @@ export const skins = [
     { image: '/images/icons/question.webp', Locked: true, price: 50 },
     { image: '/images/icons/chart.webp', Locked: true, price: 50 },
     { image: '/images/icons/podium.webp', Locked: true, price: 50 },
+]
+
+export const factions = [
+    { name: 'Celestial Nomads', profit: 10, sleected: true, description: ' A wandering alliance of various alien species who travel the galaxy, hey trade, and barter among themselves and with other factions, living a nomadic and adaptable lifestyle. ' },
+    { name: 'The Syndicate', profit: 20, sleected: false, description: 'A shadowy organization involved in smuggling, espionage, and clandestine operations. They are known for their covert operations and their influence over the black markets of the galaxy.' },
+    { name: 'Luminary Council', profit: 30, sleected: false, description: 'A coalition of advanced artificial intelligences who govern their own network of worlds. They focus on achieving harmony and stability, using their superior computational abilities to manage their domains.' },
+    { name: 'Arcane Order', profit: 40, sleected: false, description: 'A mysterious group of beings who harness ancient and mystical energies. They are known for their enigmatic rituals and their pursuit of esoteric knowledge, often clashing with more technologically focused factions.' },
+    { name: 'Eternal Guardians', profit: 50, sleected: false, description: 'An ancient and secretive order dedicated to protecting the galaxy from existential threats. They are known for their strict code of honor and the powerful, ancient technology that they use to defend against cosmic dangers.' },
+    { name: 'Starlight Pirates', profit: 60, sleected: false, description: 'A loose confederation of spacefaring raiders and outlaws who live by their own code. They are skilled at hit-and-run tactics and are known for their charisma and unpredictability.' },
+    { name: 'The Beyonders', profit: 70, sleected: false, description: 'A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown.' },
 ]

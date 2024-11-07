@@ -79,7 +79,7 @@ export default function Settings() {
 
 
             {/* Delete Account Modal */}
-            <div className="modal fade" id="deleteModal" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div className="modal fade text-center" id="deleteModal" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <span className='close' data-bs-dismiss="modal" id='closeDeleteModal'></span>
                     <div className="modal-content">

@@ -28,11 +28,12 @@
             gap: 12px;
 
             .item {
-                width: calc(25% - 9px);
+                width: calc(25% - 12px);
                 box-shadow: 0 0 3px 0px var(--warning);
                 border-radius: 12px;
                 padding: 8px;
                 height: 92px;
+                text-align: center;
 
                 img {
                     height: 40px;

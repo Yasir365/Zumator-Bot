@@ -127,7 +127,7 @@ export default function Ops() {
 
       {/* Mystery Box Modal */}
       <button data-bs-toggle="modal" data-bs-target="#misteryBoxModal" id='mistery-box-btn' className='d-none'></button>
-      <div className="modal fade" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
+      <div className="modal fade text-center" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-body">
