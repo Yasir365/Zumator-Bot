@@ -328,3 +328,22 @@ export const factions = [
     { name: 'Starlight Pirates', profit: 60, sleected: false, description: 'A loose confederation of spacefaring raiders and outlaws who live by their own code. They are skilled at hit-and-run tactics and are known for their charisma and unpredictability.' },
     { name: 'The Beyonders', profit: 70, sleected: false, description: 'A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown.' },
 ]
+
+export function getRemainingTime() {
+    const now = new Date();
+    const nextReset = new Date();
+    nextReset.setHours(24, 0, 0, 0); // Set to midnight of the next day
+    return nextReset - now;
+}
+
+export function isRewardClaimedToday() {
+    const lastClaimDate = localStorage.getItem('dailyRewardClaimDate');
+    if (!lastClaimDate) return false;
+
+    const today = new Date().toDateString();
+    return today === lastClaimDate;
+}
+
+export function setRewardClaimed() {
+    localStorage.setItem('dailyRewardClaimDate', new Date().toDateString());
+}

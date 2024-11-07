@@ -115,3 +115,21 @@ export async function deleteUserAccount(data) {
         }
     }
 }
+
+export async function updatePoints(data) {
+    if (data) {
+        try {
+            const response = await axios.post(`${baseUrl}/updatePoints`, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.status == 200) {
+                return response.data.data;
+            }
+        } catch (error) {
+            console.error('Error saving user info:', error);
+        }
+    }
+}
