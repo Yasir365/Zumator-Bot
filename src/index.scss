@@ -9,7 +9,7 @@
 
 :root {
     --primary: #359235;
-    --background: #4F92B7;
+    --background: #4f93b7;
     --success: #03E104;
     --warning: #FFD700;
     --danger: #FF0000;
@@ -59,16 +59,12 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: #4f93b734;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 12px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
 }
 
 .progress {

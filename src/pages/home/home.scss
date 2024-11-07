@@ -239,9 +239,10 @@
         }
     }
 
-    .fractions{
+    .fractions {
+        padding: 16px;
 
-        .close{
+        .close {
             border-radius: 100px;
             border: 1px solid var(--danger);
             color: var(--danger);
@@ -257,8 +258,14 @@
             top: 10px;
             right: 10px;
         }
-        .wrapper{
-            .item{
+
+        .wrapper {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-right: 6px;
+            padding-right: 12px;
+
+            .item {
                 border: 1px solid var(--warning);
                 margin-bottom: 6px;
                 padding: 8px;
@@ -267,7 +274,7 @@
                 align-items: center;
                 position: relative;
 
-                &.active{
+                &.active {
                     border-color: var(--success);
                 }
 
