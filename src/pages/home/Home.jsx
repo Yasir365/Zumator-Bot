@@ -18,7 +18,6 @@ export default function Home() {
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
-    console.log("User Info From Store ::::::: ", userInfo);
     
     useEffect(() => {
         const interval = setInterval(() => {
