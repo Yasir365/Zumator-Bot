@@ -10,10 +10,11 @@ import ProfitPerHour from '../../components/profit-per-hour/ProfitPerHour';
 import DailyMissionBoard from '../../components/daily-mission-board/DailyMissionBoard';
 import Avatar from '../../components/avatar/Avatar';
 import KeysAndDiamonds from '../../components/keys-and-diamonds/KeysAndDiamonds';
+import { useSelector } from 'react-redux';
 
 export default function Home() {
     const { t } = useTranslation();
-
+    const userInfo = useSelector((state) => state.user.userInfo);
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
@@ -39,7 +40,7 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
-                <span>0.000156</span>
+                <span>{userInfo? userInfo.balance : 0.00000}</span>
             </div>
 
             <Avatar />
