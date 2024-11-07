@@ -1,14 +1,17 @@
+import { useSelector } from "react-redux";
 
 export default function KeysAndDiamonds() {
+    const userInfo = useSelector((state) => state.user.userInfo);
+
     return (
         <div className='left'>
             <div className="item">
                 <img src="/images/icons/key.webp" alt="" />
-                <span>50</span>
+                <span>{userInfo ? userInfo.keys : 0}</span>
             </div>
             <div className="item">
                 <img src="/images/icons/bonas.webp" alt="" />
-                <span>30</span>
+                <span>{userInfo ? userInfo.diamonds : 0}</span>
             </div>
         </div>
     )
