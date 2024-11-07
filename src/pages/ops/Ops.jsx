@@ -2,14 +2,16 @@ import './ops.scss';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import Header from '../../components/header/Header';
-import { opsData, gradients } from '../../services/data.service';
 import { Rating } from 'react-simple-star-rating'
+import Artifacts from '../../components/artifacts/Artifacts';
+import Galactic from '../../components/galactic/Galactic';
+import Market from '../../components/market/Market';
+import Web3 from '../../components/web3/Web3';
 
 
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
-  const { tab1Data, tab2Data, tab3Data, tab4Data } = opsData
   const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
   useEffect(() => {
@@ -113,117 +115,13 @@ export default function Ops() {
         </li>
       </ul>
 
-      {
-        activeTab === 'web3' && (
-          <div className="tab-content d-flex">
-            {tab1Data.map((item, index) => (
-              <div className="item" key={index} style={{ background: gradients[index % gradients.length], }}>
-                <div className="card-image">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="card-info">
-                  <div className='d-flex justify-content-between'>
-                    <div className="title">Zumator</div>
-                    <div className="value">{item.num}</div>
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                    <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
-                  </div>
-                  <div className="card-footer">
-                    <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )
-      }
+      {activeTab === 'web3' && (<Web3 />)}
 
-      {
-        activeTab === 'market' && (
-          <div className="tab-content d-flex">
-            {tab2Data.map((item, index) => (
-              <div className="item" key={index}>
-                <div className="card-image">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="card-info">
-                  <div className='d-flex justify-content-between'>
-                    <div className="title">Zumator</div>
-                    <div className="value">{item.num}</div>
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                    <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
-                  </div>
-                  <div className="card-footer">
-                    <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )
-      }
+      {activeTab === 'market' && (<Market />)}
 
-      {
-        activeTab === 'galactic' && (
-          <div className="tab-content d-flex">
-            {tab3Data.map((item, index) => (
-              <div className="item" key={index}>
-                <div className="card-image">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="card-info">
-                  <div className='d-flex justify-content-between'>
-                    <div className="title">Zumator</div>
-                    <div className="value">{item.num}</div>
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                    <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
-                  </div>
-                  <div className="card-footer">
-                    <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )
-      }
+      {activeTab === 'galactic' && (<Galactic />)}
 
-      {
-        activeTab === 'artifacts' && (
-          <div className="tab-content d-flex">
-            {tab4Data.map((item, index) => (
-              <div className="item" key={index}>
-                <div className="card-image">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="card-info">
-                  <div className='d-flex justify-content-between'>
-                    <div className="title">Zumator</div>
-                    <div className="value">{item.num}</div>
-                  </div>
-                  <div className='mt-2 d-flex justify-content-between'>
-                    <div className="profit">Profit per hour</div>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit}</div>
-                  </div>
-                  <div className="card-footer mt-2">
-                    <p>Lvl 2</p>
-                    <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.total}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )
-      }
+      {activeTab === 'artifacts' && (<Artifacts />)}
 
 
 

@@ -5,6 +5,11 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import GamePass from '../../game-pass/GamePass';
+import Tickets from '../../components/tickets/Tickets';
+import ProfitPerHour from '../../components/profit-per-hour/ProfitPerHour';
+import DailyMissionBoard from '../../components/daily-mission-board/DailyMissionBoard';
+import Avatar from '../../components/avatar/Avatar';
+import KeysAndDiamonds from '../../components/keys-and-diamonds/KeysAndDiamonds';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -26,70 +31,21 @@ export default function Home() {
         <div className='home-page'>
             <Header />
             <div className='rewards'>
-                <div className='left'>
-                    <div className="item">
-                        <img src="/images/icons/key.webp" alt="" />
-                        <span>50</span>
-                    </div>
-                    <div className="item">
-                        <img src="/images/icons/bonas.webp" alt="" />
-                        <span>30</span>
-                    </div>
-                </div>
-
-                <div className='right'>
-                    <div className="item">
-                        <img src="/images/icons/grid.webp" alt="" />
-                        <p>{t('Profit-per-hour')} <span>0.05</span> <small> /hr</small></p>
-                    </div>
-                </div>
+                <KeysAndDiamonds />
+                <ProfitPerHour />
             </div>
 
-            <div className="daily-board">
-                <h4>{t('Daily-Mission-Board')}</h4>
-                <div className="item-container">
-                    <div className="item">
-                        <div className="img"> <img src="/images/daily-board/1.webp" alt="img" /> </div>
-                        <p>{t('Combo')}</p>
-                    </div>
-
-                    <div className="item">
-                        <div className="img"> <img src="/images/daily-board/2.webp" alt="img" /> </div>
-                        <p>{t('Cypher')}</p>
-                    </div>
-
-                    <div className="item">
-                        <Link to="/rewards">
-                            <div className="img"> <img src="/images/daily-board/3.webp" alt="img" /> </div>
-                            <p>{t('Reward')}</p>
-                        </Link>
-                    </div>
-
-                    <div className="item">
-                        <Link to="/rewards">
-                            <div className="img"> <img src="/images/daily-board/4.webp" alt="img" /> </div>
-                            <p>{t('Task')}</p>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <DailyMissionBoard />
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
                 <span>0.000156</span>
             </div>
 
-            <div className="main-image-wrapper">
-                <div className="image">
-                    <img src="/images/hero.webp" alt="" />
-                </div>
-            </div>
+            <Avatar />
 
             <div className="tickets">
-                <div>
-                    <p>{t('Tickets')}</p>
-                    <span>05/10</span>
-                </div>
+                <Tickets />
                 <GamePass />
             </div>
 

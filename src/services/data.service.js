@@ -1,109 +1,107 @@
-export const opsData = {
-    tab1Data: [
-        {
-            image: '/images/card-img.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/card-img.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/card-img.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/card-img.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-    ],
-    tab2Data: [
-        {
-            image: '/images/daily-board/2.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/2.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-    ],
-    tab3Data: [
-        {
-            image: '/images/daily-board/3.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/3.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/3.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/3.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-    ],
-    tab4Data: [
-        {
-            image: '/images/daily-board/4.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/4.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/4.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-        {
-            image: '/images/daily-board/4.webp',
-            num: '#021',
-            profit: 0.05,
-            total: 200
-        },
-    ]
-}
+export const web3Data = [
+    {
+        image: '/images/card-img.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/card-img.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/card-img.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/card-img.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+]
+export const marketData = [
+    {
+        image: '/images/daily-board/2.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/2.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/2.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/2.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+]
+export const galacticData = [
+    {
+        image: '/images/daily-board/3.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/3.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/3.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/3.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+]
+export const artifactsData = [
+    {
+        image: '/images/daily-board/4.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/4.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/4.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+    {
+        image: '/images/daily-board/4.webp',
+        num: '#021',
+        profit: 0.05,
+        total: 200
+    },
+]
 
 export const shipyardData = [
     {
