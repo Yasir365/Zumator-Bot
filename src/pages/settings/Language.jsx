@@ -8,14 +8,7 @@ export default function Language() {
 
     useEffect(() => {
         let temp = localStorage.getItem('language');
-        try {
-            temp = temp ? JSON.parse(temp) : null;
-        } catch (e) {
-            console.error("Error parsing language from localStorage:", e);
-            temp = null;
-        }
-        ;
-        setSelectedLanguage(temp ? temp.name : 'English');
+        setSelectedLanguage(temp ? temp : 'English');
         if (temp) {
             i18n.changeLanguage(temp.value);
         }
@@ -23,7 +16,7 @@ export default function Language() {
 
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang.value);
-        localStorage.setItem('language', JSON.stringify(lang));
+        localStorage.setItem('language', lang.name);
         setSelectedLanguage(lang.name);
     };
 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import swalToastr from '../../services/toastr.service'
 import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 import { deleteUserAccount } from '../../services/api.service';
 import { useSelector, useDispatch } from 'react-redux';
 import { saveUser } from '../../store/userInfoSlice';
@@ -12,17 +13,12 @@ export default function Settings() {
     const { t, i18n } = useTranslation();
     const userInfo = useSelector((state) => state.user.userInfo);
     const dispatch = useDispatch();
+    const currentLanguage = i18next;
 
 
     useEffect(() => {
         let temp = localStorage.getItem('language')
-        try {
-            temp = temp ? JSON.parse(temp) : null;
-        } catch (e) {
-            console.error("Error parsing language from localStorage:", e);
-            temp = null;
-        }
-        setSelectedLanguage(temp ? temp.name : 'English')
+        setSelectedLanguage(temp ? temp : 'English')
     }, [])
 
     const deleteAccount = async () => {
