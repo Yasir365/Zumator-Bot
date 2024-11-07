@@ -1,3 +1,5 @@
+export const youtubeUrl = 'https://youtube.com/@masairgamingyt6876?si=_YRD9v8RscgoMkHu'
+
 export const web3Data = [
     {
         image: '/images/card-img.webp',
@@ -272,8 +274,6 @@ export const gradients = [
     'linear-gradient(180deg, #FFE575 0%, #725D00 100%)',
     'linear-gradient(180deg, #A58AFF 0%, #009FB9 100%)',
 ]
-
-export const youtubeUrl = 'https://youtube.com/@masairgamingyt6876?si=_YRD9v8RscgoMkHu'
 
 export const dailyRewards = [
     { Day_1: 50000 },

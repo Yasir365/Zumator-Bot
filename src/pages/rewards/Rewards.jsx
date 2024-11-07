@@ -4,7 +4,7 @@ import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
-import { getRemainingTime, isRewardClaimedToday, setRewardClaimed } from '../../services/data.service';
+import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards } from '../../services/data.service';
 import swalToastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { updatePoints } from '../../services/api.service';
@@ -31,7 +31,9 @@ export default function Rewards() {
 
   const handleClaim = async () => {
     if (!isClaimed) {
-      const data = await updatePoints({ _id: userInfo._id, points: 100 });
+      const dayOfMonth = new Date().getDate();
+      const points = dailyRewards[dayOfMonth - 1][`Day_${dayOfMonth}`] || 100;
+      const data = await updatePoints({ _id: userInfo._id, points: points });
 
       if (data.user) {
         dispatch(saveUser(data));
