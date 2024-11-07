@@ -18,7 +18,8 @@ export default function Home() {
     const [date] = useState(new Date());
     const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
 
-
+    console.log("User Info From Store ::::::: ", userInfo);
+    
     useEffect(() => {
         const interval = setInterval(() => {
             setFormattedDate(moment().format('hh:mm:ss'));
@@ -40,7 +41,7 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
-                <span>{userInfo? userInfo.balance : 0.00000}</span>
+                <span>{userInfo? userInfo.points : 0.00000}</span>
             </div>
 
             <Avatar />
