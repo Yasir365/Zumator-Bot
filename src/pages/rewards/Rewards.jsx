@@ -32,7 +32,7 @@ export default function Rewards() {
     if (!isClaimed) {
       const data = await updatePoints({ _id: userInfo._id, points: 100 });
       
-      if (data) {
+      if (data.user) {
         console.log(":::::::::::", data);
         dispatch(saveUser(data));
         swalToastr('success', 'Daily reward claimed!');
