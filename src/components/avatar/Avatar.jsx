@@ -4,8 +4,8 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 
 
 function Model() {
-    const { scene } = useGLTF('/modal/bot.glb');
-    return <primitive object={scene} scale={[0.1, 0.1, 0.1]} />;
+    const { scene } = useGLTF('/modal/avatar1.glb');
+    return <primitive object={scene} scale={[1, 1, 1]} />;
 }
 
 export default function Avatar() {
