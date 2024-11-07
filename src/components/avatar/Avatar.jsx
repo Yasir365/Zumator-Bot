@@ -19,7 +19,7 @@ export default function Avatar() {
                         <Suspense fallback={null}>
                             <Model />
                         </Suspense>
-                        <OrbitControls enableZoom={true} />
+                        <OrbitControls enableZoom={false} />
                     </Canvas>
                 </div>
             </div>
