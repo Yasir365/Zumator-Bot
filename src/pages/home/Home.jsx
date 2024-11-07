@@ -4,7 +4,7 @@ import Header from '../../components/header/Header';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import GamePass from '../../game-pass/GamePass';
+import GamePass from '../../components/game-pass/GamePass';
 import Tickets from '../../components/tickets/Tickets';
 import ProfitPerHour from '../../components/profit-per-hour/ProfitPerHour';
 import DailyMissionBoard from '../../components/daily-mission-board/DailyMissionBoard';

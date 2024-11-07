@@ -1,4 +1,4 @@
-import swalToastr from '../services/toastr.service';
+import swalToastr from '../../services/toastr.service';
 
 export default function GamePass() {
 
