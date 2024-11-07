@@ -14,8 +14,8 @@ export default function Avatar() {
             <div className="model">
                 <div style={{ width: '100%', height: '300px', }}>
                     <Canvas>
-                        <ambientLight intensity={0.5} />
-                        <directionalLight position={[5, 5, 5]} />
+                        <ambientLight intensity={0} />
+                        <directionalLight position={[0, 0, 0]} />
                         <Suspense fallback={null}>
                             <Model />
                         </Suspense>
