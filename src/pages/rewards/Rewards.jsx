@@ -8,6 +8,7 @@ import { getRemainingTime, isRewardClaimedToday, setRewardClaimed } from '../../
 import swalToastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { updatePoints } from '../../services/api.service';
+import { saveUser } from '../../store/userInfoSlice';
 
 
 export default function Rewards() {
@@ -31,7 +32,7 @@ export default function Rewards() {
   const handleClaim = async () => {
     if (!isClaimed) {
       const data = await updatePoints({ _id: userInfo._id, points: 100 });
-      
+
       if (data.user) {
         console.log(":::::::::::", data);
         dispatch(saveUser(data));
