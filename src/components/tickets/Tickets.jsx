@@ -7,7 +7,7 @@ export default function Tickets() {
     return (
         <div>
             <p>{t('Tickets')}</p>
-            <span>{userInfo ? userInfo.tickets : 0}/10</span>
+            <span>{userInfo ? userInfo.tickets : 10}/10</span>
         </div>
     )
 }
