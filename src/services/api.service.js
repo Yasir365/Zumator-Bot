@@ -21,29 +21,6 @@ export async function registerUser(data) {
     }
 }
 
-export const generateInviteLink = (user) => {
-    try {
-        if (!user) {
-            throw new Error('User info is not available to generate invite link');
-        }
-        const botUsername = "Zumator_dev_bot";
-        return `https://t.me/${botUsername}/Game/?startapp=${user.user.id}`;
-    } catch (error) {
-        console.error('Error generating invite link:', error);
-    }
-};
-
-export const handleInviteClick = (user) => {
-    try {
-        const link = generateInviteLink(user);
-        const message = `Hey! Join Zumator using my invite link.`;
-
-        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(message)}`);
-    } catch (error) {
-        console.error('Error generating invite link:', error);
-    }
-};
-
 export const saveReferal = async (data) => {
     try {
         const response = await axios.post(`${baseUrl}/saveReferal`, data, {

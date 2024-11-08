@@ -1,5 +1,6 @@
 import './friends.scss'
-import { handleInviteClick, getInvitedFriends, generateInviteLink, getReferal } from '../../services/api.service';
+import { getInvitedFriends, getReferal } from '../../services/api.service';
+import { handleInviteClick, generateInviteLink } from '../../services/util.service';
 import { useEffect, useState } from 'react';
 import swalToastr from '../../services/toastr.service';
 import { useSelector } from 'react-redux';
