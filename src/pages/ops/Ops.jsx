@@ -13,11 +13,11 @@ import swalToastr from '../../services/toastr.service';
 
 
 export default function Ops() {
-  const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
   const userInfo = useSelector((state) => state.user.userInfo);
   const [remainingTime, setRemainingTime] = useState(getRemainingTime());
   const [isClaimed, setIsClaimed] = useState(isRewardClaimedToday());
+
 
   useEffect(() => {
     if (isClaimed) {
