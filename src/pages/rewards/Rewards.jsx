@@ -4,7 +4,7 @@ import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
-import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards } from '../../services/data.service';
+import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/data.service';
 import swalToastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { updatePoints } from '../../services/api.service';
@@ -46,13 +46,6 @@ export default function Rewards() {
     }
   };
 
-  const formatTime = (ms) => {
-    const totalSeconds = Math.floor(ms / 1000);
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  };
 
   return (
     <div className="rewards-page">

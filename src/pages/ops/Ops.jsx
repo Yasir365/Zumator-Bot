@@ -7,12 +7,16 @@ import Artifacts from '../../components/artifacts/Artifacts';
 import Galactic from '../../components/galactic/Galactic';
 import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
+import { useSelector } from 'react-redux';
+import { getRemainingTime, formatTime } from '../../services/data.service';
 
 
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
   const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
+  const userInfo = useSelector((state) => state.user.userInfo);
+  const [remainingTime, setRemainingTime] = useState(getRemainingTime());
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,8 +57,8 @@ export default function Ops() {
               <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
-              <p className='amount'>548,000</p>
-              <p className="time">{formattedDate} <img src="/images/icons/info.webp" alt="info" /></p>
+              <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
+              <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>
         </div>
