@@ -1,10 +1,15 @@
 import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 
 function Model() {
     const { scene } = useGLTF('/modal/avatar2.glb');
+    useFrame(() => {
+        scene.rotation.x += (Math.random() - 4) * 0.005;
+        scene.rotation.y += (Math.random() - 4) * 0.005;
+        scene.rotation.z += (Math.random() - 4) * 0.005;
+    });
     return <primitive object={scene} scale={[2, 2, 2]} />;
 }
 
