@@ -133,45 +133,15 @@
     }
 
     .tickets {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px 12px 0 28px;
+        text-align: right;
+        margin-top: 4px;
+        font-size: 16px;
+        font-weight: 600;
 
-        p {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
+        p,
         span {
-            font-size: 16px;
-            font-weight: 600;
+            padding-right: 8px;
         }
-    }
-
-    .time {
-        display: flex;
-        align-items: center;
-
-        img {
-            margin-right: 8px;
-        }
-
-        span {
-            margin-right: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            min-width: 45px;
-        }
-
-    }
-
-    .progress-container {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        gap: 20px;
-        position: relative;
 
         .claim {
             border-radius: 26px;
@@ -182,16 +152,35 @@
             font-size: 14px;
             font-weight: 600;
         }
+    }
+
+    .game-pass {
+        display: flex;
+        justify-content: end;
+    }
+
+    .arena-name {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .progress-container {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 20px;
+        position: relative;
+
 
         .progress {
-            width: calc(100% - 138px);
+            width: calc(100% - 35px);
             height: 25px;
             border-radius: 26px 0 0 26px;
         }
 
         .img {
             position: absolute;
-            right: -5px;
+            right: 0px;
             padding: 6px 8px;
             border-radius: 50%;
             background-color: var(--black);

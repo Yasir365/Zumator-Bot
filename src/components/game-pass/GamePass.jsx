@@ -6,12 +6,14 @@ export default function GamePass() {
         swalToastr('success', 'Game pass purchased successfully')
     }
     return (
-        <div>
-            <div data-bs-toggle="modal" data-bs-target="#gamePassModal">
-                <img src="/images/icons/pass.webp" alt="" />
+        <>
+            <div className='game-pass'>
+                <div data-bs-toggle="modal" data-bs-target="#gamePassModal">
+                    <img src="/images/icons/pass.webp" alt="" />
+                </div>
             </div>
 
-
+            
             {/* Modal */}
             <div className="modal fade" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
@@ -32,7 +34,8 @@ export default function GamePass() {
                     </div>
                 </div>
             </div>
-        </div>
+
+        </>
 
 
     )

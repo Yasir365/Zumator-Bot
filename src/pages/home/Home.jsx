@@ -15,17 +15,6 @@ import { useSelector } from 'react-redux';
 export default function Home() {
     const { t } = useTranslation();
     const userInfo = useSelector((state) => state.user.userInfo);
-    const [date] = useState(new Date());
-    const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
-
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFormattedDate(moment().format('hh:mm:ss'));
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
 
 
     return (
@@ -40,42 +29,40 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
-                <span>{userInfo? userInfo.points : 0.00000}</span>
+                <span>{userInfo ? userInfo.points : 0.00000}</span>
             </div>
 
             <Avatar />
 
-            <div className="tickets">
-                <Tickets />
-                <GamePass />
-            </div>
-
-            <div className="time">
-                <img src="/images/icons/clock.webp" alt="" />
-                <span>{formattedDate}</span>
-                <span className='m-0 ms-4'>{t('Recruite')}</span>
-                <Link to="/arena">
-                    <img src="/images/icons/podium.webp" alt="" />
-                </Link>
-                <Link to="/leaderboard">
-                    <img src="/images/icons/chart.webp" alt="" />
-                </Link>
-            </div>
-
-            <div className="progress-container">
-                <button className='claim'>{t('Claim')}</button>
-                <div className="progress">
-                    <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{t('Level-1')}</div>
+            <div className='d-flex justify-content-between gap-2'>
+                <div className='tickets'>
+                    <Tickets />
                 </div>
-                <div className="img"> <img src="/images/icons/layer.webp" alt="" /> </div>
-            </div>
 
+                <div className='w-100'>
+                    <GamePass />
+
+                    <div className="d-flex align-items-center">
+                        <span className='me-3 arena-name'>{t('Recruite')}</span>
+                        <Link to="/arena">
+                            <img src="/images/icons/podium.webp" alt="" />
+                        </Link>
+                        <Link to="/leaderboard" className='ms-2'>
+                            <img src="/images/icons/chart.webp" alt="" />
+                        </Link>
+                    </div>
+                    <div className="progress-container">
+                        <div className="progress">
+                            <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{t('Level-1')}</div>
+                        </div>
+                        <div className="img"> <img src="/images/icons/layer.webp" alt="" /> </div>
+                    </div>
+
+                </div>
+            </div>
             <div className="play-container">
                 <a className="play-button" href="#"> <span>{t('Play-now')}</span> </a>
             </div>
-
-
-
         </div>
     )
 }
