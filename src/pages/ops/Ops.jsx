@@ -1,6 +1,5 @@
 import './ops.scss';
 import { useEffect, useState } from 'react';
-import moment from 'moment';
 import Header from '../../components/header/Header';
 import { Rating } from 'react-simple-star-rating'
 import Artifacts from '../../components/artifacts/Artifacts';
@@ -9,6 +8,8 @@ import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
 import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/data.service';
+import swalToastr from '../../services/toastr.service';
+
 
 
 export default function Ops() {
@@ -59,7 +60,7 @@ export default function Ops() {
               <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
-            <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
+              <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
               {isClaimed ? (
                 <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
               ) : (
