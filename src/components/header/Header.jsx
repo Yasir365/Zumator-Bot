@@ -2,7 +2,7 @@ import './header.scss';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { skins } from '../../services/data.service';
+import { skins } from '../../services/util.service';
 
 export default function Header() {
     const { t } = useTranslation();

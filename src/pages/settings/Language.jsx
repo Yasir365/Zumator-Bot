@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { languages } from '../../services/data.service';
+import { languages } from '../../services/util.service';
 import { useTranslation } from 'react-i18next';
 
 export default function Language() {

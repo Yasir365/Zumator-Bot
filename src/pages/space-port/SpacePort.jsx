@@ -1,5 +1,5 @@
 import './space-port.scss'
-import { shipyardData, gradients } from '../../services/data.service';
+import { shipyardData, gradients } from '../../services/util.service';
 import Slider from 'react-slick';
 
 

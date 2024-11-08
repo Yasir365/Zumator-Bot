@@ -1,4 +1,4 @@
-import { web3Data, gradients } from "../../services/data.service"
+import { web3Data, gradients } from "../../services/util.service"
 
 export default function Web3() {
     return (

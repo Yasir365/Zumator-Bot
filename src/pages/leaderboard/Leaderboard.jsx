@@ -1,5 +1,5 @@
 import './leaderboard.scss'
-import { leaderboardData } from '../../services/data.service';
+import { leaderboardData } from '../../services/util.service';
 
 import Slider from 'react-slick';
 

@@ -7,7 +7,7 @@ import Galactic from '../../components/galactic/Galactic';
 import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
-import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/data.service';
+import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/util.service';
 import swalToastr from '../../services/toastr.service';
 
 

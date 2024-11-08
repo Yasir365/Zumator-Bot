@@ -1,4 +1,4 @@
-import { marketData, gradients } from "../../services/data.service"
+import { marketData, gradients } from "../../services/util.service"
 
 export default function Market() {
     return (

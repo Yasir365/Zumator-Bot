@@ -1,4 +1,4 @@
-import { artifactsData, gradients } from "../../services/data.service"
+import { artifactsData, gradients } from "../../services/util.service"
 
 export default function Artifacts() {
     return (

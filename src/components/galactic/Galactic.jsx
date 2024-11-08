@@ -1,4 +1,4 @@
-import { galacticData, gradients } from "../../services/data.service"
+import { galacticData, gradients } from "../../services/util.service"
 
 export default function Galactic() {
     return (

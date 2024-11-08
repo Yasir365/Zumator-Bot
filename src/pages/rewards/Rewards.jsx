@@ -4,7 +4,7 @@ import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
-import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/data.service';
+import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/util.service';
 import swalToastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { updatePoints } from '../../services/api.service';

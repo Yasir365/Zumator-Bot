@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { factions } from "../../services/data.service";
+import { factions } from "../../services/util.service";
 
 export default function ProfitPerHour() {
     const { t } = useTranslation();

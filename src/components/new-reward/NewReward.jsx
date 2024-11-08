@@ -1,4 +1,4 @@
-import { rewardData } from '../../services/data.service';
+import { rewardData } from '../../services/util.service';
 
 
 export default function NewReward() {
