@@ -59,12 +59,12 @@ export default function Ops() {
               <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
+            <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
               {isClaimed ? (
-                <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
+                <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
               ) : (
-                <p className='amount'>00:00:00</p>
+                <p className='time'>00:00:00</p>
               )}
-              <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>
         </div>
