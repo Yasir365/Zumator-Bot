@@ -16,9 +16,9 @@ export default function Ops() {
   const [activeTab, setActiveTab] = useState('web3');
   const userInfo = useSelector((state) => state.user.userInfo);
   const [remainingTime, setRemainingTime] = useState(getRemainingTime());
+  const [isClaimed, setIsClaimed] = useState(isRewardClaimedToday());
 
   useEffect(() => {
-    const isClaimed = isRewardClaimedToday();
     if (isClaimed) {
       const interval = setInterval(() => {
         setRemainingTime(getRemainingTime());
@@ -26,7 +26,7 @@ export default function Ops() {
 
       return () => clearInterval(interval);
     }
-  }, []);
+  }, [isClaimed]);
 
   useEffect(() => {
     let previous = localStorage.getItem('collect-coins');
