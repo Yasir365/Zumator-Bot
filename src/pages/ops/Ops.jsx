@@ -8,22 +8,24 @@ import Galactic from '../../components/galactic/Galactic';
 import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
-import { getRemainingTime, formatTime } from '../../services/data.service';
+import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/data.service';
 
 
 export default function Ops() {
   const [date] = useState(new Date());
   const [activeTab, setActiveTab] = useState('web3');
-  const [formattedDate, setFormattedDate] = useState(moment(date).format('hh:mm:ss'));
   const userInfo = useSelector((state) => state.user.userInfo);
   const [remainingTime, setRemainingTime] = useState(getRemainingTime());
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFormattedDate(moment().format('hh:mm:ss'));
-    }, 1000);
+    const isClaimed = isRewardClaimedToday();
+    if (isClaimed) {
+      const interval = setInterval(() => {
+        setRemainingTime(getRemainingTime());
+      }, 1000);
 
-    return () => clearInterval(interval);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   useEffect(() => {
