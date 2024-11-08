@@ -26,6 +26,8 @@ export default function Rewards() {
       }, 1000);
 
       return () => clearInterval(interval);
+    } else {
+      setRemainingTime("00:00:00");
     }
   }, [isClaimed]);
 
