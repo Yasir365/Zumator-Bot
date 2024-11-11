@@ -2,6 +2,19 @@ import axios from 'axios';
 
 // const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
+axios.interceptors.request.use(
+    config => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers['Authorization'] = 'Bearer ' + token
+        }
+        // config.headers['Content-Type'] = 'application/json';
+        return config
+    },
+    error => {
+        Promise.reject(error)
+    }
+)
 
 export const registerUser = async (data) => {
     if (data) {
