@@ -4,11 +4,11 @@ import axios from 'axios';
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 axios.interceptors.request.use(
     config => {
-        const token = "test token for now";
+        const token = localStorage.getItem('token');
         if (token) {
             config.headers['Authorization'] = 'Bearer ' + token
         }
-        // config.headers['Content-Type'] = 'application/json';
+        config.headers['Content-Type'] = 'application/json';
         return config
     },
     error => {
@@ -26,6 +26,7 @@ export const registerUser = async (data) => {
             });
 
             if (response.status == 200) {
+                localStorage.setItem('token', 'this is a test token');
                 return response.data.data;
             }
         } catch (error) {
