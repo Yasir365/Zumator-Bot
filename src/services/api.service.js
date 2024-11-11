@@ -4,7 +4,7 @@ import axios from 'axios';
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 axios.interceptors.request.use(
     config => {
-        const token = localStorage.getItem('token');
+        const token = "test token for now";
         if (token) {
             config.headers['Authorization'] = 'Bearer ' + token
         }
