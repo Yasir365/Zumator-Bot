@@ -22,7 +22,12 @@
 
         .accordion-header {
             position: relative;
-            
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+
             .selected {
                 position: absolute;
                 right: 21px;
@@ -44,15 +49,16 @@
                 z-index: 1000;
                 background: url('images/faction/bg1.png');
             }
-        }
 
-        .accordion-button {
-            background: none;
+            .accordion-button {
+                background: none;
 
-            &:focus {
-                box-shadow: none;
+                &:focus {
+                    box-shadow: none;
+                }
             }
         }
+
 
         .select-btn {
             height: 50px;

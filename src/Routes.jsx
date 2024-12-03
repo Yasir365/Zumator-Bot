@@ -11,6 +11,7 @@ import Leaderboard from './pages/leaderboard/Leaderboard';
 import Rewards from './pages/rewards/Rewards';
 import SpacePort from './pages/space-port/SpacePort';
 import Faction from './pages/faction/Faction';
+import Skins from './pages/skins/Skins';
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             {
                 path: 'faction',
                 element: <Faction />,
+            },
+            {
+                path: 'skins',
+                element: <Skins />,
             },
         ],
     },

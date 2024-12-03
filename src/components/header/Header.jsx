@@ -12,7 +12,7 @@ export default function Header() {
         <>
             <header className="user-header">
                 <div className="d-flex align-items-center">
-                    <Link to="/faction">
+                    <Link to="/skins">
                         <img src='/images/profile.webp' alt="img" loading="lazy" />
                     </Link>
                     {userInfo && userInfo.user ? (
