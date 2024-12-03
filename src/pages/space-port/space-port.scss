@@ -1,5 +1,23 @@
 .space-port-page {
     padding-bottom: 90px;
+    // padding: 2rem 12px 90px 12px;
+    position: relative;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+
+        img {
+            position: fixed;
+            top: 50vh;
+            left: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+    }
 
     .slick-slider {
         width: 85%;
@@ -63,7 +81,7 @@
         }
 
         .slick-arrow {
-            z-index: 1000;
+            z-index: 998;
 
             &::before {
                 content: '';
@@ -95,6 +113,10 @@
         padding: 12px;
         border-radius: 12px;
         background-color: var(--white);
+        background: url('/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
 
         label {
             font-weight: 700;

@@ -4,12 +4,15 @@
 
     .daily-combo {
         padding: 12px;
-        background-color: var(--white);
         margin-top: 20px;
         border-radius: 12px;
         box-shadow: 0 0 5px 0px var(--warning);
         border: 1px solid var(--warning);
         color: var(--white);
+        background: url('/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
 
         .time {
             text-align: right;
@@ -114,6 +117,10 @@
         background-color: var(--white);
         border-radius: 30px;
         padding: 8px;
+        background: url('/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
 
         .nav-item {
             width: calc(25% - 10px);
@@ -183,4 +190,20 @@
             }
         }
     }
+
+    #misteryBoxModal{
+        .modal-dialog{
+         padding: 0 4px;
+        }
+        .modal-content{
+            border-radius: 19px;
+        }
+        .modal-body {
+            background: url('/images/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            border-radius: 18px;
+        }
+    } 
 }

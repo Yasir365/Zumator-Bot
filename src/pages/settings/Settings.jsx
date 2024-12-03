@@ -61,12 +61,6 @@ export default function Settings() {
                         <i className="fa-solid fa-chevron-right"></i>
                     </Link>
                 </li>
-                <li>
-                    <Link to='/leaderboard' className='item'>
-                        <div className='title'>{t('Leaderboard')}</div>
-                        <i className="fa-solid fa-chevron-right"></i>
-                    </Link>
-                </li>
                 <li className='item' data-bs-toggle="modal" data-bs-target="#deleteModal">
                     <div className='title'>{t('Delete-Account')}</div>
                     <i className="fa-solid fa-chevron-right"></i>

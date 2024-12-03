@@ -1,0 +1,71 @@
+.faction-page {
+    color: var(--white);
+    padding-bottom: 90px;
+
+    .heading {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .accordion-item {
+        color: var(--black);
+        padding: 6px 16px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        min-height: 48px;
+        background: url('/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        .accordion-header {
+            position: relative;
+            
+            .selected {
+                position: absolute;
+                right: 21px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 26px;
+                color: var(--primary);
+                z-index: 1000;
+                background: url('images/faction/bg2.png');
+            }
+
+            .collapsed .selected {
+                position: absolute;
+                right: 21px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 26px;
+                color: var(--primary);
+                z-index: 1000;
+                background: url('images/faction/bg1.png');
+            }
+        }
+
+        .accordion-button {
+            background: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .select-btn {
+            height: 50px;
+            width: 100%;
+            background: var(--warning);
+            border-radius: 26px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--black);
+        }
+    }
+}

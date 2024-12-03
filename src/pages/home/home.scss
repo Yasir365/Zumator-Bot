@@ -15,6 +15,10 @@
             display: flex;
             justify-content: space-between;
             gap: 10px;
+            background: url('/images/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
 
             .item {
                 display: flex;
@@ -38,6 +42,10 @@
             display: flex;
             justify-content: space-between;
             gap: 10px;
+            background: url('/images/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
 
             .item {
                 display: flex;
@@ -64,6 +72,10 @@
         border-radius: 12px;
         box-shadow: 0 0 5px 0px var(--warning);
         border: 1px solid var(--warning);
+        background: url('/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
 
         h4 {
             font-weight: 500;
@@ -157,6 +169,13 @@
     .game-pass {
         display: flex;
         justify-content: end;
+        position: relative;
+
+        .pass-2{
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+        }
     }
 
     .arena-name {

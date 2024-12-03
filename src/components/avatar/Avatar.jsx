@@ -18,14 +18,15 @@ export default function Avatar() {
         <div className="main-image-wrapper">
             <div className="model">
                 <div style={{ width: '100%', height: '250px', }}>
-                    <Canvas>
+                    <img src="/images/hero.webp" alt="" />
+                    {/* <Canvas>
                         <ambientLight intensity={0} />
                         <directionalLight position={[0, 0, 0]} />
                         <Suspense fallback={null}>
                             <Model />
                         </Suspense>
                         <OrbitControls enableZoom={false} />
-                    </Canvas>
+                    </Canvas> */}
                 </div>
             </div>
         </div>

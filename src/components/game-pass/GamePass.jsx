@@ -11,9 +11,12 @@ export default function GamePass() {
                 <div data-bs-toggle="modal" data-bs-target="#gamePassModal">
                     <img src="/images/icons/pass.webp" alt="" />
                 </div>
+                <div data-bs-toggle="modal" data-bs-target="#gamePassModal" className='pass-2'>
+                    <img src="/images/icons/pass2.png" alt="" />
+                </div>
             </div>
 
-            
+
             {/* Modal */}
             <div className="modal fade" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">

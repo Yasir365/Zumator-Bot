@@ -10,6 +10,7 @@ import Arena from './pages/arena/Arena';
 import Leaderboard from './pages/leaderboard/Leaderboard';
 import Rewards from './pages/rewards/Rewards';
 import SpacePort from './pages/space-port/SpacePort';
+import Faction from './pages/faction/Faction';
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: 'rewards',
                 element: <Rewards />,
+            },
+            {
+                path: 'faction',
+                element: <Faction />,
             },
         ],
     },

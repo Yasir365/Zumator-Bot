@@ -12,6 +12,9 @@ export default function Arena() {
 
   return (
     <div className="arena-page">
+      <div className="overlay">
+        <img src="/images/comming-soon.png" alt="" />
+      </div>
       <h4 className="heading"> Arena </h4>
       <div className="card-container">
         {total.map((item, index) => (
