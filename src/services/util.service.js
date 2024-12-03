@@ -308,16 +308,14 @@ export const dailyRewards = [
     { Day_30: 3000000 },
 ]
 
-export const skins = [
-    { image: '/images/profile.webp', Locked: false, price: 50 },
-    { image: '/images/icons/layer.webp', Locked: true, price: 50 },
-    { image: '/images/icons/frog.webp', Locked: true, price: 50 },
-    { image: '/images/icons/gaming.webp', Locked: true, price: 50 },
-    { image: '/images/icons/shipyard.webp', Locked: true, price: 50 },
-    { image: '/images/icons/question.webp', Locked: true, price: 50 },
-    { image: '/images/icons/chart.webp', Locked: true, price: 50 },
-    { image: '/images/icons/podium.webp', Locked: true, price: 50 },
-]
+export const skinsData = [
+    { id: 1, name: 'Zumator', img: '/images/skins/1.png', price: 20 },
+    { id: 2, name: 'Zumator', img: '/images/skins/2.png', price: 30 },
+    { id: 3, name: 'Zumator', img: '/images/skins/3.png', price: 40 },
+    { id: 4, name: 'Zumator', img: '/images/skins/4.png', price: 50 },
+    { id: 5, name: 'Zumator', img: '/images/skins/2.png', price: 20 },
+    { id: 6, name: 'Zumator', img: '/images/skins/3.png', price: 30 },
+];
 
 export const factions = [
     { name: 'Celestial Nomads', img: '/images/faction/1.png', profit: 10, selected: true, description: ' A wandering alliance of various alien species who travel the galaxy, hey trade, and barter among themselves and with other factions, living a nomadic and adaptable lifestyle. ' },
