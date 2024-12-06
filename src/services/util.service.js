@@ -1,113 +1,5 @@
 export const youtubeUrl = 'https://youtube.com/@masairgamingyt6876?si=_YRD9v8RscgoMkHu'
 
-export const web3Data = [
-    {
-        image: '/images/card-img.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/card-img.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-
-export const marketData = [
-    {
-        image: '/images/daily-board/2.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/2.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-
-export const galacticData = [
-    {
-        image: '/images/daily-board/3.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/3.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-
-export const artifactsData = [
-    {
-        image: '/images/daily-board/4.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-    {
-        image: '/images/daily-board/4.webp',
-        num: '#021',
-        profit: 0.05,
-        total: 200
-    },
-]
-
 export const shipyardData = [
     {
         image: '/images/ship-yard/1.webp',
@@ -267,13 +159,6 @@ export const rewardData = {
         },
     ],
 }
-
-export const gradients = [
-    'linear-gradient(180deg, #4EA9B8 0%, #009FB9 100%)',
-    'linear-gradient(180deg, #F1AEFF 0%, #9000AA 100%)',
-    'linear-gradient(180deg, #FFE575 0%, #725D00 100%)',
-    'linear-gradient(180deg, #A58AFF 0%, #009FB9 100%)',
-]
 
 export const dailyRewards = [
     { Day_1: 50000 },

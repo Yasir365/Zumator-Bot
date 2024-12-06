@@ -2,6 +2,7 @@ import axios from 'axios';
 
 // const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
 const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
+const adminBaseUrl = "http://zumator-admin.updatemedaily.com/api"
 
 export const registerUser = async (data) => {
     if (data) {
@@ -109,5 +110,17 @@ export const updatePoints = async (data) => {
         } catch (error) {
             console.error('Error saving user info:', error);
         }
+    }
+}
+
+export const getOpsCards = async (category) => {
+    try {
+        const response = await axios.get(`${adminBaseUrl}/cards_api?category=${category}`,);
+        if (response.status == 200) {
+            return response.data.records;
+        }
+    } catch (error) {
+        console.error('Error getting invited friends:', error);
+        return [];
     }
 }
