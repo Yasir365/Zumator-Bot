@@ -14,11 +14,11 @@ export default function Friends() {
     const fetchReferralData = async () => {
       try {
         const data = await getReferal(userInfo.id)
-        if(data){
+        if (data) {
           setRef(data);
         }
-        const data2 = await getInvitedFriends(userInfo.telegram_id)
-        if(data2){
+        const data2 = await getInvitedFriends({ telegram_id: userInfo.telegram_id })
+        if (data2) {
           setInvitedFriends(data2);
         }
       } catch (error) {
