@@ -13,7 +13,7 @@ export default function Friends() {
   useEffect(() => {
     const fetchReferralData = async () => {
       try {
-        const data = await getReferal(userInfo.id)
+        const data = await getReferal({ id: userInfo.id })
         if (data) {
           setRef(data);
         }
