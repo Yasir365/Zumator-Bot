@@ -15,10 +15,10 @@ export default function Header() {
                     <Link to="/skins">
                         <img src='/images/profile.webp' alt="img" loading="lazy" />
                     </Link>
-                    {userInfo && userInfo.user ? (
+                    {userInfo ? (
                         <>
                             <p className="title">
-                                {userInfo.user.first_name} {userInfo.user.last_name}
+                                {userInfo.first_name} {userInfo.last_name}
                                 <small>({t('conqueror')})</small>
                             </p>
                         </>
