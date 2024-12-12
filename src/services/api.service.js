@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
-const baseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
+const nodeBaseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 const adminBaseUrl = "https://zumator-admin.updatemedaily.com/api"
 
 export const registerUser = async (data) => {
     if (data) {
         try {
-            const response = await axios.post(`${adminBaseUrl}/register`, data, {
+            const response = await axios.post(`${nodeBaseUrl}/register`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -25,7 +25,7 @@ export const registerUser = async (data) => {
 
 export const saveReferal = async (data) => {
     try {
-        const response = await axios.post(`${adminBaseUrl}/saveReferal`, data, {
+        const response = await axios.post(`${nodeBaseUrl}/saveReferal`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -42,7 +42,7 @@ export const saveReferal = async (data) => {
 
 export const getReferal = async (data) => {
     try {
-        const response = await axios.post(`${adminBaseUrl}/getReferal`, data, {
+        const response = await axios.post(`${nodeBaseUrl}/getReferal`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -62,7 +62,7 @@ export const getReferal = async (data) => {
 
 export const getInvitedFriends = async (data) => {
     try {
-        const response = await axios.post(`${adminBaseUrl}/getInvitedFriends`, data, {
+        const response = await axios.post(`${nodeBaseUrl}/getInvitedFriends`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -80,7 +80,7 @@ export const getInvitedFriends = async (data) => {
 export const deleteUserAccount = async (data) => {
     if (data) {
         try {
-            const response = await axios.post(`${adminBaseUrl}/deleteAccount`, data, {
+            const response = await axios.post(`${nodeBaseUrl}/deleteAccount`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -98,7 +98,7 @@ export const deleteUserAccount = async (data) => {
 export const updatePoints = async (data) => {
     if (data) {
         try {
-            const response = await axios.post(`${adminBaseUrl}/updatePoints`, data, {
+            const response = await axios.post(`${nodeBaseUrl}/updatePoints`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -115,7 +115,7 @@ export const updatePoints = async (data) => {
 
 export const getOpsCards = async (category) => {
     try {
-        const response = await axios.get(`${adminBaseUrl}/cards_api?category=${category}`,);
+        const response = await axios.get(`${nodeBaseUrl}/cards_api?category=${category}`,);
         if (response.status == 200) {
             return response.data.records;
         }
@@ -127,7 +127,7 @@ export const getOpsCards = async (category) => {
 
 export const getTasks = async () => {
     try {
-        const response = await axios.get(`${adminBaseUrl}/tasks_api`,);
+        const response = await axios.get(`${nodeBaseUrl}/tasks_api`,);
         if (response.status == 200) {
             return response.data.records;
         }
