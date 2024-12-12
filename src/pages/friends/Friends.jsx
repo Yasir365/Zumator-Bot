@@ -13,11 +13,11 @@ export default function Friends() {
   useEffect(() => {
     const fetchReferralData = async () => {
       try {
-        const data = await getReferal(userInfo)
+        const data = await getReferal(userInfo.id)
         if(data){
           setRef(data);
         }
-        const data2 = await getInvitedFriends(userInfo)
+        const data2 = await getInvitedFriends(userInfo.telegram_id)
         if(data2){
           setInvitedFriends(data2);
         }

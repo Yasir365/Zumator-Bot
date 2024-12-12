@@ -24,19 +24,18 @@ export default function App() {
             const data = await registerUser(user);
             dispatch(saveUser(data));
             if (!data.referral_id && start_param) {
-                await saveReferral(start_param, data);
+                await saveReferral(start_param, data.id);
             }
         }
     };
 
-    const saveReferral = async (ref, userData) => {
+    const saveReferral = async (ref, id) => {
         const data = {
-            referral_id: +ref,
-            user_id: userData._id
+            id: id,
+            referral_id: +ref
         }
-        const response = await saveReferal(data);
-        dispatch(saveUser(response));
-        console.log("Saved Referral Data ::::::::::: ", response);
+        await saveReferal(data);
+        // console.log("Saved Referral Data ::::::::::: ", response);
     };
 
     const setupBackButton = async () => {

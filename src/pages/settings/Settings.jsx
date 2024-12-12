@@ -22,7 +22,7 @@ export default function Settings() {
     }, [])
 
     const deleteAccount = async () => {
-        const res = await deleteUserAccount({ userId: userInfo._id });
+        const res = await deleteUserAccount({ id: userInfo.id });
 
         if (res.success) {
             swalToastr('success', 'Account deleted successfully')
