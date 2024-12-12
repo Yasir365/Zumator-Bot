@@ -14,6 +14,8 @@ export default function Friends() {
     const fetchReferralData = async () => {
       try {
         const data = await getReferal({ id: userInfo.id })
+        console.log("---------------------", data);
+        
         if (data) {
           setRef(data);
         }
