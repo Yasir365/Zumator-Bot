@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// const baseUrl = "http://localhost:3000/api/zumator-bot/v1"
-const nodeBaseUrl = "https://zumbator-bot-backend.vercel.app/api/zumator-bot/v1"
 const adminBaseUrl = "https://zumator-admin.updatemedaily.com/api"
 
 export const registerUser = async (data) => {
