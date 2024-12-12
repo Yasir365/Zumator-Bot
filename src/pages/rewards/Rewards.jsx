@@ -33,7 +33,13 @@ export default function Rewards() {
     if (!isClaimed) {
       const dayOfMonth = new Date().getDate();
       const points = dailyRewards[dayOfMonth - 1][`Day_${dayOfMonth}`] || 100;
-      const data = await updatePoints({ id: userInfo.id, points: points });
+      const params = {
+        id: userInfo.id,
+        points: points,
+        keys: 0,
+        diamonds: 0
+      }
+      const data = await updatePoints(params);
 
       if (data) {
         dispatch(saveUser(data));
