@@ -49,7 +49,7 @@ export const getReferal = async (data) => {
         });
 
         if (response.data.data) {
-            return response.data.data.user.first_name + " " + response.data.data.user.last_name;
+            return response.data.data.first_name + " " + response.data.data.last_name;
         } else {
             return '';
         }

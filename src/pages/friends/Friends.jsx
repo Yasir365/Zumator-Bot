@@ -14,8 +14,6 @@ export default function Friends() {
     const fetchReferralData = async () => {
       try {
         const data = await getReferal({ id: userInfo.id })
-        console.log("---------------------", data);
-        
         if (data) {
           setRef(data);
         }
@@ -66,7 +64,7 @@ export default function Friends() {
 
       {ref && (
         <div className="item mt-4 d-flex justify-content-center">
-          <p>Your are already a referral, invited by <span className="warn">{ref.first_name} &nbsp; {ref.last_name} </span></p>
+          <p>Your are already a referral, invited by <span className="warn">{ref}</span></p>
         </div>
       )}
 
