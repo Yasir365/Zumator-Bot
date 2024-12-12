@@ -36,7 +36,7 @@
                 font-size: 26px;
                 color: var(--primary);
                 z-index: 1000;
-                background: url('images/faction/bg2.png');
+                background: url('/images/faction/bg2.png');
             }
 
             .collapsed .selected {
@@ -47,7 +47,7 @@
                 font-size: 26px;
                 color: var(--primary);
                 z-index: 1000;
-                background: url('images/faction/bg1.png');
+                background: url('/images/faction/bg1.png');
             }
 
             .accordion-button {
