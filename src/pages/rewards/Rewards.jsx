@@ -7,7 +7,7 @@ import WalletReward from '../../components/wallet-reward/WalletReward';
 import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/util.service';
 import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
-import { dailyCliam } from '../../services/api.service';
+import { claimDailyReward } from '../../services/api.service';
 import { saveUser } from '../../store/userInfoSlice';
 
 
@@ -58,14 +58,14 @@ export default function Rewards() {
       const params = {
         user_id: userInfo.id,
       };
-      const data = await dailyCliam(params);
+      const data = await claimDailyReward(params);
 
       if (data) {
         dispatch(saveUser(data));
         toastr('success', 'Daily reward claimed!');
         // setRewardClaimed();
         setIsClaimed(true);
-        setRemainingTime(24 * 60 * 60 * 1000); 
+        setRemainingTime(24 * 60 * 60 * 1000);
       }
     }
   };

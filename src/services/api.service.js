@@ -45,7 +45,7 @@ export const getTopPlayer = async () => {
     return response.data.data || [];
 };
 
-export const dailyCliam = async (data) => {
+export const claimDailyReward = async (data) => {
     const response = await axiosInstance.post('/claim_daily_reward', data);
     return response.data.data || [];
 };
