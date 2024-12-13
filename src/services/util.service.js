@@ -184,21 +184,6 @@ export const handleInviteClick = (user) => {
     }
 };
 
-export function getRemainingTime(time) {
-    const now = new Date();
-    const nextReset = new Date();
-    nextReset.setHours(24, 0, 0, 0);
-    return nextReset - now;
-}
-
-export function isRewardClaimedToday() {
-    const lastClaimDate = localStorage.getItem('dailyRewardClaimDate');
-    if (!lastClaimDate) return false;
-
-    const today = new Date().toDateString();
-    return today === lastClaimDate;
-}
-
 export const formatTime = (ms) => {
     const totalSeconds = Math.floor(ms / 1000);
     const hours = Math.floor(totalSeconds / 3600);
