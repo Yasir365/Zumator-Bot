@@ -29,19 +29,7 @@ export default function Ops() {
     }
   }, [isClaimed]);
 
-  useEffect(() => {
-    let previous = localStorage.getItem('collect-coins');
-    const currentTime = new Date().getTime();
-
-    if (!previous || (currentTime - previous) > (24 * 60 * 60 * 1000)) {
-      let a = document.querySelector('#mistery-box-btn');
-      a?.click();
-    }
-  }, []);
-
-
   const collectCoins = () => {
-    localStorage.setItem('collect-coins', new Date().getTime())
     toastr('success', 'Coins collected successfully')
   }
 
@@ -71,28 +59,28 @@ export default function Ops() {
         </div>
         <div className="item-container">
           <div className="item">
-            <div className="img">
+            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
               <img className='question' src="/images/icons/question.webp" alt="" />
               <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
-            <div className="img">
+            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
               <img className='question' src="/images/icons/question.webp" alt="" />
               <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
-            <div className="img">
+            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
               <img className='question' src="/images/icons/question.webp" alt="" />
               <img src="/images/icons/coins.webp" alt="" />
             </div>
           </div>
 
           <div className="item">
-            <div className="img">
+            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
               <img className='question' src="/images/icons/question.webp" alt="" />
               <img src="/images/icons/coins.webp" alt="" />
             </div>
@@ -137,7 +125,6 @@ export default function Ops() {
 
 
       {/* Mystery Box Modal */}
-      <button data-bs-toggle="modal" data-bs-target="#misteryBoxModal" id='mistery-box-btn' className='d-none'></button>
       <div className="modal fade text-center" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
