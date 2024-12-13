@@ -4,7 +4,7 @@ import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
-import { getRemainingTime, isRewardClaimedToday, formatTime } from '../../services/util.service';
+import { formatTime } from '../../services/util.service';
 import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { claimDailyReward } from '../../services/api.service';
@@ -13,7 +13,7 @@ import { saveUser } from '../../store/userInfoSlice';
 
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
-  const [isClaimed, setIsClaimed] = useState(isRewardClaimedToday());
+  const [isClaimed, setIsClaimed] = useState(true);
   const [remainingTime, setRemainingTime] = useState();
   const dispatch = useDispatch();
   const userInfo = useSelector((state) => state.user.userInfo);
@@ -34,12 +34,12 @@ export default function Rewards() {
 
       const timeDifference = nextClaimDate - currentDate;
 
-      if (timeDifference > 0) {
-        setRemainingTime(timeDifference);
-        setIsClaimed(true);
-      } else {
+      if (timeDifference > 24) {
         setRemainingTime(0);
         setIsClaimed(false);
+      } else {
+        setRemainingTime(timeDifference);
+        setIsClaimed(true);
       }
     };
 
@@ -50,7 +50,7 @@ export default function Rewards() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [userInfo]);
+  }, [isClaimed]);
 
 
   const handleClaim = async () => {
