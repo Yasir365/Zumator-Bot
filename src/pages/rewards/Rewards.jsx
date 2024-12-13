@@ -19,6 +19,7 @@ export default function Rewards() {
   const userInfo = useSelector((state) => state.user.userInfo);
 
 
+
   useEffect(() => {
     const calculateRemainingTime = () => {
       if (!userInfo?.last_claim_date_time) {
@@ -29,15 +30,18 @@ export default function Rewards() {
 
       const lastClaimDate = new Date(userInfo.last_claim_date_time);
       const currentDate = new Date();
-      const nextClaimDate = new Date(lastClaimDate);
-      nextClaimDate.setDate(lastClaimDate.getDate() + 1);
 
-      const timeDifference = nextClaimDate - currentDate;
+      const lastClaimDay = new Date(lastClaimDate.getFullYear(), lastClaimDate.getMonth(), lastClaimDate.getDate());
+      const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
 
-      if (timeDifference > 24) {
+      if (currentDay > lastClaimDay) {
         setRemainingTime(0);
         setIsClaimed(false);
       } else {
+        const nextDayStart = new Date(currentDay);
+        nextDayStart.setDate(nextDayStart.getDate() + 1);
+        const timeDifference = nextDayStart - currentDate;
+
         setRemainingTime(timeDifference);
         setIsClaimed(true);
       }
@@ -52,24 +56,25 @@ export default function Rewards() {
     return () => clearInterval(interval);
   }, [userInfo]);
 
-
-
   const handleClaim = async () => {
     if (!isClaimed) {
       const params = {
         user_id: userInfo.id,
       };
-      const data = await claimDailyReward(params);
 
+      const data = await claimDailyReward(params);
       if (data) {
         dispatch(saveUser(data));
         toastr('success', 'Daily reward claimed!');
+
         setIsClaimed(true);
-        setRemainingTime(24 * 60 * 60 * 1000);
+        const nextDayStart = new Date();
+        nextDayStart.setHours(24, 0, 0, 0);
+        const timeDifference = nextDayStart - new Date();
+        setRemainingTime(timeDifference);
       }
     }
   };
-
 
   return (
     <div className="rewards-page">
