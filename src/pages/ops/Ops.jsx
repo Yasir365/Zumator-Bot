@@ -7,7 +7,6 @@ import Galactic from '../../components/galactic/Galactic';
 import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
-import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/util.service';
 import toastr from '../../services/toastr.service';
 
 
@@ -15,19 +14,7 @@ import toastr from '../../services/toastr.service';
 export default function Ops() {
   const [activeTab, setActiveTab] = useState('web3');
   const userInfo = useSelector((state) => state.user.userInfo);
-  const [remainingTime, setRemainingTime] = useState(getRemainingTime());
-  const [isClaimed, setIsClaimed] = useState(isRewardClaimedToday());
 
-
-  useEffect(() => {
-    if (isClaimed) {
-      const interval = setInterval(() => {
-        setRemainingTime(getRemainingTime());
-      }, 1000);
-
-      return () => clearInterval(interval);
-    }
-  }, [isClaimed]);
 
   const collectCoins = () => {
     toastr('success', 'Coins collected successfully')
@@ -49,11 +36,7 @@ export default function Ops() {
             </div>
             <div className="d-flex flex-column">
               <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
-              {isClaimed ? (
-                <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
-              ) : (
-                <p className='time'>00:00:00</p>
-              )}
+              <p className="time">04:30:00 <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>
         </div>
