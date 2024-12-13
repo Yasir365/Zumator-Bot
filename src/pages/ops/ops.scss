@@ -216,9 +216,11 @@
         justify-content: center;
         align-items: center;
 
-        .spinner-border, 
+        .spinner-border,
         .spinner-grow {
             color: var(--black);
+            width: 4rem;
+            height: 4rem;
         }
     }
 }
