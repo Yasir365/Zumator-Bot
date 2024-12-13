@@ -141,39 +141,6 @@ export const gradients = [
     'linear-gradient(180deg, #A58AFF 0%, #009FB9 100%)',
 ]
 
-export const dailyRewards = [
-    { Day_1: 50000 },
-    { Day_2: 75000 },
-    { Day_3: 100000 },
-    { Day_4: 150000 },
-    { Day_5: 200000 },
-    { Day_6: 300000 },
-    { Day_7: 400000 },
-    { Day_8: 500000 },
-    { Day_9: 600000 },
-    { Day_10: 1000000 },
-    { Day_11: 1100000 },
-    { Day_12: 1200000 },
-    { Day_13: 1300000 },
-    { Day_14: 1400000 },
-    { Day_15: 1500000 },
-    { Day_16: 1600000 },
-    { Day_17: 1700000 },
-    { Day_18: 1800000 },
-    { Day_19: 1900000 },
-    { Day_20: 2000000 },
-    { Day_21: 2100000 },
-    { Day_22: 2200000 },
-    { Day_23: 2300000 },
-    { Day_24: 2400000 },
-    { Day_25: 2500000 },
-    { Day_26: 2600000 },
-    { Day_27: 2700000 },
-    { Day_28: 2800000 },
-    { Day_29: 2900000 },
-    { Day_30: 3000000 },
-]
-
 export const skinsData = [
     { id: 1, name: 'Zumator', img: '/images/skins/1.png', price: 20 },
     { id: 2, name: 'Zumator', img: '/images/skins/2.png', price: 30 },
@@ -217,7 +184,7 @@ export const handleInviteClick = (user) => {
     }
 };
 
-export function getRemainingTime() {
+export function getRemainingTime(time) {
     const now = new Date();
     const nextReset = new Date();
     nextReset.setHours(24, 0, 0, 0);
@@ -230,10 +197,6 @@ export function isRewardClaimedToday() {
 
     const today = new Date().toDateString();
     return today === lastClaimDate;
-}
-
-export function setRewardClaimed() {
-    localStorage.setItem('dailyRewardClaimDate', new Date().toDateString());
 }
 
 export const formatTime = (ms) => {

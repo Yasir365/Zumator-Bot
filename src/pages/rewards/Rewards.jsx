@@ -4,7 +4,7 @@ import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
-import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/util.service';
+import { getRemainingTime, isRewardClaimedToday, formatTime } from '../../services/util.service';
 import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { claimDailyReward } from '../../services/api.service';
@@ -14,7 +14,7 @@ import { saveUser } from '../../store/userInfoSlice';
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState('new');
   const [isClaimed, setIsClaimed] = useState(isRewardClaimedToday());
-  const [remainingTime, setRemainingTime] = useState(getRemainingTime());
+  const [remainingTime, setRemainingTime] = useState();
   const dispatch = useDispatch();
   const userInfo = useSelector((state) => state.user.userInfo);
 
@@ -63,7 +63,6 @@ export default function Rewards() {
       if (data) {
         dispatch(saveUser(data));
         toastr('success', 'Daily reward claimed!');
-        // setRewardClaimed();
         setIsClaimed(true);
         setRemainingTime(24 * 60 * 60 * 1000);
       }
@@ -76,26 +75,29 @@ export default function Rewards() {
 
       <h3 className='heading'>Complete Task to Earn Coins</h3>
 
-      <div className="daily-reward d-flex justify-content-between align-items-center" onClick={handleClaim}>
-        <div className="d-flex">
-          <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
-          <div className="ms-2">
-            <p className="head">Daily Reward</p>
-            {isClaimed ? (
-              <>
-                <p>Can be claimed in</p>
-                <p>{formatTime(remainingTime)}</p>
-              </>
-            ) : (
-              <>
-                <p>Click to claim your daily reward!</p>
-                <p>00:00:00</p>
-              </>
-            )}
+      {
+        userInfo.last_claim_day_id != 'Day_30' &&
+        <div className="daily-reward d-flex justify-content-between align-items-center" onClick={handleClaim}>
+          <div className="d-flex">
+            <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
+            <div className="ms-2">
+              <p className="head">Daily Reward</p>
+              {isClaimed ? (
+                <>
+                  <p>Can be claimed in</p>
+                  <p>{formatTime(remainingTime)}</p>
+                </>
+              ) : (
+                <>
+                  <p>Click to claim your daily reward!</p>
+                  <p>00:00:00</p>
+                </>
+              )}
+            </div>
           </div>
+          <i className={`fa-solid fa-chevron-right ${isClaimed ? 'disabled' : ''}`} />
         </div>
-        <i className={`fa-solid fa-chevron-right ${isClaimed ? 'disabled' : ''}`} />
-      </div>
+      }
 
       <ul className="nav nav-tabs">
         <li className="nav-item">
