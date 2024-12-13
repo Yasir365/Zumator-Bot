@@ -45,8 +45,6 @@ export default function Leaderboard() {
     const getData = async () => {
         const res = await getTopPlayer()
         setData(res)
-        console.log("Top Players :: ", res);
-
     }
     useEffect(() => {
         getData()
