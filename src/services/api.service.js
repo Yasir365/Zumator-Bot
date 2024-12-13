@@ -42,5 +42,5 @@ export const getTasks = async () => {
 
 export const getTopPlayer = async () => {
     const response = await axiosInstance.get('/top_players');
-    return response.data.records || [];
+    return response.data.data || [];
 };
