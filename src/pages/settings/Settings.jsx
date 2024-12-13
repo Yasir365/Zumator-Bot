@@ -1,7 +1,7 @@
 import './settings.scss'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import swalToastr from '../../services/toastr.service'
+import toastr from '../../services/toastr.service'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { deleteUserAccount } from '../../services/api.service';
@@ -25,7 +25,7 @@ export default function Settings() {
         const res = await deleteUserAccount({ id: userInfo.id });
 
         if (res.success) {
-            swalToastr('success', 'Account deleted successfully')
+            toastr('success', 'Account deleted successfully')
             dispatch(saveUser({}))
             const a = document.getElementById('closeDeleteModal')
             a?.click()
@@ -36,7 +36,7 @@ export default function Settings() {
                 WebApp.close();
             }, 1500);
         } else {
-            swalToastr('error', 'Error deleting account')
+            toastr('error', 'Error deleting account')
         }
     }
 

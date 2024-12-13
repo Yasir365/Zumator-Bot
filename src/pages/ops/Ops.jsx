@@ -8,7 +8,7 @@ import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
 import { getRemainingTime, formatTime, isRewardClaimedToday } from '../../services/util.service';
-import swalToastr from '../../services/toastr.service';
+import toastr from '../../services/toastr.service';
 
 
 
@@ -42,7 +42,7 @@ export default function Ops() {
 
   const collectCoins = () => {
     localStorage.setItem('collect-coins', new Date().getTime())
-    swalToastr('success', 'Coins collected successfully')
+    toastr('success', 'Coins collected successfully')
   }
 
   return (

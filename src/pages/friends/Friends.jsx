@@ -2,7 +2,7 @@ import './friends.scss'
 import { getInvitedFriends, getReferal } from '../../services/api.service';
 import { handleInviteClick, generateInviteLink } from '../../services/util.service';
 import { useEffect, useState } from 'react';
-import swalToastr from '../../services/toastr.service';
+import toastr from '../../services/toastr.service';
 import { useSelector } from 'react-redux';
 
 export default function Friends() {
@@ -29,7 +29,7 @@ export default function Friends() {
     fetchReferralData();
   }, [])
   const copyLink = () => {
-    swalToastr('success', 'Link copied to clipboard')
+    toastr('success', 'Link copied to clipboard')
     navigator.clipboard.writeText(generateInviteLink(userInfo))
   }
 

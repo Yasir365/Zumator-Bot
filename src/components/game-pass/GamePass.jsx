@@ -1,9 +1,9 @@
-import swalToastr from '../../services/toastr.service';
+import toastr from '../../services/toastr.service';
 
 export default function GamePass() {
 
     const buyPass = () => {
-        swalToastr('success', 'Game pass purchased successfully')
+        toastr('success', 'Game pass purchased successfully')
     }
     return (
         <>

@@ -5,7 +5,7 @@ import NewReward from '../../components/new-reward/NewReward';
 import SocialReward from '../../components/social-reward/SocialReward';
 import WalletReward from '../../components/wallet-reward/WalletReward';
 import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/util.service';
-import swalToastr from '../../services/toastr.service';
+import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { updatePoints } from '../../services/api.service';
 import { saveUser } from '../../store/userInfoSlice';
@@ -43,7 +43,7 @@ export default function Rewards() {
 
       if (data) {
         dispatch(saveUser(data));
-        swalToastr('success', 'Daily reward claimed!');
+        toastr('success', 'Daily reward claimed!');
         setRewardClaimed();
         setIsClaimed(true);
         setRemainingTime(getRemainingTime());

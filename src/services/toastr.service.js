@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-const swalToastr = (icon, title) => {
+const toastr = (icon, title) => {
     Swal.fire({
         toast: true,
         position: 'top',
@@ -8,7 +8,8 @@ const swalToastr = (icon, title) => {
         title: title,
         showConfirmButton: false,
         timer: 2500,
+        timerProgressBar: true,
     });
 };
 
-export default swalToastr;
+export default toastr;

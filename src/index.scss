@@ -131,3 +131,26 @@ p {
         font-weight: 700;
     }
 }
+
+.swal2-popup.swal2-toast {
+    background: url('/images/toast-bg.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    color: var(--black) !important;
+    font-weight: 600 !important;
+}
+
+.swal2-popup.swal2-toast .swal2-success {
+    border-color: var(--white) !important;
+}
+
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+    background-color: var(--white) !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-timer-progress-bar){
+    background: var(--white) !important;
+}

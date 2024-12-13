@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { TonConnectButton, useTonAddress } from '@tonconnect/ui-react';
-import swalToastr from '../../services/toastr.service';
+import toastr from '../../services/toastr.service';
 
 
 export default function WalletReward() {
@@ -19,7 +19,7 @@ export default function WalletReward() {
 
     const copyAddress = () => {
         navigator.clipboard.writeText(walletAddress)
-        swalToastr('success', 'Address copied to clipboard')
+        toastr('success', 'Address copied to clipboard')
     }
     return (
         <div className="tab-content">
