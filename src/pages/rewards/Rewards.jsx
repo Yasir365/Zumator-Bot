@@ -20,35 +20,53 @@ export default function Rewards() {
 
 
   useEffect(() => {
-    if (isClaimed) {
-      const interval = setInterval(() => {
-        setRemainingTime(getRemainingTime());
-      }, 1000);
+    const calculateRemainingTime = () => {
+      if (!userInfo?.last_claim_date_time) {
+        setRemainingTime(0);
+        setIsClaimed(false);
+        return;
+      }
 
-      return () => clearInterval(interval);
-    }
-  }, [isClaimed]);
+      const lastClaimDate = new Date(userInfo.last_claim_date_time);
+      const currentDate = new Date();
+      const nextClaimDate = new Date(lastClaimDate);
+      nextClaimDate.setDate(lastClaimDate.getDate() + 1);
+
+      const timeDifference = nextClaimDate - currentDate;
+
+      if (timeDifference > 0) {
+        setRemainingTime(timeDifference);
+        setIsClaimed(true);
+      } else {
+        setRemainingTime(0);
+        setIsClaimed(false);
+      }
+    };
+
+    calculateRemainingTime();
+
+    const interval = setInterval(() => {
+      calculateRemainingTime();
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [userInfo]);
+
 
   const handleClaim = async () => {
     if (!isClaimed) {
-      const dayOfMonth = new Date().getDate();
-      const points = dailyRewards[dayOfMonth - 1][`Day_${dayOfMonth}`] || 100;
       const params = {
-        id: userInfo.id,
-        points: points,
-        keys: 0,
-        diamonds: 0
-      }
-      const data = await updatePoints(params);
+        user_id: userInfo.id,
+      };
+      const data = await dailyCliam(params);
 
       if (data) {
         dispatch(saveUser(data));
         toastr('success', 'Daily reward claimed!');
-        setRewardClaimed();
+        // setRewardClaimed();
         setIsClaimed(true);
-        setRemainingTime(getRemainingTime());
+        setRemainingTime(24 * 60 * 60 * 1000); 
       }
-
     }
   };
 

@@ -220,7 +220,7 @@ export const handleInviteClick = (user) => {
 export function getRemainingTime() {
     const now = new Date();
     const nextReset = new Date();
-    nextReset.setHours(24, 0, 0, 0); // Set to midnight of the next day
+    nextReset.setHours(24, 0, 0, 0);
     return nextReset - now;
 }
 

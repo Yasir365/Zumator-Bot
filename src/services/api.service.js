@@ -44,3 +44,8 @@ export const getTopPlayer = async () => {
     const response = await axiosInstance.get('/top_players');
     return response.data.data || [];
 };
+
+export const dailyCliam = async (data) => {
+    const response = await axiosInstance.post('/claim_daily_reward', data);
+    return response.data.data || [];
+};
