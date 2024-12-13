@@ -3,6 +3,7 @@ import { leaderboardData } from '../../services/util.service';
 
 import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
+import { getTopPlayer } from '../../services/api.service';
 
 function NextArrow(props) {
     const { className, onClick } = props;
