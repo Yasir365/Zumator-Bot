@@ -3,16 +3,20 @@ import { useState, useEffect } from 'react';
 
 export default function Web3() {
     const [data, setData] = useState([]);
+    const [fetchloader, setFetchLoader] = useState(false);
+
     const getData = async () => {
+        setFetchLoader(true);
         const res = await getOpsCards('Web 3')
         setData(res)
+        setFetchLoader(false);
     }
     useEffect(() => {
         getData()
     }, [])
     return (
         <div className="tab-content d-flex">
-            {data.map((item, index) => (
+            {!fetchloader && data.map((item, index) => (
                 <div className="item" key={index} style={{ background: item.card_bg_color }}>
                     <div className="card-image">
                         <img src={item.card_image} alt="" />
@@ -33,5 +37,6 @@ export default function Web3() {
                     </div>
                 </div>
             ))}
+            {fetchloader && <div className="api-loader"><div class="spinner-border" role="status"></div></div>}
         </div>)
 }

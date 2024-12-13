@@ -191,13 +191,15 @@
         }
     }
 
-    #misteryBoxModal{
-        .modal-dialog{
-         padding: 0 4px;
+    #misteryBoxModal {
+        .modal-dialog {
+            padding: 0 4px;
         }
-        .modal-content{
+
+        .modal-content {
             border-radius: 19px;
         }
+
         .modal-body {
             background: url('/images/bg.png');
             background-repeat: no-repeat;
@@ -205,5 +207,18 @@
             background-position: bottom;
             border-radius: 18px;
         }
-    } 
+    }
+
+    .api-loader {
+        min-height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .spinner-border, 
+        .spinner-grow {
+            color: var(--black);
+        }
+    }
 }
