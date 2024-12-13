@@ -1,136 +1,46 @@
-import axios from 'axios';
-
-const adminBaseUrl = "https://zumator-admin.updatemedaily.com/api"
+import axiosInstance from "./axious-instanse.service";
 
 export const registerUser = async (data) => {
-    if (data) {
-        try {
-            const response = await axios.post(`${adminBaseUrl}/zumator_user_register`, data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (response.status == 200) {
-                localStorage.setItem('token', 'this is a test token');
-                return response.data.data;
-            }
-        } catch (error) {
-            console.error('Error saving user info:', error);
-        }
-    }
-}
+    const response = await axiosInstance.post('/zumator_user_register', data);
+    return response.data.data;
+};
 
 export const saveReferal = async (data) => {
-    try {
-        const response = await axios.post(`${adminBaseUrl}/saveReferal`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.data.data) {
-            return response.data.data;
-        }
-
-    } catch (error) {
-        console.error('Error saving referral user info:', error);
-    }
+    const response = await axiosInstance.post('/saveReferal', data);
+    return response.data.data || null;
 };
 
 export const getReferal = async (data) => {
-    try {
-        const response = await axios.post(`${adminBaseUrl}/getReferal`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.data.data) {
-            return response.data.data.first_name + " " + response.data.data.last_name;
-        } else {
-            return '';
-        }
-
-    } catch (error) {
-        console.error('Error Fetching referral user info:', error);
-        return '';
-    }
+    const response = await axiosInstance.post('/getReferal', data);
+    return response.data.data ? `${response.data.data.first_name} ${response.data.data.last_name}` : '';
 };
 
 export const getInvitedFriends = async (data) => {
-    try {
-        const response = await axios.post(`${adminBaseUrl}/getInvitedFriends`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.status == 200) {
-            return response.data.data;
-        }
-    } catch (error) {
-        console.error('Error getting invited friends:', error);
-        return [];
-    }
-}
+    const response = await axiosInstance.post('/getInvitedFriends', data);
+    return response.data.data || [];
+};
 
 export const deleteUserAccount = async (data) => {
-    if (data) {
-        try {
-            const response = await axios.post(`${adminBaseUrl}/deleteAccount`, data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (response.status == 200) {
-                return response.data;
-            }
-        } catch (error) {
-            console.error('Error saving user info:', error);
-        }
-    }
-}
+    const response = await axiosInstance.post('/deleteAccount', data);
+    return response.data || null;
+};
 
 export const updatePoints = async (data) => {
-    if (data) {
-        try {
-            const response = await axios.post(`${adminBaseUrl}/updatePoints`, data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (response.status == 200) {
-                return response.data.data;
-            }
-        } catch (error) {
-            console.error('Error saving user info:', error);
-        }
-    }
-}
+    const response = await axiosInstance.post('/updatePoints', data);
+    return response.data.data || null;
+};
 
 export const getOpsCards = async (category) => {
-    try {
-        const response = await axios.get(`${adminBaseUrl}/cards_api?category=${category}`,);
-        if (response.status == 200) {
-            return response.data.records;
-        }
-    } catch (error) {
-        console.error('Error getting invited friends:', error);
-        return [];
-    }
-}
+    const response = await axiosInstance.get(`/cards_api?category=${category}`);
+    return response.data.records || [];
+};
 
 export const getTasks = async () => {
-    try {
-        const response = await axios.get(`${adminBaseUrl}/tasks_api`,);
-        if (response.status == 200) {
-            return response.data.records;
-        }
-    } catch (error) {
-        console.error('Error getting invited friends:', error);
-        return [];
-    }
-}
+    const response = await axiosInstance.get('/tasks_api');
+    return response.data.records || [];
+};
+
+export const getTopPlayer = async () => {
+    const response = await axiosInstance.get('/top_players');
+    return response.data.records || [];
+};
