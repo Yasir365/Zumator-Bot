@@ -1,5 +1,4 @@
 import './leaderboard.scss'
-import { leaderboardData } from '../../services/util.service';
 
 import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
@@ -42,7 +41,6 @@ const settings = {
 };
 
 export default function Leaderboard() {
-    const cardData = leaderboardData;
     const [data, setData] = useState([]);
     const getData = async () => {
         const res = await getTopPlayer()
@@ -78,7 +76,7 @@ export default function Leaderboard() {
 
             <div className="card-container">
                 <div className="card-content">
-                    {cardData.map((item, index) => (
+                    {data.map((item, index) => (
                         <div>
                             <div className="item" key={index}>
                                 <div className="index">{index + 1}</div>
@@ -87,14 +85,14 @@ export default function Leaderboard() {
                                 </div>
                                 <div className="player">
                                     <small className="title">Player’s Name</small>
-                                    <p className="value">{item.name}</p>
+                                    <p className="value">{item.first_name} {item.last_name}</p>
                                 </div>
                                 <div className="play-image">
                                     <img src='/images/leaderboard/play.webp' alt="" />
                                 </div>
                                 <div className="score">
                                     <small>Score</small>
-                                    <p className="value">{item.score}</p>
+                                    <p className="value">{item.points}</p>
                                 </div>
                             </div>
                             <hr />
