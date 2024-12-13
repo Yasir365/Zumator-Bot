@@ -21,13 +21,13 @@ export default function Rewards() {
 
   useEffect(() => {
     const calculateRemainingTime = () => {
-      if (!userInfo?.last_claim_date_time) {
+      if (!userInfo?.formattedclaim_date_time) {
         setRemainingTime(0);
         setIsClaimed(false);
         return;
       }
 
-      const lastClaimDate = new Date(userInfo.last_claim_date_time);
+      const lastClaimDate = new Date(userInfo.formattedclaim_date_time);
       const currentDate = new Date();
       const nextClaimDate = new Date(lastClaimDate);
       nextClaimDate.setDate(lastClaimDate.getDate() + 1);
