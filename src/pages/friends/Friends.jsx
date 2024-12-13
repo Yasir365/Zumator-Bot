@@ -1,6 +1,6 @@
 import './friends.scss'
 import { getInvitedFriends, getReferal } from '../../services/api.service';
-import { handleInviteClick, generateInviteLink } from '../../services/util.service';
+import { handleInviteClick, generateInviteLink, formatNumber } from '../../services/util.service';
 import { useEffect, useState } from 'react';
 import toastr from '../../services/toastr.service';
 import { useSelector } from 'react-redux';
@@ -88,7 +88,7 @@ export default function Friends() {
                 </div>
               </div>
               <div className='profit'>
-                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.points}</div>
+                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {formatNumber(item.points)}</div>
               </div>
             </div>
           ))}

@@ -8,6 +8,7 @@ import Market from '../../components/market/Market';
 import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
 import toastr from '../../services/toastr.service';
+import { formatNumber } from '../../services/util.service';
 
 
 
@@ -35,7 +36,7 @@ export default function Ops() {
               <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
-              <p className='amount'>{userInfo ? userInfo.points : 0.00000}</p>
+              <p className='amount'>{formatNumber(userInfo.points)}</p>
               <p className="time">04:30:00 <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>

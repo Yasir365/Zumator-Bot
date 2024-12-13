@@ -11,6 +11,7 @@ import DailyMissionBoard from '../../components/daily-mission-board/DailyMission
 import Avatar from '../../components/avatar/Avatar';
 import KeysAndDiamonds from '../../components/keys-and-diamonds/KeysAndDiamonds';
 import { useSelector } from 'react-redux';
+import { formatNumber } from '../../services/util.service';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -29,7 +30,7 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
-                <span>{userInfo ? userInfo.points : 0.00000}</span>
+                <span>{formatNumber(userInfo.points)}</span>
             </div>
 
             <Avatar />

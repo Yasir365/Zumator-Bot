@@ -1,5 +1,5 @@
 import './space-port.scss'
-import { shipyardData, gradients } from '../../services/util.service';
+import { shipyardData, gradients, formatNumber } from '../../services/util.service';
 import Slider from 'react-slick';
 
 
@@ -115,7 +115,7 @@ export default function SpacePort() {
 
                                     <div className='d-flex justify-content-between mb-1'>
                                         <label>{item.progressName}</label>
-                                        <p>{item.points}</p>
+                                        <p>{formatNumber(item.points)}</p>
                                     </div>
                                     <div className="progress mb-1">
                                         <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
