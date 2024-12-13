@@ -243,3 +243,7 @@ export const formatTime = (ms) => {
     const seconds = totalSeconds % 60;
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 };
+
+export const formatNumber = (number) => {
+    return new Intl.NumberFormat('en-US').format(number);
+};

@@ -3,6 +3,7 @@ import './leaderboard.scss'
 import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
 import { getTopPlayer } from '../../services/api.service';
+import { formatNumber } from '../../services/util.service';
 
 function NextArrow(props) {
     const { className, onClick } = props;
@@ -90,7 +91,7 @@ export default function Leaderboard() {
                                 </div>
                                 <div className="score">
                                     <small>Score</small>
-                                    <p className="value">{item.points}</p>
+                                    <p className="value">{formatNumber(item.points)}</p>
                                 </div>
                             </div>
                             <hr />
