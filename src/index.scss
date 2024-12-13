@@ -48,7 +48,6 @@ p {
     min-height: 100vh;
     max-width: 525px;
     width: 100%;
-    padding: 2rem 12px 0px 12px;
     background: url('/images/background.webp') no-repeat center center;
     background-size: cover;
 }
@@ -147,10 +146,10 @@ p {
     border-color: var(--white) !important;
 }
 
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
     background-color: var(--white) !important;
 }
 
-div:where(.swal2-container) div:where(.swal2-timer-progress-bar){
+div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
     background: var(--white) !important;
 }

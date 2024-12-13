@@ -1,7 +1,10 @@
 .space-port-page {
-    padding-bottom: 90px;
-    // padding: 2rem 12px 90px 12px;
     position: relative;
+    // padding: 2rem 12px 90px 12px;
+
+    .inner {
+        padding: 2rem 12px 90px 12px;
+    }
 
     .overlay {
         width: 100%;
