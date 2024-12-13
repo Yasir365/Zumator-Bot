@@ -40,7 +40,17 @@ const settings = {
 };
 
 export default function Leaderboard() {
-    const cardData = leaderboardData
+    const cardData = leaderboardData;
+    const [data, setData] = useState([]);
+    const getData = async () => {
+        const res = await getTopPlayer()
+        setData(res)
+        console.log("Top Players :: ", res);
+
+    }
+    useEffect(() => {
+        getData()
+    }, [])
     return (
         <div className='leaderboard-page'>
             <Slider {...settings}>
