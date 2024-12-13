@@ -7,7 +7,7 @@ import WalletReward from '../../components/wallet-reward/WalletReward';
 import { getRemainingTime, isRewardClaimedToday, setRewardClaimed, dailyRewards, formatTime } from '../../services/util.service';
 import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
-import { updatePoints } from '../../services/api.service';
+import { dailyCliam } from '../../services/api.service';
 import { saveUser } from '../../store/userInfoSlice';
 
 
