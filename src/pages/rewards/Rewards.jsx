@@ -50,7 +50,8 @@ export default function Rewards() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isClaimed]);
+  }, [userInfo]);
+
 
 
   const handleClaim = async () => {
