@@ -99,15 +99,17 @@
     .card-container {
         background: url('/images/leaderboard/card.webp') no-repeat;
         position: relative;
-        height: 390px;
+        min-height: 400px;
+        background-size: contain;
+        background-position: center;
 
         .card-content {
             top: 50%;
-            left: 49%;
+            left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
             overflow: auto;
-            height: 320px;
+            height: calc(100% - 95px);
             width: 82%;
             padding: 0 12px;
             border-radius: 30px;
