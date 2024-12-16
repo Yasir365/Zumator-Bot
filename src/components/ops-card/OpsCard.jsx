@@ -26,15 +26,11 @@ export default function OpsCard({ pageType }) {
 
         const method = item.card_level[item.user_level_no - 1].method_of_unlocking_payment;
         const price = item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking;
-        const diamonds = userInfo.diamonds;
-        const coins = userInfo.points;
-        console.log(method, price, diamonds, coins);
 
-        debugger
-        if (method == 'COINS' && price < userInfo.points) {
+        if (method == 'COINS' && price > userInfo.points) {
             toastr('Not enough coins')
             return
-        } else if (method == 'DIAMONDS' && price < userInfo.diamonds) {
+        } else if (method == 'DIAMONDS' && price > userInfo.diamonds) {
             toastr('Not enough diamonds')
             return
         }
