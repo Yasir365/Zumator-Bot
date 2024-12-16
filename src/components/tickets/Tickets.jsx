@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { formatTime } from '../../services/util.service';
 import { cliamTicket } from '../../services/api.service';
 import toastr from '../../services/toastr.service';
+import { saveUser } from '../../store/userInfoSlice';
 
 export default function Tickets() {
     const { t } = useTranslation();
@@ -14,13 +15,13 @@ export default function Tickets() {
 
     useEffect(() => {
         const calculateRemainingTime = () => {
-            if (!userInfo?.last_claim_ticket_time) {
+            if (!userInfo?.last_ticket_claim_at) {
                 setRemainingTime(0);
                 setIsClaimed(false);
                 return;
             }
 
-            const lastClaimDate = new Date(userInfo.last_claim_ticket_time);
+            const lastClaimDate = new Date(userInfo.last_ticket_claim_at);
             const currentDate = new Date();
 
             const nextClaimTime = new Date(lastClaimDate.getTime() + 12 * 60 * 60 * 1000);
@@ -44,11 +45,11 @@ export default function Tickets() {
         return () => clearInterval(interval);
     }, [userInfo]);
 
-    const handleClaim = () => {
+    const handleClaim = async () => {
         if (!isClaimed) {
-            const res = cliamTicket({ user_id: userInfo.id });
-            toastr.success('Ticket Cliamed Successfully', 'Success');
-            dispatch(res);
+            const res = await cliamTicket({ user_id: userInfo.id });
+            dispatch(saveUser(res));
+            toastr('Success', 'Ticket Cliamed Successfully');
         }
     };
 
@@ -57,7 +58,7 @@ export default function Tickets() {
             <p>{t('Tickets')}</p>
             <p>{userInfo ? userInfo.tickets : 10}/10</p>
             <div className="d-flex align-items-center justify-content-between">
-                <img src="/images/icons/clock.webp" alt="clock" lazyLoad={true} />
+                <img src="/images/icons/clock.webp" alt="clock" />
                 <span>{formatTime(remainingTime)}</span>
             </div>
             <div className="progress-container">

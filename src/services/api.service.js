@@ -57,6 +57,6 @@ export const upgradeOpsCard = async (data) => {
 
 
 export const cliamTicket = async (data) => {
-    const response = await axiosInstance.post('/cliam_ticket', data);
+    const response = await axiosInstance.post('/claim_daily_tickets', data);
     return response.data.data || [];
 };

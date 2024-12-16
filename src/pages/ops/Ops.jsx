@@ -117,7 +117,7 @@ export default function Ops() {
           <div className="modal-content">
             <div className="modal-body">
               <h5>Mystery Ops</h5>
-              <img src="/images/ops/mystery-box.webp" alt="" lazyload="true" />
+              <img src="/images/ops/mystery-box.webp" alt=""/>
               <button type="button" className="btn" onClick={collectCoins} data-bs-dismiss="modal">Collect Coins</button>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { getOpsCards, upgradeOpsCard } from "../../services/api.service";
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import toastr from "../../services/toastr.service";
+import { saveUser } from "../../store/userInfoSlice";
 
 export default function OpsCard({ pageType }) {
     const [data, setData] = useState([]);
@@ -36,9 +37,8 @@ export default function OpsCard({ pageType }) {
             card_id: item.id
         }
         const res = await upgradeOpsCard(params)
-        console.log(res);
-
-        dispatch(res);
+        dispatch(saveUser(res));
+        getData()
         toastr('success', 'Card Upgrade Successfully')
     }
 
