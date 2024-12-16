@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import toastr from "../../services/toastr.service";
 
-export default function Web3() {
+export default function OpsCard({ pageType }) {
     const [data, setData] = useState([]);
     const userInfo = useSelector(state => state.user.userInfo);
     const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export default function Web3() {
 
     const getData = async () => {
         setFetchLoader(true);
-        const res = await getOpsCards('Web 3', userInfo.id)
+        const res = await getOpsCards(pageType, userInfo.id)
         setData(res)
         setFetchLoader(false);
     }

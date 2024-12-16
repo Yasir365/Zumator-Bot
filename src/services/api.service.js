@@ -49,3 +49,8 @@ export const claimDailyReward = async (data) => {
     const response = await axiosInstance.post('/claim_daily_reward', data);
     return response.data.data || [];
 };
+
+export const upgradeOpsCard = async (data) => {
+    const response = await axiosInstance.post('/upgrade_Card', data);
+    return response.data.data || [];
+};

@@ -9,6 +9,7 @@ import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
 import toastr from '../../services/toastr.service';
 import { formatNumber } from '../../services/util.service';
+import OpsCard from '../../components/ops-card/OpsCard';
 
 
 
@@ -98,13 +99,15 @@ export default function Ops() {
         </li>
       </ul>
 
-      {activeTab === 'web3' && (<Web3 />)}
+      {activeTab === 'web3' && (<OpsCard pageType="Web 3" />)}
+      {activeTab === 'market' && (<OpsCard pageType="Markets" />)}
+      {activeTab === 'galactic' && (<OpsCard pageType="Galactic" />)}
+      {activeTab === 'artifacts' && (<OpsCard pageType="Artifacts" />)}
 
+      {/* {activeTab === 'web3' && (<Web3 />)}
       {activeTab === 'market' && (<Market />)}
-
       {activeTab === 'galactic' && (<Galactic />)}
-
-      {activeTab === 'artifacts' && (<Artifacts />)}
+      {activeTab === 'artifacts' && (<Artifacts />)} */}
 
 
 
