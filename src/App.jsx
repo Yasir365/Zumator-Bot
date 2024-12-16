@@ -13,12 +13,9 @@ export default function App() {
 
     const initWebApp = async () => {
         if (typeof window === 'undefined') return;
-        console.log("111111111111111111111111");
-        
+
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
-        console.log("222222222222222222222222");
-        
 
         const { initDataUnsafe: user } = WebApp;
 
@@ -29,6 +26,16 @@ export default function App() {
             if (!data.referral_id && start_param) {
                 await saveReferral(start_param, data.id);
             }
+        } else {
+            const params = {
+                user: {
+                    id: 7985990995,
+                    first_name: 'Yasir',
+                    last_name: 'Saleem'
+                }
+            }
+            const data = await registerUser(params);
+            dispatch(saveUser(data));
         }
     };
 
