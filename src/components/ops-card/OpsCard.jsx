@@ -21,6 +21,9 @@ export default function OpsCard({ pageType }) {
 
 
     const upgradeCard = async (item) => {
+        console.log(item);
+        console.log(userInfo);
+
         if (item.card_level[item.user_level_no - 1].method_of_unlocking_payment == 'COINS' && item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking < userInfo.points) {
             toastr('Not enough coins')
             return
