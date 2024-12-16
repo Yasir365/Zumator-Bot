@@ -43,7 +43,7 @@ export default function Market() {
                     </div>
                 </div>
             ))}
-            {fetchloader && <div className="api-loader"><div class="spinner-border" role="status"></div></div>}
+            {fetchloader && <div className="api-loader"><div className="spinner-border" role="status"></div></div>}
         </div>
     )
 }
