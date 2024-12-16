@@ -1,11 +1,7 @@
 import './ops.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from '../../components/header/Header';
 import { Rating } from 'react-simple-star-rating'
-import Artifacts from '../../components/artifacts/Artifacts';
-import Galactic from '../../components/galactic/Galactic';
-import Market from '../../components/market/Market';
-import Web3 from '../../components/web3/Web3';
 import { useSelector } from 'react-redux';
 import toastr from '../../services/toastr.service';
 import { formatNumber } from '../../services/util.service';
@@ -104,12 +100,6 @@ export default function Ops() {
       {activeTab === 'galactic' && (<OpsCard pageType="Galactic" />)}
       {activeTab === 'artifacts' && (<OpsCard pageType="Artifacts" />)}
 
-      {/* {activeTab === 'web3' && (<Web3 />)}
-      {activeTab === 'market' && (<Market />)}
-      {activeTab === 'galactic' && (<Galactic />)}
-      {activeTab === 'artifacts' && (<Artifacts />)} */}
-
-
 
       {/* Mystery Box Modal */}
       <div className="modal fade text-center" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
@@ -117,7 +107,7 @@ export default function Ops() {
           <div className="modal-content">
             <div className="modal-body">
               <h5>Mystery Ops</h5>
-              <img src="/images/ops/mystery-box.webp" alt=""/>
+              <img src="/images/ops/mystery-box.webp" alt="" />
               <button type="button" className="btn" onClick={collectCoins} data-bs-dismiss="modal">Collect Coins</button>
             </div>
           </div>
