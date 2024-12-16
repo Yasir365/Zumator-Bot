@@ -30,8 +30,8 @@ export const updatePoints = async (data) => {
     return response.data.data || null;
 };
 
-export const getOpsCards = async (category) => {
-    const response = await axiosInstance.get(`/cards_api?category=${category}`);
+export const getOpsCards = async (category, user_id) => {
+    const response = await axiosInstance.get(`/cards_api?category=${category}&user_id=${user_id}`);
     return response.data.records || [];
 };
 

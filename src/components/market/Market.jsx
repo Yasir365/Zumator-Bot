@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import { getOpsCards } from "../../services/api.service";
+import { useSelector } from "react-redux";
 
 export default function Market() {
     const [data, setData] = useState([]);
     const [fetchloader, setFetchLoader] = useState(false);
+    const userInfo = useSelector(state => state.user.userInfo);
 
     const getData = async () => {
         setFetchLoader(true);
-        const res = await getOpsCards('Markets')
+        const res = await getOpsCards('Markets', userInfo.id)
         setData(res)
         setFetchLoader(false);
     }
@@ -28,11 +30,15 @@ export default function Market() {
                         </div>
                         <div className='d-flex justify-content-between'>
                             <div className="profit">Profit per hour</div>
-                            <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.profit_per_hour}</div>
+                            <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.card_level[item.user_level_no - 1].profit_per_hour}</div>
                         </div>
                         <div className="card-footer">
-                            <p>Lvl 2</p>
-                            <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> 100 </div>
+                            <p>Lvl {item.user_level_no}</p>
+                            <div className="value">
+                                {item.card_level[item.user_level_no - 1].method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.webp" alt="usdt" />}
+                                {item.card_level[item.user_level_no - 1].method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.webp" alt="usdt" />}
+                                {item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking}
+                            </div>
                         </div>
                     </div>
                 </div>
