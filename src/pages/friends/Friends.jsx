@@ -50,18 +50,6 @@ export default function Friends() {
         </div>
       </div>
 
-      <div className="item mt-4">
-        <div className="card-info">
-          <div className="card-image">
-            <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
-          </div>
-          <div className='reward'>
-            <div className="title">Invite a friend with Telegram Premium</div>
-            <div className="value"><img src="/images/icons/bonas.webp" alt="" /> <span className='warn'>+0.3 </span> for you and your friend </div>
-          </div>
-        </div>
-      </div>
-
       {ref && (
         <div className="item mt-4 d-flex justify-content-center">
           <p>Your are already a referral, invited by <span className="warn">{ref}</span></p>

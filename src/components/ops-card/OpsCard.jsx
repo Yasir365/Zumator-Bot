@@ -52,7 +52,6 @@ export default function OpsCard({ pageType }) {
                     <div className="card-info">
                         <div className='d-flex justify-content-between'>
                             <div className="title">{item.title}</div>
-                            <div className="value">#021</div>
                         </div>
                         <div className='d-flex justify-content-between'>
                             <div className="profit">Profit per hour</div>
