@@ -88,7 +88,7 @@ export default function Friends() {
                 </div>
               </div>
               <div className='profit'>
-                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {formatNumber(item.points)}</div>
+                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {formatNumber(item.coins)}</div>
               </div>
             </div>
           ))}

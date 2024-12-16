@@ -91,7 +91,7 @@ export default function Leaderboard() {
                                 </div>
                                 <div className="score">
                                     <small>Score</small>
-                                    <p className="value">{formatNumber(item.points)}</p>
+                                    <p className="value">{formatNumber(item.coins)}</p>
                                 </div>
                             </div>
                             <hr />

@@ -116,7 +116,7 @@ export default function SpacePort() {
 
                                         <div className='d-flex justify-content-between mb-1'>
                                             <label>{item.progressName}</label>
-                                            <p>{formatNumber(item.points)}</p>
+                                            <p>{formatNumber(item.coins)}</p>
                                         </div>
                                         <div className="progress mb-1">
                                             <div className="progress-bar w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>

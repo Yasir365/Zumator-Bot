@@ -6,7 +6,7 @@ export const shipyardData = [
         image: '/images/ship-yard/1.webp',
         title: 'Fire Power',
         num: '#12345',
-        points: 350,
+        coins: 350,
         progressName: 'Attack',
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
@@ -14,7 +14,7 @@ export const shipyardData = [
         image: '/images/ship-yard/2.webp',
         title: 'Shield',
         num: '#12345',
-        points: 350,
+        coins: 350,
         progressName: 'Defence',
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
@@ -22,7 +22,7 @@ export const shipyardData = [
         image: '/images/ship-yard/3.webp',
         title: 'Fire Power',
         num: '#12345',
-        points: 350,
+        coins: 350,
         progressName: 'Attack',
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },
@@ -30,7 +30,7 @@ export const shipyardData = [
         image: '/images/ship-yard/4.webp',
         title: 'Shield',
         num: '#12345',
-        points: 350,
+        coins: 350,
         progressName: 'Defence',
         description: 'Lorem Ipsum has been the indus standard dummy text ever since te 1500s, when an unknown printer tk a galley of type and scrambled it to make a type specimen book.'
     },

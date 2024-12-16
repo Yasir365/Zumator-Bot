@@ -33,7 +33,7 @@ export default function Ops() {
               <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
-              <p className='amount'>{formatNumber(userInfo.points)}</p>
+              <p className='amount'>{formatNumber(userInfo.coins)}</p>
               <p className="time">04:30:00 <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>

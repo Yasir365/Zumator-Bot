@@ -190,6 +190,9 @@
         gap: 20px;
         position: relative;
 
+        a{
+            width: 100%;
+        }
 
         .progress {
             width: calc(100% - 35px);

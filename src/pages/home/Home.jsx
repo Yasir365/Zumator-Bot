@@ -30,7 +30,7 @@ export default function Home() {
 
             <div className="balance">
                 <img src="/images/icons/usdt.webp" alt="" />
-                <span>{formatNumber(userInfo.points)}</span>
+                <span>{formatNumber(userInfo.coins)}</span>
             </div>
 
             <Avatar />
@@ -53,9 +53,11 @@ export default function Home() {
                         </Link>
                     </div>
                     <div className="progress-container">
-                        <div className="progress">
-                            <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{t('Level-1')}</div>
-                        </div>
+                        <Link to="/leaderboard">
+                            <div className="progress">
+                                <div className="progress-bar" style={{ width: `40%` }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{t('Level-1')}</div>
+                            </div>
+                        </Link>
                         <div className="img"> <img src="/images/icons/layer.webp" alt="" /> </div>
                     </div>
 
