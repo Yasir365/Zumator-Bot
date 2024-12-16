@@ -13,9 +13,12 @@ export default function App() {
 
     const initWebApp = async () => {
         if (typeof window === 'undefined') return;
-
+        console.log("111111111111111111111111");
+        
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
+        console.log("222222222222222222222222");
+        
 
         const { initDataUnsafe: user } = WebApp;
 
