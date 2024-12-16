@@ -25,11 +25,6 @@ export const deleteUserAccount = async (data) => {
     return response.data || null;
 };
 
-export const updatePoints = async (data) => {
-    const response = await axiosInstance.post('/updatePoints', data);
-    return response.data.data || null;
-};
-
 export const getOpsCards = async (category, user_id) => {
     const response = await axiosInstance.get(`/cards_api?category=${category}&user_id=${user_id}`);
     return response.data.data || [];
