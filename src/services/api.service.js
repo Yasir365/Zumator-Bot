@@ -32,12 +32,12 @@ export const updatePoints = async (data) => {
 
 export const getOpsCards = async (category, user_id) => {
     const response = await axiosInstance.get(`/cards_api?category=${category}&user_id=${user_id}`);
-    return response.data.records || [];
+    return response.data.data || [];
 };
 
-export const getTasks = async () => {
-    const response = await axiosInstance.get('/tasks_api');
-    return response.data.records || [];
+export const getTasks = async (type) => {
+    const response = await axiosInstance.get(`/tasks_api?task_type=${type}`);
+    return response.data.data || [];
 };
 
 export const getTopPlayer = async () => {

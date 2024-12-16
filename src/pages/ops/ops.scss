@@ -208,19 +208,4 @@
             border-radius: 18px;
         }
     }
-
-    .api-loader {
-        min-height: 300px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .spinner-border,
-        .spinner-grow {
-            color: var(--black);
-            width: 4rem;
-            height: 4rem;
-        }
-    }
 }

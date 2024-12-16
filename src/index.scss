@@ -153,3 +153,19 @@ div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
 div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
     background: var(--white) !important;
 }
+
+
+.api-loader {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .spinner-border,
+    .spinner-grow {
+        color: var(--black);
+        width: 3rem;
+        height: 3rem;
+    }
+}

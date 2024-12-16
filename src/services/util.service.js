@@ -51,45 +51,6 @@ export const languages = [
 ];
 
 export const rewardData = {
-    new: [
-        {
-            image: 'images/icons/youtube.webp',
-            title: 'How to Trade?',
-            score: 250
-        },
-        {
-            image: 'images/icons/youtube.webp',
-            title: 'Crypto Terms',
-            score: 200
-        },
-    ],
-    social: [
-        {
-            image: 'images/icons/twitter.webp',
-            title: 'Connect Twitter',
-            score: 250
-        },
-        {
-            image: 'images/icons/youtube.webp',
-            title: 'Subscribe to YouTube',
-            score: 200
-        },
-        {
-            image: 'images/icons/tiktok.webp',
-            title: 'Connect Tiktok',
-            score: 130
-        },
-        {
-            image: 'images/icons/facebook.webp',
-            title: 'Join Facebook',
-            score: 300
-        },
-        {
-            image: 'images/icons/instagram.webp',
-            title: 'Follow Instagram',
-            score: 280
-        },
-    ],
     friends: [
         {
             image: 'images/icons/friends.webp',
