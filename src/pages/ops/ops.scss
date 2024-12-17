@@ -192,6 +192,11 @@
     }
 
     #misteryBoxModal {
+        h5 {
+            color: var(--black);
+            font-weight: 600;
+        }
+
         .modal-dialog {
             padding: 0 4px;
         }
@@ -206,6 +211,28 @@
             background-size: cover;
             background-position: bottom;
             border-radius: 18px;
+        }
+
+        img {
+            margin-bottom: 12px;
+            object-fit: cover;
+            background-position: center;
+        }
+
+        p {
+            color: var(--black);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        button {
+            width: 100%;
+            border-radius: 100px;
+            background-color: var(--warning);
+            color: var(--black);
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 700;
         }
     }
 }

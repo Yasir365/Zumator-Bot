@@ -121,6 +121,11 @@
             color: var(--white);
         }
 
+        .disable{
+            color: black;
+            background-color: silver;
+        }
+
         .connect-wallet {
             svg {
                 display: none;

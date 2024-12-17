@@ -26,7 +26,7 @@ export default function Ops() {
         <div className="header d-flex justify-content-between">
           <div className='d-flex align-items-center'>
             <p className="title">Mystery Ops</p>
-            <Rating initialValue={2} readonly={true} size={13} emptyColor="#fff" maxValue={4} />
+            <Rating initialValue={1} readonly={true} size={13} emptyColor="#fff" maxValue={4} iconsCount={4} />
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
             <div className="icon me-2">

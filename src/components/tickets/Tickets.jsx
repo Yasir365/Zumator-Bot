@@ -24,7 +24,7 @@ export default function Tickets() {
             const lastClaimDate = new Date(userInfo.last_ticket_claim_at);
             const currentDate = new Date();
 
-            const nextClaimTime = new Date(lastClaimDate.getTime() + 12 * 60 * 60 * 1000);
+            const nextClaimTime = new Date(lastClaimDate.getTime() + 3 * 60 * 60 * 1000);
             const timeDifference = nextClaimTime - currentDate;
 
             if (timeDifference <= 0) {

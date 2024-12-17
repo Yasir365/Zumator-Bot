@@ -50,8 +50,17 @@ export const upgradeOpsCard = async (data) => {
     return response.data.data || [];
 };
 
-
 export const cliamTicket = async (data) => {
     const response = await axiosInstance.post('/claim_daily_tickets', data);
+    return response.data.data || [];
+};
+
+export const getInviteFriendsTask = async (data) => {
+    const response = await axiosInstance.post('/UserFriendInvitationReward', data);
+    return response.data.data || [];
+};
+
+export const cliamFriendsReward = async (data) => {
+    const response = await axiosInstance.post('/ClaimFriendInvitationReward', data);
     return response.data.data || [];
 };
