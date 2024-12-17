@@ -10,7 +10,11 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.response.use(
-    (response) => response,
+    (response) => {
+        if (response.data && response.data.success) {
+            return response;
+        }
+    },
     (error) => {
         if (error.response) {
             console.log('API Error:', error.response.data.message || error.response.statusText);
