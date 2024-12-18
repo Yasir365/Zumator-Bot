@@ -15,25 +15,6 @@ export default function Skins() {
         <div className="skins-page">
             <Header />
 
-            <div className="daily-board">
-                <div className='d-flex justify-content-between mb-3'>
-                    <h4>Achievements</h4>
-                    <button className='see-all'>See all</button>
-                </div>
-                <div className="item-container">
-                    {
-                        [1, 2, 3, 4].map((item) => (
-                            <div className="item" key={item}>
-                                <div className="img">
-                                    <img src="/images/icons/bonas.webp" alt="img" />
-                                </div>
-                                <p>Item 1</p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-
             <div className="selected-card mt-4">
                 <div className="card-image">
                     <h3 className="card-title">Skin</h3>
@@ -46,11 +27,11 @@ export default function Skins() {
                         Lorem Ipsum has been the industry's standard dummy text ever since the
                         when an unknown printer took a galley of type and bled it to make a type specimen book.
                     </p>
-                    <div className='d-flex justify-content-center align-items-center mb-2'>
+                    {/* <div className='d-flex justify-content-center align-items-center mb-2'>
                         {selectedSkin.price}
                         <img src="/images/icons/bonas.webp" alt="Bonus Icon" />
                     </div>
-                    <button className="choose-btn">Choose <i className='fa-solid fa-lock'></i></button>
+                    <button className="choose-btn">Choose <i className='fa-solid fa-lock'></i></button> */}
                 </div>
             </div>
 

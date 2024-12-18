@@ -12,6 +12,7 @@ import faTranslation from '../public/locales/fa/translation.json';
 import zhTranslation from '../public/locales/zh/translation.json';
 import jaTranslation from '../public/locales/ja/translation.json';
 import filTranslation from '../public/locales/fil/translation.json';
+import deTranslation from '../public/locales/de/translation.json';
 
 i18n
     .use(LanguageDetector)
@@ -29,6 +30,7 @@ i18n
             zh: { translation: zhTranslation },
             ja: { translation: jaTranslation },
             fil: { translation: filTranslation },
+            de: { translation: deTranslation },
         },
         fallbackLng: 'en',
         debug: true,

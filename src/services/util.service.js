@@ -47,7 +47,9 @@ export const languages = [
     { "name": "Persian", "value": "fa" },
     { "name": "Chinese", "value": "zh" },
     { "name": "Japanese", "value": "ja" },
-    { "name": "Filipino", "value": "fil" }
+    { "name": "Phillipines", "value": "fil" },
+    { "name": "German", "value": "de" },
+    { "name": "Iran", "value": "fa" }
 ];
 
 export const rewardData = {

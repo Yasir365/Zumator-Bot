@@ -27,7 +27,7 @@ export default function Faction() {
                                 aria-controls={`collapse${index}`}
                             >
                                 {item.name}
-                                {item.selected && <i className='fa-solid fa-check selected'></i>}
+                                {/* {item.selected && <i className='fa-solid fa-check selected'></i>} */}
                             </button>
                         </div>
                         <div
@@ -38,13 +38,13 @@ export default function Faction() {
                         >
                             <div className="accordion-body">
                                 <p>{item.description}</p>
-                                {
+                                {/* {
                                     !item.selected && (
                                         <div className="d-flex justify-content-center mt-3">
                                             <button className="select-btn">Select</button>
                                         </div>
                                     )
-                                }
+                                } */}
                             </div>
                         </div>
                     </div>

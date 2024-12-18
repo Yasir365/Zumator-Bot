@@ -1,66 +1,6 @@
 .skins-page {
     padding: 2rem 12px 90px 12px;
 
-    .daily-board {
-        padding: 12px;
-        background-color: var(--white);
-        margin-top: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 5px 0px var(--warning);
-        border: 1px solid var(--warning);
-        background: url('/images/bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-
-        h4 {
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .see-all {
-            padding: 2px 8px;
-            border-radius: 6px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 12px;
-            font-weight: 600;
-            border: none;
-        }
-
-        .item-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 8px;
-
-            .item {
-                width: calc(25% - 8px);
-                background-color: var(--white);
-                border-radius: 8px;
-
-                .img {
-                    padding: 8px;
-                    display: flex;
-                    justify-content: center;
-
-
-                    img {
-                        width: 40px;
-                    }
-
-                }
-
-                p {
-                    color: var(--black);
-                    text-align: center;
-                    font-size: 600;
-                    margin-bottom: 8px;
-                }
-            }
-        }
-    }
-
     .selected-card {
         display: flex;
         justify-content: space-between;
@@ -105,7 +45,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            // justify-content: space-between;
             color: var(--white);
             background-color: var(--primary);
             width: 50%;
