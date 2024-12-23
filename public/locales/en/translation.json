@@ -47,5 +47,64 @@
     "Chinese": "Chinese",
     "Japanese": "Japanese",
     "German": "German",
-    "Iran": "Iran"
+    "Iran": "Iran",
+    "Phillipines" : "Phillipines",
+
+    "Mystery-Ops": "Mystery Ops",
+    "Web-3" :"Web 3",
+    "Market" :"Market",
+    "Galactic" :"Galactic",
+    "Artifacts" : "Artifacts",
+    "Lvl-1" : "Lvl 1",
+    "Lvl-2" : "Lvl 2",
+    "Lvl-3" : "Lvl 3",
+    "Lvl-4" : "Lvl 4",
+    "Lvl-5": "Lvl 5",
+    "Lvl-6": "Lvl 6",
+    "Lvl-7": "Lvl 7",
+    "Lvl-8": "Lvl 8",
+    "Lvl-9": "Lvl 9",
+    "Lvl-10": "Lvl 10",
+    "Lvl-11": "Lvl 11",
+    "Lvl-12": "Lvl 12",
+    "Lvl-13": "Lvl 13",
+    "Lvl-14": "Lvl 14",
+    "Lvl-15": "Lvl 15",
+    "Lvl-16": "Lvl 16",
+    "Lvl-17": "Lvl 17",
+    "Lvl-18": "Lvl 18",
+    "Lvl-19": "Lvl 19",
+    "Lvl-20": "Lvl 20",
+
+    "Invite-Friends" : "Invite Friends",
+    "You-and-your-friends-will-get-bonuses" : "You and your friends will get bonuses",
+    "Invite-a-friend" : "Invite a friend",
+    "for-you-and-your-friend" : "for you and your friend",
+    "Your-are-already-a-referral,-invited by" : "Your are already a referral, invited by",
+    "You-haven’t-invited-anyone-yet" : "You haven’t invited anyone yet",
+    "List-of-your-Friends" : "List of your Friends",
+    "Send-Invite" : "Send Invite",
+
+    "Faction":"Faction",
+    "Celestial-Nomads":"Celestial Nomads",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.":"A wandering alliance of various alien species who travel the galaxy, hey trade, and barter among themselves and with other factions, living a nomadic and adaptable lifestyle.",
+
+    "The-Syndicate":"The Syndicate",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy." : "A shadowy organization involved in smuggling, espionage, and clandestine operations. They are known for their covert operations and their influence over the black markets of the galaxy.",
+
+    "Luminary-Council":"Luminary Council",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.":"A coalition of advanced artificial intelligences who govern their own network of worlds. They focus on achieving harmony and stability, using their superior computational abilities to manage their domains.",
+
+    "Arcane-Order":"Arcane Order",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.":"A mysterious group of beings who harness ancient and mystical energies. They are known for their enigmatic rituals and their pursuit of esoteric knowledge, often clashing with more technologically focused factions.",
+
+    "Eternal-Guardians":"Eternal Guardians",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.":"An ancient and secretive order dedicated to protecting the galaxy from existential threats. They are known for their strict code of honor and the powerful, ancient technology that they use to defend against cosmic dangers.",
+
+    "Starlight-Pirates":"Starlight Pirates",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.":"A loose confederation of spacefaring raiders and outlaws who live by their own code. They are skilled at hit-and-run tactics and are known for their charisma and unpredictability.",
+
+    "The-Beyonders":"The Beyonders",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown."
+    
 }
