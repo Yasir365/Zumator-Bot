@@ -18,7 +18,7 @@ export default function Ops() {
 
 
   const collectCoins = () => {
-    toastr('success', 'Coins collected successfully')
+    toastr('success', t('Coins-collected-successfully'))
   }
 
   return (

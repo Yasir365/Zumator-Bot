@@ -20,7 +20,7 @@ export default function GamePass() {
 
     const handleProceed = async () => {
         if (!selectedPack) {
-            toastr('error', 'Please select a card pack before proceeding');
+            toastr('error', t('Please-select-a-card-pack-before-proceeding'));
             return;
         }
 
@@ -40,13 +40,13 @@ export default function GamePass() {
             if (data.invoiceLink) {
                 window.Telegram.WebApp.openInvoice(data.invoiceLink, (status) => {
                     if (status === 'paid') {
-                        toastr('success', 'Payment successful! Enjoy your Diamonds 🎉');
+                        toastr('success', t('Payment-successful!-Enjoy-your-Diamonds-🎉'));
                     } else {
-                        toastr('error', 'Payment failed or cancelled');
+                        toastr('error', t('Payment-failed-or-cancelled'));
                     }
                 });
             } else {
-                toastr('error', 'Failed to generate payment link');
+                toastr('error', t('Failed-to-generate-payment-link'));
             }
         } catch (error) {
             console.error('Error:', error);

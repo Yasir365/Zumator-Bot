@@ -25,7 +25,7 @@ export default function Settings() {
         const res = await deleteUserAccount({ id: userInfo.id });
 
         if (res.success) {
-            toastr('success', 'Account deleted successfully')
+            toastr('success', t('Account-deleted-successfully'))
             dispatch(saveUser({}))
             const a = document.getElementById('closeDeleteModal')
             a?.click()
@@ -36,7 +36,7 @@ export default function Settings() {
                 WebApp.close();
             }, 1500);
         } else {
-            toastr('error', 'Error deleting account')
+            toastr('error', t('Error-deleting-account'))
         }
     }
 

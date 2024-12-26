@@ -22,7 +22,7 @@ export default function WalletReward() {
 
     const copyAddress = () => {
         navigator.clipboard.writeText(walletAddress)
-        toastr('success', 'Address copied to clipboard')
+        toastr('success', t('Address-copied-to-clipboard'))
     }
     return (
         <div className="tab-content">

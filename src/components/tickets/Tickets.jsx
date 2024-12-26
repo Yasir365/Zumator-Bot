@@ -49,7 +49,7 @@ export default function Tickets() {
         if (!isClaimed) {
             const res = await cliamTicket({ user_id: userInfo.id });
             dispatch(saveUser(res));
-            toastr('Success', 'Ticket Cliamed Successfully');
+            toastr('Success', t('Ticket-Claimed-Successfully'));
         }
     };
 

@@ -31,7 +31,7 @@ export default function FriendsReward() {
 
     const claimReward = async (id) => {
         const res = await cliamFriendsReward({ friend_invitation_reward_id: id, user_id: userInfo.id })
-        toastr('success', 'Reward Claimed Successfully')
+        toastr('success', t('Reward-Claimed-Successfully'))
         getData()
         dispatch(saveUser(res));
     }

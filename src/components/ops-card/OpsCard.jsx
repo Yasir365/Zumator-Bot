@@ -29,10 +29,10 @@ export default function OpsCard({ pageType }) {
         const price = item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking;
 
         if (method == 'COINS' && price > userInfo.coins) {
-            toastr('error', 'Not enough coins')
+            toastr('error', t('Not-enough-coins'))
             return
         } else if (method == 'DIAMONDS' && price > userInfo.diamonds) {
-            toastr('error', 'Not enough diamonds')
+            toastr('error', t('Not-enough-diamonds'))
             return
         }
         const params = {
@@ -42,7 +42,7 @@ export default function OpsCard({ pageType }) {
         const res = await upgradeOpsCard(params)
         dispatch(saveUser(res));
         getData()
-        toastr('success', 'Card Upgrade Successfully')
+        toastr('success', t('Card-Upgrade-Successfully'))
     }
 
     return (

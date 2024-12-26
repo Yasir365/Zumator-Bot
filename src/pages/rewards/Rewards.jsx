@@ -67,7 +67,7 @@ export default function Rewards() {
       const data = await claimDailyReward(params);
       if (data) {
         dispatch(saveUser(data));
-        toastr('success', 'Daily reward claimed!');
+        toastr('success', t('Daily-reward-claimed!'));
 
         setIsClaimed(true);
         const nextDayStart = new Date();

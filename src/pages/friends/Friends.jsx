@@ -31,7 +31,7 @@ export default function Friends() {
     fetchReferralData();
   }, [])
   const copyLink = () => {
-    toastr('success', 'Link copied to clipboard')
+    toastr('success', t('Link-copied-to-clipboard'))
     navigator.clipboard.writeText(generateInviteLink(userInfo))
   }
 
