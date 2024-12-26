@@ -9,9 +9,11 @@ import toastr from '../../services/toastr.service';
 import { useDispatch, useSelector } from "react-redux";
 import { claimDailyReward } from '../../services/api.service';
 import { saveUser } from '../../store/userInfoSlice';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Rewards() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('new');
   const [isClaimed, setIsClaimed] = useState(true);
   const [remainingTime, setRemainingTime] = useState();
@@ -79,7 +81,7 @@ export default function Rewards() {
   return (
     <div className="rewards-page">
 
-      <h3 className='heading'>Complete Task to Earn Coins</h3>
+      <h3 className='heading'>{t('Complete-Task-to-Earn-Coins')}</h3>
 
       {
         userInfo.last_claim_day_id != 'Day_30' &&
@@ -87,15 +89,15 @@ export default function Rewards() {
           <div className="d-flex">
             <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
             <div className="ms-2">
-              <p className="head">Daily Reward</p>
+              <p className="head">{t('Daily-Reward')}</p>
               {isClaimed ? (
                 <>
-                  <p>Can be claimed in</p>
+                  <p>{t('Can-be-claimed-in')}</p>
                   <p>{formatTime(remainingTime)}</p>
                 </>
               ) : (
                 <>
-                  <p>Click to claim your daily reward!</p>
+                  <p>{t('Click-to-claim-your-daily-reward')}</p>
                   <p>00:00:00</p>
                 </>
               )}
@@ -108,22 +110,22 @@ export default function Rewards() {
       <ul className="nav nav-tabs">
         <li className="nav-item">
           <a className={activeTab === 'new' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('new')} >
-            New
+          {t('New')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'onChain' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('onChain')} >
-            On Chain
+          {t('On-Chain')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'social' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('social')} >
-            Socials
+          {t('Socials')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'friends' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('friends')} >
-            Friends
+          {t('Friends')}
           </a>
         </li>
       </ul>

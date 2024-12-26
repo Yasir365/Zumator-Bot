@@ -73,5 +73,49 @@
     "Your-are-already-a-referral,-invited by": "أنت بالفعل مُحال، دعى من قبل",
     "You-haven’t-invited-anyone-yet": "لم تقم بدعوة أي شخص بعد",
     "List-of-your-Friends": "قائمة أصدقائك",
-    "Send-Invite": "إرسال الدعوة"
+    "Send-Invite": "إرسال الدعوة",
+
+    "Collect-Coins": "اجمع العملات",
+
+    "Faction":"الفصيل", 
+    "Celestial-Nomads":"البدو السماويون",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.":"تحالف متجول من أنواع فضائية مختلفة يجوبون المجرة، يتاجرون ويتبادلون السلع فيما بينهم ومع الفصائل الأخرى، ويعيشون حياة بدوية وقابلة للتكيف.",
+
+    "The-Syndicate":"النقابة",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy." : "منظمة غامضة متورطة في التهريب، والتجسس، والعمليات السرية. تُعرف بعملياتها الخفية وتأثيرها على الأسواق السوداء في المجرة.",
+
+    "Luminary-Council":"مجلس الأضواء",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.":"تحالف من الذكاءات الاصطناعية المتقدمة التي تحكم شبكتها الخاصة من العوالم. يركزون على تحقيق الانسجام والاستقرار، باستخدام قدراتهم الحسابية المتفوقة لإدارة مجالاتهم.",
+
+    "Arcane-Order":"النظام الغامض",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.":"مجموعة غامضة من الكائنات التي تستغل الطاقات القديمة والغامضة. تُعرف بطقوسها الغامضة وسعيها وراء المعرفة الباطنية، وغالبًا ما تصطدم مع الفصائل التي تركز على التكنولوجيا.",
+
+    "Eternal-Guardians":"الحراس الأبديون",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.":"نظام قديم وسري مكرس لحماية المجرة من التهديدات الوجودية. يُعرفون بقواعد شرفهم الصارمة والتكنولوجيا القديمة والقوية التي يستخدمونها للدفاع ضد المخاطر الكونية.",
+
+    "Starlight-Pirates":"قراصنة ضوء النجوم",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.":"اتحاد فضفاض من المغيرين الخارجين عن القانون والمسافرين عبر الفضاء الذين يعيشون وفقًا لقواعدهم الخاصة. يتميزون بمهاراتهم في التكتيكات السريعة والمعروفة بجاذبيتهم وعدم قابليتهم للتوقع.",
+
+    "The-Beyonders":"ما وراء الخيال",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"فصيل أسطوري يدمج بين الأسطورة والواقع، يُشاع أنهم يمتلكون قوى تكنولوجية وغامضة شبيهة بالآلهة. وجودهم محاط بالغموض، حيث يعتبرهم الكثيرون كائنات إلهية بطبيعة مجهولة.",
+
+    "Buy-Diamonds": "اشترِ الألماس",
+    "Diamonds": "ألماس",
+    "Proceed": "تابع",
+    "Complete-Task-to-Earn-Coins": "أكمل المهمة لكسب العملات",
+    "Daily-Reward": "المكافأة اليومية",
+    "Can-be-claimed-in": "يمكن المطالبة به في",
+    "New": "جديد",
+    "Start": "ابدأ",
+    "On-Chain": "على السلسلة",
+    "Connect-Wallet": "اتصل بالمحفظة",
+    "Socials": "وسائل التواصل الاجتماعي",
+    "Click-to-claim-your-daily-reward": "انقر للمطالبة بمكافأتك اليومية!",
+    "An-error-occurred-while-processing-payment": "حدث خطأ أثناء معالجة الدفع",
+    "Connect-to-Wallet": "اتصل بالمحفظة",
+
+    "Player-s-Name": "اسم اللاعب",
+    "Score": "النتيجة"
+
+
 }

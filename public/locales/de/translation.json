@@ -74,7 +74,7 @@
     "You-haven’t-invited-anyone-yet": "Du hast noch niemanden eingeladen",
     "List-of-your-Friends": "Deine Freundesliste",
     "Send-Invite": "Einladung senden",
-
+    "Collect-Coins": "Münzen sammeln",
     "Faction": "Fraktion",
     "Celestial-Nomads": "Himmlische Nomaden",
     "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions,-living-a-nomadic-and-adaptable-lifestyle.": "Eine wandernde Allianz verschiedener Alienarten, die durch die Galaxie reisen, handeln und tauschen untereinander und mit anderen Fraktionen, während sie einen nomadischen und anpassungsfähigen Lebensstil führen.",
@@ -89,5 +89,22 @@
     "Starlight-Pirates": "Starlight-Piraten",
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "Eine lose Konföderation von weltraumfahrenden Räubern und Gesetzlosen, die nach ihrem eigenen Kodex leben. Sie sind geschickt in Schlag-und-Lauf-Taktiken und bekannt für ihren Charme und ihre Unvorhersehbarkeit.",
     "The-Beyonders": "Die Jenseitigen",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Eine legendäre Fraktion, die sich zwischen Mythos und Realität bewegt und Gerüchten zufolge gottähnliche technologische und mystische Kräfte besitzt. Ihre Existenz ist von Geheimnissen umhüllt, wobei viele sie als göttliche Wesen betrachten, deren wahre Natur unbekannt bleibt."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Eine legendäre Fraktion, die sich zwischen Mythos und Realität bewegt und Gerüchten zufolge gottähnliche technologische und mystische Kräfte besitzt. Ihre Existenz ist von Geheimnissen umhüllt, wobei viele sie als göttliche Wesen betrachten, deren wahre Natur unbekannt bleibt.",
+
+    "Buy-Diamonds": "Diamanten kaufen",
+    "Diamonds": "Diamanten",
+    "Proceed": "Fortfahren",
+    "Complete-Task-to-Earn-Coins": "Aufgabe abschließen, um Münzen zu verdienen",
+    "Daily-Reward": "Tägliche Belohnung",
+    "Can-be-claimed-in": "Kann in Anspruch genommen werden in",
+    "New": "Neu",
+    "Start": "Start",
+    "On-Chain": "On-Chain",
+    "Connect-Wallet": "Wallet verbinden",
+    "Socials": "Soziale Medien",
+    "Click-to-claim-your-daily-reward": "Klicken Sie, um Ihre tägliche Belohnung zu beanspruchen!",
+    "Connect-to-Wallet": "Mit Wallet verbinden",
+
+    "Player-s-Name": "Spielername",
+    "Score": "Punktzahl"
 }

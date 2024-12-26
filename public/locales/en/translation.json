@@ -85,6 +85,8 @@
     "List-of-your-Friends" : "List of your Friends",
     "Send-Invite" : "Send Invite",
 
+    "Collect-Coins": "Collect Coins",
+
     "Faction":"Faction",
     "Celestial-Nomads":"Celestial Nomads",
     "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.":"A wandering alliance of various alien species who travel the galaxy, hey trade, and barter among themselves and with other factions, living a nomadic and adaptable lifestyle.",
@@ -105,6 +107,24 @@
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.":"A loose confederation of spacefaring raiders and outlaws who live by their own code. They are skilled at hit-and-run tactics and are known for their charisma and unpredictability.",
 
     "The-Beyonders":"The Beyonders",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown.",
+
+    "Buy-Diamonds": "Buy Diamonds",
+    "Diamonds": "Diamonds",
+    "Proceed": "Proceed",
+
+    "Complete-Task-to-Earn-Coins": "Complete Task to Earn Coins",
+    "Daily-Reward": "Daily Reward",
+    "Can-be-claimed-in": "Can be claimed in",
+    "New": "New",
+    "Start": "Start",
+    "On-Chain": "On Chain",
+    "Connect-Wallet": "Connect Wallet",
+    "Socials": "Socials",
+    "Click-to-claim-your-daily-reward": "Click to claim your daily reward!",
+    "Connect-to-Wallet": "Connect to Wallet",
+
+    "Player-s-Name": "Player’s Name",
+    "Score": "Score"
     
 }

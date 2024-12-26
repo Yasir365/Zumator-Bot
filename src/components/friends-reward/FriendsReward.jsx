@@ -4,9 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { getInviteFriendsTask, cliamFriendsReward } from "../../services/api.service";
 import toastr from '../../services/toastr.service';
 import { saveUser } from "../../store/userInfoSlice";
+import { useTranslation } from 'react-i18next';
 
 
 export default function FriendsReward() {
+
+    const { t } = useTranslation();
     const [data, setData] = useState([]);
     const userInfo = useSelector(state => state.user.userInfo);
     const [fetchloader, setFetchLoader] = useState(false);
@@ -46,7 +49,7 @@ export default function FriendsReward() {
                             </div>
                         </div>
 
-                        <button className={!item.is_ready_to_claim || item.is_claimed ? "start disable" : "start"} disabled={!item.is_ready_to_claim || item.is_claimed} onClick={() => claimReward(item.id)}>Claim</button>
+                        <button className={!item.is_ready_to_claim || item.is_claimed ? "start disable" : "start"} disabled={!item.is_ready_to_claim || item.is_claimed} onClick={() => claimReward(item.id)}>{t('Claim')}</button>
                     </div>
                     {index !== data.length - 1 && (<hr />)}
                 </div>

@@ -2,9 +2,10 @@ import './faction.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { factions } from '../../services/util.service';
-
+import { useTranslation } from 'react-i18next';
 export default function Faction() {
     const [activeIndex, setActiveIndex] = useState(null);
+    const { t } = useTranslation();
 
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -12,7 +13,7 @@ export default function Faction() {
 
     return (
         <div className="faction-page">
-            <h3 className="heading">Faction</h3>
+            <h3 className="heading">{t('Faction')}</h3>
 
             <div className="accordion" id="factionAccordion">
                 {factions.map((item, index) => (
@@ -26,7 +27,7 @@ export default function Faction() {
                                 aria-expanded={activeIndex === index}
                                 aria-controls={`collapse${index}`}
                             >
-                                {item.name}
+                                {t(item.name)}
                                 {/* {item.selected && <i className='fa-solid fa-check selected'></i>} */}
                             </button>
                         </div>
@@ -37,7 +38,7 @@ export default function Faction() {
                             data-bs-parent="#factionAccordion"
                         >
                             <div className="accordion-body">
-                                <p>{item.description}</p>
+                                <p>{t(item.description)}</p>
                                 {/* {
                                     !item.selected && (
                                         <div className="d-flex justify-content-center mt-3">

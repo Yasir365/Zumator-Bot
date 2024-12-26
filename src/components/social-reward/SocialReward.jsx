@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { getTasks } from "../../services/api.service";
+import { useTranslation } from 'react-i18next';
 
 
 export default function SocialReward() {
+
+    const { t } = useTranslation();
     const [data, setData] = useState([]);
     const [fetchloader, setFetchLoader] = useState(false);
 
@@ -36,7 +39,7 @@ export default function SocialReward() {
                                 </div>
                             </div>
 
-                            <button className="start">Start</button>
+                            <button className="start">{t('Start')}</button>
                         </div>
                         {index !== data.length - 1 && (<hr />)}
                     </div>

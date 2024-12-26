@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
 import { getTopPlayer } from '../../services/api.service';
 import { formatNumber } from '../../services/util.service';
+import { useTranslation } from 'react-i18next';
 
 function NextArrow(props) {
     const { className, onClick } = props;
@@ -42,6 +43,8 @@ const settings = {
 };
 
 export default function Leaderboard() {
+
+    const { t } = useTranslation();
     const [data, setData] = useState([]);
     const getData = async () => {
         const res = await getTopPlayer()
@@ -55,23 +58,23 @@ export default function Leaderboard() {
             <Slider {...settings}>
                 <div className="item-container">
                     <img src="/images/hero.webp" alt="" />
-                    <h6>Recruite</h6>
+                    <h6>{t('Recruite')}</h6>
                 </div>
                 <div className="item-container">
                     <img src="/images/hero.webp" alt="" />
-                    <h6>Recruite</h6>
+                    <h6>{t('Recruite')}</h6>
                 </div>
                 <div className="item-container">
                     <img src="/images/hero.webp" alt="" />
-                    <h6>Recruite</h6>
+                    <h6>{t('Recruite')}</h6>
                 </div>
                 <div className="item-container">
                     <img src="/images/hero.webp" alt="" />
-                    <h6>Recruite</h6>
+                    <h6>{t('Recruite')}</h6>
                 </div>
             </Slider>
 
-            <h4 className="heading"> Leaderboard </h4>
+            <h4 className="heading">{t('Leaderboard')}</h4>
 
             <div className="card-container">
                 <div className="card-content">
@@ -83,14 +86,14 @@ export default function Leaderboard() {
                                     <img src='/images/leaderboard/profile.webp' alt="" />
                                 </div>
                                 <div className="player">
-                                    <small className="title">Player’s Name</small>
+                                    <small className="title">{t('Player-s-Name')}</small>
                                     <p className="value">{item.first_name} {item.last_name}</p>
                                 </div>
                                 <div className="play-image">
                                     <img src='/images/leaderboard/play.webp' alt="" />
                                 </div>
                                 <div className="score">
-                                    <small>Score</small>
+                                    <small>{t('Score')}</small>
                                     <p className="value">{formatNumber(item.coins)}</p>
                                 </div>
                             </div>

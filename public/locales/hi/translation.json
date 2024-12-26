@@ -73,5 +73,45 @@
     "Your-are-already-a-referral,-invited by": "आप पहले ही एक रेफरल हैं, आमंत्रित किया गया",
     "You-haven’t-invited-anyone-yet": "आपने अभी तक किसी को आमंत्रित नहीं किया है",
     "List-of-your-Friends": "आपके दोस्तों की सूची",
-    "Send-Invite": "आमंत्रण भेजें"
+    "Send-Invite": "आमंत्रण भेजें",
+
+    "Collect-Coins": "सिक्के इकट्ठा करें",
+
+    "Faction": "गुट",
+    "Celestial-Nomads": "आकाशीय घुमंतू",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.": "विभिन्न विदेशी प्रजातियों का एक घुमंतू गठबंधन जो आकाशगंगा में यात्रा करता है, व्यापार और विनिमय करता है, और अन्य गुटों के साथ तालमेल बनाकर चलता है, एक घुमंतू और अनुकूलनशील जीवनशैली जीता है।",
+
+    "The-Syndicate": "सिंडिकेट",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy.": "एक छायादार संगठन जो तस्करी, जासूसी, और गुप्त अभियानों में शामिल है। यह अपने गुप्त अभियानों और आकाशगंगा के ब्लैक मार्केट पर प्रभाव के लिए जाना जाता है।",
+
+    "Luminary-Council": "प्रकाश परिषद",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.": "उन्नत कृत्रिम बुद्धिमत्ता का एक गठबंधन जो अपनी दुनिया के नेटवर्क का शासन करता है। वे अपने उत्कृष्ट गणनात्मक कौशल का उपयोग करके सामंजस्य और स्थिरता प्राप्त करने पर ध्यान केंद्रित करते हैं।",
+
+    "Arcane-Order": "गूढ़ आदेश",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.": "एक रहस्यमय समूह जो प्राचीन और रहस्यमय ऊर्जा का उपयोग करता है। यह अपने गूढ़ अनुष्ठानों और गूढ़ ज्ञान की खोज के लिए जाना जाता है और अक्सर तकनीकी रूप से केंद्रित गुटों के साथ टकराता है।",
+
+    "Eternal-Guardians": "अनंत संरक्षक",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.": "एक प्राचीन और गुप्त संगठन जो आकाशगंगा को अस्तित्वगत खतरों से बचाने के लिए समर्पित है। यह अपने कठोर सम्मान के नियम और शक्तिशाली प्राचीन तकनीक के लिए जाना जाता है, जिसका उपयोग यह ब्रह्मांडीय खतरों से बचाने के लिए करता है।",
+
+    "Starlight-Pirates": "स्टारलाइट समुद्री डाकू",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "अंतरिक्ष यात्रियों और अपराधियों का एक ढीला संघ जो अपने स्वयं के नियमों से जीता है। वे हिट-एंड-रन रणनीतियों में कुशल हैं और अपने करिश्मे और अप्रत्याशितता के लिए जाने जाते हैं।",
+
+    "The-Beyonders": "परे वाले",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "एक पौराणिक गुट जो मिथक और वास्तविकता के बीच में है, जिसे भगवान जैसे तकनीकी और रहस्यमय शक्तियों का स्वामी माना जाता है। उनका अस्तित्व रहस्य में लिपटा हुआ है, और कई लोग उन्हें दिव्य प्राणी मानते हैं जिनकी सच्ची प्रकृति अज्ञात है।",
+
+    "Buy-Diamonds": "हीरे खरीदें",
+    "Diamonds": "हीरे",
+    "Proceed": "आगे बढ़ें",
+    "Complete-Task-to-Earn-Coins": "सिक्के कमाने के लिए कार्य पूरा करें",
+    "Daily-Reward": "दैनिक इनाम",
+    "Can-be-claimed-in": "में दावा किया जा सकता है",
+    "New": "नया",
+    "Start": "शुरू करें",
+    "On-Chain": "चेन पर",
+    "Connect-Wallet": "वॉलेट कनेक्ट करें",
+    "Socials": "सोशल मीडिया",
+    "Click-to-claim-your-daily-reward": "अपना दैनिक पुरस्कार प्राप्त करने के लिए क्लिक करें!",
+    "Connect-to-Wallet": "वॉलेट से कनेक्ट करें",
+    "Player-s-Name": "खिलाड़ी का नाम",
+    "Score": "स्कोर"
 }

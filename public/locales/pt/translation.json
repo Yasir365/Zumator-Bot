@@ -74,7 +74,7 @@
     "You-haven’t-invited-anyone-yet": "Você ainda não convidou ninguém",
     "List-of-your-Friends": "Lista de seus amigos",
     "Send-Invite": "Enviar convite",
-
+"Collect-Coins": "Coletar moedas",
     "Faction": "Facção",
     "Celestial-Nomads": "Nômades Celestiais",
     "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions,-living-a-nomadic-and-adaptable-lifestyle.": "Uma aliança errante de várias espécies alienígenas que viajam pela galáxia, trocam e negociam entre si e com outras facções, vivendo um estilo de vida nômade e adaptável.",
@@ -89,5 +89,21 @@
     "Starlight-Pirates": "Piratas da Luz Estelar",
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "Uma confederação solta de saqueadores e foras-da-lei espaciais que vivem segundo seu próprio código. São habilidosos em táticas de ataque e fuga e são conhecidos por seu carisma e imprevisibilidade.",
     "The-Beyonders": "Os Além",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Uma facção lendária que transita entre o mito e a realidade, supostamente possuindo poderes tecnológicos e místicos semelhantes aos de um deus. Sua existência é envolta em mistério, com muitos os considerando como entidades divinas cuja verdadeira natureza permanece desconhecida."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Uma facção lendária que transita entre o mito e a realidade, supostamente possuindo poderes tecnológicos e místicos semelhantes aos de um deus. Sua existência é envolta em mistério, com muitos os considerando como entidades divinas cuja verdadeira natureza permanece desconhecida.",
+
+    "Buy-Diamonds": "Comprar diamantes",
+    "Diamonds": "Diamantes",
+    "Proceed": "Prosseguir",
+    "Complete-Task-to-Earn-Coins": "Complete a tarefa para ganhar moedas",
+    "Daily-Reward": "Recompensa diária",
+    "Can-be-claimed-in": "Pode ser resgatado em",
+    "New": "Novo",
+    "Start": "Iniciar",
+    "On-Chain": "On-Chain",
+    "Connect-Wallet": "Conectar carteira",
+    "Socials": "Redes sociais",
+    "Click-to-claim-your-daily-reward": "Clique para resgatar sua recompensa diária!",
+    "Connect-to-Wallet": "Conectar à carteira",
+    "Player-s-Name": "Nome do jogador",
+    "Score": "Pontuação"
 }

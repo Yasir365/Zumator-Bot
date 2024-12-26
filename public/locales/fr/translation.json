@@ -75,6 +75,8 @@
     "List-of-your-Friends": "Liste de vos amis",
     "Send-Invite": "Envoyer l'invitation",
 
+    "Collect-Coins": "Collecter des pièces",
+
     "Faction": "Faction",
     "Celestial-Nomads": "Nomades Célestes",
     "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions,-living-a-nomadic-and-adaptable-lifestyle.": "Une alliance errante de diverses espèces extraterrestres qui voyagent à travers la galaxie, commercent et échangent entre elles et avec d'autres factions, vivant un mode de vie nomade et adaptable.",
@@ -89,5 +91,21 @@
     "Starlight-Pirates": "Pirates de la Lumière Stellaire",
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "Une confédération lâche de pirates de l'espace et d'outlaws qui vivent selon leur propre code. Ils sont habiles dans les tactiques de frappe et de fuite et sont connus pour leur charisme et leur imprévisibilité.",
     "The-Beyonders": "Les Au-Delà",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Une faction légendaire oscillant entre le mythe et la réalité, supposée posséder des pouvoirs technologiques et mystiques semblables à ceux des dieux. Leur existence est enveloppée de mystère, beaucoup les voyant comme des entités divines dont la véritable nature demeure inconnue."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Une faction légendaire oscillant entre le mythe et la réalité, supposée posséder des pouvoirs technologiques et mystiques semblables à ceux des dieux. Leur existence est enveloppée de mystère, beaucoup les voyant comme des entités divines dont la véritable nature demeure inconnue.",
+
+    "Buy-Diamonds": "Acheter des diamants",
+    "Diamonds": "Diamants",
+    "Proceed": "Procéder",
+    "Complete-Task-to-Earn-Coins": "Complétez la tâche pour gagner des pièces",
+    "Daily-Reward": "Récompense quotidienne",
+    "Can-be-claimed-in": "Peut être réclamé dans",
+    "New": "Nouveau",
+    "Start": "Commencer",
+    "On-Chain": "Sur la chaîne",
+    "Connect-Wallet": "Connecter le portefeuille",
+    "Socials": "Réseaux sociaux",
+    "Click-to-claim-your-daily-reward": "Cliquez pour réclamer votre récompense quotidienne !",
+    "Connect-to-Wallet": "Connecter au portefeuille",
+    "Player-s-Name": "Nom du joueur",
+    "Score": "Score"
 }

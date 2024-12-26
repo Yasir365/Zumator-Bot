@@ -4,8 +4,10 @@ import { handleInviteClick, generateInviteLink, formatNumber } from '../../servi
 import { useEffect, useState } from 'react';
 import toastr from '../../services/toastr.service';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 export default function Friends() {
+  const { t } = useTranslation();
   const [ref, setRef] = useState('');
   const [invitedFriends, setInvitedFriends] = useState([]);
   const userInfo = useSelector((state) => state.user.userInfo);
@@ -35,8 +37,8 @@ export default function Friends() {
 
   return (
     <div className='firends-page'>
-      <h3 className='heading'>Invite Friends</h3>
-      <h6 className="sub-heading">You and your friends will get bonuses</h6>
+      <h3 className='heading'>{t('Invite-Friends')}</h3>
+      <h6 className="sub-heading">{t('You-and-your-friends-will-get-bonuses')}</h6>
 
       <div className="item mt-4">
         <div className="card-info">
@@ -44,24 +46,24 @@ export default function Friends() {
             <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
           </div>
           <div className='reward'>
-            <div className="title">Invite a friend</div>
-            <div className="value"><img src="/images/icons/bonas.webp" alt="" /> <span className='warn'>+0.1 </span> for you and your friend </div>
+            <div className="title">{t('Invite-a-friend')}</div>
+            <div className="value"><img src="/images/icons/bonas.webp" alt="" /> <span className='warn'>+0.1 </span>{t('for-you-and-your-friend')}</div>
           </div>
         </div>
       </div>
 
       {ref && (
         <div className="item mt-4 d-flex justify-content-center">
-          <p>Your are already a referral, invited by <span className="warn">{ref}</span></p>
+          <p>{t('Your-are-already-a-referral,-invited by')}  <span className="warn">{ref}</span></p>
         </div>
       )}
 
       <div className="card-container">
         <div className="tab-content d-flex">
-          <h6>List of your Friends</h6>
+          <h6>{t('List-of-your-Friends')}</h6>
           {invitedFriends.length == 0 &&
             <div className="item mt-4 d-flex justify-content-center">
-              <p>You haven’t invited anyone yet</p>
+              <p>{t('You-haven’t-invited-anyone-yet')}</p>
             </div>
           }
           {invitedFriends.length > 0 && invitedFriends.map((item, index) => (
@@ -84,7 +86,7 @@ export default function Friends() {
       </div>
 
       <div className="button-container">
-        <button className='invite' onClick={() => handleInviteClick(userInfo)}>Send Invite</button>
+        <button className='invite' onClick={() => handleInviteClick(userInfo)}>{t('Send-Invite')}</button>
         <button className='copy' onClick={copyLink}><i className="fa-regular fa-copy"></i></button>
       </div>
     </div>

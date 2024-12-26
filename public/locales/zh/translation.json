@@ -73,5 +73,46 @@
     "Your-are-already-a-referral,-invited by": "你已经是一个推荐人，邀请人是",
     "You-haven’t-invited-anyone-yet": "你还没有邀请任何人",
     "List-of-your-Friends": "你的朋友列表",
-    "Send-Invite": "发送邀请"
+    "Send-Invite": "发送邀请",
+
+    "Collect-Coins": "收集硬币",
+
+
+    "Faction": "派系",
+    "Celestial-Nomads": "天体游牧者",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.": "一个由各种外星种族组成的流浪联盟，他们在银河系中旅行、交易，并与自己和其他派系进行物物交换，过着游牧且适应性强的生活方式。",
+
+    "The-Syndicate": "辛迪加",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy.": "一个参与走私、间谍活动和秘密行动的黑暗组织。他们以隐秘行动和对银河黑市的影响力而闻名。",
+
+    "Luminary-Council": "光辉议会",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.": "由先进人工智能组成的联盟，管理着他们自己的世界网络。他们专注于通过卓越的计算能力来实现和谐与稳定，以管理他们的领土。",
+
+    "Arcane-Order": "奥术教团",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.": "一个利用古老而神秘能量的神秘团体。他们以神秘的仪式和对秘学知识的追求而闻名，经常与更加注重技术的派系发生冲突。",
+
+    "Eternal-Guardians": "永恒守护者",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.": "一个古老而秘密的教团，致力于保护银河免受存在性威胁。他们以严格的荣誉准则和用于防御宇宙危险的强大古代技术而闻名。",
+
+    "Starlight-Pirates": "星光海盗",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "一个由航天掠夺者和亡命之徒组成的松散联盟，他们遵循自己的规则生活。他们擅长突袭战术，以其魅力和不可预测性而闻名。",
+
+    "The-Beyonders": "超越者",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "一个介于神话与现实之间的传奇派系，据说拥有神一般的技术和神秘力量。他们的存在笼罩在神秘之中，许多人将其视为神圣存在，但其真正本质仍然未知。",
+
+    "Buy-Diamonds": "购买钻石",
+    "Diamonds": "钻石",
+    "Proceed": "继续",
+    "Complete-Task-to-Earn-Coins": "完成任务以赚取硬币",
+    "Daily-Reward": "每日奖励",
+    "Can-be-claimed-in": "可以在…领取",
+    "New": "新的",
+    "Start": "开始",
+    "On-Chain": "链上",
+    "Connect-Wallet": "连接钱包",
+    "Socials": "社交媒体",
+    "Click-to-claim-your-daily-reward": "点击领取您的每日奖励！",
+    "Connect-to-Wallet": "连接钱包",
+    "Player-s-Name": "玩家姓名",
+    "Score": "得分"
 }

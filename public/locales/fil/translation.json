@@ -73,5 +73,45 @@
     "Your-are-already-a-referral,-invited by": "Ikaw ay isang referral na, inanyayahan ni",
     "You-haven’t-invited-anyone-yet": "Wala ka pang inanyayahan",
     "List-of-your-Friends": "Listahan ng iyong mga Kaibigan",
-    "Send-Invite": "Magpadala ng Imbitasyon"
+    "Send-Invite": "Magpadala ng Imbitasyon",
+
+    "Collect-Coins": "Kolektahin ang mga barya",
+
+    "Faction":"Paksyon", 
+    "Celestial-Nomads":"Mga Nomad ng Kalangitan",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.":"Isang gumagalang alyansa ng iba't ibang mga alien species na naglalakbay sa kalawakan, nakikipagkalakalan, at nakikipagpalitan sa isa't isa at sa ibang mga paksyon, na namumuhay ng isang nomadic at adaptable na pamumuhay.",
+
+    "The-Syndicate":"Ang Sindikato",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy." : "Isang lihim na organisasyon na sangkot sa smuggling, paniniktik, at mga tagong operasyon. Kilala sila sa kanilang mga lihim na aktibidad at impluwensya sa black markets ng kalawakan.",
+
+    "Luminary-Council":"Konseho ng Liwanag",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.":"Isang koalisyon ng mga advanced na artipisyal na intelihensiya na namamahala sa kanilang sariling network ng mga mundo. Nakatuon sila sa pagkakamit ng pagkakaisa at katatagan gamit ang kanilang superior computational na kakayahan para pamahalaan ang kanilang nasasakupan.",
+
+    "Arcane-Order":"Arcane Order",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.":"Isang misteryosong grupo ng mga nilalang na gumagamit ng sinaunang at mahiwagang enerhiya. Kilala sila sa kanilang mga enigmatikong ritwal at paghahanap ng esoterikong kaalaman, madalas nakikipagtunggali sa mga teknolohikal na nakatuong paksyon.",
+
+    "Eternal-Guardians":"Walang Hanggang Tagapagbantay",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.":"Isang sinaunang at lihim na samahan na nakatuon sa pagprotekta sa kalawakan mula sa mga banta sa pag-iral. Kilala sila sa kanilang mahigpit na kodigo ng karangalan at makapangyarihang sinaunang teknolohiya na ginagamit nila upang ipagtanggol laban sa mga kosmikong panganib.",
+
+    "Starlight-Pirates":"Mga Pirata ng Starlight",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.":"Isang maluwag na konfederasyon ng mga spacefaring raiders at outlaw na namumuhay ayon sa kanilang sariling kodigo. Mahusay sila sa mga taktika ng hit-and-run at kilala sa kanilang karisma at hindi mahulaan.",
+
+    "The-Beyonders":"Ang mga Higit Pa",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"Isang maalamat na paksyon na nasa pagitan ng alamat at realidad, na pinaniniwalaang may taglay na teknolohikal at mahiwagang kapangyarihan na tulad ng Diyos. Ang kanilang pag-iral ay nababalot ng misteryo, at marami ang tumitingin sa kanila bilang mga banal na nilalang na ang tunay na kalikasan ay nananatiling di alam.",
+
+    "Buy-Diamonds": "Bumili ng mga diyamante",
+    "Diamonds": "Mga diyamante",
+    "Proceed": "Magpatuloy",
+    "Complete-Task-to-Earn-Coins": "Kumpletuhin ang gawain upang kumita ng mga barya",
+    "Daily-Reward": "Araw-araw na gantimpala",
+    "Can-be-claimed-in": "Maaaring i-claim sa",
+    "New": "Bago",
+    "Start": "Magsimula",
+    "On-Chain": "Sa Chain",
+    "Connect-Wallet": "Ikonekta ang wallet",
+    "Socials": "Mga social media",
+    "Click-to-claim-your-daily-reward": "Mag-click upang kunin ang iyong pang-araw-araw na gantimpala!",
+    "Connect-to-Wallet": "Ikonekta ang wallet",
+    "Player-s-Name": "Pangalan ng manlalaro",
+    "Score": "Iskor"
 }

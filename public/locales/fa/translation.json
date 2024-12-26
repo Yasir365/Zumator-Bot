@@ -73,5 +73,45 @@
     "Your-are-already-a-referral,-invited by": "شما قبلاً یک ارجاع هستید، دعوت شده توسط",
     "You-haven’t-invited-anyone-yet": "شما هنوز هیچ کسی را دعوت نکرده اید",
     "List-of-your-Friends": "لیست دوستان شما",
-    "Send-Invite": "ارسال دعوت"
+    "Send-Invite": "ارسال دعوت",
+
+    "Collect-Coins": "جمع آوری سکه‌ها",
+
+    "Faction":"فرقه", 
+    "Celestial-Nomads":"کوچ‌نشینان آسمانی",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.":"ائتلافی سرگردان از گونه‌های مختلف بیگانه که در کهکشان سفر می‌کنند، تجارت و مبادله می‌کنند، و با دیگر فرقه‌ها زندگی کوچ‌نشین و سازگاری دارند.",
+
+    "The-Syndicate":"اتحادیه",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy." : "یک سازمان مخفی که در قاچاق، جاسوسی و عملیات پنهانی درگیر است. آن‌ها به‌خاطر عملیات محرمانه و نفوذشان در بازارهای سیاه کهکشان شناخته می‌شوند.",
+
+    "Luminary-Council":"شورای روشنگری",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.":"ائتلافی از هوش‌های مصنوعی پیشرفته که شبکه‌ای از جهان‌ها را اداره می‌کنند. آن‌ها بر دستیابی به هماهنگی و ثبات تمرکز دارند و از توانایی‌های محاسباتی برتر خود برای مدیریت حوزه‌هایشان استفاده می‌کنند.",
+
+    "Arcane-Order":"نظم اسرارآمیز",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.":"گروهی اسرارآمیز از موجوداتی که از انرژی‌های باستانی و عرفانی بهره می‌برند. آن‌ها به خاطر آیین‌های مرموز و جستجوی دانش باطنی‌شان شناخته می‌شوند و اغلب با فرقه‌های متمرکز بر فناوری در تضاد هستند.",
+
+    "Eternal-Guardians":"نگهبانان ابدی",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.":"یک نظم باستانی و مخفی که به حفاظت از کهکشان در برابر تهدیدات وجودی اختصاص دارد. آن‌ها به‌خاطر قوانین سختگیرانه افتخار و فناوری باستانی و قدرتمندی که برای دفاع در برابر خطرات کیهانی استفاده می‌کنند، شناخته می‌شوند.",
+
+    "Starlight-Pirates":"دزدان دریایی نور ستارگان",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.":"یک کنفدراسیون آزاد از مهاجمان و قانون‌شکنان فضایی که طبق قوانین خود زندگی می‌کنند. آن‌ها در تاکتیک‌های حمله و فرار ماهر هستند و به‌خاطر کاریزما و غیرقابل پیش‌بینی بودن‌شان شناخته می‌شوند.",
+
+    "The-Beyonders":"فراترها",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"یک فرقه افسانه‌ای که بین افسانه و واقعیت قرار دارد و شایعه شده است که دارای قدرت‌های فناورانه و عرفانی شبیه به خدا هستند. وجود آن‌ها در هاله‌ای از ابهام قرار دارد و بسیاری آن‌ها را موجوداتی الهی می‌دانند که ماهیت واقعی‌شان ناشناخته باقی مانده است.",
+
+    "Buy-Diamonds": "الماس بخرید",
+    "Diamonds": "الماس",
+    "Proceed": "ادامه بده",
+    "Complete-Task-to-Earn-Coins": "برای کسب سکه‌ها، کار را انجام دهید",
+    "Daily-Reward": "پاداش روزانه",
+    "Can-be-claimed-in": "قابل دریافت در",
+    "New": "جدید",
+    "Start": "شروع",
+    "On-Chain": "روی زنجیره",
+    "Connect-Wallet": "اتصال کیف پول",
+    "Socials": "شبکه‌های اجتماعی",
+    "Click-to-claim-your-daily-reward": "برای دریافت پاداش روزانه خود کلیک کنید!",
+    "Connect-to-Wallet": "اتصال به کیف پول",
+    "Player-s-Name": "نام بازیکن",
+    "Score": "امتیاز"
 }

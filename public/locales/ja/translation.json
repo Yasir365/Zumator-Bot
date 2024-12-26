@@ -73,5 +73,44 @@
     "Your-are-already-a-referral,-invited by": "あなたはすでに紹介者です。招待者は",
     "You-haven’t-invited-anyone-yet": "まだ誰も招待していません",
     "List-of-your-Friends": "あなたの友達のリスト",
-    "Send-Invite": "招待を送信"
+    "Send-Invite": "招待を送信",
+    "Collect-Coins": "コインを集める",
+
+    "Faction": "派閥",
+    "Celestial-Nomads": "天の遊牧民",
+    "A-wandering-alliance-of-various-alien-species-who-travel-the-galaxy,-hey-trade,-and-barter-among-themselves-and-with-other-factions, -living-a-nomadic-and-adaptable-lifestyle.": "銀河を旅し、取引し、他の派閥と物々交換を行う、さまざまな異星種族の放浪同盟。彼らは遊牧的で適応力のあるライフスタイルを送っています。",
+
+    "The-Syndicate": "シンジケート",
+    "A-shadowy-organization-involved-in-smuggling,-espionage,-and-clandestine-operations.-They-are-known-for-their-covert-operations-and-their -influence-over-the-black-markets-of-the-galaxy.": "密輸、スパイ活動、秘密作戦に関与する影の組織。彼らは秘密の活動と銀河のブラックマーケットへの影響力で知られています。",
+
+    "Luminary-Council": "光明評議会",
+    "A-coalition-of-advanced-artificial-intelligences-who-govern-their-own-network-of-worlds.-They-focus-on-achieving-harmony-and-stability,-using-their-superior-computational-abilities-to-manage-their-domains.": "高度な人工知能の連合で、独自の世界ネットワークを統治しています。彼らは卓越した計算能力を活用して、自分たちの領域を管理し、調和と安定を実現することに重点を置いています。",
+
+    "Arcane-Order": "秘儀の秩序",
+    "A-mysterious-group-of-beings-who-harness-ancient-and-mystical-energies.-They-are-known-for-their-enigmatic-rituals-and-their-pursuit-of-esoteric-knowledge,-often-clashing-with-more-technologically-focused-factions.": "古代の神秘的なエネルギーを利用する謎めいた存在のグループ。彼らは神秘的な儀式と秘教的な知識の追求で知られており、技術的に重点を置いた派閥と衝突することがよくあります。",
+
+    "Eternal-Guardians": "永遠の守護者",
+    "An-ancient-and-secretive-order-dedicated-to-protecting-the-galaxy-from-existential-threats.-They-are-known-for-their-strict-code-of-honor-and-the-powerful,-ancient-technology-that-they-use-to-defend-against-cosmic-dangers.": "銀河を存在の脅威から守ることに専念する古代の秘密結社。彼らは厳格な名誉の規範と、宇宙的な危険から防御するために使用する強力で古代の技術で知られています。",
+
+    "Starlight-Pirates": "星明りの海賊",
+    "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "独自の規範に従って生きる、宇宙航行の襲撃者や無法者の緩やかな連合。彼らはヒットアンドラン戦術に長けており、そのカリスマ性と予測不可能性で知られています。",
+
+    "The-Beyonders": "ビヨンダーズ",
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "神話と現実の境界に位置する伝説的な派閥で、神のような技術的および神秘的な力を持つと言われています。その存在は謎に包まれており、多くの人が彼らを神聖な存在と見なし、その真の性質は未知のままです。",
+
+    "Buy-Diamonds": "ダイヤモンドを購入する",
+    "Diamonds": "ダイヤモンド",
+    "Proceed": "進む",
+    "Complete-Task-to-Earn-Coins": "コインを獲得するためにタスクを完了する",
+    "Daily-Reward": "デイリーリワード",
+    "Can-be-claimed-in": "で請求できます",
+    "New": "新しい",
+    "Start": "開始",
+    "On-Chain": "オンチェーン",
+    "Connect-Wallet": "ウォレットを接続する",
+    "Socials": "ソーシャルメディア",
+    "Click-to-claim-your-daily-reward": "デイリーボーナスを獲得するにはクリックしてください！",
+    "Connect-to-Wallet": "ウォレットを接続する",
+    "Player-s-Name": "プレイヤー名",
+    "Score": "スコア"
 }

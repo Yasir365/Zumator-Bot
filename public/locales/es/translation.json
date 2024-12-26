@@ -74,6 +74,7 @@
     "You-haven’t-invited-anyone-yet": "Aún no has invitado a nadie",
     "List-of-your-Friends": "Lista de tus amigos",
     "Send-Invite": "Enviar invitación",
+    "Collect-Coins": "Recoger monedas",
 
     "Faction": "Facción",
     "Celestial-Nomads": "Nómadas Celestiales",
@@ -89,5 +90,21 @@
     "Starlight-Pirates": "Piratas de la Luz Estelar",
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "Una confederación suelta de saqueadores y forajidos espaciales que viven según su propio código. Son expertos en tácticas de golpe y fuga y son conocidos por su carisma e imprevisibilidad.",
     "The-Beyonders": "Los Más Allá",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Una facción legendaria que se encuentra entre el mito y la realidad, se rumorea que posee poderes tecnológicos y místicos similares a los de los dioses. Su existencia está envuelta en misterio, y muchos los ven como entidades divinas cuya verdadera naturaleza sigue siendo desconocida."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Una facción legendaria que se encuentra entre el mito y la realidad, se rumorea que posee poderes tecnológicos y místicos similares a los de los dioses. Su existencia está envuelta en misterio, y muchos los ven como entidades divinas cuya verdadera naturaleza sigue siendo desconocida.",
+    "Buy-Diamonds": "Comprar diamantes",
+    "Diamonds": "Diamantes",
+    "Proceed": "Proceder",
+
+    "Complete-Task-to-Earn-Coins": "Completa la tarea para ganar monedas",
+    "Daily-Reward": "Recompensa diaria",
+    "Can-be-claimed-in": "Se puede reclamar en",
+    "New": "Nuevo",
+    "Start": "Iniciar",
+    "On-Chain": "En cadena",
+    "Connect-Wallet": "Conectar cartera",
+    "Socials": "Redes sociales",
+    "Click-to-claim-your-daily-reward": "¡Haz clic para reclamar tu recompensa diaria!",
+    "Connect-to-Wallet": "Conectar con la cartera",
+    "Player-s-Name": "Nombre del jugador",
+    "Score": "Puntuación"
 }

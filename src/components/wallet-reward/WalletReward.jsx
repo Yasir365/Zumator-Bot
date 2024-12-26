@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { TonConnectButton, useTonAddress } from '@tonconnect/ui-react';
 import toastr from '../../services/toastr.service';
+import { useTranslation } from 'react-i18next';
 
 
 export default function WalletReward() {
+
+    const { t } = useTranslation();
     const [isWalletConnect, setIsWalletConnect] = useState(false);
 
     const walletAddress = useTonAddress();
@@ -27,7 +30,7 @@ export default function WalletReward() {
                 <div className='d-flex align-items-center'>
                     <img src="/images/icons/wallet.webp" alt="" />
                     {!isWalletConnect ? (
-                        <span className='bold ms-2'>Connect to Wallet</span>
+                        <span className='bold ms-2'>{t('Connect-to-Wallet')}</span>
                     ) : (
                         <div>
                             <span className='bold ms-2'>Wallet Connected:</span>

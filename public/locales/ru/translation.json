@@ -74,6 +74,8 @@
     "You-haven’t-invited-anyone-yet": "Вы еще никого не пригласили",
     "List-of-your-Friends": "Список ваших друзей",
     "Send-Invite": "Отправить приглашение",
+    "Collect-Coins": "Собирайте монеты",
+
 
     "Faction": "Фракция",
     "Celestial-Nomads": "Небесные кочевники",
@@ -89,5 +91,21 @@
     "Starlight-Pirates": "Пираты Света Звезд",
     "A-loose-confederation-of-spacefaring-raiders-and-outlaws-who-live-by-their-own-code.-They-are-skilled-at-hit-and-run-tactics-and-are-known-for-their-charisma-and-unpredictability.": "Свободная конфедерация космических пиратов и изгнанников, живущих по собственному кодексу. Они мастерски владеют тактикой ударов и бегства и известны своим харизматичным и непредсказуемым поведением.",
     "The-Beyonders": "Превосходящие",
-    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Легендарная фракция, балансирующая между мифом и реальностью, которая, как говорят, обладает богоподобными технологическими и мистическими силами. Их существование окутано тайной, многие воспринимают их как божественные сущности, чья истинная природа остается неизвестной."
+    "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.": "Легендарная фракция, балансирующая между мифом и реальностью, которая, как говорят, обладает богоподобными технологическими и мистическими силами. Их существование окутано тайной, многие воспринимают их как божественные сущности, чья истинная природа остается неизвестной.",
+
+    "Buy-Diamonds": "Купить бриллианты",
+    "Diamonds": "Бриллианты",
+    "Proceed": "Продолжить",
+    "Complete-Task-to-Earn-Coins": "Выполните задание, чтобы заработать монеты",
+    "Daily-Reward": "Ежедневная награда",
+    "Can-be-claimed-in": "Можно получить в",
+    "New": "Новый",
+    "Start": "Начать",
+    "On-Chain": "В цепочке",
+    "Connect-Wallet": "Подключить кошелек",
+    "Socials": "Социальные сети",
+    "Click-to-claim-your-daily-reward": "Нажмите, чтобы получить свою ежедневную награду!",
+    "Connect-to-Wallet": "Подключить кошелек",
+    "Player-s-Name": "Имя игрока",
+    "Score": "Счёт"
 }
