@@ -106,5 +106,23 @@
     "Click-to-claim-your-daily-reward": "¡Haz clic para reclamar tu recompensa diaria!",
     "Connect-to-Wallet": "Conectar con la cartera",
     "Player-s-Name": "Nombre del jugador",
-    "Score": "Puntuación"
+    "Score": "Puntuación",
+
+    "Reward-Claimed-Successfully": "Recompensa reclamada con éxito",
+    "Please-select-a-card-pack-before-proceeding": "Por favor, seleccione un paquete de cartas antes de continuar",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "¡Pago exitoso! Disfruta de tus diamantes 🎉",
+    "Payment-failed-or-cancelled": "Pago fallido o cancelado",
+    "Failed-to-generate-payment-link": "Error al generar el enlace de pago",
+    "An-error-occurred-while-processing-payment": "Ocurrió un error al procesar el pago",
+    "Not-enough-coins": "No tienes suficientes monedas",
+    "Not-enough-diamonds": "No tienes suficientes diamantes",
+    "Card-Upgrade-Successfully": "Tarjeta actualizada con éxito",
+    "Ticket-Claimed-Successfully": "Boleto reclamado con éxito",
+    "Address-copied-to-clipboard": "Dirección copiada al portapapeles",
+    "Link-copied-to-clipboard": "Enlace copiado al portapapeles",
+    "Coins-collected-successfully": "Monedas recolectadas con éxito",
+    "Daily-reward-claimed!": "¡Recompensa diaria reclamada!",
+    "Account-deleted-successfully": "Cuenta eliminada con éxito",
+    "Error-deleting-account": "Error al eliminar la cuenta"
+
 }

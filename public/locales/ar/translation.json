@@ -111,11 +111,27 @@
     "Connect-Wallet": "اتصل بالمحفظة",
     "Socials": "وسائل التواصل الاجتماعي",
     "Click-to-claim-your-daily-reward": "انقر للمطالبة بمكافأتك اليومية!",
-    "An-error-occurred-while-processing-payment": "حدث خطأ أثناء معالجة الدفع",
     "Connect-to-Wallet": "اتصل بالمحفظة",
 
     "Player-s-Name": "اسم اللاعب",
-    "Score": "النتيجة"
+    "Score": "النتيجة",
+    "Reward-Claimed-Successfully": "تم المطالبة بالمكافأة بنجاح",
+    "Please-select-a-card-pack-before-proceeding": "يرجى اختيار حزمة بطاقة قبل المتابعة",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "تم الدفع بنجاح! استمتع بالماس الخاص بك 🎉",
+    "Payment-failed-or-cancelled": "فشل الدفع أو تم إلغاؤه",
+    "Failed-to-generate-payment-link": "فشل في توليد رابط الدفع",
+    "An-error-occurred-while-processing-payment": "حدث خطأ أثناء معالجة الدفع",
+    "Not-enough-coins": "ليس لديك ما يكفي من العملات",
+    "Not-enough-diamonds": "ليس لديك ما يكفي من الماس",
+    "Card-Upgrade-Successfully": "تم ترقية البطاقة بنجاح",
+    "Ticket-Claimed-Successfully": "تم المطالبة بالتذكرة بنجاح",
+    "Address-copied-to-clipboard": "تم نسخ العنوان إلى الحافظة",
+    "Link-copied-to-clipboard": "تم نسخ الرابط إلى الحافظة",
+    "Coins-collected-successfully": "تم جمع العملات بنجاح",
+    "Daily-reward-claimed!": "تم المطالبة بالمكافأة اليومية!",
+    "Account-deleted-successfully": "تم حذف الحساب بنجاح",
+    "Error-deleting-account": "خطأ في حذف الحساب"
+
 
 
 }

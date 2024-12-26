@@ -114,5 +114,23 @@
     "Click-to-claim-your-daily-reward": "点击领取您的每日奖励！",
     "Connect-to-Wallet": "连接钱包",
     "Player-s-Name": "玩家姓名",
-    "Score": "得分"
+    "Score": "得分",
+
+    "Reward-Claimed-Successfully": "奖励成功领取",
+    "Please-select-a-card-pack-before-proceeding": "请在继续之前选择一张卡片包",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "付款成功！享受您的钻石 🎉",
+    "Payment-failed-or-cancelled": "支付失败或已取消",
+    "Failed-to-generate-payment-link": "生成支付链接失败",
+    "An-error-occurred-while-processing-payment": "处理支付时发生错误",
+    "Not-enough-coins": "金币不足",
+    "Not-enough-diamonds": "钻石不足",
+    "Card-Upgrade-Successfully": "卡片成功升级",
+    "Ticket-Claimed-Successfully": "票务成功领取",
+    "Address-copied-to-clipboard": "地址已复制到剪贴板",
+    "Link-copied-to-clipboard": "链接已复制到剪贴板",
+    "Coins-collected-successfully": "金币成功收集",
+    "Daily-reward-claimed!": "每日奖励已领取！",
+    "Account-deleted-successfully": "帐户已成功删除",
+    "Error-deleting-account": "删除帐户时出错"
+
 }

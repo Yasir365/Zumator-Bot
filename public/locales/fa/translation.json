@@ -113,5 +113,23 @@
     "Click-to-claim-your-daily-reward": "برای دریافت پاداش روزانه خود کلیک کنید!",
     "Connect-to-Wallet": "اتصال به کیف پول",
     "Player-s-Name": "نام بازیکن",
-    "Score": "امتیاز"
+    "Score": "امتیاز",
+
+    "Reward-Claimed-Successfully": "پاداش با موفقیت دریافت شد",
+    "Please-select-a-card-pack-before-proceeding": "لطفاً قبل از ادامه یک بسته کارت انتخاب کنید",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "پرداخت با موفقیت انجام شد! از الماس‌های خود لذت ببرید 🎉",
+    "Payment-failed-or-cancelled": "پرداخت ناموفق یا لغو شد",
+    "Failed-to-generate-payment-link": "خطا در تولید لینک پرداخت",
+    "An-error-occurred-while-processing-payment": "هنگام پردازش پرداخت خطا رخ داده است",
+    "Not-enough-coins": "سکه کافی نیست",
+    "Not-enough-diamonds": "الماس کافی نیست",
+    "Card-Upgrade-Successfully": "ترفیع کارت با موفقیت انجام شد",
+    "Ticket-Claimed-Successfully": "بلیط با موفقیت دریافت شد",
+    "Address-copied-to-clipboard": "آدرس به کلیپ بورد کپی شد",
+    "Link-copied-to-clipboard": "لینک به کلیپ بورد کپی شد",
+    "Coins-collected-successfully": "سکه‌ها با موفقیت جمع‌آوری شدند",
+    "Daily-reward-claimed!": "پاداش روزانه دریافت شد!",
+    "Account-deleted-successfully": "حساب با موفقیت حذف شد",
+    "Error-deleting-account": "خطا در حذف حساب"
+
 }

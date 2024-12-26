@@ -112,5 +112,23 @@
     "Click-to-claim-your-daily-reward": "デイリーボーナスを獲得するにはクリックしてください！",
     "Connect-to-Wallet": "ウォレットを接続する",
     "Player-s-Name": "プレイヤー名",
-    "Score": "スコア"
+    "Score": "スコア",
+
+    "Reward-Claimed-Successfully": "報酬が正常に受け取られました",
+    "Please-select-a-card-pack-before-proceeding": "続行する前にカードパックを選択してください",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "支払いが成功しました！ ダイヤモンドをお楽しみください 🎉",
+    "Payment-failed-or-cancelled": "支払いに失敗またはキャンセルされました",
+    "Failed-to-generate-payment-link": "支払いリンクの生成に失敗しました",
+    "An-error-occurred-while-processing-payment": "支払い処理中にエラーが発生しました",
+    "Not-enough-coins": "コインが足りません",
+    "Not-enough-diamonds": "ダイヤモンドが足りません",
+    "Card-Upgrade-Successfully": "カードが正常にアップグレードされました",
+    "Ticket-Claimed-Successfully": "チケットが正常に受け取られました",
+    "Address-copied-to-clipboard": "アドレスがクリップボードにコピーされました",
+    "Link-copied-to-clipboard": "リンクがクリップボードにコピーされました",
+    "Coins-collected-successfully": "コインが正常に収集されました",
+    "Daily-reward-claimed!": "デイリー報酬を受け取りました！",
+    "Account-deleted-successfully": "アカウントが正常に削除されました",
+    "Error-deleting-account": "アカウント削除中にエラーが発生しました"
+
 }

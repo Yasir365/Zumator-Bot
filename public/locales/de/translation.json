@@ -106,5 +106,23 @@
     "Connect-to-Wallet": "Mit Wallet verbinden",
 
     "Player-s-Name": "Spielername",
-    "Score": "Punktzahl"
+    "Score": "Punktzahl",
+
+    "Reward-Claimed-Successfully": "Belohnung erfolgreich beansprucht",
+    "Please-select-a-card-pack-before-proceeding": "Bitte wählen Sie ein Kartenpaket aus, bevor Sie fortfahren",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "Zahlung erfolgreich! Genießen Sie Ihre Diamanten 🎉",
+    "Payment-failed-or-cancelled": "Zahlung fehlgeschlagen oder abgebrochen",
+    "Failed-to-generate-payment-link": "Fehler beim Erzeugen des Zahlungslinks",
+    "An-error-occurred-while-processing-payment": "Beim Verarbeiten der Zahlung ist ein Fehler aufgetreten",
+    "Not-enough-coins": "Nicht genügend Münzen",
+    "Not-enough-diamonds": "Nicht genügend Diamanten",
+    "Card-Upgrade-Successfully": "Karten-Upgrade erfolgreich",
+    "Ticket-Claimed-Successfully": "Ticket erfolgreich beansprucht",
+    "Address-copied-to-clipboard": "Adresse in die Zwischenablage kopiert",
+    "Link-copied-to-clipboard": "Link in die Zwischenablage kopiert",
+    "Coins-collected-successfully": "Münzen erfolgreich gesammelt",
+    "Daily-reward-claimed!": "Tägliche Belohnung beansprucht!",
+    "Account-deleted-successfully": "Konto erfolgreich gelöscht",
+    "Error-deleting-account": "Fehler beim Löschen des Kontos"
+
 }

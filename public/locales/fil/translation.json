@@ -113,5 +113,23 @@
     "Click-to-claim-your-daily-reward": "Mag-click upang kunin ang iyong pang-araw-araw na gantimpala!",
     "Connect-to-Wallet": "Ikonekta ang wallet",
     "Player-s-Name": "Pangalan ng manlalaro",
-    "Score": "Iskor"
+    "Score": "Iskor",
+
+    "Reward-Claimed-Successfully": "Matagumpay na na-claim ang reward",
+    "Please-select-a-card-pack-before-proceeding": "Pumili ng card pack bago magpatuloy",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "Matagumpay ang pagbabayad! Mag-enjoy sa iyong mga Diamonds 🎉",
+    "Payment-failed-or-cancelled": "Nag-fail na bayad o kinansela",
+    "Failed-to-generate-payment-link": "Nabigong mag-generate ng payment link",
+    "An-error-occurred-while-processing-payment": "Nagkaroon ng error habang pinoproseso ang pagbabayad",
+    "Not-enough-coins": "Walang sapat na mga coins",
+    "Not-enough-diamonds": "Walang sapat na diamonds",
+    "Card-Upgrade-Successfully": "Na-upgrade ang card ng matagumpay",
+    "Ticket-Claimed-Successfully": "Na-claim ang ticket ng matagumpay",
+    "Address-copied-to-clipboard": "In-copy ang address sa clipboard",
+    "Link-copied-to-clipboard": "In-copy ang link sa clipboard",
+    "Coins-collected-successfully": "Matagumpay na nakolekta ang mga coins",
+    "Daily-reward-claimed!": "Na-claim ang daily reward!",
+    "Account-deleted-successfully": "Matagumpay na na-delete ang account",
+    "Error-deleting-account": "Error sa pag-delete ng account"
+
 }

@@ -125,6 +125,23 @@
     "Connect-to-Wallet": "Connect to Wallet",
 
     "Player-s-Name": "Player’s Name",
-    "Score": "Score"
+    "Score": "Score",
+
+    "Reward-Claimed-Successfully": "Reward Claimed Successfully",
+    "Please-select-a-card-pack-before-proceeding": "Please select a card pack before proceeding",
+    "Payment-successful!-Enjoy-your-Diamonds-🎉": "Payment successful! Enjoy your Diamonds 🎉",
+    "Payment-failed-or-cancelled": "Payment failed or cancelled",
+    "Failed-to-generate-payment-link": "Failed to generate payment link",
+    "An-error-occurred-while-processing-payment": "An error occurred while processing payment",
+    "Not-enough-coins": "Not enough coins",
+    "Not-enough-diamonds": "Not enough diamonds",
+    "Card-Upgrade-Successfully": "Card Upgrade Successfully",
+    "Ticket-Claimed-Successfully": "Ticket Claimed Successfully",
+    "Address-copied-to-clipboard": "Address copied to clipboard",
+    "Link-copied-to-clipboard": "Link copied to clipboard",
+    "Coins-collected-successfully": "Coins collected successfully",
+    "Daily-reward-claimed!": "Daily reward claimed!",
+    "Account-deleted-successfully": "Account deleted successfully",
+    "Error-deleting-account": "Error deleting account"
     
 }
