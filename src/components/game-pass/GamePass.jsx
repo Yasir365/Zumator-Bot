@@ -72,28 +72,36 @@ export default function GamePass() {
                         <div className="modal-body">
                             <h5>{t('Buy-Diamonds')}</h5>
                             <div className="card-wrapper">
-                                {[199, 499, 999, 1299, 1499, 1799].map((amount, index) => (
+                                {[
+                                    { diamonds: 100, price: 1.99 },
+                                    { diamonds: 300, price: 4.99 },
+                                    { diamonds: 650, price: 9.99 },
+                                    { diamonds: 1000, price: 14.99 },
+                                    { diamonds: 2000, price: 29.99 },
+                                    { diamonds: 5000, price: 69.99 }
+                                ].map((pack, index) => (
                                     <div
                                         key={index}
-                                        className={`card ${selectedPack === amount ? 'selected' : ''}`}
-                                        onClick={() => handlePackSelect(amount)}
-                                        style={{ cursor: 'pointer', border: selectedPack === amount ? '2px solid green' : '' }}
+                                        className={`card ${selectedPack === pack.price ? 'selected' : ''}`}
+                                        onClick={() => handlePackSelect(pack.price)}
+                                        style={{ cursor: 'pointer', border: selectedPack === pack.price ? '2px solid green' : '' }}
                                     >
-                                        <h6 className="text-center">{amount / 100} {t('Diamonds')}</h6>
+                                        <h6 className="text-center">{pack.diamonds} {t('Diamonds')}</h6>
                                         <div className='d-flex justify-content-center'>
                                             <img src="/images/icons/bonas.webp" alt="" />
                                         </div>
-                                        <div className="footer mt-2"> ${amount / 100} </div>
+                                        <div className="footer mt-2"> ${pack.price.toFixed(2)} </div>
                                     </div>
                                 ))}
                             </div>
                             <button type="button" className="btn btn-success mt-2" onClick={handleProceed}>
-                            {t('Proceed')}
+                                {t('Proceed')}
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </>
     );
 }
