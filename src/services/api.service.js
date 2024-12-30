@@ -64,3 +64,8 @@ export const cliamFriendsReward = async (data) => {
     const response = await axiosInstance.post('/ClaimFriendInvitationReward', data);
     return response.data.data || [];
 };
+
+export const cliamMysteryBoxes = async (data) => {
+    const response = await axiosInstance.post('/user_claim_mystery_boxes', data);
+    return response.data.data || [];
+};

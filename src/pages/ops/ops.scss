@@ -76,15 +76,32 @@
                 background-color: var(--white);
                 border: 2px solid var(--primary);
                 border-radius: 8px;
+                height: 100px;
 
-                .img {
+                .opened-box {
                     padding: 8px;
                     border-radius: 8px;
-                    height: 109px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
+                    gap: 6px;
+
+                    img {
+                        height: 45px;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .img {
+                    padding: 8px;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 6px;
 
                     .question {
                         width: 32px;

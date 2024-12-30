@@ -1,23 +1,61 @@
 import './ops.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import { Rating } from 'react-simple-star-rating'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import toastr from '../../services/toastr.service';
-import { formatNumber } from '../../services/util.service';
+import { formatNumber, formatTime } from '../../services/util.service';
 import OpsCard from '../../components/ops-card/OpsCard';
 import { useTranslation } from 'react-i18next';
+import { saveUser } from '../../store/userInfoSlice';
+import { cliamMysteryBoxes } from '../../services/api.service';
 
 
 
 export default function Ops() {
 
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState('web3');
   const userInfo = useSelector((state) => state.user.userInfo);
+  const [remainingTime, setRemainingTime] = useState(0);
 
 
-  const collectCoins = () => {
+  useEffect(() => {
+    const calculateRemainingTime = () => {
+      if (!userInfo?.last_mysterybox_claim_at) {
+        setRemainingTime(0);
+        return;
+      }
+      const lastClaimDate = new Date(userInfo.last_mysterybox_claim_at);
+      const currentDate = new Date();
+
+      // const nextClaimTime = new Date(lastClaimDate.getTime() + 3 * 60 * 60 * 1000);
+      const nextClaimTime = new Date(lastClaimDate.getTime() + 5 * 60 * 1000);
+      const timeDifference = nextClaimTime - currentDate;
+      if (timeDifference <= 0) {
+        setRemainingTime(0);
+      } else {
+        setRemainingTime(timeDifference);
+      }
+    };
+
+    calculateRemainingTime();
+
+    const interval = setInterval(() => {
+      calculateRemainingTime();
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [userInfo]);
+
+
+  const collectCoins = async () => {
+    const resp = await cliamMysteryBoxes({ user_id: userInfo.id });
+    if (resp) {
+      console.log("cliamMysteryBoxes :: ", resp);
+      dispatch(saveUser(resp));
+    }
     toastr('success', t('Coins-collected-successfully'))
   }
 
@@ -37,38 +75,41 @@ export default function Ops() {
             </div>
             <div className="d-flex flex-column">
               <p className='amount'>{formatNumber(userInfo.coins)}</p>
-              <p className="time">04:30:00 <img src="/images/icons/info.webp" alt="info" /></p>
+              <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
             </div>
           </div>
         </div>
         <div className="item-container">
-          <div className="item">
-            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-              <img className='question' src="/images/icons/question.webp" alt="" />
-              <img src="/images/icons/coins.webp" alt="" />
-            </div>
-          </div>
-
-          <div className="item">
-            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-              <img className='question' src="/images/icons/question.webp" alt="" />
-              <img src="/images/icons/coins.webp" alt="" />
-            </div>
-          </div>
-
-          <div className="item">
-            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-              <img className='question' src="/images/icons/question.webp" alt="" />
-              <img src="/images/icons/coins.webp" alt="" />
-            </div>
-          </div>
-
-          <div className="item">
-            <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-              <img className='question' src="/images/icons/question.webp" alt="" />
-              <img src="/images/icons/coins.webp" alt="" />
-            </div>
-          </div>
+          {
+            [0, 1, 2, 3].map((item, index) =>
+              <div key={item}>
+                {userInfo && userInfo.mysterybox_info_detail && userInfo.mysterybox_opened != 0 && userInfo.mysterybox_opened - 1 >= index ? (
+                  <div className="item">
+                    <div className="opened-box">
+                      {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.webp" alt="" />}
+                      {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.webp" alt="" />}
+                      {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.webp" alt="" />}
+                      <h5 className='text-dark text-center pt-1'>{userInfo.mysterybox_info_detail[item].reward_amount}</h5>
+                    </div>
+                  </div>
+                ) : userInfo.mysterybox_opened == index && remainingTime == 0 ? (
+                  <div className="item">
+                    <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
+                      <img className='question' src="/images/icons/question.webp" alt="" />
+                      <img src="/images/icons/coins.webp" alt="" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="item">
+                    <div className="img">
+                      <img className='question' src="/images/icons/question.webp" alt="" />
+                      <img src="/images/icons/coins.webp" alt="" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            )
+          }
         </div>
         <div className="d-flex justify-content-center mt-2">
           <img src="/images/ops/coin-box.webp" alt="" />
@@ -78,22 +119,22 @@ export default function Ops() {
       <ul className="nav nav-tabs">
         <li className="nav-item">
           <a className={activeTab === 'web3' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('web3')} >
-          {t('Web-3')} 
+            {t('Web-3')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'market' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('market')} >
-            {t('Market')} 
+            {t('Market')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'galactic' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('galactic')} >
-          {t('Galactic')}  
+            {t('Galactic')}
           </a>
         </li>
         <li className="nav-item">
           <a className={activeTab === 'artifacts' ? 'nav-link active' : 'nav-link'} onClick={() => setActiveTab('artifacts')} >
-          {t('Artifacts')} 
+            {t('Artifacts')}
           </a>
         </li>
       </ul>
