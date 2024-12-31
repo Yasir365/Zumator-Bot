@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 12px;
 
         .left {
             padding: 6px 20px;
@@ -68,7 +68,7 @@
     .daily-board {
         padding: 12px;
         background-color: var(--white);
-        margin-top: 20px;
+        margin-top: 12px;
         border-radius: 12px;
         box-shadow: 0 0 5px 0px var(--warning);
         border: 1px solid var(--warning);
@@ -117,7 +117,7 @@
 
     .balance {
         margin: auto;
-        margin-top: 20px;
+        margin-top: 12px;
         border-radius: 6px;
         display: flex;
         align-items: center;
@@ -132,7 +132,6 @@
     }
 
     .main-image-wrapper {
-        margin-top: 20px;
         display: flex;
         justify-content: center;
 
