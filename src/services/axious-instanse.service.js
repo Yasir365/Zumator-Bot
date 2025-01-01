@@ -9,13 +9,6 @@ const axiosInstance = axios.create({
     },
 });
 
-const axiosInstance2 = axios.create({
-    baseURL: 'https://the-sponsor-backend.vercel.app/the-sponsor-apis/v1/public',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-});
-
 axiosInstance.interceptors.response.use(
     (response) => {
         if (response.data && response.data.success) {
@@ -36,4 +29,4 @@ axiosInstance.interceptors.response.use(
     }
 );
 
-export { axiosInstance, axiosInstance2 };
+export default axiosInstance;

@@ -20,18 +20,21 @@ export default function GamePass() {
         setSelectedPack(amount);
     };
 
-    const handleProceed = async () => {
+    const handleProceed = async (pack) => {
         try {
             const payload = {
-                user_id: userInfo.id,
-                amount: selectedPack,
+                userId: userInfo.id,
+                amount: pack.price,
+                title: `${pack.diamonds} Diamonds`,
+                description: `${pack.diamonds} Diamonds for ${pack.price}`,
+                
             }
             const link = await getInvoiceLink(payload);
             const WebApp = (await import('@twa-dev/sdk')).default;
             console.log("Link :: ", link);
 
             WebApp.openInvoice(link, async (status) => {
-                // const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link });
+                //const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link });
                 if (status === 'paid') {
                     toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
                 } else {
@@ -81,12 +84,13 @@ export default function GamePass() {
                                             <img src="/images/icons/bonas.webp" alt="" />
                                         </div>
                                         <div className="footer mt-2"> ${pack.price.toFixed(2)} </div>
+                                        <button type="button" className="btn btn-success mt-2" onClick={()=>handleProceed(pack)}>
+                                            {t('Proceed')}
+                                        </button>
                                     </div>
                                 ))}
                             </div>
-                            <button type="button" className="btn btn-success mt-2" onClick={handleProceed}>
-                                {t('Proceed')}
-                            </button>
+                            
                         </div>
                     </div>
                 </div>

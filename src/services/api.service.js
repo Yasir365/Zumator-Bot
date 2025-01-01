@@ -1,4 +1,4 @@
-import { axiosInstance, axiosInstance2 } from "./axious-instanse.service";
+import axiosInstance from "./axious-instanse.service";
 
 export const registerUser = async (data) => {
     const response = await axiosInstance.post('/zumator_user_register', data);
@@ -71,7 +71,7 @@ export const cliamMysteryBoxes = async (data) => {
 };
 
 export const getInvoiceLink = async (data) => {
-    const response = await axiosInstance2.post('/create-invoice-link', data);
+    const response = await axiosInstance.post('/create-invoice', data);
     return response.data.link || '';
 };
 
