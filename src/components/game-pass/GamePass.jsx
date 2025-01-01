@@ -5,34 +5,50 @@ import { useTranslation } from 'react-i18next';
 export default function GamePass() {
 
     const { t } = useTranslation();
-    const [selectedPack, setSelectedPack] = useState(null); // Track selected pack
+    const [selectedPack, setSelectedPack] = useState(1.99);
 
     useEffect(() => {
-        // Ensure Telegram WebApp API is available
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.ready();
         }
     }, []);
 
     const handlePackSelect = (amount) => {
-        setSelectedPack(amount); // Update selected pack amount
+        setSelectedPack(amount);
     };
 
-    const handleProceed = async () => {
-        if (!selectedPack) {
-            toastr('error', t('Please-select-a-card-pack-before-proceeding'));
-            return;
-        }
+    const createInvoiceLink = async () => {
+        app.post("/create-invoice", async (req, res) => {
 
+            const invoiceLink = await botApi.createInvoiceLink(
+                "Title", //title
+                "Some description", //description
+                "{}", //payload
+                "", // For Telegram Stars payment this should be empty
+                "XTR", //currency
+                [{ amount: 1, label: "Diamond" }], //prices
+            );
+
+            res.json({ invoiceLink });
+        });
+    }
+    const handleProceed = async () => {
         try {
-            // Call your backend to create the invoice link
+            const { invoiceLink } = await useGetInvoiceLink();
+            
+            WebApp.openInvoice(invoiceLink, (status) => {
+                if (status === "paid") {
+                    // Do your updates 
+                }
+            });
+            debugger
             const response = await fetch('/create-invoice', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    title: 'Buy Diamonds', // Payment title
-                    description: `Purchase ${selectedPack / 100} Diamonds`, // Description
-                    amount: selectedPack, // Selected pack amount
+                    title: 'Buy Diamonds',
+                    description: `Purchase ${selectedPack} Diamonds`,
+                    amount: selectedPack,
                 }),
             });
 
@@ -42,7 +58,7 @@ export default function GamePass() {
                     if (status === 'paid') {
                         toastr('success', t('Payment-successful!-Enjoy-your-Diamonds-🎉'));
                     } else {
-                        toastr('error', t('Payment-failed-or-cancelled'));
+                        toastr('error', t('Payment Failed'));
                     }
                 });
             } else {

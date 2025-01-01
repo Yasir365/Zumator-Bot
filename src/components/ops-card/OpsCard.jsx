@@ -47,6 +47,7 @@ export default function OpsCard({ pageType }) {
 
     return (
         <div className="tab-content d-flex">
+            {!fetchloader && data.length == 0 && <div className="api-loader"><h5 className="text-white">No Data Found</h5></div>}
             {!fetchloader && data.map((item, index) => (
                 <div className="item" key={index} style={{ background: item.card_bg_color }}>
                     <div className="card-image">
