@@ -26,12 +26,14 @@ export default function GamePass() {
                 user_id: userInfo.id,
                 amount: selectedPack,
             }
-            const { invoiceLink } = await getInvoiceLink(payload);
+            const link = await getInvoiceLink(payload);
+            const WebApp = (await import('@twa-dev/sdk')).default;
+            console.log("Link :: ", link);
 
-            WebApp.openInvoice(invoiceLink, async(status) => {
-                const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: invoiceLink });
+            WebApp.openInvoice(link, async (status) => {
+                // const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link });
                 if (status === 'paid') {
-                    toastr('success', t('Payment-successful!-Enjoy-your-Diamonds-🎉'));
+                    toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
                 } else {
                     toastr('error', t('Payment Failed'));
                 }
