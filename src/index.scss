@@ -24,11 +24,11 @@ body {
     min-width: 320px;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
     color: var(--black);
     font-size: 12px;
-    background: url('/images/background.webp') no-repeat center center;
-    background-size: cover;
+    // background: url('/images/background.webp') no-repeat center center;
+    // background-size: cover;
 }
 
 a {
@@ -126,4 +126,11 @@ div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
         width: 3rem;
         height: 3rem;
     }
+}
+
+.end_area,
+.top_area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
