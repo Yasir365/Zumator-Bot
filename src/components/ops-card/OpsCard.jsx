@@ -61,6 +61,7 @@ export default function OpsCard({ pageType }) {
                             <div className="profit">{t('Profit-per-hour')}</div>
                             <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {item.card_level[item.user_level_no - 1].profit_per_hour}</div>
                         </div>
+                        <div className="description mt-1">{item.description}</div>
                         <div className="card-footer" onClick={() => upgradeCard(item)}>
                             <p>{t(`Lvl-${item.user_level_no}`)}</p>
                             <div className="value">
