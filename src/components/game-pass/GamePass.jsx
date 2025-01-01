@@ -27,7 +27,7 @@ export default function GamePass() {
                 amount: pack.price,
                 title: `${pack.diamonds} Diamonds`,
                 description: `${pack.diamonds} Diamonds for ${pack.price}`,
-                
+
             }
             const link = await getInvoiceLink(payload);
             const WebApp = (await import('@twa-dev/sdk')).default;
@@ -84,13 +84,13 @@ export default function GamePass() {
                                             <img src="/images/icons/bonas.webp" alt="" />
                                         </div>
                                         <div className="footer mt-2"> ${pack.price.toFixed(2)} </div>
-                                        <button type="button" className="btn btn-success mt-2" onClick={()=>handleProceed(pack)}>
-                                            {t('Proceed')}
+                                        <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(pack)}>
+                                            {t('Buy')}
                                         </button>
                                     </div>
                                 ))}
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
