@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import toastr from '../../services/toastr.service';
 import { useTranslation } from 'react-i18next';
+import { getInvoiceLink, updatePaymentStatus } from '../../services/api.service';
+import { useSelector } from 'react-redux';
 
 export default function GamePass() {
 
     const { t } = useTranslation();
+    const userInfo = useSelector((state) => state.user.userInfo);
     const [selectedPack, setSelectedPack] = useState(1.99);
 
     useEffect(() => {
@@ -17,53 +20,22 @@ export default function GamePass() {
         setSelectedPack(amount);
     };
 
-    const createInvoiceLink = async () => {
-        app.post("/create-invoice", async (req, res) => {
-
-            const invoiceLink = await botApi.createInvoiceLink(
-                "Title", //title
-                "Some description", //description
-                "{}", //payload
-                "", // For Telegram Stars payment this should be empty
-                "XTR", //currency
-                [{ amount: 1, label: "Diamond" }], //prices
-            );
-
-            res.json({ invoiceLink });
-        });
-    }
     const handleProceed = async () => {
         try {
-            const { invoiceLink } = await useGetInvoiceLink();
-            
-            WebApp.openInvoice(invoiceLink, (status) => {
-                if (status === "paid") {
-                    // Do your updates 
+            const payload = {
+                user_id: userInfo.id,
+                amount: selectedPack,
+            }
+            const { invoiceLink } = await getInvoiceLink(payload);
+
+            WebApp.openInvoice(invoiceLink, async(status) => {
+                const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: invoiceLink });
+                if (status === 'paid') {
+                    toastr('success', t('Payment-successful!-Enjoy-your-Diamonds-🎉'));
+                } else {
+                    toastr('error', t('Payment Failed'));
                 }
             });
-            debugger
-            const response = await fetch('/create-invoice', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    title: 'Buy Diamonds',
-                    description: `Purchase ${selectedPack} Diamonds`,
-                    amount: selectedPack,
-                }),
-            });
-
-            const data = await response.json();
-            if (data.invoiceLink) {
-                window.Telegram.WebApp.openInvoice(data.invoiceLink, (status) => {
-                    if (status === 'paid') {
-                        toastr('success', t('Payment-successful!-Enjoy-your-Diamonds-🎉'));
-                    } else {
-                        toastr('error', t('Payment Failed'));
-                    }
-                });
-            } else {
-                toastr('error', t('Failed-to-generate-payment-link'));
-            }
         } catch (error) {
             console.error('Error:', error);
             toastr("error", t('An-error-occurred-while-processing-payment'));

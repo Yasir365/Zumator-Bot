@@ -69,3 +69,13 @@ export const cliamMysteryBoxes = async (data) => {
     const response = await axiosInstance.post('/user_claim_mystery_boxes', data);
     return response.data.data || [];
 };
+
+export const getInvoiceLink = async (data) => {
+    const response = await axiosInstance.post('/getInvoiceLink', data);
+    return response.data.data || [];
+};
+
+export const updatePaymentStatus = async (data) => {
+    const response = await axiosInstance.post('/updatePaymentStatus', data);
+    return response.data.data || [];
+};
