@@ -82,32 +82,32 @@ export default function Ops() {
         <div className="item-container">
           {
             [0, 1, 2, 3].map((item, index) =>
-              <div key={item}>
-                {userInfo && userInfo.mysterybox_info_detail && userInfo.mysterybox_opened != 0 && userInfo.mysterybox_opened - 1 >= index ? (
-                  <div className="item">
-                    <div className="opened-box">
-                      {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.webp" alt="" />}
-                      {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.webp" alt="" />}
-                      {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.webp" alt="" />}
-                      <h5 className='text-dark text-center pt-1'>{userInfo.mysterybox_info_detail[item].reward_amount}</h5>
-                    </div>
-                  </div>
-                ) : userInfo.mysterybox_opened == index && remainingTime == 0 ? (
-                  <div className="item">
-                    <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-                      <img className='question' src="/images/icons/question.webp" alt="" />
-                      <img src="/images/icons/coins.webp" alt="" />
-                    </div>
-                  </div>
-                ) : (
+              // <div key={item}>
+              //   {userInfo && userInfo.mysterybox_info_detail && userInfo.mysterybox_opened != 0 && userInfo.mysterybox_opened - 1 >= index ? (
+              //     <div className="item">
+              //       <div className="opened-box">
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.webp" alt="" />}
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.webp" alt="" />}
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.webp" alt="" />}
+              //         <h5 className='text-dark text-center pt-1'>{userInfo.mysterybox_info_detail[item].reward_amount}</h5>
+              //       </div>
+              //     </div>
+              //   ) : userInfo.mysterybox_opened == index && remainingTime == 0 ? (
+              //     <div className="item">
+              //       <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
+              //         <img className='question' src="/images/icons/question.webp" alt="" />
+              //         <img src="/images/icons/coins.webp" alt="" />
+              //       </div>
+              //     </div>
+              //   ) : (
                   <div className="item">
                     <div className="img">
                       <img className='question' src="/images/icons/question.webp" alt="" />
                       <img src="/images/icons/coins.webp" alt="" />
                     </div>
                   </div>
-                )}
-              </div>
+              //   )}
+              // </div>
             )
           }
         </div>

@@ -78,7 +78,7 @@
       margin-top: 12px;
 
       .item {
-        width: 90px;
+        width: calc(25% - 8px);
         background-color: var(--white);
         border: 2px solid var(--primary);
         border-radius: 8px;
