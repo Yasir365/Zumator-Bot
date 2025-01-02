@@ -81,7 +81,7 @@ export default function GamePass() {
                                     >
                                         <h6 className="text-center">{pack.diamonds} {t('Diamonds')}</h6>
                                         <div className='d-flex justify-content-center'>
-                                            <img src="/images/icons/bonas.webp" alt="" />
+                                            <img src="/images/icons/bonas.png" alt="" />
                                         </div>
                                         <div className="footer mt-2"> ${pack.price.toFixed(2)} </div>
                                         <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(pack)}>

@@ -68,7 +68,7 @@ export default function Ops() {
           </div>
           <div className='earning d-flex align-items-between align-items-center'>
             <div className="icon me-2">
-              <img className='usdt' src="/images/icons/usdt.webp" alt="usdt" />
+              <img className='usdt' src="/images/icons/usdt.png" alt="usdt" />
             </div>
             <div className="d-flex flex-column">
               <p className='amount'>{formatNumber(userInfo.coins)}</p>
@@ -84,8 +84,8 @@ export default function Ops() {
               //     <div className="item">
               //       <div className="opened-box">
               //         {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.webp" alt="" />}
-              //         {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.webp" alt="" />}
-              //         {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.webp" alt="" />}
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.png" alt="" />}
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.png" alt="" />}
               //         <h5 className='text-dark text-center pt-1'>{userInfo.mysterybox_info_detail[item].reward_amount}</h5>
               //       </div>
               //     </div>

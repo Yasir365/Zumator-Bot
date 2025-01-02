@@ -47,7 +47,7 @@ export default function Friends() {
           </div>
           <div className='reward'>
             <div className="title">{t('Invite-a-friend')}</div>
-            <div className="value"><img src="/images/icons/bonas.webp" alt="" /> <span className='warn'>+0.1 </span>{t('for-you-and-your-friend')}</div>
+            <div className="value"><img src="/images/icons/bonas.png" alt="" /> <span className='warn'>+0.1 </span>{t('for-you-and-your-friend')}</div>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function Friends() {
                 </div>
               </div>
               <div className='profit'>
-                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {formatNumber(item.coins)}</div>
+                <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {formatNumber(item.coins)}</div>
               </div>
             </div>
           ))}

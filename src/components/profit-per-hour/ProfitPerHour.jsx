@@ -9,7 +9,7 @@ export default function ProfitPerHour() {
             <div className='right'>
                 <div className="item">
                     <Link to="/faction">
-                        <img src="/images/icons/grid.webp" alt="" />
+                        <img src="/images/icons/grid.png" alt="" />
                     </Link>
                     <p>{t('Profit-per-hour')} <span>0</span> <small> /hr</small></p>
                 </div>

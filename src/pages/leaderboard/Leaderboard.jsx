@@ -54,19 +54,19 @@ export default function Leaderboard() {
       <div className="middle_area">
         <Slider {...settings}>
           <div className="item-container">
-            <img src="/images/hero.webp" alt="" />
+            <img src="/images/hero.png" alt="" />
             <h6>{t("Recruite")}</h6>
           </div>
           <div className="item-container">
-            <img src="/images/hero.webp" alt="" />
+            <img src="/images/hero.png" alt="" />
             <h6>{t("Recruite")}</h6>
           </div>
           <div className="item-container">
-            <img src="/images/hero.webp" alt="" />
+            <img src="/images/hero.png" alt="" />
             <h6>{t("Recruite")}</h6>
           </div>
           <div className="item-container">
-            <img src="/images/hero.webp" alt="" />
+            <img src="/images/hero.png" alt="" />
             <h6>{t("Recruite")}</h6>
           </div>
         </Slider>

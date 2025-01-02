@@ -17,5 +17,10 @@
     .setting {
         padding-left: 6px;
         border-left: 1px solid var(--black);
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
