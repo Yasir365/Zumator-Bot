@@ -1,4 +1,4 @@
-import './rewards.scss';
+import './tasks.scss';
 import { useState } from 'react';
 import FriendsReward from '../../components/friends-reward/FriendsReward';
 import NewReward from '../../components/new-reward/NewReward';
@@ -7,13 +7,13 @@ import WalletReward from '../../components/wallet-reward/WalletReward';
 import { useTranslation } from 'react-i18next';
 
 
-export default function Rewards() {
+export default function Tasks() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('new');
 
 
   return (
-    <div className="rewards-page">
+    <div className="tasks-page">
 
       <h3 className='heading'>{t('Complete-Task-to-Earn-Coins')}</h3>
 

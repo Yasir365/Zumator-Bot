@@ -8,10 +8,10 @@ import PrivacyPolicy from './pages/settings/Privacy-Policy';
 import Language from './pages/settings/Language';
 import Arena from './pages/arena/Arena';
 import Leaderboard from './pages/leaderboard/Leaderboard';
-import Rewards from './pages/rewards/Rewards';
 import SpacePort from './pages/space-port/SpacePort';
 import Faction from './pages/faction/Faction';
 import Skins from './pages/skins/Skins';
+import Tasks from './pages/tasks/Tasks';
 
 const router = createBrowserRouter([
     {
@@ -55,8 +55,8 @@ const router = createBrowserRouter([
                 element: <Language />,
             },
             {
-                path: 'rewards',
-                element: <Rewards />,
+                path: 'tasks',
+                element: <Tasks />,
             },
             {
                 path: 'faction',

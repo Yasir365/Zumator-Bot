@@ -21,7 +21,7 @@ export default function DailyMissionBoard() {
           <p>{t("Reward")}</p>
         </div>
 
-        <Link to="/rewards" className="item">
+        <Link to="/tasks" className="item">
           <div className="img">
             <img src="/images/avatars/4.png" alt="img" />
           </div>
