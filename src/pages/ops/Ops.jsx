@@ -72,7 +72,7 @@ export default function Ops() {
             </div>
             <div className="d-flex flex-column">
               <p className='amount'>{formatNumber(userInfo.coins)}</p>
-              <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.webp" alt="info" /></p>
+              <p className="time">{formatTime(remainingTime)} <img src="/images/icons/info.png" alt="info" /></p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Ops() {
               //   {userInfo && userInfo.mysterybox_info_detail && userInfo.mysterybox_opened != 0 && userInfo.mysterybox_opened - 1 >= index ? (
               //     <div className="item">
               //       <div className="opened-box">
-              //         {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.webp" alt="" />}
+              //         {userInfo.mysterybox_info_detail[index].reward_type == 'coins' && <img src="/images/icons/coins.png" alt="" className='coins-img'  />}
               //         {userInfo.mysterybox_info_detail[index].reward_type == 'keys' && <img src="/images/icons/key.png" alt="" />}
               //         {userInfo.mysterybox_info_detail[index].reward_type == 'diamonds' && <img src="/images/icons/bonas.png" alt="" />}
               //         <h5 className='text-dark text-center pt-1'>{userInfo.mysterybox_info_detail[item].reward_amount}</h5>
@@ -92,15 +92,17 @@ export default function Ops() {
               //   ) : userInfo.mysterybox_opened == index && remainingTime == 0 ? (
               //     <div className="item">
               //       <div className="img" data-bs-toggle="modal" data-bs-target="#misteryBoxModal">
-              //         <img className='question' src="/images/icons/question.webp" alt="" />
-              //         <img src="/images/icons/coins.webp" alt="" />
+              //         <img className='question' src="/images/icons/question.png" alt="" />
+              //         <img src="/images/icons/coins.png" alt="" className='coins-img'  />
               //       </div>
               //     </div>
               //   ) : (
               <div className="item">
                 <div className="img">
-                  <img className='question' src="/images/icons/question.webp" alt="" />
-                  <img src="/images/icons/coins.webp" alt="" />
+                  <img className='question' src="/images/icons/question.png" alt="" />
+                  <div className="coins-img">
+                    <img src="/images/icons/coins.png" alt="" />
+                  </div>
                 </div>
               </div>
               //   )}
