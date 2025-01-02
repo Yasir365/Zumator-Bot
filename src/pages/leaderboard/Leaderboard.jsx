@@ -80,7 +80,7 @@ export default function Leaderboard() {
                 <div className="item">
                   <div className="index">{index + 1}</div>
                   <div className="profile-image">
-                    <img src="/images/leaderboard/profile.webp" alt="" />
+                    <img src="/images/leaderboard/profile.png" alt="" />
                   </div>
                   <div className="player">
                     <small className="title">{t("Player-s-Name")}</small>
