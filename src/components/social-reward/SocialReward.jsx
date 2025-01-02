@@ -22,10 +22,10 @@ export default function SocialReward() {
 
     return (
         <>
-            {!fetchloader && data.length == 0 && <div className="api-loader"><h5 className="text-white">No Data Found</h5></div>}
-            {!fetchloader && data.length > 0 &&
-                <div className="tab-content">
-                    {data.map((item, index) => (
+            <div className="tab-content">
+                {!fetchloader && data.length == 0 && <div className="d-flex justify-content-center w-100"><h5 className="no-data">No Task Available</h5></div>}
+                {!fetchloader && data.length > 0 &&
+                    data.map((item, index) => (
                         <div className='w-100' key={index}>
                             <div className="d-flex justify-content-between align-items-center pb-1">
                                 <div className='d-flex align-items-center'>
@@ -46,9 +46,8 @@ export default function SocialReward() {
                             {index !== data.length - 1 && (<hr />)}
                         </div>
                     ))}
-                </div>
-            }
-            {fetchloader && <div className="api-loader"><div className="spinner-border" role="status"></div></div>}
+                {fetchloader && <div className="d-flex justify-content-center w-100"><div className="spinner-border" role="status"></div></div>}
+            </div>
         </>
     )
 }

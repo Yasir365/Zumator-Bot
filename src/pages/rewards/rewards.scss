@@ -90,6 +90,9 @@
         background-size: cover;
         background-position: center center;
 
+        .no-data{
+            color: var(--primary);
+        }
         img{
             width: 40px;
             height: 40px;
