@@ -72,11 +72,17 @@ export default function OpsCard({ pageType }) {
                         <div className="description mt-1">{item.description}</div>
                         <div className="card-footer" onClick={() => upgradeCard(item)}>
                             <p>{t(`Lvl-${item.user_level_no}`)}</p>
-                            <div className="value">
-                                {item.method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
-                                {item.method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
-                                {calculateUnlockPrice(item)}
-                            </div>
+                            {
+                                item.upgrade_lock == 'Yes' ? (
+                                    <div className="lock"><i class="fa-solid fa-lock"></i></div>
+                                ) : (
+                                    <div className="value">
+                                        {item.method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
+                                        {item.method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
+                                        {calculateUnlockPrice(item)}
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
