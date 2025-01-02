@@ -9,35 +9,145 @@ export default function DailyMissionBoard() {
       <div className="item-container">
         <div className="item">
           <div className="img">
-            {" "}
-            <img src="/images/avatars/1.png" alt="img" />{" "}
+            <img src="/images/avatars/1.png" alt="img" />
           </div>
           <p>{t("Combo")}</p>
         </div>
 
-        {/* <div className="item">
+        <div className="item" data-bs-toggle="modal" data-bs-target="#dailyRewardModal">
           <div className="img">
-            {" "}
-            <img src="/images/avatars/2.png" alt="img" />{" "}
+            <img src="/images/avatars/3.png" alt="img" />
           </div>
-          <p>{t("Cypher")}</p>
-        </div> */}
+          <p>{t("Reward")}</p>
+        </div>
 
         <Link to="/rewards" className="item">
           <div className="img">
-            {" "}
-            <img src="/images/avatars/3.png" alt="img" />{" "}
-          </div>
-          <p>{t("Reward")}</p>
-        </Link>
-        <Link to="/rewards" className="item">
-          <div className="img">
-            {" "}
-            <img src="/images/avatars/4.png" alt="img" />{" "}
+            <img src="/images/avatars/4.png" alt="img" />
           </div>
           <p>{t("Task")}</p>
         </Link>
       </div>
+
+
+
+      {/* Daily Reward Modal */}
+      <div className="modal fade text-center" id="dailyRewardModal" aria-labelledby="dailyRewardModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
+              <h5>{t('Buy-Diamonds')}</h5>
+              <div className="card-wrapper">
+                {[{ diamonds: 100, price: 1.99 },].map((pack, index) => (
+                  <div key={index} className={`card`} >
+                    Comming Soon
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+
+// import { formatTime } from '../../services/util.service';
+// import toastr from '../../services/toastr.service';
+// import { useDispatch, useSelector } from "react-redux";
+// import { claimDailyReward } from '../../services/api.service';
+// import { saveUser } from '../../store/userInfoSlice';
+
+
+
+// const [isClaimed, setIsClaimed] = useState(true);
+// const dispatch = useDispatch();
+// const userInfo = useSelector((state) => state.user.userInfo);
+// const [remainingTime, setRemainingTime] = useState();
+
+
+
+// useEffect(() => {
+//   const calculateRemainingTime = () => {
+//     if (!userInfo?.last_claim_date_time) {
+//       setRemainingTime(0);
+//       setIsClaimed(false);
+//       return;
+//     }
+
+//     const lastClaimDate = new Date(userInfo.last_claim_date_time);
+//     const currentDate = new Date();
+
+//     const lastClaimDay = new Date(lastClaimDate.getFullYear(), lastClaimDate.getMonth(), lastClaimDate.getDate());
+//     const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+
+//     if (currentDay > lastClaimDay) {
+//       setRemainingTime(0);
+//       setIsClaimed(false);
+//     } else {
+//       const nextDayStart = new Date(currentDay);
+//       nextDayStart.setDate(nextDayStart.getDate() + 1);
+//       const timeDifference = nextDayStart - currentDate;
+
+//       setRemainingTime(timeDifference);
+//       setIsClaimed(true);
+//     }
+//   };
+
+//   calculateRemainingTime();
+
+//   const interval = setInterval(() => {
+//     calculateRemainingTime();
+//   }, 1000);
+
+//   return () => clearInterval(interval);
+// }, [userInfo]);
+
+
+
+// const handleClaim = async () => {
+//     if (!isClaimed) {
+//       const params = {
+//         user_id: userInfo.id,
+//       };
+
+//       const data = await claimDailyReward(params);
+//       if (data) {
+//         dispatch(saveUser(data));
+//         toastr('success', t('Daily-reward-claimed!'));
+
+//         setIsClaimed(true);
+//         const nextDayStart = new Date();
+//         nextDayStart.setHours(24, 0, 0, 0);
+//         const timeDifference = nextDayStart - new Date();
+//         setRemainingTime(timeDifference);
+//       }
+//     }
+//   };
+
+
+// {
+//   userInfo.last_claim_day_id != 'Day_30' &&
+//   <div className="daily-reward d-flex justify-content-between align-items-center" onClick={handleClaim}>
+//     <div className="d-flex">
+//       <img src='/images/icons/reward.png' alt="" style={{ borderRadius: 0 }} />
+//       <div className="ms-2">
+//         <p className="head">{t('Daily-Reward')}</p>
+//         {isClaimed ? (
+//           <>
+//             <p>{t('Can-be-claimed-in')}</p>
+//             <p>{formatTime(remainingTime)}</p>
+//           </>
+//         ) : (
+//           <>
+//             <p>{t('Click-to-claim-your-daily-reward')}</p>
+//             <p>00:00:00</p>
+//           </>
+//         )}
+//       </div>
+//     </div>
+//     <i className={`fa-solid fa-chevron-right ${isClaimed ? 'disabled' : ''}`} />
+//   </div>
+// }
