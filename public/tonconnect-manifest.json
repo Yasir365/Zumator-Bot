@@ -1,6 +1,6 @@
 {
     "url": "https://zumator-bot.vercel.app",
     "name": "Zumator",
-    "iconUrl": "https://zumator-bot.vercel.app/images/icons/frog.webp",
+    "iconUrl": "https://zumator-bot.vercel.app/images/icons/frog.png",
     "description": "Your app description for TON Connect"
 }
