@@ -10,7 +10,7 @@ export default function KeysAndDiamonds() {
                 <span>{userInfo ? userInfo.keys : 10}</span>
             </div>
             <div className="item">
-                <img src="/images/icons/bonas.webp" alt="" />
+                <img src="/images/icons/bonas2.png" alt="" />
                 <span>{userInfo ? userInfo.diamonds : 5}</span>
             </div>
         </div>
