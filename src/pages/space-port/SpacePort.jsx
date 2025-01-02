@@ -30,11 +30,9 @@ function PrevArrow(props) {
 const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
 };
@@ -43,7 +41,9 @@ export default function SpacePort() {
     return (
         <div className="space-port-page">
             <div className="overlay">
-                <img src="/images/comming-soon.png" alt="" />
+                <div className="img-container">
+                    <img src="/images/comming-soon.png" alt="" />
+                </div>
             </div>
             <div className='inner'>
                 <Slider {...settings}>
