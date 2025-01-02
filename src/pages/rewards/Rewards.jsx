@@ -87,7 +87,7 @@ export default function Rewards() {
         userInfo.last_claim_day_id != 'Day_30' &&
         <div className="daily-reward d-flex justify-content-between align-items-center" onClick={handleClaim}>
           <div className="d-flex">
-            <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
+            <img src='/images/icons/reward.png' alt="" style={{ borderRadius: 0 }} />
             <div className="ms-2">
               <p className="head">{t('Daily-Reward')}</p>
               {isClaimed ? (

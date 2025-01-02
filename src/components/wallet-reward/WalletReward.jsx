@@ -28,7 +28,7 @@ export default function WalletReward() {
         <div className="tab-content">
             <div className="d-flex justify-content-between align-items-center w-100">
                 <div className='d-flex align-items-center'>
-                    <img src="/images/icons/wallet.webp" alt="" />
+                    <img src="/images/icons/wallet.png" alt="" />
                     {!isWalletConnect ? (
                         <span className='bold ms-2'>{t('Connect-to-Wallet')}</span>
                     ) : (
