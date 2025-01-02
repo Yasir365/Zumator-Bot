@@ -29,7 +29,7 @@ export default function Home() {
         <DailyMissionBoard />
 
         <div className="balance">
-          <img src="/images/icons/usdt.svg" alt="" width="100%" height="100%" />
+          <img src="/images/icons/usdt.png" alt="" width="100%" height="100%" />
           <span>{formatNumber(userInfo.coins)}</span>
         </div>
       </div>

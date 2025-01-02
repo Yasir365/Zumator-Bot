@@ -13,7 +13,9 @@ export default function Arena() {
   return (
     <div className="arena-page">
       <div className="overlay">
-        <img src="/images/comming-soon.png" alt="" />
+        <div className="img-container">
+          <img src="/images/comming-soon.png" alt="" />
+        </div>
       </div>
       <div className="inner">
         <h4 className="heading"> Arena </h4>

@@ -12,9 +12,11 @@ export default function Header() {
         <>
             <header className="user-header">
                 <div className="d-flex align-items-center">
-                    <Link to="/skins">
-                        <img src='/images/profile.webp' alt="img" loading="lazy" />
-                    </Link>
+                    <div className='profile'>
+                        <Link to="/skins">
+                            <img src='/images/profile.png' alt="img" loading="lazy" />
+                        </Link>
+                    </div>
                     {userInfo ? (
                         <>
                             <p className="title">

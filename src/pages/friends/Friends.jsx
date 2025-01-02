@@ -70,7 +70,7 @@ export default function Friends() {
             <div className="item" key={index}>
               <div className="card-info">
                 <div className="card-image">
-                  <img src='/images/leaderboard/profile.webp' alt="" />
+                  <img src='/images/leaderboard/profile.png' alt="" />
                 </div>
                 <div className='user'>
                   <div className="title">{item.first_name + ' ' + item.last_name}</div>
