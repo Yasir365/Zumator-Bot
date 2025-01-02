@@ -43,7 +43,7 @@ export default function Friends() {
       <div className="item">
         <div className="card-info">
           <div className="card-image">
-            <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
+            <img src='/images/icons/reward.png' alt="" style={{ borderRadius: 0 }} />
           </div>
           <div className='reward'>
             <div className="title">{t('Invite-a-friend')}</div>
