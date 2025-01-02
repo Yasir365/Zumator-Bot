@@ -76,6 +76,6 @@ export const getInvoiceLink = async (data) => {
 };
 
 export const updatePaymentStatus = async (data) => {
-    const response = await axiosInstance.post('/updatePaymentStatus', data);
+    const response = await axiosInstance.post('/update-payment-status', data);
     return response.data.data || [];
 };
