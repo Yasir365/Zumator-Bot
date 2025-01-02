@@ -8,17 +8,12 @@ export default function GamePass() {
 
     const { t } = useTranslation();
     const userInfo = useSelector((state) => state.user.userInfo);
-    const [selectedPack, setSelectedPack] = useState(1.99);
 
     useEffect(() => {
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.ready();
         }
     }, []);
-
-    const handlePackSelect = (amount) => {
-        setSelectedPack(amount);
-    };
 
     const handleProceed = async (pack) => {
         try {
@@ -34,8 +29,8 @@ export default function GamePass() {
             console.log("Link :: ", link);
 
             WebApp.openInvoice(link, async (status) => {
-                //const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link });
                 if (status === 'paid') {
+                    const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link, status: 'paid', amount: pack.price });
                     toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
                 } else {
                     toastr('error', t('Payment Failed'));
@@ -75,9 +70,7 @@ export default function GamePass() {
                                 ].map((pack, index) => (
                                     <div
                                         key={index}
-                                        className={`card ${selectedPack === pack.price ? 'selected' : ''}`}
-                                        onClick={() => handlePackSelect(pack.price)}
-                                        style={{ cursor: 'pointer', border: selectedPack === pack.price ? '2px solid green' : '' }}
+                                        className={`card`}
                                     >
                                         <h6 className="text-center">{pack.diamonds} {t('Diamonds')}</h6>
                                         <div className='d-flex justify-content-center'>
