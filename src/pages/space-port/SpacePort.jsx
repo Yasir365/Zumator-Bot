@@ -38,12 +38,20 @@ const settings = {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
 };
+import React, { useEffect } from "react";
 
 export default function SpacePort() {
+    const [width, setWidth] = React.useState(0)
+
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [])
     return (
         <div className="space-port-page">
             <div className="overlay">
                 <img src="/images/comming-soon.png" alt="" />
+
+                <h1 className='text-white'>{width}</h1>
             </div>
             <div className='inner'>
                 <Slider {...settings}>
