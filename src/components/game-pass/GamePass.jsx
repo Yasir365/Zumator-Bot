@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import toastr from '../../services/toastr.service';
 import { useTranslation } from 'react-i18next';
 import { getInvoiceLink, updatePaymentStatus } from '../../services/api.service';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { saveUser } from '../../store/userInfoSlice';
 
 export default function GamePass() {
 
     const { t } = useTranslation();
     const userInfo = useSelector((state) => state.user.userInfo);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (window.Telegram && window.Telegram.WebApp) {
@@ -31,6 +33,9 @@ export default function GamePass() {
             WebApp.openInvoice(link, async (status) => {
                 if (status === 'paid') {
                     const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link, status: 'paid', amount: pack.price, diamonds: pack.diamonds });
+                    if(result){
+                        dispatch(saveUser(result));
+                    }
                     toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
                 } else {
                     toastr('error', t('Payment Failed'));
