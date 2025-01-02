@@ -105,12 +105,12 @@ export const gradients = [
 ]
 
 export const skinsData = [
-    { id: 1, name: 'Zumator', img: '/images/skins/1.png', price: 20 },
-    { id: 2, name: 'Zumator', img: '/images/skins/2.png', price: 30 },
-    { id: 3, name: 'Zumator', img: '/images/skins/3.png', price: 40 },
-    { id: 4, name: 'Zumator', img: '/images/skins/4.png', price: 50 },
-    { id: 5, name: 'Zumator', img: '/images/skins/2.png', price: 20 },
-    { id: 6, name: 'Zumator', img: '/images/skins/3.png', price: 30 },
+    { id: 1, name: 'Zumator', img: '/images/avatars/5.png', price: 20 },
+    { id: 2, name: 'Zumator', img: '/images/avatars/6.png', price: 30 },
+    { id: 3, name: 'Zumator', img: '/images/avatars/4.png', price: 40 },
+    { id: 4, name: 'Zumator', img: '/images/avatars/3.png', price: 50 },
+    { id: 5, name: 'Zumator', img: '/images/avatars/2.png', price: 20 },
+    { id: 6, name: 'Zumator', img: '/images/avatars/1.png', price: 30 },
 ];
 
 export const factions = [

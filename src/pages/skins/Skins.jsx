@@ -19,7 +19,7 @@ export default function Skins() {
                 <div className="card-image">
                     <h3 className="card-title">Skin</h3>
                     <img className='character' src={selectedSkin.img} alt={selectedSkin.name} />
-                    <img className='frame' src="/images/skins/Frame.png" alt="Frame" />
+                    <img className='frame' src="/images/icons/frame.png" alt="Frame" />
                 </div>
                 <div className="card-content">
                     <h4>{selectedSkin.name}</h4>
