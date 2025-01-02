@@ -33,7 +33,7 @@ export default function GamePass() {
             WebApp.openInvoice(link, async (status) => {
                 if (status === 'paid') {
                     const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link, status: 'paid', amount: pack.price, diamonds: pack.diamonds });
-                    if(result){
+                    if (result) {
                         dispatch(saveUser(result));
                     }
                     toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
@@ -50,10 +50,10 @@ export default function GamePass() {
     return (
         <>
             <div className='game-pass'>
-                <div>
-                    <img src="/images/icons/pass.webp" alt="" />
+                <div className='pass'>
+                    <img src="/images/icons/pass.png" alt="" />
                 </div>
-                <div className='pass-2' data-bs-toggle="modal" data-bs-target="#diamondPassModal">
+                <div className='pass pass-2' data-bs-toggle="modal" data-bs-target="#diamondPassModal">
                     <img src="/images/icons/pass2.png" alt="" />
                 </div>
             </div>
