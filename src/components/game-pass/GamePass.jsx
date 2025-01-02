@@ -30,7 +30,7 @@ export default function GamePass() {
 
             WebApp.openInvoice(link, async (status) => {
                 if (status === 'paid') {
-                    const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link, status: 'paid', amount: pack.price });
+                    const result = await updatePaymentStatus({ id: userInfo.id, invoiceLink: link, status: 'paid', amount: pack.price, diamonds: pack.diamonds });
                     toastr('success', t('Payment-successful!-Enjoy-your-🎉'));
                 } else {
                     toastr('error', t('Payment Failed'));
