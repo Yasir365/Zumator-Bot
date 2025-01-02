@@ -45,6 +45,14 @@ export default function OpsCard({ pageType }) {
         toastr('success', t('Card-Upgrade-Successfully'))
     }
 
+    const calculateUnlockPrice = (item) => {
+        const basePrice = item.cost_of_purchase_unlocking;
+        const increasePercentage = item.upgrade_percentage_cost / 100;
+        const cardLevel = item.user_level_no;
+
+        return basePrice * Math.pow(1 + increasePercentage, cardLevel);
+    };
+
     return (
         <div className="tab-content d-flex">
             {!fetchloader && data.length == 0 && <div className="api-loader"><h5 className="text-white">No Data Found</h5></div>}
@@ -59,15 +67,15 @@ export default function OpsCard({ pageType }) {
                         </div>
                         <div className='d-flex justify-content-between'>
                             <div className="profit">{t('Profit-per-hour')}</div>
-                            <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.card_level[item.user_level_no - 1].profit_per_hour}</div>
+                            <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit_per_hour}</div>
                         </div>
                         <div className="description mt-1">{item.description}</div>
                         <div className="card-footer" onClick={() => upgradeCard(item)}>
                             <p>{t(`Lvl-${item.user_level_no}`)}</p>
                             <div className="value">
-                                {item.card_level[item.user_level_no - 1].method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
-                                {item.card_level[item.user_level_no - 1].method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
-                                {item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking}
+                                {item.method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
+                                {item.method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
+                                {calculateUnlockPrice(item)}
                             </div>
                         </div>
                     </div>
