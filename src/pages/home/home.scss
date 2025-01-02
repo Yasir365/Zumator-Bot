@@ -357,19 +357,19 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
 
       .card {
-        padding: 8px 0;
-        width: calc(33.33% - 4px);
+        padding: 12px 0;
+        width: calc(33.33% - 6px);
         border-radius: 12px;
 
         p {
-          font-size: 8px;
+          font-size: 7px;
         }
 
         img {
-          width: 40px;
+          width: 45px;
           height: auto;
           margin-bottom: 10px;
         }
