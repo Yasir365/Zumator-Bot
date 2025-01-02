@@ -6,11 +6,11 @@ export default function KeysAndDiamonds() {
     return (
         <div className='left'>
             <div className="item">
-                <img src="/images/icons/key.webp" alt="" />
+                <img src="/images/icons/key.png" alt="" />
                 <span>{userInfo ? userInfo.keys : 10}</span>
             </div>
             <div className="item">
-                <img src="/images/icons/bonas2.png" alt="" />
+                <img src="/images/icons/bonas.png" alt="" />
                 <span>{userInfo ? userInfo.diamonds : 5}</span>
             </div>
         </div>

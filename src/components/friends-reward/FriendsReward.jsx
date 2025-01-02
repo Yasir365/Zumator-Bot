@@ -48,7 +48,7 @@ export default function FriendsReward() {
                                     <img src="images/icons/friends.webp" alt="" />
                                     <div className='ms-2'>
                                         <p className='bold'>{item.title}</p>
-                                        <p className='small'><img src="/images/icons/usdt.webp" alt="" /> +{item.coins}</p>
+                                        <p className='small'><img src="/images/icons/usdt.png" alt="" /> +{item.coins}</p>
                                     </div>
                                 </div>
 

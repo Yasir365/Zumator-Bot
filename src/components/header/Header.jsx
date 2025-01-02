@@ -30,7 +30,7 @@ export default function Header() {
                 </div>
                 <div className="setting">
                     <Link to="/settings">
-                        <img src="/images/icons/setting.webp" alt="setting" loading="lazy" />
+                        <img src="/images/icons/setting.png" alt="setting" loading="lazy" />
                     </Link>
                 </div>
             </header>

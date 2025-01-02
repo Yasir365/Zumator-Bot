@@ -130,7 +130,7 @@ export default function SpacePort() {
                                     <div className="upgrade d-flex justify-content-between">
                                         <p>Lvl 2</p>
                                         <div>
-                                            <img src="/images/icons/usdt.webp" alt="" />
+                                            <img src="/images/icons/usdt.png" alt="" />
                                             <span className='ms-2'>200</span>
                                         </div>
                                     </div>

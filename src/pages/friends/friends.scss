@@ -1,5 +1,5 @@
 .firends-page {
-    padding: 2rem 12px 90px 12px;
+    padding: 12px;
 
     .heading,
     .sub-heading {
@@ -21,7 +21,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 40px;
+        margin-top: 12px;
         padding-bottom: 60px;
 
         h6 {
@@ -39,7 +39,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 12px;
+        margin: 12px 0;
         background: url('/images/bg.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -89,7 +89,7 @@
         }
 
         .warn {
-            color: var(--warning);
+            color: #211deb;
             margin-right: 2px;
         }
 

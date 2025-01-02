@@ -29,7 +29,7 @@ export default function Skins() {
                     </p>
                     {/* <div className='d-flex justify-content-center align-items-center mb-2'>
                         {selectedSkin.price}
-                        <img src="/images/icons/bonas.webp" alt="Bonus Icon" />
+                        <img src="/images/icons/bonas.png" alt="Bonus Icon" />
                     </div>
                     <button className="choose-btn">Choose <i className='fa-solid fa-lock'></i></button> */}
                 </div>

@@ -29,8 +29,8 @@ export default function NewReward() {
                                     <div className='ms-2'>
                                         <p className='bold'>{item.title}</p>
                                         <p className='small'>
-                                            {item.task_reward == 'COINS' && <img src="/images/icons/usdt.webp" alt="usdt" />}
-                                            {item.task_reward == 'DIAMONDS' && <img src="/images/icons/bonas.webp" alt="usdt" />}
+                                            {item.task_reward == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
+                                            {item.task_reward == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
                                             {item.reward_amount}
                                         </p>
                                     </div>

@@ -40,20 +40,20 @@ export default function Friends() {
       <h3 className='heading'>{t('Invite-Friends')}</h3>
       <h6 className="sub-heading">{t('You-and-your-friends-will-get-bonuses')}</h6>
 
-      <div className="item mt-4">
+      <div className="item">
         <div className="card-info">
           <div className="card-image">
             <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
           </div>
           <div className='reward'>
             <div className="title">{t('Invite-a-friend')}</div>
-            <div className="value"><img src="/images/icons/bonas.webp" alt="" /> <span className='warn'>+0.1 </span>{t('for-you-and-your-friend')}</div>
+            <div className="value"><img src="/images/icons/bonas.png" alt="" /> <span className='warn'>+0.1 </span>{t('for-you-and-your-friend')}</div>
           </div>
         </div>
       </div>
 
       {ref && (
-        <div className="item mt-4 d-flex justify-content-center">
+        <div className="item d-flex justify-content-center">
           <p>{t('Your-are-already-a-referral,-invited by')}  <span className="warn">{ref}</span></p>
         </div>
       )}
@@ -62,7 +62,7 @@ export default function Friends() {
         <div className="tab-content d-flex">
           <h6>{t('List-of-your-Friends')}</h6>
           {invitedFriends.length == 0 &&
-            <div className="item mt-4 d-flex justify-content-center">
+            <div className="item d-flex justify-content-center">
               <p>{t('You-haven’t-invited-anyone-yet')}</p>
             </div>
           }
@@ -78,7 +78,7 @@ export default function Friends() {
                 </div>
               </div>
               <div className='profit'>
-                <div className="value"><img src="/images/icons/usdt.webp" alt="usdt" /> {formatNumber(item.coins)}</div>
+                <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {formatNumber(item.coins)}</div>
               </div>
             </div>
           ))}
