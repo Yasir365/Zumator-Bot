@@ -55,42 +55,42 @@ export const languages = [
 export const rewardData = {
     friends: [
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 10 friends',
             score: 50
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 20 friends',
             score: 100
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 30 friends',
             score: 150
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 40 friends',
             score: 200
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 50 friends',
             score: 250
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 60 friends',
             score: 300
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 70 friends',
             score: 350
         },
         {
-            image: 'images/icons/friends.webp',
+            image: 'images/icons/friends.png',
             title: 'Invite 80 friends',
             score: 400
         },

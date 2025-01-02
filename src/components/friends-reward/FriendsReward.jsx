@@ -45,7 +45,7 @@ export default function FriendsReward() {
                         <div className='w-100' key={index}>
                             <div className="d-flex justify-content-between align-items-center pb-1">
                                 <div className='d-flex align-items-center'>
-                                    <img src="images/icons/friends.webp" alt="" />
+                                    <img src="images/icons/friends.png" alt="" />
                                     <div className='ms-2'>
                                         <p className='bold'>{item.title}</p>
                                         <p className='small'><img src="/images/icons/usdt.png" alt="" /> +{item.coins}</p>
