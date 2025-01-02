@@ -66,7 +66,7 @@ export default function Home() {
               </Link>
               <div className="img">
                 {" "}
-                <img src="/images/icons/layer.webp" alt="" />{" "}
+                <img src="/images/icons/layer.png" alt="" />{" "}
               </div>
             </div>
           </div>
