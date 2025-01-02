@@ -10,7 +10,7 @@ export default function DailyMissionBoard() {
         <div className="item">
           <div className="img">
             {" "}
-            <img src="/images/daily-board/1.webp" alt="img" />{" "}
+            <img src="/images/daily-board/1.png" alt="img" />{" "}
           </div>
           <p>{t("Combo")}</p>
         </div>
@@ -18,7 +18,7 @@ export default function DailyMissionBoard() {
         <div className="item">
           <div className="img">
             {" "}
-            <img src="/images/daily-board/2.webp" alt="img" />{" "}
+            <img src="/images/daily-board/2.png" alt="img" />{" "}
           </div>
           <p>{t("Cypher")}</p>
         </div>
@@ -26,14 +26,14 @@ export default function DailyMissionBoard() {
         <Link to="/rewards" className="item">
           <div className="img">
             {" "}
-            <img src="/images/daily-board/3.webp" alt="img" />{" "}
+            <img src="/images/daily-board/3.png" alt="img" />{" "}
           </div>
           <p>{t("Reward")}</p>
         </Link>
         <Link to="/rewards" className="item">
           <div className="img">
             {" "}
-            <img src="/images/daily-board/4.webp" alt="img" />{" "}
+            <img src="/images/daily-board/4.png" alt="img" />{" "}
           </div>
           <p>{t("Task")}</p>
         </Link>
