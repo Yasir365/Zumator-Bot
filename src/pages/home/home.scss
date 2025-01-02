@@ -178,6 +178,7 @@
     p {
       text-align: center;
     }
+
     span {
       line-height: normal;
     }
@@ -257,6 +258,7 @@
       border: 1px solid var(--warning);
       width: 40px;
       height: 40px;
+
       img {
         width: 100%;
         height: 100%;
@@ -345,7 +347,8 @@
 
       h5 {
         color: var(--black);
-        font-weight: 700;
+        font-weight: 600;
+        font-size: 20px;
       }
     }
 
@@ -354,15 +357,15 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 6px;
 
       .card {
-        padding: 8px;
-        width: calc(33.33% - 8px);
+        padding: 8px 0;
+        width: calc(33.33% - 4px);
+        border-radius: 12px;
 
-        h6,
-        footer {
-          font-weight: 700;
+        p {
+          font-size: 8px;
         }
 
         img {
@@ -377,14 +380,18 @@
       border-radius: 100px;
       background-color: var(--warning);
       color: var(--black);
-      padding: 10px 0;
-      font-size: 16px;
-      font-weight: 700;
+      padding: 2px 0;
+      margin: auto;
+      width: 80%;
+      font-size: 8px;
+      font-weight: 800;
+      border: none;
     }
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 375px) {
+
   .home-page .rewards .right,
   .home-page .rewards .left {
     padding: 6px 10px;
@@ -399,29 +406,36 @@
   .home-page .rewards {
     gap: 10px !important;
   }
+
   .play-container {
     margin-top: 0px !important;
   }
+
   .home-page .play-container .play-button {
     height: 44px;
     width: 180px;
   }
+
   .end_area,
   .top_area {
     gap: 8px;
   }
+
   .home-page .daily-board .item-container .item .img img {
     height: 42px;
     border-radius: 4px;
   }
+
   .home-page .balance span {
     font-size: 26px;
     line-height: 24px;
   }
+
   .home-page .balance img {
     width: 24px;
     height: 24px;
   }
+
   .home-page .main-image-wrapper {
     height: 130px;
     margin-bottom: 15px;

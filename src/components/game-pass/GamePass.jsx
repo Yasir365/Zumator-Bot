@@ -68,15 +68,11 @@ export default function GamePass() {
                                     { diamonds: 2000, price: 29.99 },
                                     { diamonds: 5000, price: 69.99 }
                                 ].map((pack, index) => (
-                                    <div
-                                        key={index}
-                                        className={`card`}
-                                    >
-                                        <h6 className="text-center">{pack.diamonds} {t('Diamonds')}</h6>
+                                    <div key={index} className={`card`} >
                                         <div className='d-flex justify-content-center'>
                                             <img src="/images/icons/bonas.png" alt="" />
                                         </div>
-                                        <div className="footer mt-2"> ${pack.price.toFixed(2)} </div>
+                                        <p className="text-center">{pack.diamonds} {t('Diamonds')} = ${pack.price}</p>
                                         <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(pack)}>
                                             {t('Buy')}
                                         </button>
