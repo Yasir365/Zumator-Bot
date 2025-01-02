@@ -38,7 +38,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/arena">
-                  <img src="/images/icons/podium.webp" alt="" />
+                  <img src="/images/icons/podium.png" alt="" />
                   {t('Arena')}
                 </NavLink>
               </li>

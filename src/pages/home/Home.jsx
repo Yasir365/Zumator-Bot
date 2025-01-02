@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className="middle_area">
-      <Avatar />
+        <Avatar />
       </div>
 
       <div className="end_area">
@@ -49,11 +49,11 @@ export default function Home() {
 
             <div className="d-flex align-items-center">
               <span className="me-3 arena-name">{t("Recruite")}</span>
-              <Link to="/arena">
-                <img src="/images/icons/podium.webp" alt="" />
+              <Link to="/arena" className="arena-img">
+                <img src="/images/icons/podium.png" alt="" />
               </Link>
-              <Link to="/leaderboard" className="ms-2">
-                <img src="/images/icons/chart.webp" alt="" />
+              <Link to="/leaderboard" className="ms-2 arena-img">
+                <img src="/images/icons/chart.png" alt="" />
               </Link>
             </div>
             <div className="progress-container">

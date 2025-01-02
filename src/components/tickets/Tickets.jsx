@@ -57,8 +57,8 @@ export default function Tickets() {
         <>
             <p>{t('Tickets')}</p>
             <p>{userInfo ? userInfo.tickets : 10}/10</p>
-            <div className="d-flex align-items-center justify-content-between">
-                <img src="/images/icons/clock.webp" alt="clock" />
+            <div className="d-flex align-items-center justify-content-between clock-img">
+                <img src="/images/icons/clock.png" alt="clock" />
                 <span>{formatTime(remainingTime)}</span>
             </div>
             <div className="progress-container">
