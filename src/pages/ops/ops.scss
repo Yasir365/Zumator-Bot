@@ -32,7 +32,6 @@
       background-color: var(--primary);
       border-radius: 8px;
       padding: 4px 8px;
-      margin-top: 4px;
 
       .title {
         font-size: 16px;
@@ -74,14 +73,13 @@
       justify-content: space-between;
       align-items: center;
       gap: 8px;
-      margin-top: 12px;
+      margin-top: 8px;
 
       .item {
         width: calc(25% - 8px);
         background-color: var(--white);
         border: 2px solid var(--primary);
         border-radius: 8px;
-        height: 100px;
 
         .opened-box {
           padding: 8px;
@@ -115,7 +113,7 @@
 
 
           .coins-img {
-            height: 40px;
+            height: 30px;
           }
 
           img {
@@ -139,7 +137,6 @@
     justify-content: space-evenly;
     gap: 10px;
     border: none;
-    margin-top: 20px;
     background-color: var(--white);
     border-radius: 30px;
     padding: 8px;
@@ -175,7 +172,6 @@
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-top: 20px;
 
     .item {
       padding: 8px;

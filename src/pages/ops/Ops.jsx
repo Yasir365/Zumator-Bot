@@ -79,6 +79,14 @@ export default function Ops() {
         <div className="item-container">
           {
             [0, 1, 2, 3].map((item, index) =>
+              <div className="item" key={index}>
+                <div className="img">
+                  <img className='question' src="/images/icons/question.png" alt="" />
+                  <div className="coins-img">
+                    <img src="/images/icons/coins.png" alt="" />
+                  </div>
+                </div>
+              </div>
               // <div key={item}>
               //   {userInfo && userInfo.mysterybox_info_detail && userInfo.mysterybox_opened != 0 && userInfo.mysterybox_opened - 1 >= index ? (
               //     <div className="item">
@@ -97,14 +105,6 @@ export default function Ops() {
               //       </div>
               //     </div>
               //   ) : (
-              <div className="item">
-                <div className="img">
-                  <img className='question' src="/images/icons/question.png" alt="" />
-                  <div className="coins-img">
-                    <img src="/images/icons/coins.png" alt="" />
-                  </div>
-                </div>
-              </div>
               //   )}
               // </div>
             )

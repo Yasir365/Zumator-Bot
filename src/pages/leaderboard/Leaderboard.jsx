@@ -30,7 +30,7 @@ const settings = {
   speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 2500,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
@@ -72,7 +72,7 @@ export default function Leaderboard() {
         </Slider>
       </div>
       <div className="end_area">
-        <h4 className="heading heading2">{t("Leaderboard")}</h4>
+        <h4 className="heading heading2">{t("Total players 40")}</h4>
         <div className="card-container">
           <div className="card-content">
             {data.map((item, index) => (
