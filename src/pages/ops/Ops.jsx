@@ -1,6 +1,5 @@
 import './ops.scss';
 import { useEffect, useState } from 'react';
-import Header from '../../components/header/Header';
 import { Rating } from 'react-simple-star-rating'
 import { useDispatch, useSelector } from 'react-redux';
 import toastr from '../../services/toastr.service';
@@ -61,8 +60,6 @@ export default function Ops() {
 
   return (
     <div className="ops-page">
-      <Header />
-
       <div className="daily-combo">
         <div className="header d-flex justify-content-between">
           <div className='d-flex align-items-center'>
@@ -100,12 +97,12 @@ export default function Ops() {
               //       </div>
               //     </div>
               //   ) : (
-                  <div className="item">
-                    <div className="img">
-                      <img className='question' src="/images/icons/question.webp" alt="" />
-                      <img src="/images/icons/coins.webp" alt="" />
-                    </div>
-                  </div>
+              <div className="item">
+                <div className="img">
+                  <img className='question' src="/images/icons/question.webp" alt="" />
+                  <img src="/images/icons/coins.webp" alt="" />
+                </div>
+              </div>
               //   )}
               // </div>
             )
