@@ -40,7 +40,7 @@ export default function Friends() {
       <h3 className='heading'>{t('Invite-Friends')}</h3>
       <h6 className="sub-heading">{t('You-and-your-friends-will-get-bonuses')}</h6>
 
-      <div className="item mt-4">
+      <div className="item">
         <div className="card-info">
           <div className="card-image">
             <img src='/images/friends/reward.webp' alt="" style={{ borderRadius: 0 }} />
@@ -53,7 +53,7 @@ export default function Friends() {
       </div>
 
       {ref && (
-        <div className="item mt-4 d-flex justify-content-center">
+        <div className="item d-flex justify-content-center">
           <p>{t('Your-are-already-a-referral,-invited by')}  <span className="warn">{ref}</span></p>
         </div>
       )}
@@ -62,7 +62,7 @@ export default function Friends() {
         <div className="tab-content d-flex">
           <h6>{t('List-of-your-Friends')}</h6>
           {invitedFriends.length == 0 &&
-            <div className="item mt-4 d-flex justify-content-center">
+            <div className="item d-flex justify-content-center">
               <p>{t('You-haven’t-invited-anyone-yet')}</p>
             </div>
           }
