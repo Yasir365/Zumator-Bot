@@ -15,13 +15,13 @@ export default function DailyMissionBoard() {
           <p>{t("Combo")}</p>
         </div>
 
-        <div className="item">
+        {/* <div className="item">
           <div className="img">
             {" "}
             <img src="/images/daily-board/2.png" alt="img" />{" "}
           </div>
           <p>{t("Cypher")}</p>
-        </div>
+        </div> */}
 
         <Link to="/rewards" className="item">
           <div className="img">
