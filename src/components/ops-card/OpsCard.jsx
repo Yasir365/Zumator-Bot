@@ -45,7 +45,7 @@ export default function OpsCard({ pageType }) {
         const res = await upgradeOpsCard(params)
         setUpgrade({ status: false, index: -1 })
         if (res.status) {
-            dispatch(saveUser(res));
+            dispatch(saveUser(res.data));
             getData()
             toastr('success', t('Card-Upgrade-Successfully'))
         } else {
