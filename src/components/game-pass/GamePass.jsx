@@ -57,7 +57,7 @@ export default function GamePass() {
                     <img src="/images/icons/pass2.png" alt="" />
                 </div>
                 <div className='pass pass-3' data-bs-toggle="modal" data-bs-target="#buyTicketsModal">
-                    <img src="/images/icons/pass2.png" alt="" />
+                    <img src="/images/icons/pass3.png" alt="" />
                 </div>
             </div>
 
