@@ -130,7 +130,37 @@ div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
 
 .end_area,
 .top_area {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal {
+    transform: translateY(100%);
+    transition: .5s !important;
+    transition-duration: .3s !important;
+
+    .modal-dialog {
+        bottom: 0;
+        position: absolute;
+        margin: 0;
+
+        .modal-content {
+            border-radius: 19px 19px 0 0;
+
+            .modal-body {
+                background: url(/images/bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom;
+                border-radius: 19px 19px 0 0;
+            }
+        }
+    }
+}
+
+.modal.show {
+    transform: translateY(0%);
+    transition: .5s !important;
+    transition-duration: .3s !important;
 }

@@ -8,12 +8,14 @@ export default function DailyMissionBoard() {
     <div className="daily-board">
       <h4>{t("Daily-Mission-Board")}</h4>
       <div className="item-container">
-        <div className="item">
-          <div className="img">
-            <img src="/images/avatars/1.png" alt="img" />
+        <Link to="/ops" className="item">
+          <div className="item">
+            <div className="img">
+              <img src="/images/avatars/1.png" alt="img" />
+            </div>
+            <p>{t("Combo")}</p>
           </div>
-          <p>{t("Combo")}</p>
-        </div>
+        </Link>
 
         <div className="item" data-bs-toggle="modal" data-bs-target="#dailyRewardModal">
           <div className="img">
@@ -33,9 +35,10 @@ export default function DailyMissionBoard() {
 
 
       {/* Daily Reward Modal */}
-      <div className="modal fade text-center" id="dailyRewardModal" aria-labelledby="dailyRewardModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
+      <div className="modal fade-up text-center" id="dailyRewardModal" aria-labelledby="dailyRewardModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
           <div className="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
               <h5>{t('Daily-Reward')}</h5>
               <div className="card-wrapper">

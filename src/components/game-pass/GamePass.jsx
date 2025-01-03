@@ -59,8 +59,8 @@ export default function GamePass() {
             </div>
 
             {/* Buy Diamond Modal */}
-            <div className="modal fade text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered">
+            <div className="modal text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-body">
                             <h5>{t('Buy-Diamonds')}</h5>
