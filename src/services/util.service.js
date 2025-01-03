@@ -133,6 +133,15 @@ export const dailyReward = [
     { id: 1, name: 'Zumator', price: 20 },
     { id: 1, name: 'Zumator', price: 20 },
     { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
 ]
 
 

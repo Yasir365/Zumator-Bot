@@ -139,14 +139,16 @@ div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
     transform: translateY(100%);
     transition: .5s !important;
     transition-duration: .3s !important;
-
+    
     .modal-dialog {
         bottom: 0;
         position: absolute;
         margin: 0;
-
+        
         .modal-content {
             border-radius: 19px 19px 0 0;
+            max-height: 60vh;
+            overflow-y: auto;
 
             .btn-close {
                 position: absolute;
@@ -168,6 +170,8 @@ div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
                 background-size: cover;
                 background-position: bottom;
                 border-radius: 19px 19px 0 0;
+            overflow-y: auto;
+
             }
         }
     }
