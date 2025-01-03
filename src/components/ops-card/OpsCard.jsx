@@ -12,6 +12,7 @@ export default function OpsCard({ pageType }) {
     const userInfo = useSelector(state => state.user.userInfo);
     const dispatch = useDispatch();
     const [fetchloader, setFetchLoader] = useState(false);
+    const [upgrade, setUpgrade] = useState({ status: false, index: -1 });
 
     const getData = async () => {
         setFetchLoader(true);
@@ -24,9 +25,10 @@ export default function OpsCard({ pageType }) {
     }, [])
 
 
-    const upgradeCard = async (item) => {
-        const method = item.card_level[item.user_level_no - 1].method_of_unlocking_payment;
-        const price = item.card_level[item.user_level_no - 1].cost_of_purchase_unlocking;
+    const upgradeCard = async (item, index) => {
+        if (upgrade.status) return
+        const method = item.method_of_unlocking_payment;
+        const price = calculateUnlockPrice(item);
 
         if (method == 'COINS' && price > userInfo.coins) {
             toastr('error', t('Not-enough-coins'))
@@ -39,6 +41,10 @@ export default function OpsCard({ pageType }) {
             user_id: userInfo.id,
             card_id: item.id
         }
+        setUpgrade({ status: true, index: index })
+        setTimeout(() => {
+            setUpgrade({ status: false, index: -1 })
+        }, 1000);
         const res = await upgradeOpsCard(params)
         dispatch(saveUser(res));
         getData()
@@ -49,8 +55,9 @@ export default function OpsCard({ pageType }) {
         const basePrice = item.cost_of_purchase_unlocking;
         const increasePercentage = item.upgrade_percentage_cost / 100;
         const cardLevel = item.user_level_no;
+        const price = basePrice * Math.pow(1 + increasePercentage, cardLevel);
 
-        return basePrice * Math.pow(1 + increasePercentage, cardLevel);
+        return +price.toFixed(2);
     };
 
     return (
@@ -70,20 +77,23 @@ export default function OpsCard({ pageType }) {
                             <div className="value"><img src="/images/icons/usdt.png" alt="usdt" /> {item.profit_per_hour}</div>
                         </div>
                         <div className="description mt-1">{item.description}</div>
-                        <div className="card-footer" onClick={() => upgradeCard(item)}>
-                            <p>{t(`Lvl-${item.user_level_no}`)}</p>
-                            {
-                                item.upgrade_lock == 'Yes' ? (
-                                    <div className="lock"><i class="fa-solid fa-lock"></i></div>
-                                ) : (
-                                    <div className="value">
-                                        {item.method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
-                                        {item.method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
-                                        {calculateUnlockPrice(item)}
-                                    </div>
-                                )
-                            }
-                        </div>
+                        {item.user_level_no < 20 &&
+                            <div className="card-footer" onClick={() => upgradeCard(item, index)}>
+                                <p>{t(`Lvl-${item.user_level_no}`)}</p>
+                                {upgrade.status && upgrade.index == index && <div className="spinner-border" role="status"></div>}
+                                <div className="value">
+                                    {item.method_of_unlocking_payment == 'COINS' && <img src="/images/icons/usdt.png" alt="usdt" />}
+                                    {item.method_of_unlocking_payment == 'DIAMONDS' && <img src="/images/icons/bonas.png" alt="usdt" />}
+                                    {calculateUnlockPrice(item)}
+                                </div>
+                            </div>
+                        }
+                        {
+                            item.user_level_no >= 20 &&
+                            <div className="card-footer justify-content-center">
+                                <p>Max</p>
+                            </div>
+                        }
                     </div>
                 </div>
             ))}

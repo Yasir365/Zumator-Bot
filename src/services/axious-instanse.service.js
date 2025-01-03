@@ -1,4 +1,5 @@
 import axios from 'axios';
+import toastr from './toastr.service';
 
 const adminBaseUrl = "https://zumator-admin.updatemedaily.com/api";
 
@@ -13,6 +14,8 @@ axiosInstance.interceptors.response.use(
     (response) => {
         if (response.data && response.data.success) {
             return response;
+        }else{
+            toastr('error', response.data.message || 'Something went wrong. Please try again later.');
         }
     },
     (error) => {
