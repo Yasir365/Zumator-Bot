@@ -42,13 +42,15 @@ export default function OpsCard({ pageType }) {
             card_id: item.id
         }
         setUpgrade({ status: true, index: index })
-        setTimeout(() => {
-            setUpgrade({ status: false, index: -1 })
-        }, 1000);
         const res = await upgradeOpsCard(params)
-        dispatch(saveUser(res));
-        getData()
-        toastr('success', t('Card-Upgrade-Successfully'))
+        if (res.status) {
+            dispatch(saveUser(res));
+            getData()
+            toastr('success', t('Card-Upgrade-Successfully'))
+        } else {
+            setUpgrade({ status: false, index: -1 })
+            toastr('error', res.message)
+        }
     }
 
     const calculateUnlockPrice = (item) => {
