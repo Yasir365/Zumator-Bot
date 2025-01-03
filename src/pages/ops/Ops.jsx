@@ -78,8 +78,11 @@ export default function Ops() {
         </div>
         <div className="item-container">
           {
-            [0, 1, 2, 3].map((item, index) =>
-              <div className="item" key={index}>
+            [500, 1000, 1500, 2000].map((item, index) =>
+              <div className="item" key={index}
+                data-aos="flip-left"
+                // data-aos-easing="ease-out-cubic"
+                data-aos-duration={item} >
                 <div className="img">
                   <img className='question' src="/images/icons/question.png" alt="" />
                   <div className="coins-img">
@@ -145,7 +148,7 @@ export default function Ops() {
 
 
       {/* Mystery Box Modal */}
-      <div className="modal fade text-center" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
+      <div className="modal text-center" id="misteryBoxModal" aria-labelledby="misteryBoxModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-body">

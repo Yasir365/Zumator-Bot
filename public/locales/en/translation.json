@@ -109,9 +109,11 @@
     "The-Beyonders":"The Beyonders",
     "A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.":"A legendary faction straddling myth and reality, rumored to possess god-like technological and mystical powers. Their existence is shrouded in mystery, with many viewing them as divine entities whose true nature remains unknown.",
 
+    "Game-Pass": "Game Pass",
     "Buy-Diamonds": "Diamond Pack",
     "Diamonds": "Diamonds",
     "Buy": "Buy",
+    
 
     "Complete-Task-to-Earn-Coins": "Complete Task to Earn Coins",
     "Daily-Reward": "Daily Reward",
@@ -142,6 +144,8 @@
     "Coins-collected-successfully": "Coins collected successfully",
     "Daily-reward-claimed!": "Daily reward claimed!",
     "Account-deleted-successfully": "Account deleted successfully",
-    "Error-deleting-account": "Error deleting account"
+    "Error-deleting-account": "Error deleting account",
+
+    "Faction-Selected-Successfully": "Faction Selected Successfully"
     
 }

@@ -47,7 +47,7 @@ export const claimDailyReward = async (data) => {
 
 export const upgradeOpsCard = async (data) => {
     const response = await axiosInstance.post('/user_upgrade_card_level', data);
-    return response.data.data || [];
+    return response.data;
 };
 
 export const cliamTicket = async (data) => {

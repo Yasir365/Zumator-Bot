@@ -1,5 +1,5 @@
 .tasks-page {
-    padding: 2rem 12px 90px 12px;
+    padding: 12px;
 
     .heading {
         font-size: 20px;
@@ -14,15 +14,20 @@
         border-radius: 8px;
         width: 100%;
         min-height: 90px;
-        margin-top: 16px;
         background: url('/images/bg.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
 
+        .img-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         img {
-            width: 80px;
-            height: 80px;
+            width: 40px;
+            height: 40px;
         }
 
         .head {
@@ -30,10 +35,17 @@
         }
 
         p {
-            font-size: 16px;
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 12px;
         }
 
         i {
+            padding: 4px 6px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
             font-weight: 700;
         }
     }
@@ -43,7 +55,7 @@
         justify-content: space-evenly;
         gap: 10px;
         border: none;
-        margin-top: 20px;
+        margin-top: 12px;
         background-color: var(--white);
         border-radius: 30px;
         padding: 8px;
@@ -80,7 +92,7 @@
         align-items: center;
         gap: 12px;
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-top: 12px;
         background-color: var(--white);
         border-radius: 8px;
         padding: 30px 15px;
@@ -90,10 +102,11 @@
         background-size: cover;
         background-position: center center;
 
-        .no-data{
+        .no-data {
             color: var(--primary);
         }
-        img{
+
+        img {
             width: 40px;
             height: 40px;
         }
@@ -124,7 +137,7 @@
             color: var(--white);
         }
 
-        .disable{
+        .disable {
             color: black;
             background-color: silver;
         }
@@ -152,6 +165,54 @@
             .go3349661836 {
                 display: block !important;
             }
+        }
+    }
+
+
+    #dailyRewardModal {
+        .modal-body {
+            h5 {
+                color: var(--black);
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .card {
+                padding: 12px 0;
+                width: calc(33.33% - 6px);
+                border-radius: 12px;
+
+                p {
+                    font-size: 7px;
+                }
+
+                img {
+                    width: 45px;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            border-radius: 100px;
+            background-color: var(--warning);
+            color: var(--black);
+            padding: 4px 0;
+            margin: auto;
+            width: 80%;
+            font-size: 8px;
+            font-weight: 800;
+            border: none;
         }
     }
 

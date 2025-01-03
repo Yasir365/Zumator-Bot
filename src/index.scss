@@ -130,7 +130,55 @@ div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
 
 .end_area,
 .top_area {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal {
+    transform: translateY(100%);
+    transition: .5s !important;
+    transition-duration: .3s !important;
+
+    .modal-dialog {
+        bottom: 0;
+        position: absolute;
+        margin: 0;
+        width: 100%;
+
+        .modal-content {
+            border-radius: 19px 19px 0 0;
+            max-height: 60vh;
+            overflow-y: auto;
+
+            .btn-close {
+                position: absolute;
+                top: 4px;
+                right: 5px;
+                font-size: 14px !important;
+                z-index: 5000;
+                display: inline-block;
+                width: 20px !important;
+                height: 20px;
+                padding: 6px !important;
+                background-color: #60d4c3 !important;
+                opacity: 1
+            }
+
+            .modal-body {
+                background: url(/images/bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom;
+                border-radius: 19px 19px 0 0;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.modal.show {
+    transform: translateY(0%);
+    transition: .5s !important;
+    transition-duration: .3s !important;
 }

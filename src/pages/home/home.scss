@@ -75,6 +75,10 @@
         small {
           font-size: 8px;
         }
+
+        p {
+          font-size: 10px;
+        }
       }
     }
   }
@@ -197,6 +201,10 @@
       color: var(--white);
       font-size: 14px;
       font-weight: 600;
+    }
+
+    .disabled{
+      background-color: #BCBCBC;
     }
 
     .clock-img {
@@ -352,13 +360,46 @@
       border-radius: 19px;
     }
 
-    .modal-body {
-      background: url("/images/bg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom;
-      border-radius: 18px;
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
 
+      .card {
+        padding: 12px 0;
+        width: calc(33.33% - 6px);
+        border-radius: 12px;
+
+        p {
+          font-size: 7px;
+        }
+
+        img {
+          width: 45px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      border-radius: 100px;
+      background-color: var(--warning);
+      color: var(--black);
+      padding: 4px 0;
+      margin: auto;
+      width: 80%;
+      font-size: 8px;
+      font-weight: 800;
+      border: none;
+    }
+  }
+
+  #dailyRewardModal {
+    .modal-body {
       h5 {
         color: var(--black);
         font-weight: 600;
@@ -429,6 +470,7 @@
     gap: 10px !important;
     padding: 8px;
   }
+
   .home-page .rewards {
     gap: 10px !important;
   }
@@ -447,7 +489,7 @@
     gap: 8px;
   }
 
-  .home-page .daily-board .item-container .item .img img {
+  .home-page .daily-board .item-container .item .img {
     height: 42px;
     border-radius: 4px;
   }
@@ -466,6 +508,7 @@
     height: 130px;
     margin-bottom: 15px;
   }
+
   .user-navbar .navbar {
     margin: 8px;
   }

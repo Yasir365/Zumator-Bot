@@ -58,11 +58,11 @@ export default function GamePass() {
           <img src="/images/icons/pass3.svg" alt="" />
         </div>
       </div>
-
       {/* Buy Diamond Modal */}
-      <div className="modal fade text-center" id="ticketPassModal" aria-labelledby="ticketPassModalLabel" aria-hidden="true">
+      <div className="modal text-center" id="ticketPassModal" aria-labelledby="ticketPassModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
               <h5>Ticket Refill</h5>
               <div className="ticket_modal">
@@ -71,8 +71,10 @@ export default function GamePass() {
                   <h6>Ticket</h6>
                   <p>Users can Buy full ticket top-up instantly. This means if a user doesn't want to wait, they can fill up all their ticket capacity by buying them instantly.</p>
                   <div className="d-flex align-items-center mt-2">
-                    <span className="d-flex align-items-center"><img src="/images/icons/star.svg" className="mx-1" alt="" /> 700</span>
-                    <button type="button" className="btn btn-success" onClick={() => handleProceed(pack)} style={{width: "fit-content", padding: "5px 20px", margin: "0 0 0 12px"}}>
+                    <span className="d-flex align-items-center">
+                      <img src="/images/icons/star.svg" className="mx-1" alt="" /> 700
+                    </span>
+                    <button type="button" className="btn btn-success" onClick={() => handleProceed(pack)} style={{ width: "fit-content", padding: "5px 20px", margin: "0 0 0 12px" }}>
                       {t("Buy Tickets")}
                     </button>
                   </div>
@@ -83,9 +85,10 @@ export default function GamePass() {
         </div>
       </div>
       {/* Buy Diamond Modal */}
-      <div className="modal fade text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
+      <div className="modal text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
               <h5>{t("Buy-Diamonds")}</h5>
               <div className="card-wrapper">
@@ -109,6 +112,36 @@ export default function GamePass() {
                     </button>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Buy Game Pass Modal */}
+            <div className="modal text-center" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div className="modal-body w-100">
+                    <h5>{t("Game-Pass")}</h5>
+                    <div className="card-wrapper">
+                      <h1>Comming Soon</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Buy Tickets Modal */}
+            <div className="modal text-center" id="buyTicketsModal" aria-labelledby="buyTicketsModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div className="modal-body w-100">
+                    <h5>{t("Game-Pass")}</h5>
+                    <div className="card-wrapper">
+                      <h1>Comming Soon</h1>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

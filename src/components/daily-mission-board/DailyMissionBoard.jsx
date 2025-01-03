@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { dailyReward } from "../../services/util.service";
 
 export default function DailyMissionBoard() {
   const { t } = useTranslation();
@@ -7,12 +8,12 @@ export default function DailyMissionBoard() {
     <div className="daily-board">
       <h4>{t("Daily-Mission-Board")}</h4>
       <div className="item-container">
-        <div className="item">
+        <Link to="/ops" className="item">
           <div className="img">
             <img src="/images/avatars/1.png" alt="img" />
           </div>
           <p>{t("Combo")}</p>
-        </div>
+        </Link>
 
         <div className="item" data-bs-toggle="modal" data-bs-target="#dailyRewardModal">
           <div className="img">
@@ -32,19 +33,26 @@ export default function DailyMissionBoard() {
 
 
       {/* Daily Reward Modal */}
-      <div className="modal fade text-center" id="dailyRewardModal" aria-labelledby="dailyRewardModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
+      <div className="modal fade-up text-center" id="dailyRewardModal" aria-labelledby="dailyRewardModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
           <div className="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
-              <h5>{t('Buy-Diamonds')}</h5>
+              <h5>{t('Daily-Reward')}</h5>
               <div className="card-wrapper">
-                {[{ diamonds: 100, price: 1.99 },].map((pack, index) => (
+                {dailyReward.map((item, index) => (
                   <div key={index} className={`card`} >
-                    Comming Soon
+                    <div>{item.name}</div>
+                    <div className='d-flex justify-content-center'>
+                      <img className='m-0' src="/images/icons/usdt.png" alt="" />
+                    </div>
+                    <div>{item.coins}</div>
+                    <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(item)}>
+                      {t('Claim')}
+                    </button>
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
@@ -52,6 +60,7 @@ export default function DailyMissionBoard() {
     </div>
   );
 }
+
 
 
 // import { formatTime } from '../../services/util.service';
