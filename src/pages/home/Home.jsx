@@ -39,12 +39,12 @@ export default function Home() {
       </div>
 
       <div className="end_area">
-        <div className="d-flex justify-content-between gap-2">
+        <div className="d-flex justify-content-between align-items-end gap-2">
           <div className="tickets">
             <Tickets />
           </div>
 
-          <div className="w-100">
+          <div className="w-100 position-relative">
             <GamePass />
 
             <div className="d-flex align-items-center">
