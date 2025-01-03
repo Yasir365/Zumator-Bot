@@ -53,7 +53,6 @@ export default function DailyMissionBoard() {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>

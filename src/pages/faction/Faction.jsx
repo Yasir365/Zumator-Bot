@@ -11,6 +11,11 @@ export default function Faction() {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
+    const selectFaction = (index) => {
+        factions[index].selected = true;
+        setActiveIndex(index);
+    }
+
     return (
         <div className="faction-page">
             <h3 className="heading">{t('Faction')}</h3>
@@ -39,13 +44,13 @@ export default function Faction() {
                         >
                             <div className="accordion-body">
                                 <p>{t(item.description)}</p>
-                                {/* {
+                                {
                                     !item.selected && (
-                                        <div className="d-flex justify-content-center mt-3">
+                                        <div className="d-flex justify-content-center mt-3" onClick={() => selectFaction(index)}>
                                             <button className="select-btn">Select</button>
                                         </div>
                                     )
-                                } */}
+                                }
                             </div>
                         </div>
                     </div>
