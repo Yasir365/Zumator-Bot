@@ -46,7 +46,7 @@ export default function Tickets() {
     }, [userInfo]);
 
     const handleClaim = async () => {
-        if (!isClaimed) {
+        if (!isClaimed && userInfo.tickets < 10) {
             const res = await cliamTicket({ user_id: userInfo.id });
             dispatch(saveUser(res));
             toastr('Success', t('Ticket-Claimed-Successfully'));
@@ -62,7 +62,7 @@ export default function Tickets() {
                 <span>{formatTime(remainingTime)}</span>
             </div>
             <div className="progress-container">
-                <button className='claim' onClick={handleClaim} disabled={isClaimed} > {t('Claim')} </button>
+                <button className={`claim ${userInfo.tickets >= 10 ? 'disabled' : ''}`} onClick={handleClaim} disabled={isClaimed} > {t('Claim')} </button>
             </div>
         </>
     )
