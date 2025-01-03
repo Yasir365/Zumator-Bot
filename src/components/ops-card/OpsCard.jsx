@@ -43,6 +43,7 @@ export default function OpsCard({ pageType }) {
         }
         setUpgrade({ status: true, index: index })
         const res = await upgradeOpsCard(params)
+        setUpgrade({ status: false, index: -1 })
         if (res.status) {
             dispatch(saveUser(res));
             getData()

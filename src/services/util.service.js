@@ -123,6 +123,18 @@ export const factions = [
     { name: 'The-Beyonders', img: '/images/faction/7.png', profit: 70, selected: false, description: 'A-legendary-faction-straddling-myth-and-reality,-rumored-to-possess-god-like-technological-and-mystical-powers.-Their-existence-is-shrouded-in-mystery,-with-many-viewing-them-as-divine-entities-whose-true-nature-remains-unknown.' },
 ]
 
+export const dailyReward = [
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+    { id: 1, name: 'Zumator', price: 20 },
+]
+
 
 export const generateInviteLink = (user) => {
     try {

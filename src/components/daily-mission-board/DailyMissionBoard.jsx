@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { dailyReward } from "../../services/util.service";
 
 export default function DailyMissionBoard() {
   const { t } = useTranslation();
@@ -36,11 +37,17 @@ export default function DailyMissionBoard() {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-body">
-              <h5>{t('Buy-Diamonds')}</h5>
+              <h5>{t('Daily-Reward')}</h5>
               <div className="card-wrapper">
-                {[{ diamonds: 100, price: 1.99 },].map((pack, index) => (
+                {dailyReward.map((pack, index) => (
                   <div key={index} className={`card`} >
-                    Comming Soon
+                    <div className='d-flex justify-content-center'>
+                      <img src="/images/icons/bonas.png" alt="" />
+                    </div>
+                    <p className="text-center">{pack.diamonds} {t('Diamonds')} = ${pack.price}</p>
+                    <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(pack)}>
+                      {t('Buy')}
+                    </button>
                   </div>
                 ))}
               </div>
@@ -52,6 +59,7 @@ export default function DailyMissionBoard() {
     </div>
   );
 }
+
 
 
 // import { formatTime } from '../../services/util.service';
