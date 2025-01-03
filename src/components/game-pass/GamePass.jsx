@@ -50,10 +50,13 @@ export default function GamePass() {
     return (
         <>
             <div className='game-pass'>
-                <div className='pass'>
+                <div className='pass' data-bs-toggle="modal" data-bs-target="#gamePassModal">
                     <img src="/images/icons/pass.png" alt="" />
                 </div>
                 <div className='pass pass-2' data-bs-toggle="modal" data-bs-target="#diamondPassModal">
+                    <img src="/images/icons/pass2.png" alt="" />
+                </div>
+                <div className='pass pass-3' data-bs-toggle="modal" data-bs-target="#buyTicketsModal">
                     <img src="/images/icons/pass2.png" alt="" />
                 </div>
             </div>
@@ -91,6 +94,35 @@ export default function GamePass() {
                 </div>
             </div>
 
+            {/* Buy Game Pass Modal */}
+            <div className="modal text-center" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal-body w-100">
+                            <h5>{t('Game-Pass')}</h5>
+                            <div className="card-wrapper">
+                                <h1>Comming Soon</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Buy Tickets Modal */}
+            <div className="modal text-center" id="buyTicketsModal" aria-labelledby="buyTicketsModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal-body w-100">
+                            <h5>{t('Game-Pass')}</h5>
+                            <div className="card-wrapper">
+                                <h1>Comming Soon</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
