@@ -9,12 +9,10 @@ export default function DailyMissionBoard() {
       <h4>{t("Daily-Mission-Board")}</h4>
       <div className="item-container">
         <Link to="/ops" className="item">
-          <div className="item">
-            <div className="img">
-              <img src="/images/avatars/1.png" alt="img" />
-            </div>
-            <p>{t("Combo")}</p>
+          <div className="img">
+            <img src="/images/avatars/1.png" alt="img" />
           </div>
+          <p>{t("Combo")}</p>
         </Link>
 
         <div className="item" data-bs-toggle="modal" data-bs-target="#dailyRewardModal">

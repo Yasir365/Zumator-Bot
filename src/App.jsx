@@ -7,6 +7,7 @@ import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { useDispatch } from "react-redux";
 import { saveUser } from "./store/userInfoSlice";
 
+
 export default function App() {
     const location = useLocation();
     const dispatch = useDispatch();

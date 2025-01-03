@@ -8,8 +8,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import './i18n';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import "aos/dist/aos.css";
+import Aos from 'aos';
 
-
+Aos.init();
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <StrictMode>

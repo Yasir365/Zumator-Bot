@@ -62,6 +62,7 @@ export default function GamePass() {
             <div className="modal text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="modal-body">
                             <h5>{t('Buy-Diamonds')}</h5>
                             <div className="card-wrapper">
