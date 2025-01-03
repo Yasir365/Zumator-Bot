@@ -40,14 +40,15 @@ export default function DailyMissionBoard() {
             <div className="modal-body">
               <h5>{t('Daily-Reward')}</h5>
               <div className="card-wrapper">
-                {dailyReward.map((pack, index) => (
+                {dailyReward.map((item, index) => (
                   <div key={index} className={`card`} >
+                    <div>{item.name}</div>
                     <div className='d-flex justify-content-center'>
-                      <img src="/images/icons/bonas.png" alt="" />
+                      <img className='m-0' src="/images/icons/usdt.png" alt="" />
                     </div>
-                    <p className="text-center">{pack.diamonds} {t('Diamonds')} = ${pack.price}</p>
-                    <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(pack)}>
-                      {t('Buy')}
+                    <div>{item.coins}</div>
+                    <button type="button" className="btn btn-success mt-2" onClick={() => handleProceed(item)}>
+                      {t('Claim')}
                     </button>
                   </div>
                 ))}
