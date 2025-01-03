@@ -1,5 +1,11 @@
 .skins-page {
-    padding: 2rem 12px 90px 12px;
+    padding: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
     .selected-card {
         display: flex;
@@ -30,6 +36,7 @@
                 height: 140px;
                 object-fit: contain;
                 position: relative;
+                transform: translateX(-8px);
             }
 
             img.frame {
@@ -58,7 +65,7 @@
 
             p {
                 font-size: 12px;
-                margin: 10px 0;
+                margin: 10px 0 0;
             }
 
         }

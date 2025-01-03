@@ -14,7 +14,7 @@ export default function Arena() {
     <div className="arena-page">
       <div className="overlay">
         <div className="img-container">
-          <img src="/images/comming-soon.png" alt="" />
+          <img className='zoom_animation' src="/images/comming-soon.png" alt="" />
         </div>
       </div>
       <div className="inner">

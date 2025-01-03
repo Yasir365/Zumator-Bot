@@ -1,32 +1,34 @@
 .settings-pages {
+  color: var(--white);
+  padding: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90vh;
+
+  .heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
     color: var(--white);
-    padding: 2rem 12px 90px 12px;
+  }
 
-    .heading {
-        font-size: 20px;
-        text-align: center;
-        font-weight: 700;
-        color: var(--white);
+  ul {
+    margin-top: 15px;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--black);
+      padding: 6px 16px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      min-height: 48px;
+      background-color: var(--white);
+      background: url("/images/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
     }
-
-    ul {
-        margin-top: 40px;
-
-        .item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--black);
-            padding: 6px 16px;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            min-height: 48px;
-            background-color: var(--white);
-            background: url('/images/bg.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-        }
-    }
-
+  }
 }

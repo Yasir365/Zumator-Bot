@@ -1,77 +1,81 @@
 .faction-page {
+  color: var(--white);
+  padding: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90vh;
+
+  .heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
     color: var(--white);
-    padding: 2rem 12px 90px 12px;
+  }
 
-    .heading {
-        font-size: 20px;
-        text-align: center;
-        font-weight: 700;
-        color: var(--white);
+  .accordion-item {
+    color: var(--black);
+    padding: 6px 16px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    min-height: 48px;
+    background: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .accordion-header {
+      position: relative;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+
+      .selected {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: #000;
+        z-index: 1000;
+        background: rgb(198 238 179);
+        backdrop-filter: blur(10px);
+      }
+
+      .collapsed .selected {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: #000;
+        z-index: 1000;
+        background: #a5e27aa8;
+        backdrop-filter: blur(10px);
+      }
+
+      .accordion-button {
+        background: none;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
     }
 
-    .accordion-item {
-        color: var(--black);
-        padding: 6px 16px;
-        border-radius: 6px;
-        margin-bottom: 8px;
-        min-height: 48px;
-        background: url('/images/bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-
-        .accordion-header {
-            position: relative;
-
-            img {
-                width: 35px;
-                height: 35px;
-            }
-
-            .selected {
-                position: absolute;
-                right: 21px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 26px;
-                color: var(--primary);
-                z-index: 1000;
-                background: url('/images/faction/bg2.png');
-            }
-
-            .collapsed .selected {
-                position: absolute;
-                right: 21px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 26px;
-                color: var(--primary);
-                z-index: 1000;
-                background: url('/images/faction/bg1.png');
-            }
-
-            .accordion-button {
-                background: none;
-
-                &:focus {
-                    box-shadow: none;
-                }
-            }
-        }
-
-
-        .select-btn {
-            height: 50px;
-            width: 100%;
-            background: var(--warning);
-            border-radius: 26px;
-            border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--black);
-        }
+    .select-btn {
+      height: 50px;
+      width: 100%;
+      background: var(--warning);
+      border-radius: 26px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--black);
     }
+  }
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-collapse">
-            <ul className="navbar-nav d-flex flex-row justify-content-evenly">
+            <ul className="navbar-nav d-flex flex-row justify-content-between">
               <li className="nav-item">
                 <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} aria-current="page" to="/">
                   <img src="/images/icons/frog.png" alt="" />

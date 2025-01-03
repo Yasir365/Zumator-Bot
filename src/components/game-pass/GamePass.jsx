@@ -59,8 +59,8 @@ export default function GamePass() {
         </div>
       </div>
       {/* Buy Diamond Modal */}
-      <div className="modal text-center" id="ticketPassModal" aria-labelledby="ticketPassModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
+      <div className="modal fade-up text-center" id="ticketPassModal" aria-labelledby="ticketPassModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
           <div className="modal-content">
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
@@ -85,8 +85,8 @@ export default function GamePass() {
         </div>
       </div>
       {/* Buy Diamond Modal */}
-      <div className="modal text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
+      <div className="modal fade-up text-center" id="diamondPassModal" aria-labelledby="diamondPassModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
           <div className="modal-content">
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body">
@@ -116,7 +116,7 @@ export default function GamePass() {
             </div>
 
             {/* Buy Game Pass Modal */}
-            <div className="modal text-center" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
+            <div className="modal fade-up text-center" id="gamePassModal" aria-labelledby="gamePassModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -131,7 +131,7 @@ export default function GamePass() {
             </div>
 
             {/* Buy Tickets Modal */}
-            <div className="modal text-center" id="buyTicketsModal" aria-labelledby="buyTicketsModalLabel" aria-hidden="true">
+            <div className="modal fade-up text-center" id="buyTicketsModal" aria-labelledby="buyTicketsModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

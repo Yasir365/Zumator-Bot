@@ -15,7 +15,7 @@ export default function Skins() {
         <div className="skins-page">
             <Header />
 
-            <div className="selected-card mt-4">
+            <div className="selected-card">
                 <div className="card-image">
                     <h3 className="card-title">Skin</h3>
                     <img className='character' src={selectedSkin.img} alt={selectedSkin.name} />
@@ -35,7 +35,7 @@ export default function Skins() {
                 </div>
             </div>
 
-            <div className="skins-container mt-4">
+            <div className="skins-container">
                 {skinsData.map((skin) => (
                     <div key={skin.id} className={`item ${selectedSkin.id === skin.id ? 'selected' : ''}`} onClick={() => handleSelectSkin(skin)}>
                         <div className="img-wrapper">
