@@ -144,6 +144,8 @@
     "Coins-collected-successfully": "Coins collected successfully",
     "Daily-reward-claimed!": "Daily reward claimed!",
     "Account-deleted-successfully": "Account deleted successfully",
-    "Error-deleting-account": "Error deleting account"
+    "Error-deleting-account": "Error deleting account",
+
+    "Faction-Selected-Successfully": "Faction Selected Successfully"
     
 }
